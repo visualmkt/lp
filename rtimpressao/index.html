@@ -60,6 +60,45 @@ function waUrl(c, msg) {
   return `https://api.whatsapp.com/send?phone=${c.contact.whatsapp}&text=${encodeURIComponent(msg || c.contact.whatsappMsg)}`;
 }
 
+function injectTracking(t) {
+  if (!t) return;
+  window.dataLayer = window.dataLayer || [];
+
+  // Google Tag Manager
+  if (t.gtm) {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',t.gtm);
+
+    const ns = document.createElement('noscript');
+    ns.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${t.gtm}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+    document.body.insertBefore(ns, document.body.firstChild);
+  }
+
+  // Google gtag.js (Google Ads / GA4) — aceita string ou array de IDs
+  if (t.gtag) {
+    const ids = Array.isArray(t.gtag) ? t.gtag : [t.gtag];
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${ids[0]}`;
+    document.head.appendChild(s);
+    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    ids.forEach(id => gtag('config', id));
+  }
+
+  // Meta Pixel
+  if (t.metaPixel) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', t.metaPixel); fbq('track', 'PageView');
+  }
+}
+
 function applyBrand(c) {
   tailwind.config = {
     theme: { extend: {
@@ -319,6 +358,7 @@ function render(c) {
 
 (async () => {
   const c = await loadConfig();
+  injectTracking(c.tracking);
   applyBrand(c);
   render(c);
 })();
