@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "title": "Display para PDV em Santa Catarina | RT Impressão Digital — Itajaí/SC",
+    "description": "Fábrica de displays, wobblers, expositores e materiais de PDV em Santa Catarina. Visual merchandising para ponto de venda em Itajaí, Balneário Camboriú, Joinville, Blumenau e Florianópolis.",
+    "keywords": "display para PDV, material ponto de venda, wobbler personalizado, expositor de produtos, adesivo para vitrine, sinalização loja Santa Catarina, vitrine PDV, luminoso loja",
+    "ogImage": "https://www.rtimpressaodigital.com.br/assets/img/about.jpg"
+  },
+  "brand": {
+    "primary": "#b4afb1",
+    "dark": "#8e8a8c",
+    "light": "#eee9ec",
+    "logo": "https://www.rtimpressaodigital.com.br/assets/img/logo.png",
+    "logoFooter": "https://www.rtimpressaodigital.com.br/assets/img/hero-logo.png"
+  },
+  "contact": {
+    "phoneDisplay": "47 3348-9284",
+    "phoneTel": "+554733489284",
+    "whatsapp": "5547991500033",
+    "whatsappDisplay": "47 9150-0033",
+    "whatsappMsg": "Olá, quero um orçamento de material para PDV",
+    "email": "atendimento@rtimpressaodigital.com.br",
+    "instagram": "https://www.instagram.com/rtimpressao/",
+    "facebook": "https://www.facebook.com/rtdesignrepresentacoes"
+  },
+  "address": {
+    "street": "Av. Itaipava, 2500 — Galpão 03",
+    "neighborhood": "Itaipava",
+    "city": "Itajaí",
+    "state": "SC",
+    "zip": "88316-300",
+    "hours": "Segunda a sexta · 08h às 18h",
+    "schemaHours": "Mo-Fr 08:00-18:00",
+    "areaServed": ["Itajaí", "Balneário Camboriú", "Joinville", "Blumenau", "Florianópolis", "Santa Catarina"]
+  },
+  "hero": {
+    "badge": "Itajaí · Atendendo toda Santa Catarina",
+    "h1Pre": "Displays e Material de PDV",
+    "h1Highlight": "que vendem mais",
+    "h1Pos": "na sua loja",
+    "subtitle": "Fábrica completa de visual merchandising para ponto de venda em SC. Displays, wobblers, vitrines, expositores e sinalização sob medida — produção própria e instalação.",
+    "ctaPrimary": "Solicitar Orçamento Agora",
+    "ctaSecondary": "Ver Produtos de PDV",
+    "bgImage": "https://www.rtimpressaodigital.com.br/assets/img/featured-9.jpg",
+    "hiddenSeo": "Visual merchandising, material de ponto de venda, displays personalizados, wobbler, expositor de produtos, sinalização para loja, adesivo para vitrine em Santa Catarina, Itajaí, Balneário Camboriú, Joinville, Blumenau, Florianópolis."
+  },
+  "trust": [
+    { "icon": "fa-industry", "title": "Fábrica Própria", "subtitle": "Em Itajaí/SC" },
+    { "icon": "fa-truck-fast", "title": "Entrega em SC", "subtitle": "e todo o Brasil" },
+    { "icon": "fa-award", "title": "Qualidade Premium", "subtitle": "Tecnologia avançada" },
+    { "icon": "fa-handshake", "title": "+500 Marcas", "subtitle": "Já atendidas" }
+  ],
+  "productsSection": {
+    "kicker": "Linha PDV — Mais Procurados em SC",
+    "title": "Material de Ponto de Venda",
+    "titleSub": "que destaca seu produto",
+    "subtitle": "Os itens mais buscados no Google Ads em Santa Catarina — produzidos com qualidade industrial."
+  },
+  "products": [
+    {
+      "img": "https://www.rtimpressaodigital.com.br/assets/img/featured-4.jpg",
+      "title": "Displays para PDV",
+      "desc": "Expositores de chão e balcão em PS, PVC, MDF ou acrílico. Atrai o olhar e aumenta a venda por impulso.",
+      "cta": "Orçamento de Display",
+      "slug": "display",
+      "msg": "Quero orçamento de Display para PDV"
+    },
+    {
+      "img": "https://www.rtimpressaodigital.com.br/assets/img/featured-12.jpg",
+      "title": "Wobblers Personalizados",
+      "desc": "Sinalizadores flexíveis para gôndola que destacam ofertas e lançamentos no exato momento da decisão de compra.",
+      "cta": "Orçamento de Wobbler",
+      "slug": "wobbler",
+      "msg": "Quero orçamento de Wobbler"
+    },
+    {
+      "img": "https://www.rtimpressaodigital.com.br/assets/img/featured-1.jpg",
+      "title": "Adesivos para Vitrine",
+      "desc": "Recortes em vinil, jateado e perfurado. Comunica promoções e identidade da marca direto na fachada.",
+      "cta": "Orçamento de Adesivo",
+      "slug": "adesivo",
+      "msg": "Quero orçamento de Adesivo de Vitrine"
+    },
+    {
+      "img": "https://www.rtimpressaodigital.com.br/assets/img/featured-9.jpg",
+      "title": "Expositores de Produtos",
+      "desc": "Mobiliário comercial em MDF, metalon e acrílico. Projeto, produção e instalação na sua loja.",
+      "cta": "Orçamento de Expositor",
+      "slug": "expositor",
+      "msg": "Quero orçamento de Expositor"
+    },
+    {
+      "img": "https://www.rtimpressaodigital.com.br/assets/img/featured-10.jpg",
+      "title": "Sinalização para Loja",
+      "desc": "Placas, fachadas, totens e wayfinding. Identidade e orientação completas no PDV.",
+      "cta": "Orçamento de Sinalização",
+      "slug": "sinalizacao",
+      "msg": "Quero orçamento de Sinalização"
+    },
+    {
+      "img": "https://www.rtimpressaodigital.com.br/assets/img/featured-6.jpg",
+      "title": "Vitrines e Cenários",
+      "desc": "Projetos especiais de visual merchandising para campanhas sazonais — Natal, Black Friday, lançamentos.",
+      "cta": "Orçamento de Vitrine",
+      "slug": "vitrine",
+      "msg": "Quero orçamento de Vitrine"
+    }
+  ],
+  "authority": {
+    "kicker": "Por que a RT",
+    "title": "Tudo o que seu PDV precisa,",
+    "titleSub": "num só fornecedor.",
+    "items": [
+      "Impressão digital de grandes formatos — mídias rígidas e flexíveis",
+      "Cortes especiais a laser e router (MDF, PVC, acrílico, metais)",
+      "Marcenaria e metalúrgica próprias para displays e expositores",
+      "Vacuum forming para peças tridimensionais sob medida",
+      "Pintura, montagem e instalação na sua loja",
+      "Atendimento em Itajaí, BC, Joinville, Blumenau, Florianópolis e todo Brasil"
+    ],
+    "image": "https://www.rtimpressaodigital.com.br/assets/img/services.jpg",
+    "cta": "Falar com Especialista"
+  },
+  "gallery": {
+    "kicker": "Portfólio",
+    "title": "Trabalhos em destaque",
+    "images": [
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-1.jpg",
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-2.jpg",
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-4.jpg",
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-6.jpg",
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-7.jpg",
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-9.jpg",
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-11.jpg",
+      "https://www.rtimpressaodigital.com.br/assets/img/portfolio/portfolio-12.jpg"
+    ]
+  },
+  "ctaFinal": {
+    "title": "Seu PDV merece se destacar.",
+    "subtitle": "Envie seu briefing pelo WhatsApp e receba orçamento ainda hoje.",
+    "ctaPrimary": "Solicitar Orçamento Agora"
+  },
+  "footer": {
+    "tagline": "Fábrica de visual merchandising e materiais de PDV em Santa Catarina. Projetos especiais para ponto de venda em todo Brasil.",
+    "linksTitle": "Linha PDV",
+    "links": [
+      "Display para PDV",
+      "Wobbler personalizado",
+      "Adesivo para vitrine",
+      "Expositor de produtos",
+      "Sinalização para loja",
+      "Vitrines e cenários"
+    ],
+    "copyright": "© RT Impressão Digital — Comunicação visual e PDV em Santa Catarina"
+  },
+  "exitPopup": {
+    "title": "Antes de sair…",
+    "subtitle": "Receba um orçamento personalizado de PDV no WhatsApp em poucos minutos.",
+    "cta": "Pedir Orçamento Agora",
+    "msg": "Quero o orçamento especial de PDV"
+  },
+  "tracking": {
+    "gtm": "",
+    "metaPixel": ""
+  }
+}

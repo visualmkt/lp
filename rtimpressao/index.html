@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RT Impressão Digital — Carregando…</title>
+<meta name="description" content="Fábrica de displays, wobblers e materiais de PDV em Santa Catarina.">
+<meta name="theme-color" content="#b4afb1">
+
+<!-- ============================================================
+  PADRÃO OPÇÃO B — Shell + config.json remoto
+  Este HTML é a estrutura. TODO o conteúdo editável vem do config.json.
+  Editar o site = editar o config.json no GitHub. NÃO precisa re-FTP.
+  Config URL: https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/config.json
+============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: 'Inter', sans-serif; opacity: 0; transition: opacity .3s; }
+  body.ready { opacity: 1; }
+  h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; }
+  #app-loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #fff; z-index: 100; }
+  body.ready #app-loading { display: none; }
+</style>
+</head>
+<body class="bg-white text-gray-800">
+
+<div id="app-loading"><i class="fa-solid fa-spinner fa-spin text-4xl text-gray-400"></i></div>
+
+<noscript>
+  <div style="padding:2rem;text-align:center;font-family:sans-serif">
+    <h1>RT Impressão Digital</h1>
+    <p>Fábrica de PDV em Itajaí/SC. Telefone: 47 3348-9284 — WhatsApp: 47 9150-0033</p>
+    <p>Ative o JavaScript para ver a página completa.</p>
+  </div>
+</noscript>
+
+<div id="app"></div>
+
+<script>
+const CONFIG_URL = 'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/config.json';
+const FALLBACK_URL = './config.json';
+
+async function loadConfig() {
+  try {
+    const r = await fetch(CONFIG_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw 0;
+    return await r.json();
+  } catch {
+    const r = await fetch(FALLBACK_URL);
+    return await r.json();
+  }
+}
+
+function waUrl(c, msg) {
+  return `https://api.whatsapp.com/send?phone=${c.contact.whatsapp}&text=${encodeURIComponent(msg || c.contact.whatsappMsg)}`;
+}
+
+function applyBrand(c) {
+  tailwind.config = {
+    theme: { extend: {
+      colors: { brand: { DEFAULT: c.brand.primary, dark: c.brand.dark, light: c.brand.light } },
+      fontFamily: { display: ['Montserrat'], body: ['Inter'] }
+    }}
+  };
+  document.querySelector('meta[name="theme-color"]').content = c.brand.primary;
+  document.title = c.meta.title;
+  document.querySelector('meta[name="description"]').content = c.meta.description;
+
+  let kw = document.querySelector('meta[name="keywords"]');
+  if (!kw) { kw = document.createElement('meta'); kw.name = 'keywords'; document.head.appendChild(kw); }
+  kw.content = c.meta.keywords;
+
+  // Schema.org
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "PrintingBusiness",
+    "name": "RT Impressão Digital",
+    "telephone": c.contact.phoneTel,
+    "email": c.contact.email,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": c.address.street,
+      "addressLocality": c.address.city,
+      "addressRegion": c.address.state,
+      "postalCode": c.address.zip,
+      "addressCountry": "BR"
+    },
+    "openingHours": c.address.schemaHours,
+    "image": c.brand.logo,
+    "description": c.meta.description,
+    "areaServed": c.address.areaServed,
+    "sameAs": [c.contact.instagram, c.contact.facebook]
+  };
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(schema);
+  document.head.appendChild(s);
+}
+
+function render(c) {
+  const heroBg = `linear-gradient(135deg, rgba(21,21,21,.78) 0%, rgba(180,175,177,.55) 100%), url('${c.hero.bgImage}') center/cover`;
+
+  document.getElementById('app').innerHTML = `
+
+<header class="sticky top-0 z-40 bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3"><img src="${c.brand.logo}" alt="RT Impressão Digital" class="h-10 md:h-12"></a>
+    <div class="flex items-center gap-2 md:gap-4">
+      <a href="tel:${c.contact.phoneTel}" class="hidden md:flex items-center gap-2 text-gray-700 font-semibold hover:text-brand">
+        <i class="fa-solid fa-phone text-brand"></i> ${c.contact.phoneDisplay}
+      </a>
+      <a href="${waUrl(c)}" data-action="whatsapp" data-location="header" target="_blank" rel="noopener noreferrer"
+         class="bg-brand hover:bg-brand-dark text-white font-bold px-4 md:px-5 py-2 rounded-full text-sm md:text-base transition shadow">
+        <i class="fa-brands fa-whatsapp"></i> Orçamento
+      </a>
+    </div>
+  </div>
+</header>
+
+<section id="hero" class="text-white py-16 md:py-28" style="background:${heroBg}">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <span class="inline-block bg-white/20 backdrop-blur px-4 py-1 rounded-full text-sm font-semibold mb-5">
+      <i class="fa-solid fa-location-dot"></i> ${c.hero.badge}
+    </span>
+    <h1 class="font-black text-4xl md:text-6xl leading-tight mb-5">
+      ${c.hero.h1Pre}<br><span class="underline decoration-white/60">${c.hero.h1Highlight}</span> ${c.hero.h1Pos}
+    </h1>
+    <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto opacity-95">${c.hero.subtitle}</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="${waUrl(c)}" data-action="whatsapp" data-location="hero" target="_blank" rel="noopener noreferrer"
+         class="bg-white text-gray-900 font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition text-lg">
+        <i class="fa-brands fa-whatsapp text-2xl align-middle"></i> ${c.hero.ctaPrimary}
+      </a>
+      <a href="#produtos" class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition text-lg">${c.hero.ctaSecondary}</a>
+    </div>
+    <span class="sr-only">${c.hero.hiddenSeo}</span>
+  </div>
+</section>
+
+<section class="py-12 bg-brand-light">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    ${c.trust.map(t => `
+      <div>
+        <i class="fa-solid ${t.icon} text-brand text-4xl mb-2"></i>
+        <p class="font-bold text-gray-800">${t.title}</p>
+        <p class="text-sm text-gray-600">${t.subtitle}</p>
+      </div>`).join('')}
+  </div>
+</section>
+
+<section id="produtos" class="py-20">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="text-brand font-bold uppercase tracking-wider text-sm">${c.productsSection.kicker}</span>
+      <h2 class="font-black text-3xl md:text-5xl text-gray-900 mt-2">${c.productsSection.title}<br>${c.productsSection.titleSub}</h2>
+      <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">${c.productsSection.subtitle}</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      ${c.products.map(p => `
+        <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100">
+          <img src="${p.img}" alt="${p.title}" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="font-bold text-xl mb-2 text-gray-900">${p.title}</h3>
+            <p class="text-gray-600 mb-4">${p.desc}</p>
+            <a href="${waUrl(c, p.msg)}" data-action="whatsapp" data-location="produto-${p.slug}"
+               target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-brand font-bold hover:gap-3 transition">
+              ${p.cta} <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-900 text-white py-20">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="text-brand font-bold uppercase tracking-wider text-sm">${c.authority.kicker}</span>
+      <h2 class="font-black text-3xl md:text-5xl mt-2 mb-6">${c.authority.title}<br>${c.authority.titleSub}</h2>
+      <ul class="space-y-3 text-lg">
+        ${c.authority.items.map(i => `<li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand text-xl mt-1"></i> ${i}</li>`).join('')}
+      </ul>
+      <a href="${waUrl(c)}" data-action="whatsapp" data-location="autoridade" target="_blank" rel="noopener noreferrer"
+         class="inline-block mt-8 bg-brand hover:bg-brand-dark text-white font-bold px-8 py-4 rounded-full transition shadow-lg">
+        <i class="fa-brands fa-whatsapp"></i> ${c.authority.cta}
+      </a>
+    </div>
+    <div><img src="${c.authority.image}" alt="Fábrica RT" class="rounded-2xl shadow-2xl"></div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <span class="text-brand font-bold uppercase tracking-wider text-sm">${c.gallery.kicker}</span>
+      <h2 class="font-black text-3xl md:text-5xl text-gray-900 mt-2">${c.gallery.title}</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      ${c.gallery.images.map(src => `<img src="${src}" alt="Portfólio RT" class="aspect-square object-cover rounded-2xl shadow-sm w-full">`).join('')}
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-brand text-white">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="font-black text-3xl md:text-5xl mb-5">${c.ctaFinal.title}</h2>
+    <p class="text-xl mb-8 opacity-95">${c.ctaFinal.subtitle}</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="${waUrl(c)}" data-action="whatsapp" data-location="cta-final" target="_blank" rel="noopener noreferrer"
+         class="bg-white text-gray-900 font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition text-lg">
+        <i class="fa-brands fa-whatsapp text-2xl align-middle"></i> ${c.ctaFinal.ctaPrimary}
+      </a>
+      <a href="tel:${c.contact.phoneTel}" class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition text-lg">
+        <i class="fa-solid fa-phone"></i> ${c.contact.phoneDisplay}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="py-20">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="font-black text-3xl md:text-4xl text-gray-900 mb-6">Visite a fábrica em ${c.address.city}</h2>
+      <div class="space-y-5 text-gray-700">
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-location-dot text-brand text-2xl mt-1"></i>
+          <div><p class="font-bold">Endereço</p><p>${c.address.street}<br>${c.address.neighborhood} — ${c.address.city}/${c.address.state} — CEP ${c.address.zip}</p></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-phone text-brand text-2xl mt-1"></i>
+          <div><p class="font-bold">Telefone</p><a href="tel:${c.contact.phoneTel}" class="hover:text-brand">${c.contact.phoneDisplay}</a></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-brands fa-whatsapp text-brand text-2xl mt-1"></i>
+          <div><p class="font-bold">WhatsApp</p><a href="${waUrl(c)}" data-action="whatsapp" data-location="contato" target="_blank" rel="noopener noreferrer" class="hover:text-brand">${c.contact.whatsappDisplay}</a></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-envelope text-brand text-2xl mt-1"></i>
+          <div><p class="font-bold">E-mail</p><a href="mailto:${c.contact.email}" class="hover:text-brand">${c.contact.email}</a></div>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-clock text-brand text-2xl mt-1"></i>
+          <div><p class="font-bold">Horário</p><p>${c.address.hours}</p></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <iframe class="w-full h-96 rounded-2xl shadow-lg border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=${encodeURIComponent(c.address.street + ' ' + c.address.city + ' ' + c.address.state)}&z=14&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-slate-900 text-gray-300 py-12">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+    <div>
+      <img src="${c.brand.logoFooter}" alt="RT Impressão Digital" class="h-14 mb-4">
+      <p class="text-sm">${c.footer.tagline}</p>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-3">${c.footer.linksTitle}</h4>
+      <ul class="space-y-2 text-sm">${c.footer.links.map(l => `<li>${l}</li>`).join('')}</ul>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-3">Contato</h4>
+      <p class="text-sm">${c.address.street}<br>${c.address.city}/${c.address.state} — ${c.address.zip}</p>
+      <p class="text-sm mt-2">${c.contact.phoneDisplay} · ${c.contact.whatsappDisplay}</p>
+      <div class="flex gap-3 mt-4 text-2xl">
+        <a href="${c.contact.instagram}" target="_blank" rel="noopener" class="hover:text-brand"><i class="fa-brands fa-instagram"></i></a>
+        <a href="${c.contact.facebook}" target="_blank" rel="noopener" class="hover:text-brand"><i class="fa-brands fa-facebook"></i></a>
+        <a href="${waUrl(c)}" target="_blank" rel="noopener" data-action="whatsapp" data-location="footer" class="hover:text-brand"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-xs text-gray-500 mt-10 px-4">${c.footer.copyright}</div>
+</footer>
+
+<a href="${waUrl(c)}" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full shadow-lg transition-all"
+   data-action="whatsapp" data-location="flutuante" target="_blank" rel="noopener noreferrer">
+  <i class="fa-brands fa-whatsapp text-2xl"></i><span class="hidden sm:inline">Falar com Especialista</span>
+</a>
+
+<div id="exit-popup" class="hidden fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-md w-full p-8 text-center relative shadow-2xl">
+    <button onclick="document.getElementById('exit-popup').classList.add('hidden')" class="absolute top-3 right-4 text-gray-400 text-3xl hover:text-gray-700">&times;</button>
+    <i class="fa-solid fa-tag text-brand text-5xl mb-3"></i>
+    <h3 class="font-black text-2xl text-gray-900 mb-2">${c.exitPopup.title}</h3>
+    <p class="text-gray-600 mb-6">${c.exitPopup.subtitle}</p>
+    <a href="${waUrl(c, c.exitPopup.msg)}" data-action="whatsapp" data-location="popup-exit" target="_blank" rel="noopener noreferrer"
+       class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3 rounded-full shadow-lg">
+      <i class="fa-brands fa-whatsapp"></i> ${c.exitPopup.cta}
+    </a>
+  </div>
+</div>
+  `;
+
+  document.querySelectorAll('[data-action="whatsapp"]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (window.dataLayer) dataLayer.push({ event: 'whatsapp_click', location: el.dataset.location });
+    });
+  });
+
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY < 20 && !sessionStorage.getItem('exitShown')) {
+      document.getElementById('exit-popup').classList.remove('hidden');
+      sessionStorage.setItem('exitShown', '1');
+      if (window.dataLayer) dataLayer.push({ event: 'exit_intent_show' });
+    }
+  });
+
+  document.body.classList.add('ready');
+}
+
+(async () => {
+  const c = await loadConfig();
+  applyBrand(c);
+  render(c);
+})();
+</script>
+
+</body>
+</html>
