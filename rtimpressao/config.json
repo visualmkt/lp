@@ -37,23 +37,23 @@
     "h1Pre": "Displays e Material de PDV",
     "h1Highlight": "que vendem mais",
     "h1Pos": "na sua loja",
-    "subtitle": "Fábrica completa de visual merchandising para ponto de venda em SC. Displays, wobblers, vitrines, expositores e sinalização sob medida — produção própria e instalação.",
+    "subtitle": "Fábrica de visual merchandising com produção própria em Itajaí/SC. HAVAN, Nestlé, COLCCI, Lilica Ripilica e outras marcas confiam na RT para displays, vitrines e sinalização de ponto de venda.",
     "ctaPrimary": "Solicitar Orçamento Agora",
     "ctaSecondary": "Ver Produtos de PDV",
     "bgImage": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt%20(16).jpeg",
     "hiddenSeo": "Visual merchandising, material de ponto de venda, displays personalizados, wobbler, expositor de produtos, sinalização para loja, adesivo para vitrine em Santa Catarina, Itajaí, Balneário Camboriú, Joinville, Blumenau, Florianópolis."
   },
   "trust": [
-    { "icon": "fa-industry", "title": "Fábrica Própria", "subtitle": "Em Itajaí/SC" },
-    { "icon": "fa-truck-fast", "title": "Entrega em SC", "subtitle": "e todo o Brasil" },
-    { "icon": "fa-award", "title": "Qualidade Premium", "subtitle": "Tecnologia avançada" },
-    { "icon": "fa-handshake", "title": "+500 Marcas", "subtitle": "Já atendidas" }
+    { "icon": "fa-industry", "title": "Fábrica Própria", "subtitle": "Sem terceirização" },
+    { "icon": "fa-medal", "title": "+15 Anos de Mercado", "subtitle": "Tradição em Itajaí/SC" },
+    { "icon": "fa-handshake", "title": "Marcas Líderes", "subtitle": "Confiam no nosso trabalho" },
+    { "icon": "fa-shield-halved", "title": "Prazo Garantido", "subtitle": "Entrega no combinado" }
   ],
   "productsSection": {
-    "kicker": "Linha PDV — Mais Procurados em SC",
+    "kicker": "O que produzimos para o seu PDV",
     "title": "Material de Ponto de Venda",
     "titleSub": "que destaca seu produto",
-    "subtitle": "Os itens mais buscados no Google Ads em Santa Catarina — produzidos com qualidade industrial."
+    "subtitle": "Fabricação própria, acabamento premium e equipa que cuida do projeto até a instalação. Marcas líderes confiam na RT há mais de 15 anos."
   },
   "products": [
     {
@@ -135,8 +135,8 @@
     ]
   },
   "ctaFinal": {
-    "title": "Seu PDV merece se destacar.",
-    "subtitle": "Envie seu briefing pelo WhatsApp e receba orçamento ainda hoje.",
+    "title": "Trabalhe com quem grandes marcas escolheram.",
+    "subtitle": "Atendimento direto com a fábrica. Envie seu briefing pelo WhatsApp e receba orçamento ainda hoje.",
     "ctaPrimary": "Solicitar Orçamento Agora"
   },
   "footer": {
