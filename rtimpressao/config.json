@@ -58,7 +58,7 @@
   },
   "products": [
     {
-      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/display-pdv.jpeg",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/display-pdv.webp",
       "title": "Displays para PDV",
       "desc": "Expositores de chão e balcão em PS, PVC, MDF ou acrílico. Atrai o olhar e aumenta a venda por impulso.",
       "cta": "Orçamento de Display",
@@ -66,7 +66,7 @@
       "msg": "Quero orçamento de Display para PDV"
     },
     {
-      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/wobblers.jpeg",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/wobblers.webp",
       "title": "Wobblers Personalizados",
       "desc": "Sinalizadores flexíveis para gôndola que destacam ofertas e lançamentos no exato momento da decisão de compra.",
       "cta": "Orçamento de Wobbler",
@@ -98,7 +98,7 @@
       "msg": "Quero orçamento de Sinalização"
     },
     {
-      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/vitrines-cenarios.jpeg",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/vitrines-cenarios.webp",
       "title": "Vitrines e Cenários",
       "desc": "Projetos especiais de visual merchandising para campanhas sazonais — Natal, Black Friday, lançamentos.",
       "cta": "Orçamento de Vitrine",
@@ -117,21 +117,21 @@
       "Pintura, montagem e instalação na sua loja",
       "Atendimento em Itajaí, BC, Joinville, Blumenau, Florianópolis e todo Brasil"
     ],
-    "image": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/services.jpg",
+    "image": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/services.webp",
     "cta": "Falar com Especialista"
   },
   "gallery": {
     "kicker": "Portfólio",
     "title": "Trabalhos em destaque",
     "images": [
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-2.jpeg",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-3.jpeg",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-6.jpeg",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-8.jpeg",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-9.jpeg",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-13.jpeg",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-15.jpeg",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-18.jpeg"
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-1.webp",
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-2.webp",
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-3.webp",
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-4.webp",
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-5.webp",
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-6.webp",
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-7.webp",
+      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-8.webp"
     ]
   },
   "ctaFinal": {
