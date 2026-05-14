@@ -270,7 +270,7 @@ function render(c) {
 <section id="contato" class="py-20">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
     <div>
-      <h2 class="font-black text-3xl md:text-4xl text-gray-900 mb-6">${c.contactTitle || 'Contato'}</h2>
+      ${c.contactTitle ? `<h2 class="font-black text-3xl md:text-4xl text-gray-900 mb-6">${c.contactTitle}</h2>` : ''}
       <div class="space-y-5 text-gray-700">
         <div class="flex items-start gap-4">
           <i class="fa-solid fa-location-dot text-brand text-2xl mt-1"></i>

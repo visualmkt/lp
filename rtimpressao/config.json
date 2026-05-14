@@ -22,7 +22,7 @@
     "instagram": "https://www.instagram.com/rtimpressao/",
     "facebook": "https://www.facebook.com/rtdesignrepresentacoes"
   },
-  "contactTitle": "Fale com a fábrica",
+  "contactTitle": "",
   "address": {
     "street": "Av. Itaipava, 2500 — Galpão 03",
     "neighborhood": "Itaipava",
@@ -35,10 +35,10 @@
   },
   "hero": {
     "badge": "Itajaí · Atendendo toda Santa Catarina",
-    "h1Pre": "Displays e Material de PDV",
-    "h1Highlight": "que vendem mais",
-    "h1Pos": "na sua loja",
-    "subtitle": "Fábrica de visual merchandising com produção própria e distribuição para todo Brasil.",
+    "h1Pre": "Fábrica de visual merchandising",
+    "h1Highlight": "com produção própria",
+    "h1Pos": "e distribuição para todo Brasil.",
+    "subtitle": "Confira os trabalhos que alguns clientes confiam na RT para fabricação de seus displays, vitrines e sinalização de ponto de venda.",
     "ctaPrimary": "Solicitar Orçamento Agora",
     "ctaSecondary": "Ver Produtos de PDV",
     "bgImage": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-16.jpeg",
@@ -123,7 +123,7 @@
   "gallery": {
     "kicker": "Portfólio",
     "title": "Trabalhos em destaque",
-    "subtitle": "Confira os trabalhos que alguns clientes confiam na RT para fabricação de seus displays, vitrines e sinalização de ponto de venda.",
+    "subtitle": "",
     "images": [
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-1.webp",
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-2.webp",
