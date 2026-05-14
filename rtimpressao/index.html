@@ -42,18 +42,23 @@
 <div id="app"></div>
 
 <script>
-const CONFIG_URL = 'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/config.json';
-const FALLBACK_URL = './config.json';
+// Fontes CDN do config — ambas com CORS, ambas servem o ficheiro do GitHub.
+// SEM fallback para ./config.json: ficheiro local no FTP fica velho e serve conteúdo errado (bug 2026-05-14).
+const CONFIG_SOURCES = [
+  'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/config.json',
+  'https://cdn.statically.io/gh/visualmkt/lp/main/rtimpressao/config.json'
+];
 
 async function loadConfig() {
-  try {
-    const r = await fetch(CONFIG_URL + '?t=' + Date.now(), { cache: 'no-store' });
-    if (!r.ok) throw 0;
-    return await r.json();
-  } catch {
-    const r = await fetch(FALLBACK_URL);
-    return await r.json();
+  for (let attempt = 0; attempt < 2; attempt++) {
+    for (const base of CONFIG_SOURCES) {
+      try {
+        const r = await fetch(base + '?t=' + Date.now(), { cache: 'no-store' });
+        if (r.ok) return await r.json();
+      } catch {}
+    }
   }
+  throw new Error('config indisponível');
 }
 
 function waUrl(c, msg) {
@@ -362,10 +367,19 @@ function render(c) {
 }
 
 (async () => {
-  const c = await loadConfig();
-  injectTracking(c.tracking);
-  applyBrand(c);
-  render(c);
+  try {
+    const c = await loadConfig();
+    injectTracking(c.tracking);
+    applyBrand(c);
+    render(c);
+  } catch (e) {
+    document.getElementById('app-loading').innerHTML =
+      '<div style="text-align:center;font-family:sans-serif;color:#555">' +
+      '<p style="font-size:1.2rem;margin-bottom:.5rem">Não foi possível carregar a página.</p>' +
+      '<p>Ligue para <a href="tel:+554733489284" style="color:#b4afb1;font-weight:bold">47 3348-9284</a> ' +
+      'ou <a href="https://api.whatsapp.com/send?phone=5547991500033" style="color:#25D366;font-weight:bold">WhatsApp</a></p>' +
+      '</div>';
+  }
 })();
 </script>
 
