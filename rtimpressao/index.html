@@ -187,7 +187,7 @@ function render(c) {
       <div>
         <i class="fa-solid ${t.icon} text-brand text-4xl mb-2"></i>
         <p class="font-bold text-gray-800">${t.title}</p>
-        <p class="text-sm text-gray-600">${t.subtitle}</p>
+        ${t.subtitle ? `<p class="text-sm text-gray-600">${t.subtitle}</p>` : ''}
       </div>`).join('')}
   </div>
 </section>
@@ -239,9 +239,14 @@ function render(c) {
     <div class="text-center mb-12">
       <span class="text-brand font-bold uppercase tracking-wider text-sm">${c.gallery.kicker}</span>
       <h2 class="font-black text-3xl md:text-5xl text-gray-900 mt-2">${c.gallery.title}</h2>
+      ${c.gallery.subtitle ? `<p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">${c.gallery.subtitle}</p>` : ''}
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-      ${c.gallery.images.map(src => `<img src="${src}" alt="Portfólio RT" class="aspect-square object-cover rounded-2xl shadow-sm w-full">`).join('')}
+      ${c.gallery.images.map(img => {
+        const src = typeof img === 'string' ? img : img.url;
+        const fit = (typeof img === 'object' && img.fit === 'contain') ? 'object-contain bg-gray-100' : 'object-cover';
+        return `<img src="${src}" alt="Portfólio RT" class="aspect-square ${fit} rounded-2xl shadow-sm w-full">`;
+      }).join('')}
     </div>
   </div>
 </section>

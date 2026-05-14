@@ -38,7 +38,7 @@
     "h1Pre": "Displays e Material de PDV",
     "h1Highlight": "que vendem mais",
     "h1Pos": "na sua loja",
-    "subtitle": "Fábrica de visual merchandising com produção própria em Itajaí/SC. HAVAN, Nestlé, COLCCI, Lilica Ripilica e outras marcas confiam na RT para displays, vitrines e sinalização de ponto de venda.",
+    "subtitle": "Fábrica de visual merchandising com produção própria e distribuição para todo Brasil.",
     "ctaPrimary": "Solicitar Orçamento Agora",
     "ctaSecondary": "Ver Produtos de PDV",
     "bgImage": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/rt-16.jpeg",
@@ -46,7 +46,7 @@
   },
   "trust": [
     { "icon": "fa-industry", "title": "Fábrica Própria", "subtitle": "Sem terceirização" },
-    { "icon": "fa-medal", "title": "+15 Anos de Mercado", "subtitle": "Tradição em Itajaí/SC" },
+    { "icon": "fa-medal", "title": "+15 Anos de Mercado", "subtitle": "" },
     { "icon": "fa-handshake", "title": "Marcas Líderes", "subtitle": "Confiam no nosso trabalho" },
     { "icon": "fa-shield-halved", "title": "Prazo Garantido", "subtitle": "Entrega no combinado" }
   ],
@@ -123,6 +123,7 @@
   "gallery": {
     "kicker": "Portfólio",
     "title": "Trabalhos em destaque",
+    "subtitle": "Confira os trabalhos que alguns clientes confiam na RT para fabricação de seus displays, vitrines e sinalização de ponto de venda.",
     "images": [
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-1.webp",
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-2.webp",
@@ -131,7 +132,7 @@
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-5.webp",
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-6.webp",
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-7.webp",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-8.webp"
+      { "url": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-8.webp", "fit": "contain" }
     ]
   },
   "ctaFinal": {
