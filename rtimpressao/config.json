@@ -132,7 +132,7 @@
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-5.webp",
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-6.webp",
       "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-7.webp",
-      "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-8.webp"
+      { "url": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/rtimpressao/imagens/galeria-8.webp", "fit": "fill" }
     ]
   },
   "ctaFinal": {

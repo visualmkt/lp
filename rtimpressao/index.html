@@ -249,7 +249,9 @@ function render(c) {
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
       ${c.gallery.images.map(img => {
         const src = typeof img === 'string' ? img : img.url;
-        const fit = (typeof img === 'object' && img.fit === 'contain') ? 'object-contain bg-gray-100' : 'object-cover';
+        const fit = typeof img === 'object'
+          ? (img.fit === 'contain' ? 'object-contain bg-gray-100' : img.fit === 'fill' ? 'object-fill' : 'object-cover')
+          : 'object-cover';
         return `<img src="${src}" alt="Portfólio RT" class="aspect-square ${fit} rounded-2xl shadow-sm w-full">`;
       }).join('')}
     </div>
