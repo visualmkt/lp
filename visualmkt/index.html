@@ -467,9 +467,7 @@ document.querySelectorAll('[data-wa]').forEach(el=>{
 /* ---- Formulário: salva por email (FormSubmit) + abre WhatsApp ---- */
 (function(){
   const form = document.getElementById('lead-form'); if(!form) return;
-  // ATIVAR: enviar o form 1× com o email real → clicar no link → pegar o hash em formsubmit.co/email/{email}
-  // Após ativação, substituir FORMSUBMIT_HASH_AQUI pelo hash recebido
-  const ENDPOINT = 'https://formsubmit.co/ajax/FORMSUBMIT_HASH_AQUI';
+  const ENDPOINT = 'https://api.web3forms.com/submit';
   // captcha simples
   let capA = Math.floor(Math.random()*6)+2, capB = Math.floor(Math.random()*6)+2;
   document.getElementById('cap-q').textContent = `${capA} + ${capB} = ?`;
@@ -490,7 +488,7 @@ document.querySelectorAll('[data-wa]').forEach(el=>{
     try{
       await fetch(ENDPOINT, { method:'POST',
         headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body: JSON.stringify({ nome, whatsapp:wpp, _subject:'Novo lead — Visual MKT LP' }) });
+        body: JSON.stringify({ access_key:'c48b3edc-bafe-4d0a-9022-b38a4d6b97dc', subject:'Novo lead — Visual MKT LP', nome, whatsapp:wpp }) });
     }catch(_){}
     const dl = (window.dataLayer = window.dataLayer || []);
     dl.push({ event:'lead_form_submit' });
