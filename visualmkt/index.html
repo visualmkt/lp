@@ -139,19 +139,53 @@ tailwind.config = {
     <div class="max-w-6xl mx-auto px-6 md:px-12">
 
       <!-- HERO -->
-      <section class="pt-20 md:pt-28 pb-24 text-center">
-        <p class="ink font-display font-bold tracking-widest text-magenta text-xs md:text-sm mb-6 uppercase">Especialistas em anúncios para comunicação visual</p>
-        <h1 class="ink font-display font-black text-ink leading-[0.95] text-5xl md:text-8xl mb-8">
-          Sua agenda<br>lotada de<br>orçamentos.<br>
-          <span class="text-cyan">Todo dia.</span>
-        </h1>
-        <p class="ink text-slate-600 text-lg md:text-2xl max-w-2xl mx-auto mb-10">
-          Gestão de campanhas no Google Ads e Meta Ads que transformam buscas em orçamentos — feita por quem entende de gráfica e comunicação visual.
-        </p>
-        <a href="#planos" class="ink inline-flex items-center gap-3 bg-ink text-white font-display font-bold text-lg px-9 py-5 rounded-full hover:bg-magenta transition-colors">
-          Ver planos <i class="fa-solid fa-arrow-down"></i>
-        </a>
-        <p class="ink mt-8 text-xs text-slate-400 tracking-widest uppercase"><i class="fa-solid fa-arrow-down animate-bounce"></i>&nbsp; role para imprimir o resto</p>
+      <section class="pt-14 md:pt-20 pb-14 md:pb-20">
+        <div class="grid md:grid-cols-[1fr,380px] gap-10 md:gap-14 items-center">
+
+          <!-- Copy (mobile: full width, depois o form) -->
+          <div>
+            <p class="ink font-display font-bold tracking-widest text-magenta text-xs md:text-sm mb-6 uppercase">Especialistas em anúncios para comunicação visual</p>
+            <h1 class="ink font-display font-black text-ink leading-[0.93] text-5xl md:text-7xl mb-7">
+              No topo<br>do Google.<br>Vendendo<br>
+              <span class="text-cyan">nas redes.</span>
+            </h1>
+            <p class="ink text-slate-600 text-lg md:text-xl max-w-xl mb-10">
+              Gestão de Google Ads e Meta Ads que transforma buscas em orçamentos no WhatsApp — feita por quem entende de gráfica e comunicação visual.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a data-wa data-loc="hero" data-msg="Olá! Vim pela landing page e quero saber mais sobre os anúncios da Visual MKT."
+                 class="ink inline-flex items-center gap-3 bg-magenta text-white font-display font-bold text-lg px-8 py-4 rounded-full hover:bg-ink transition-colors cursor-pointer">
+                <i class="fa-brands fa-whatsapp text-xl"></i> Falar agora
+              </a>
+              <a href="#planos" class="ink inline-flex items-center gap-3 border-2 border-ink text-ink font-display font-bold text-lg px-8 py-4 rounded-full hover:bg-ink hover:text-white transition-colors">
+                Ver planos
+              </a>
+            </div>
+            <p class="ink mt-8 text-xs text-slate-400 tracking-widest uppercase hidden md:block"><i class="fa-solid fa-arrow-down animate-bounce"></i>&nbsp; role para imprimir o resto</p>
+          </div>
+
+          <!-- Form de conversão -->
+          <div class="ink bg-white rounded-3xl border border-slate-200 shadow-xl p-7 md:p-8">
+            <h3 class="font-display font-black text-xl text-ink mb-1">Análise gratuita da sua empresa</h3>
+            <p class="text-slate-500 text-sm mb-6">Sem compromisso. Resposta no mesmo dia útil.</p>
+            <form id="hero-form" class="space-y-3">
+              <input type="text" name="nome" required autocomplete="name" placeholder="Seu nome"
+                class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:border-cyan focus:ring-2 focus:ring-cyan/30 outline-none transition text-sm">
+              <input type="tel" name="whatsapp" required autocomplete="tel" placeholder="(51) 99999-9999"
+                class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:border-cyan focus:ring-2 focus:ring-cyan/30 outline-none transition text-sm">
+              <input type="text" name="_honey_h" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+              <button type="submit"
+                class="w-full py-4 rounded-full font-display font-bold bg-magenta text-white hover:bg-ink transition flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Quero mais orçamentos
+              </button>
+              <p class="text-center text-xs text-slate-400">Seus dados ficam protegidos.</p>
+            </form>
+            <div id="hero-form-ok" class="hidden text-center py-4">
+              <i class="fa-solid fa-circle-check text-green-500 text-4xl mb-3"></i>
+              <p class="font-display font-bold text-ink">Recebido! Abrindo WhatsApp...</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- STATS -->
@@ -181,7 +215,7 @@ tailwind.config = {
       </section>
 
       <!-- MÉTODO -->
-      <section class="py-20 border-t border-slate-200">
+      <section id="metodo" class="py-20 border-t border-slate-200">
         <div class="text-center mb-14">
           <span class="ink font-display font-bold tracking-widest text-magenta text-xs uppercase">Como trabalhamos</span>
           <h2 class="ink font-display font-black text-3xl md:text-5xl text-ink mt-3 mb-4">Do zero ao orçamento<br>chegando todo dia.</h2>
@@ -244,7 +278,6 @@ tailwind.config = {
               <li><i class="fa-solid fa-check text-yellow mr-2"></i>Gestão 360: Google Ads + Meta Ads completo</li>
               <li><i class="fa-solid fa-check text-yellow mr-2"></i>Consultoria de criativos para alta conversão</li>
               <li><i class="fa-solid fa-check text-yellow mr-2"></i>Google Meu Negócio otimizado (SEO local)</li>
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Cronograma de postagens para redes sociais</li>
               <li><i class="fa-solid fa-check text-yellow mr-2"></i>Dashboard em tempo real 24/7</li>
               <li><i class="fa-solid fa-check text-yellow mr-2"></i>Reunião estratégica mensal</li>
               <li><i class="fa-solid fa-check text-yellow mr-2"></i>Suporte prioritário via WhatsApp</li>
@@ -573,6 +606,38 @@ document.querySelectorAll('[data-wa]').forEach(el=>{
     form.classList.add('hidden');
     document.getElementById('form-ok').classList.remove('hidden');
   });
+})();
+
+/* ---- Hero form (mini, sem captcha) ---- */
+(function(){
+  const hf = document.getElementById('hero-form'); if(!hf) return;
+  hf.addEventListener('submit', async e=>{
+    e.preventDefault();
+    if (hf._honey_h.value) return;
+    const btn = hf.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Enviando...';
+    const nome = hf.nome.value.trim(), wpp = hf.whatsapp.value.trim();
+    try{
+      await fetch('https://api.web3forms.com/submit', { method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify({ access_key:'c48b3edc-bafe-4d0a-9022-b38a4d6b97dc', subject:'Lead hero — Visual MKT LP', nome, whatsapp:wpp }) });
+    }catch(_){}
+    (window.dataLayer=window.dataLayer||[]).push({ event:'lead_form_submit', location:'hero' });
+    const msg = encodeURIComponent(`Olá! Sou ${nome}, vim pela landing page e quero a análise gratuita.`);
+    window.open(`https://api.whatsapp.com/send?phone=${WA}&text=${msg}`,'_blank');
+    hf.classList.add('hidden');
+    document.getElementById('hero-form-ok').classList.remove('hidden');
+  });
+})();
+
+/* ---- Reordenar: método + planos depois dos depoimentos ---- */
+(function(){
+  const metodo = document.getElementById('metodo');
+  const planos = document.getElementById('planos');
+  const form   = document.getElementById('form');
+  if (!metodo || !planos || !form) return;
+  form.parentNode.insertBefore(planos, form);
+  form.parentNode.insertBefore(metodo, planos);
 })();
 
 /* ---- Lenis smooth scroll + GSAP ---- */
