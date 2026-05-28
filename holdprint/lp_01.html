@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holdprint — Precifique certo. Entregue no prazo. Cresça com controle.</title>
+<meta name="description" content="Software de gestão para empresas de comunicação visual. Orçamento preciso, produção organizada, margem real em cada job.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy:  '#0B1220',
+        navy2: '#111827',
+        navy3: '#162035',
+        teal:  '#29B393',
+        teal2: '#1e9b7d',
+      },
+      fontFamily: {
+        display: ['Montserrat', 'sans-serif'],
+        body: ['Open Sans', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+:root { --teal: #29B393; --navy: #0B1220; --navy2: #111827; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .4; }
+}
+@keyframes drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, 20px) scale(1.05); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(16px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Open Sans', sans-serif; background: var(--navy); color: #fff; overflow-x: hidden; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: #29B39355; border-radius: 4px; }
+::selection { background: #29B39333; color: #29B393; }
+
+/* Noise overlay */
+body::before {
+  content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat; background-size: 200px;
+}
+
+/* Hero mesh */
+.hero-mesh { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero-mesh::before {
+  content: ''; position: absolute;
+  width: 700px; height: 700px; top: -200px; right: -100px;
+  background: radial-gradient(circle, rgba(41,179,147,.12) 0%, transparent 65%);
+  animation: drift 8s ease-in-out infinite alternate;
+}
+.hero-mesh::after {
+  content: ''; position: absolute;
+  width: 500px; height: 500px; bottom: -100px; left: -150px;
+  background: radial-gradient(circle, rgba(41,179,147,.06) 0%, transparent 65%);
+  animation: drift 12s ease-in-out infinite alternate-reverse;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #29B393 0%, #5ee8cc 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.badge-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(41,179,147,.08); border: 1px solid rgba(41,179,147,.2);
+  color: #29B393; font-size: 11px; font-weight: 700;
+  padding: 5px 14px; border-radius: 100px; letter-spacing: .08em; text-transform: uppercase;
+}
+
+.btn-cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: #29B393; color: #0B1220;
+  font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: .95rem;
+  padding: 14px 28px; border-radius: 12px;
+  transition: all .2s; position: relative; overflow: hidden;
+}
+.btn-cta::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,.15) 0%, transparent 60%);
+  opacity: 0; transition: opacity .2s;
+}
+.btn-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 28px rgba(41,179,147,.35); }
+.btn-cta:hover::after { opacity: 1; }
+.btn-cta:active { transform: translateY(0); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.7);
+  font-weight: 600; font-size: .95rem; padding: 14px 28px; border-radius: 12px;
+  transition: all .2s;
+}
+.btn-ghost:hover { border-color: rgba(41,179,147,.4); color: #fff; }
+
+/* Floating metric cards */
+.metric-float {
+  position: absolute; background: rgba(11,18,32,.85);
+  backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 14px; padding: 12px 16px; white-space: nowrap;
+  animation: float 4s ease-in-out infinite;
+}
+.metric-float-2 { animation-delay: -2s; animation-duration: 5s; }
+
+/* Marquee */
+.marquee-track { display: flex; gap: 0; width: max-content; animation: marquee 28s linear infinite; }
+.marquee-wrap { overflow: hidden; mask: linear-gradient(90deg, transparent, black 10%, black 90%, transparent); }
+.marquee-item {
+  display: flex; align-items: center; gap: 10px; padding: 0 40px;
+  color: rgba(255,255,255,.35); font-size: .85rem; font-weight: 600; white-space: nowrap;
+}
+.marquee-dot { width: 4px; height: 4px; background: #29B393; border-radius: 50%; opacity: .5; }
+
+/* Step cards — Como funciona */
+.step-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 20px; padding: 32px 28px;
+  transition: all .3s; position: relative; overflow: hidden;
+}
+.step-card::before {
+  content: ''; position: absolute; inset: 0; border-radius: 20px; padding: 1px;
+  background: linear-gradient(135deg, rgba(41,179,147,.0), rgba(41,179,147,.0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  transition: background .3s; pointer-events: none;
+}
+.step-card:hover::before {
+  background: linear-gradient(135deg, rgba(41,179,147,.35), rgba(41,179,147,.05) 50%, rgba(41,179,147,.2));
+}
+.step-card:hover { border-color: transparent; transform: translateY(-3px); }
+.step-num {
+  font-family: 'Montserrat', sans-serif; font-size: 2.8rem; font-weight: 700; line-height: 1;
+  color: rgba(41,179,147,.12); margin-bottom: 20px; transition: color .3s;
+}
+.step-card:hover .step-num { color: rgba(41,179,147,.3); }
+
+/* Feature cards — Solução */
+.feat-card {
+  background: rgba(255,255,255,.025);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 16px; padding: 24px;
+  transition: all .3s; position: relative; overflow: hidden;
+}
+.feat-card::before {
+  content: ''; position: absolute; inset: 0; border-radius: 16px; padding: 1px;
+  background: linear-gradient(135deg, rgba(41,179,147,.0), rgba(41,179,147,.0));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  transition: background .3s; pointer-events: none;
+}
+.feat-card:hover::before {
+  background: linear-gradient(135deg, rgba(41,179,147,.3), rgba(41,179,147,.05) 50%, rgba(41,179,147,.15));
+}
+.feat-card:hover { border-color: transparent; transform: translateY(-2px); }
+.feat-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(41,179,147,.1); border: 1px solid rgba(41,179,147,.2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; transition: background .3s;
+}
+.feat-card:hover .feat-icon { background: rgba(41,179,147,.18); }
+
+/* Dores */
+.dor-item {
+  display: flex; gap: 32px; align-items: flex-start;
+  padding: 36px 0; border-bottom: 1px solid rgba(255,255,255,.05);
+  transition: all .3s; position: relative;
+}
+.dor-item::before {
+  content: ''; position: absolute; left: -24px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, transparent, #29B393, transparent);
+  opacity: 0; transition: opacity .3s;
+}
+.dor-item:hover::before { opacity: 1; }
+.dor-num {
+  font-family: 'Montserrat', sans-serif; font-size: 3.8rem; font-weight: 700; line-height: 1;
+  color: rgba(255,255,255,.04); transition: color .3s; flex-shrink: 0; user-select: none; min-width: 72px;
+}
+.dor-item:hover .dor-num { color: rgba(41,179,147,.15); }
+.inline-highlight {
+  display: inline-block; background: rgba(41,179,147,.08);
+  border: 1px solid rgba(41,179,147,.15); color: #29B393;
+  padding: 1px 8px; border-radius: 6px; font-size: .85em;
+}
+
+/* Trial benefits list */
+.trial-item {
+  display: flex; align-items: flex-start; gap: 12px; padding: 10px 0;
+}
+.trial-check {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(41,179,147,.15); border: 1px solid rgba(41,179,147,.3);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+
+/* Form glassmorphism */
+.form-card {
+  position: relative; background: rgba(17,24,39,.7);
+  backdrop-filter: blur(20px); border-radius: 24px; padding: 40px; overflow: hidden;
+}
+.form-card::before {
+  content: ''; position: absolute; inset: 0; border-radius: 24px; padding: 1px;
+  background: linear-gradient(135deg, rgba(41,179,147,.4), rgba(41,179,147,.05) 50%, rgba(41,179,147,.15));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+}
+.form-card::after {
+  content: ''; position: absolute; top: -120px; right: -80px; z-index: 0;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(41,179,147,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.field-wrap { position: relative; margin-bottom: 12px; }
+.field-icon {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+  color: rgba(255,255,255,.2); font-size: 14px; pointer-events: none; transition: color .2s;
+}
+.field-wrap:focus-within .field-icon { color: #29B393; }
+.form-field {
+  width: 100%; background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08); color: #fff; border-radius: 10px;
+  padding: 13px 14px 13px 38px; font-family: 'Open Sans', sans-serif;
+  font-size: .9rem; transition: all .2s; appearance: none;
+}
+.form-field::placeholder { color: rgba(255,255,255,.25); }
+.form-field:focus {
+  outline: none; border-color: rgba(41,179,147,.5);
+  background: rgba(41,179,147,.04); box-shadow: 0 0 0 3px rgba(41,179,147,.08);
+}
+select.form-field option { background: #111827; }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+
+/* Exit popup */
+#exit-popup {
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(0,0,0,.7); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px; opacity: 0; pointer-events: none; transition: opacity .3s;
+}
+#exit-popup.show { opacity: 1; pointer-events: all; }
+#exit-popup .popup-box {
+  background: #111827; border: 1px solid rgba(41,179,147,.25);
+  border-radius: 24px; padding: 40px 36px; max-width: 440px; width: 100%;
+  position: relative;
+  animation: popIn .35s ease both;
+}
+#exit-popup .popup-close {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(255,255,255,.06); border: none; color: rgba(255,255,255,.4);
+  width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 16px;
+  display: flex; align-items: center; justify-content: center; transition: all .2s;
+}
+#exit-popup .popup-close:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+@media (max-width: 768px) {
+  .dor-num { font-size: 3rem !important; min-width: 52px !important; }
+  .metric-float { display: none; }
+  .form-2col { grid-template-columns: 1fr !important; }
+  .solucao-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .steps-grid { grid-template-columns: 1fr !important; }
+  .feat-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 480px) {
+  .feat-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ──────────────────────────────────────────────────────────────── -->
+<header class="fixed top-0 left-0 right-0 z-50" style="background:rgba(11,18,32,.8);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.05);">
+  <div class="max-w-6xl mx-auto px-6 h-[60px] flex items-center justify-between">
+    <a href="#" class="flex-shrink-0">
+      <img src="imagens/logo.png" alt="Holdprint" style="height:26px;">
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-white/50 font-medium">
+      <a href="#como-funciona" class="hover:text-white transition">Como funciona</a>
+      <a href="#solucao" class="hover:text-white transition">Funcionalidades</a>
+    </nav>
+    <a href="#form" class="btn-cta text-sm py-2.5 px-5">Testar grátis</a>
+  </div>
+</header>
+
+<!-- ── HERO ──────────────────────────────────────────────────────────────── -->
+<section class="relative min-h-screen flex items-center dot-grid pt-[60px]" style="background:#0B1220;">
+  <div class="hero-mesh"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 w-full grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
+
+    <!-- LEFT -->
+    <div>
+      <div class="badge-pill mb-8" style="animation:fadeUp .5s ease both;">
+        <span style="width:6px;height:6px;border-radius:50%;background:#29B393;animation:pulse 2s infinite;display:block;"></span>
+        Software para Comunicação Visual
+      </div>
+
+      <h1 style="font-size:clamp(2.2rem,4vw,3.2rem);font-weight:700;line-height:1.08;letter-spacing:-.02em;margin-bottom:24px;animation:fadeUp .6s .1s both;">
+        Você precifica<br>
+        letra caixa, ACM<br>
+        e envelopamento<br>
+        <span class="text-gradient">no achismo?</span>
+      </h1>
+
+      <p style="color:rgba(255,255,255,.55);font-size:1.05rem;line-height:1.7;max-width:420px;margin-bottom:36px;animation:fadeUp .6s .2s both;">
+        O Holdprint calcula o custo real de cada job de CV —
+        orçamento preciso, margem garantida, produção sem caos.
+      </p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .3s both;">
+        <a href="#form" class="btn-cta">
+          Quero testar grátis por 7 dias
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+        <a href="https://holdprint.net" target="_blank" class="btn-ghost">Ver o sistema</a>
+      </div>
+      <p style="margin-top:14px;color:rgba(255,255,255,.25);font-size:.8rem;animation:fadeUp .6s .4s both;">
+        7 dias de acesso completo
+      </p>
+    </div>
+
+    <!-- RIGHT — dashboard + floating cards -->
+    <div class="relative" style="animation:fadeUp .7s .2s both;">
+      <div style="position:absolute;inset:-30px;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(41,179,147,.1),transparent);border-radius:32px;pointer-events:none;"></div>
+      <img src="imagens/laptop.webp"
+           alt="Dashboard Holdprint"
+           style="position:relative;width:100%;border-radius:20px;border:1px solid rgba(255,255,255,.07);box-shadow:0 32px 64px rgba(0,0,0,.5);">
+
+      <div class="metric-float" style="bottom:-18px;left:10%;box-shadow:0 8px 32px rgba(0,0,0,.4);">
+        <div style="font-size:.65rem;color:rgba(255,255,255,.4);margin-bottom:4px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;">Orçamento gerado</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:800;color:#29B393;">5 min</div>
+        <div style="font-size:.65rem;color:rgba(255,255,255,.3);">antes: 1h na planilha</div>
+      </div>
+
+      <div class="metric-float metric-float-2" style="top:10%;right:-16px;box-shadow:0 8px 32px rgba(0,0,0,.4);">
+        <div style="font-size:.65rem;color:rgba(255,255,255,.4);margin-bottom:4px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;">Margem real</div>
+        <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:800;color:#fff;">por serviço</div>
+        <div style="display:flex;align-items:center;gap:4px;margin-top:2px;">
+          <i class="fa-solid fa-arrow-trend-up" style="color:#29B393;font-size:.7rem;"></i>
+          <span style="font-size:.65rem;color:#29B393;font-weight:700;">Visível</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── MARQUEE ────────────────────────────────────────────────────────────── -->
+<div style="background:rgba(255,255,255,.025);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);padding:18px 0;">
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="marquee-dot"></span>Orçamento em 5 minutos</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Precificação por IA</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Margem real por serviço</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Ordem de produção integrada</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Controle de prazos</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Financeiro integrado</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>7 dias grátis</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>7 dias grátis</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Orçamento em 5 minutos</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Precificação por IA</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Margem real por serviço</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Ordem de produção integrada</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Controle de prazos</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Financeiro integrado</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>7 dias grátis</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>7 dias grátis</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── COMO FUNCIONA ──────────────────────────────────────────────────────── -->
+<section id="como-funciona" style="padding:100px 24px;">
+  <div style="max-width:1000px;margin:0 auto;">
+
+    <div class="reveal" style="text-align:center;margin-bottom:64px;">
+      <div class="badge-pill" style="margin-bottom:16px;">Como funciona</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;">
+        Do orçamento à entrega,<br>tudo em um lugar
+      </h2>
+      <p style="color:rgba(255,255,255,.4);font-size:.95rem;max-width:480px;margin:0 auto;line-height:1.7;">
+        Três etapas simples que substituem planilhas, cadernos e WhatsApp espalhado.
+      </p>
+    </div>
+
+    <div class="steps-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <div style="width:44px;height:44px;border-radius:12px;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-sliders" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:1.1rem;margin-bottom:10px;line-height:1.3;">Materiais já cadastrados</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.875rem;line-height:1.7;">
+          ACM, vinil, letra caixa e mais — materiais já vêm cadastrados. Pronto para usar desde o primeiro acesso.
+        </p>
+      </div>
+
+      <div class="step-card reveal reveal-delay-1" style="position:relative;">
+        <!-- connector arrow left -->
+        <div class="hidden lg:block" style="position:absolute;left:-14px;top:50%;transform:translateY(-50%);color:rgba(41,179,147,.25);font-size:.9rem;">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="step-num">02</div>
+        <div style="width:44px;height:44px;border-radius:12px;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-calculator" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:1.1rem;margin-bottom:10px;line-height:1.3;">Crie orçamentos em minutos</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.875rem;line-height:1.7;">
+          Informe as medidas — o sistema calcula o preço com margem embutida. Sem planilha, sem estimativa no feeling.
+        </p>
+      </div>
+
+      <div class="step-card reveal reveal-delay-2" style="position:relative;">
+        <!-- connector arrow left -->
+        <div class="hidden lg:block" style="position:absolute;left:-14px;top:50%;transform:translateY(-50%);color:rgba(41,179,147,.25);font-size:.9rem;">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="step-num">03</div>
+        <div style="width:44px;height:44px;border-radius:12px;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <i class="fa-solid fa-truck-fast" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:1.1rem;margin-bottom:10px;line-height:1.3;">Acompanhe do job à entrega</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.875rem;line-height:1.7;">
+          Aprovado o orçamento, vira ordem de produção. Status, prazo e responsável de cada job visíveis em tempo real.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="reveal" style="text-align:center;margin-top:48px;">
+      <a href="#form" class="btn-cta">
+        Ver como funciona na prática
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── DORES ──────────────────────────────────────────────────────────────── -->
+<section id="dores" style="padding:100px 24px;background:rgba(255,255,255,.012);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);">
+  <div style="max-width:860px;margin:0 auto;">
+
+    <div class="reveal" style="text-align:center;margin-bottom:64px;">
+      <div class="badge-pill" style="margin-bottom:16px;">O que trava sua empresa</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.15;letter-spacing:-.02em;">
+        Você já passou por alguma<br>dessas situações?
+      </h2>
+    </div>
+
+    <div style="padding-left:24px;border-left:1px solid rgba(255,255,255,.06);">
+
+      <div class="dor-item reveal">
+        <div class="dor-num">01</div>
+        <div>
+          <h3 style="font-size:1.3rem;margin-bottom:10px;line-height:1.3;">
+            Quando te pedem um orçamento,<br>
+            <span style="color:#f87171;">você sabe exatamente quanto cobrar?</span>
+          </h3>
+          <p style="color:rgba(255,255,255,.4);font-size:.92rem;line-height:1.75;max-width:540px;">
+            Letra caixa, envelopamento, ACM — cada job é uma conta diferente feita na hora,
+            sem base, sem histórico. Às vezes você acerta, às vezes cobra errado e só descobre no fim do mês
+            quando o lucro sumiu.
+          </p>
+        </div>
+      </div>
+
+      <div class="dor-item reveal reveal-delay-1">
+        <div class="dor-num">02</div>
+        <div>
+          <h3 style="font-size:1.3rem;margin-bottom:10px;line-height:1.3;">
+            Preço certo —
+            <span style="color:#fbbf24;">mas não sobra nada no fim do mês</span>
+          </h3>
+          <p style="color:rgba(255,255,255,.4);font-size:.92rem;line-height:1.75;max-width:540px;">
+            Você cobrou o que achava justo, entregou o job, fechou o mês — e o saldo não bate.
+            Material, retrabalho, hora desperdiçada: tudo foi embora porque o custo real nunca foi calculado direito.
+            Quem precifica com método <span class="inline-highlight">cobra R$6k num envelopamento</span> sem hesitar.
+            Quem precifica no feeling perde margem todo mês.
+          </p>
+        </div>
+      </div>
+
+      <div class="dor-item reveal reveal-delay-2" style="border-bottom:none;">
+        <div class="dor-num">03</div>
+        <div>
+          <h3 style="font-size:1.3rem;margin-bottom:10px;line-height:1.3;">
+            Já ficou com medo de
+            <span style="color:#fb923c;">perder algum prazo?</span>
+          </h3>
+          <p style="color:rgba(255,255,255,.4);font-size:.92rem;line-height:1.75;max-width:540px;">
+            Jobs espalhados em WhatsApp, caderno e memória. Sem visão de quem está fazendo o quê,
+            você só descobre que atrasou quando o cliente já está na porta.
+            E cada entrega virada é um cliente que não volta.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SOLUÇÃO ────────────────────────────────────────────────────────────── -->
+<section id="solucao" style="padding:100px 24px;">
+  <div style="max-width:1000px;margin:0 auto;">
+
+    <div class="reveal" style="text-align:center;margin-bottom:56px;">
+      <div class="badge-pill" style="margin-bottom:16px;">Como o Holdprint resolve</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;">
+        Gestão integrada do orçamento à entrega
+      </h2>
+      <p style="color:rgba(255,255,255,.4);font-size:.95rem;max-width:500px;margin:0 auto;line-height:1.7;">
+        Seis módulos que trabalham juntos para você parar de perder dinheiro em precificação e prazo.
+      </p>
+    </div>
+
+    <!-- Feature cards 3×2 -->
+    <div class="feat-grid reveal" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:40px;">
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-calculator" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Precificação por IA</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
+          Custo por m², ml e unidade calculado automaticamente para letra caixa, ACM, adesivo, envelopamento e mais.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-clipboard-list" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Ordem de produção</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
+          Do orçamento aprovado à OP em um clique. Sem digitação dupla, sem margem para erro.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-eye" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Status em tempo real</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
+          Visualize o andamento de cada job, prazo e responsável. Nunca mais "cadê aquele serviço?".
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-chart-line" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Financeiro integrado</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
+          Margem real por projeto, não só a receita bruta. Sabe exatamente quanto sobrou em cada serviço.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-clock-rotate-left" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Histórico de orçamentos</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
+          Consulte orçamentos anteriores e nunca mais cobre abaixo do custo por falta de referência.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon">
+          <i class="fa-solid fa-users" style="color:#29B393;font-size:18px;"></i>
+        </div>
+        <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Multi-usuário</h3>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
+          Cada colaborador acessa o que precisa. Vendedor vê orçamentos, produção vê OPs — sem conflito.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Dashboard image -->
+    <div class="reveal solucao-grid" style="display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center;margin-top:72px;">
+      <div>
+        <h3 style="font-size:1.4rem;font-weight:700;line-height:1.35;margin-bottom:16px;letter-spacing:-.015em;">
+          Tudo integrado.<br>
+          <span class="text-gradient">Nada de planilha.</span>
+        </h3>
+        <p style="color:rgba(255,255,255,.45);font-size:.9rem;line-height:1.75;margin-bottom:28px;">
+          Do pedido do cliente à entrega final, o Holdprint conecta orçamento, produção e financeiro
+          sem nenhuma digitação dupla.
+        </p>
+        <a href="#form" class="btn-cta">
+          Começar agora — grátis
+          <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+      <div style="position:relative;">
+        <div style="position:absolute;inset:-20px;background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(41,179,147,.07),transparent);border-radius:32px;pointer-events:none;"></div>
+        <img src="imagens/dashboard.webp"
+             alt="Dashboard Holdprint"
+             style="position:relative;width:100%;border-radius:20px;border:1px solid rgba(255,255,255,.07);box-shadow:0 24px 60px rgba(0,0,0,.5);">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FORM ───────────────────────────────────────────────────────────────── -->
+<section id="form" style="padding:100px 24px;position:relative;overflow:hidden;background:rgba(255,255,255,.015);border-top:1px solid rgba(255,255,255,.05);">
+  <div style="position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:500px;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(41,179,147,.06),transparent);pointer-events:none;"></div>
+
+  <div style="max-width:900px;margin:0 auto;position:relative;z-index:1;">
+
+    <div class="reveal" style="text-align:center;margin-bottom:56px;">
+      <div class="badge-pill" style="margin-bottom:16px;">Teste grátis por 7 dias</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px;">
+        Pronto para precificar<br>com método?
+      </h2>
+      <p style="color:rgba(255,255,255,.4);font-size:.95rem;max-width:440px;margin:0 auto;line-height:1.7;">
+        Teste completo por 7 dias, cancela quando quiser.
+      </p>
+    </div>
+
+    <!-- 2-col: benefits + form -->
+    <div class="form-2col reveal" style="display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start;">
+
+      <!-- LEFT: trial benefits -->
+      <div style="padding-top:8px;">
+        <h3 style="font-size:1.15rem;font-weight:800;margin-bottom:24px;letter-spacing:-.01em;">
+          No teste você acessa:
+        </h3>
+
+        <div class="trial-item">
+          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div>
+            <span style="font-size:.9rem;font-weight:600;">Precificação por IA completa</span>
+            <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Letra caixa, ACM, adesivo, envelopamento e todos os materiais</p>
+          </div>
+        </div>
+
+        <div class="trial-item">
+          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div>
+            <span style="font-size:.9rem;font-weight:600;">Orçamentos ilimitados</span>
+            <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Crie, envie e acompanhe todos os seus orçamentos</p>
+          </div>
+        </div>
+
+        <div class="trial-item">
+          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div>
+            <span style="font-size:.9rem;font-weight:600;">Ordens de produção</span>
+            <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Do orçamento aprovado à OP em um clique</p>
+          </div>
+        </div>
+
+        <div class="trial-item">
+          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div>
+            <span style="font-size:.9rem;font-weight:600;">Painel financeiro</span>
+            <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Margem real por serviço e visão do mês</p>
+          </div>
+        </div>
+
+        <div class="trial-item">
+          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div>
+            <span style="font-size:.9rem;font-weight:600;">Suporte direto com a equipe</span>
+            <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Onboarding via WhatsApp para você começar rápido</p>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;padding:16px;background:rgba(41,179,147,.06);border:1px solid rgba(41,179,147,.15);border-radius:12px;">
+          <p style="color:rgba(255,255,255,.5);font-size:.82rem;line-height:1.6;">
+            <i class="fa-solid fa-lock" style="color:#29B393;margin-right:6px;font-size:.75rem;"></i>
+            Seus dados estão seguros. Você cancela quando quiser, sem burocracia.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="form-card">
+        <div style="position:relative;z-index:1;">
+          <div style="text-align:center;margin-bottom:28px;">
+            <img src="imagens/logo.png"
+                 alt="Holdprint" style="height:22px;margin:0 auto 16px;">
+            <p style="color:rgba(255,255,255,.35);font-size:.82rem;">Preencha e receba o acesso em instantes</p>
+          </div>
+
+          <form id="lead-form" action="https://formsubmit.co/ATIVAR_EMAIL_HOLDPRINT" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Novo lead — Holdprint LP">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://holdprint.net/obrigado">
+            <input type="hidden" name="utm_source"   id="utm_source">
+            <input type="hidden" name="utm_medium"   id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+            <input type="hidden" name="utm_content"  id="utm_content">
+            <input type="hidden" name="utm_term"     id="utm_term">
+
+            <div class="field-wrap">
+              <i class="fa-regular fa-user field-icon"></i>
+              <input type="text" name="nome" placeholder="Seu nome" class="form-field" required>
+            </div>
+            <div class="field-wrap">
+              <i class="fa-regular fa-envelope field-icon"></i>
+              <input type="email" name="email" placeholder="Seu melhor e-mail" class="form-field" required>
+            </div>
+            <div class="field-wrap">
+              <i class="fa-regular fa-building field-icon"></i>
+              <input type="text" name="empresa" placeholder="Nome da empresa" class="form-field" required>
+            </div>
+            <div class="field-wrap">
+              <i class="fa-solid fa-phone field-icon" style="font-size:12px;"></i>
+              <input type="tel" name="telefone" placeholder="(00) 9 0000-0000" class="form-field" required>
+            </div>
+            <div class="field-wrap">
+              <i class="fa-solid fa-desktop field-icon" style="font-size:12px;"></i>
+              <input type="text" name="sistema_atual" placeholder="Qual sistema usa hoje?" class="form-field" required>
+            </div>
+            <div class="field-wrap" style="margin-bottom:20px;">
+              <i class="fa-solid fa-chart-bar field-icon" style="font-size:12px;"></i>
+              <select name="faturamento" class="form-field" required>
+                <option value="">Faturamento mensal</option>
+                <option value="Até R$30.000">Até R$ 30.000</option>
+                <option value="R$30.000 a R$50.000">R$ 30.000 a R$ 50.000</option>
+                <option value="R$50.000 a R$200.000">R$ 50.000 a R$ 200.000</option>
+                <option value="R$200.000 a R$500.000">R$ 200.000 a R$ 500.000</option>
+                <option value="+R$500.000">Acima de R$ 500.000</option>
+              </select>
+            </div>
+
+            <button type="submit" id="btn-submit" class="btn-cta" style="width:100%;justify-content:center;padding:16px;font-size:1rem;">
+              Quero testar grátis
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </form>
+
+          <div id="form-sucesso" style="display:none;text-align:center;padding:40px 0;">
+            <div style="width:56px;height:56px;border-radius:50%;background:rgba(41,179,147,.15);border:1px solid rgba(41,179,147,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+              <i class="fa-solid fa-check" style="color:#29B393;font-size:1.3rem;"></i>
+            </div>
+            <h3 style="font-size:1.3rem;margin-bottom:8px;">Cadastro recebido!</h3>
+            <p style="color:rgba(255,255,255,.4);font-size:.88rem;">Nossa equipe entrará em contato em breve para liberar seu acesso.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────────── -->
+<footer style="border-top:1px solid rgba(255,255,255,.05);padding:28px 24px;">
+  <div style="max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+    <img src="imagens/logo.png" alt="Holdprint" style="height:22px;opacity:.5;">
+    <p style="color:rgba(255,255,255,.2);font-size:.78rem;text-align:center;">
+      © 2026 Holdprint.
+      <a href="https://holdprint.net/politica-de-privacidade" target="_blank" style="color:rgba(255,255,255,.3);text-decoration:none;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.3)'">Política de Privacidade</a>
+    </p>
+    <div style="display:flex;gap:16px;">
+      <a href="https://www.instagram.com/holdprintbrasil/" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.facebook.com/holdprint" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/holdprintbrasil" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── EXIT INTENT POPUP ──────────────────────────────────────────────────── -->
+<div id="exit-popup">
+  <div class="popup-box">
+    <button class="popup-close" id="popup-close" aria-label="Fechar">×</button>
+
+    <div style="text-align:center;margin-bottom:28px;">
+      <div style="width:52px;height:52px;border-radius:50%;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+        <i class="fa-solid fa-gift" style="color:#29B393;font-size:1.2rem;"></i>
+      </div>
+      <h3 style="font-size:1.4rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;">
+        Espera — 7 dias grátis ainda<br>estão disponíveis
+      </h3>
+      <p style="color:rgba(255,255,255,.4);font-size:.88rem;line-height:1.65;max-width:320px;margin:0 auto;">
+        Antes de ir, teste o Holdprint sem compromisso. 7 dias grátis.
+      </p>
+    </div>
+
+    <a href="#form" id="popup-cta" class="btn-cta" style="width:100%;justify-content:center;padding:14px;">
+      Quero testar grátis agora
+      <i class="fa-solid fa-arrow-right text-xs"></i>
+    </a>
+
+    <button id="popup-dismiss" style="width:100%;margin-top:12px;background:none;border:none;color:rgba(255,255,255,.25);font-size:.8rem;cursor:pointer;padding:8px;transition:color .2s;"
+            onmouseover="this.style.color='rgba(255,255,255,.5)'" onmouseout="this.style.color='rgba(255,255,255,.25)'">
+      Não, prefiro continuar sem
+    </button>
+  </div>
+</div>
+
+<script>
+// UTM passthrough
+(function() {
+  const p = new URLSearchParams(window.location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => {
+    const el = document.getElementById(k);
+    if (el && p.get(k)) el.value = p.get(k);
+  });
+})();
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Form submit
+const form = document.getElementById('lead-form');
+const btn  = document.getElementById('btn-submit');
+const ok   = document.getElementById('form-sucesso');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+  try {
+    await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+    form.style.display = 'none';
+    ok.style.display = 'block';
+    if (window.dataLayer) dataLayer.push({ event: 'lead_form_submit' });
+    // fbq('track', 'Lead');
+    // gtag('event', 'conversion', { send_to: 'AW-CONVERSION_ID/LABEL' });
+  } catch {
+    btn.disabled = false;
+    btn.innerHTML = 'Tentar novamente <i class="fa-solid fa-arrow-right text-xs"></i>';
+  }
+});
+
+// WhatsApp tracking
+document.querySelectorAll('[data-action="whatsapp"]').forEach(el => {
+  el.addEventListener('click', () => {
+    if (window.dataLayer) dataLayer.push({ event: 'whatsapp_click', location: el.dataset.location });
+  });
+});
+
+// Exit intent popup
+(function() {
+  const popup = document.getElementById('exit-popup');
+  const close = document.getElementById('popup-close');
+  const dismiss = document.getElementById('popup-dismiss');
+  const cta = document.getElementById('popup-cta');
+  let shown = false;
+
+  function showPopup() {
+    if (shown || sessionStorage.getItem('hp_popup_shown')) return;
+    shown = true;
+    sessionStorage.setItem('hp_popup_shown', '1');
+    popup.classList.add('show');
+    if (window.dataLayer) dataLayer.push({ event: 'exit_intent_show' });
+  }
+
+  function hidePopup() {
+    popup.classList.remove('show');
+  }
+
+  document.addEventListener('mouseleave', (e) => {
+    if (e.clientY < 20) showPopup();
+  });
+
+  close.addEventListener('click', hidePopup);
+  dismiss.addEventListener('click', hidePopup);
+  popup.addEventListener('click', (e) => { if (e.target === popup) hidePopup(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hidePopup(); });
+
+  cta.addEventListener('click', () => {
+    hidePopup();
+    // small delay so popup closes before scroll
+    setTimeout(() => document.getElementById('form').scrollIntoView({ behavior: 'smooth' }), 150);
+  });
+})();
+</script>
+</body>
+</html>
