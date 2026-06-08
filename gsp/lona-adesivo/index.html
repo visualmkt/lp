@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impressão em Lona e Adesivo em Osasco | GSP Print</title>
-<meta name="description" content="Gráfica local com produção própria em Osasco. Lona para fachada, lona com ilhos, adesivo para vitrine e adesivo para fachada de loja. Entrega rápida na Zona Oeste SP.">
+<title>Impressão em Lona e Adesivo para Fachada | GSP Print</title>
+<meta name="description" content="Comunicação visual com produção própria em São Paulo. Impressão em lona para fachada, lona com ilhos, adesivo para vitrine e adesivo para fachada de loja. Atendemos Grande São Paulo.">
 <meta name="theme-color" content="#22C55E">
 
 <!-- PADRÃO OPÇÃO B — Shell + config.json remoto
@@ -157,11 +157,8 @@ function render(c) {
 
 <section id="hero" class="text-white py-16 md:py-28" style="background:${heroBg}">
   <div class="max-w-6xl mx-auto px-4 text-center">
-    <span class="inline-block bg-white/20 backdrop-blur px-4 py-1 rounded-full text-sm font-semibold mb-5">
-      <i class="fa-solid fa-location-dot"></i> ${c.hero.badge}
-    </span>
     <h1 class="font-black text-4xl md:text-6xl leading-tight mb-5">
-      ${c.hero.h1Pre}<br><span class="underline decoration-white/60">${c.hero.h1Highlight}</span> ${c.hero.h1Pos}
+      ${c.hero.h1Pre} <span class="underline decoration-white/60">${c.hero.h1Highlight}</span> ${c.hero.h1Pos}
     </h1>
     <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto opacity-95">${c.hero.subtitle}</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
@@ -287,7 +284,7 @@ function render(c) {
           <i class="fa-solid fa-map text-brand text-2xl mt-1"></i>
           <div>
             <p class="font-bold">Área de atendimento</p>
-            <p>${c.address.areaServed.join(' · ')}</p>
+            <p>Grande São Paulo e região</p>
           </div>
         </div>
       </div>
@@ -311,7 +308,7 @@ function render(c) {
     </div>
     <div>
       <h4 class="text-white font-bold mb-3">Contato</h4>
-      <p class="text-sm">${c.address.neighborhood} — ${c.address.city}/${c.address.state}</p>
+      <p class="text-sm">${c.address.city}/${c.address.state}</p>
       <p class="text-sm mt-2">${c.contact.whatsappDisplay}</p>
       <div class="flex gap-3 mt-4 text-2xl">
         <a href="${waUrl(c)}" target="_blank" rel="noopener" data-action="whatsapp" data-location="footer" class="hover:text-brand"><i class="fa-brands fa-whatsapp"></i></a>
