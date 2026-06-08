@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "Impressão em Lona e Adesivo em Osasco | GSP Print — Zona Oeste SP",
+    "description": "Gráfica local com produção própria em Osasco. Impressão em lona para fachada, lona com ilhos, adesivo para vitrine e adesivo para fachada de loja. Entrega rápida em Barueri, Osasco, Embu e Itapecerica da Serra.",
+    "keywords": "impressão em lona, lona para fachada, lona com ilhos, adesivo vitrine, adesivo fachada, adesivo para loja, impressão digital em lona, adesivos personalizados, gráfica osasco, fachada de lona, adesivo pdv",
+    "ogImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80"
+  },
+  "brand": {
+    "primary": "#22C55E",
+    "dark": "#16A34A",
+    "light": "#F0FDF4",
+    "logo": "https://gsp3dprint.com.br/wp-content/uploads/2024/01/853042b8-3736-4446-ae46-290758d7a462-removebg-preview-1.png",
+    "logoFooter": "https://gsp3dprint.com.br/wp-content/uploads/2024/01/853042b8-3736-4446-ae46-290758d7a462-removebg-preview-1.png"
+  },
+  "contact": {
+    "phoneDisplay": "(11) 99305-1704",
+    "phoneTel": "+5511993051704",
+    "whatsapp": "5511993051704",
+    "whatsappDisplay": "(11) 99305-1704",
+    "whatsappMsg": "Olá, quero um orçamento de impressão em lona e adesivo",
+    "email": "",
+    "instagram": "#",
+    "facebook": "#"
+  },
+  "address": {
+    "street": "São Paulo",
+    "neighborhood": "Zona Oeste",
+    "city": "São Paulo",
+    "state": "SP",
+    "zip": "",
+    "hours": "Segunda a sexta · 08h às 17h",
+    "schemaHours": "Mo-Fr 08:00-17:00",
+    "areaServed": ["Osasco", "Barueri", "Embu das Artes", "Itapecerica da Serra", "São Paulo", "Grande São Paulo"]
+  },
+  "hero": {
+    "badge": "Osasco · Barueri · Embu · Itapecerica — Zona Oeste SP",
+    "h1Pre": "Impressão em Lona e Adesivo",
+    "h1Highlight": "com produção própria",
+    "h1Pos": "e entrega rápida em Osasco e região.",
+    "subtitle": "Gráfica local na Zona Oeste. Lona para fachada, backdrop e eventos. Adesivo para vitrine, PDV e comunicação visual da sua loja.",
+    "ctaPrimary": "Solicitar Orçamento Agora",
+    "ctaSecondary": "Ver Serviços",
+    "bgImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80",
+    "hiddenSeo": "Impressão em lona Osasco, lona para fachada Barueri, adesivo vitrine Osasco, adesivo para fachada de loja, impressão digital em lona SP, lona com ilhos, adesivo PDV, adesivos personalizados Zona Oeste, fachada de lona, backdrop, gráfica Osasco, gráfica Barueri."
+  },
+  "trust": [
+    { "icon": "fa-industry",       "title": "Produção Própria",        "subtitle": "Fábrica na Zona Oeste SP" },
+    { "icon": "fa-bolt",           "title": "Entrega Rápida",           "subtitle": "Osasco e região" },
+    { "icon": "fa-location-dot",   "title": "Gráfica Local",            "subtitle": "Barueri, Osasco, Embu" },
+    { "icon": "fa-comments",       "title": "Atendimento Direto",        "subtitle": "Resposta no WhatsApp" }
+  ],
+  "productsSection": {
+    "kicker": "O que produzimos para a sua empresa",
+    "title": "Lona e Adesivo",
+    "titleSub": "que destacam sua marca.",
+    "subtitle": "Impressão de alta qualidade, material durável e entrega ágil. Atendemos lojas, empresas e eventos em toda a Zona Oeste de São Paulo."
+  },
+  "products": [
+    {
+      "img": "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=600&q=80",
+      "title": "Impressão em Lona",
+      "desc": "Lona para fachada de loja, eventos e sinalização externa. Alta resolução, cores vivas e material resistente ao sol e à chuva.",
+      "cta": "Orçamento de Lona",
+      "slug": "lona-impressao",
+      "msg": "Quero orçamento de Impressão em Lona"
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80",
+      "title": "Lona com Ilhos",
+      "desc": "Lona sob medida com ilhos de metal para fixação em fachadas, tendas e estruturas. Acabamento profissional e durabilidade garantida.",
+      "cta": "Orçamento de Lona com Ilhos",
+      "slug": "lona-ilhos",
+      "msg": "Quero orçamento de Lona com Ilhos"
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600&q=80",
+      "title": "Adesivo Para Vitrine",
+      "desc": "Vinil impresso para vitrine, promoções e identidade visual da loja. Aplicação limpa, remoção sem dano ao vidro.",
+      "cta": "Orçamento de Adesivo Vitrine",
+      "slug": "adesivo-vitrine",
+      "msg": "Quero orçamento de Adesivo para Vitrine"
+    },
+    {
+      "img": "https://images.unsplash.com/photo-1621976360917-54a556a7b83c?w=600&q=80",
+      "title": "Adesivo Para Fachada",
+      "desc": "Adesivo de vinil personalizado para fachada de loja, PDV e comunicação visual externa. Resistente ao clima, cores duradouras.",
+      "cta": "Orçamento de Adesivo Fachada",
+      "slug": "adesivo-fachada",
+      "msg": "Quero orçamento de Adesivo para Fachada"
+    }
+  ],
+  "authority": {
+    "kicker": "Por que a GSP Print",
+    "title": "Gráfica local com produção própria.",
+    "titleSub": "Do arquivo ao produto final.",
+    "items": [
+      "Impressão digital de grande formato em lona e vinil",
+      "Produção própria na Zona Oeste — sem intermediários",
+      "Entrega rápida para Osasco, Barueri, Embu e Itapecerica",
+      "Atendimento direto pelo WhatsApp com resposta ágil",
+      "Qualidade, precisão e compromisso com o prazo"
+    ],
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    "cta": "Falar com Especialista"
+  },
+  "gallery": {
+    "kicker": "Portfólio",
+    "title": "Trabalhos em destaque",
+    "subtitle": "",
+    "images": [
+      "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=400&q=75",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&q=75",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=75",
+      "https://images.unsplash.com/photo-1621976360917-54a556a7b83c?w=400&q=75",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=75",
+      "https://images.unsplash.com/photo-1569230919100-d3fd5e1132f4?w=400&q=75",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=75",
+      "https://images.unsplash.com/photo-1520085601670-ee14aa5fa3e8?w=400&q=75"
+    ]
+  },
+  "ctaFinal": {
+    "title": "Precisa de lona ou adesivo para a sua loja?",
+    "subtitle": "Mande o briefing pelo WhatsApp e receba o orçamento ainda hoje. Gráfica local, entrega rápida, produção própria.",
+    "ctaPrimary": "Solicitar Orçamento Agora"
+  },
+  "footer": {
+    "tagline": "Gráfica com produção própria na Zona Oeste de São Paulo. Impressão em lona, adesivos e comunicação visual para lojas e empresas em Osasco, Barueri, Embu e região.",
+    "linksTitle": "Serviços",
+    "links": [
+      "Impressão em Lona",
+      "Lona com Ilhos",
+      "Adesivo para Vitrine",
+      "Adesivo para Fachada",
+      "Lona para Backdrop",
+      "Comunicação Visual"
+    ],
+    "copyright": "© GSP Print — Gráfica e Comunicação Visual na Zona Oeste de SP"
+  },
+  "exitPopup": {
+    "title": "Antes de sair…",
+    "subtitle": "Receba um orçamento de lona ou adesivo no WhatsApp em poucos minutos.",
+    "cta": "Pedir Orçamento Agora",
+    "msg": "Quero o orçamento especial de lona e adesivo"
+  },
+  "tracking": {
+    "gtm": "",
+    "gtag": "",
+    "metaPixel": ""
+  }
+}
