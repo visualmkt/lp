@@ -140,15 +140,15 @@ function render(c) {
 
   document.getElementById('app').innerHTML = `
 
-<header class="sticky top-0 z-40 bg-white shadow-sm">
+<header class="sticky top-0 z-40 shadow-md" style="background:#0F3460">
   <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
     <a href="#" class="flex items-center gap-3"><img src="${c.brand.logo}" alt="GSP Print" class="h-10 md:h-12"></a>
     <div class="flex items-center gap-2 md:gap-4">
-      <a href="tel:${c.contact.phoneTel}" class="hidden md:flex items-center gap-2 text-gray-700 font-semibold hover:text-brand">
+      <a href="tel:${c.contact.phoneTel}" class="hidden md:flex items-center gap-2 text-white/80 font-semibold hover:text-white">
         <i class="fa-solid fa-phone text-brand"></i> ${c.contact.phoneDisplay}
       </a>
       <a href="${waUrl(c)}" data-action="whatsapp" data-location="header" target="_blank" rel="noopener noreferrer"
-         class="bg-brand hover:bg-brand-dark text-white font-bold px-4 md:px-5 py-2 rounded-full text-sm md:text-base transition shadow">
+         class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-bold px-4 md:px-5 py-2 rounded-full text-sm md:text-base transition shadow">
         <i class="fa-brands fa-whatsapp"></i> Orçamento
       </a>
     </div>
@@ -210,7 +210,7 @@ function render(c) {
   </div>
 </section>
 
-<section class="bg-slate-900 text-white py-20">
+<section class="text-white py-20" style="background:#0F3460">
   <div class="max-w-7xl mx-auto px-4 ${c.authority.image ? 'grid md:grid-cols-2 gap-12 items-center' : 'max-w-3xl'}">
     <div>
       <span class="text-brand font-bold uppercase tracking-wider text-sm">${c.authority.kicker}</span>
@@ -243,16 +243,16 @@ ${c.gallery.images && c.gallery.images.length ? `
   </div>
 </section>` : ''}
 
-<section class="py-20 bg-brand text-white">
+<section class="py-20 text-white" style="background: linear-gradient(135deg, #0F3460 0%, #1a4a7a 60%, #16A34A 100%)">
   <div class="max-w-4xl mx-auto px-4 text-center">
     <h2 class="font-black text-3xl md:text-5xl mb-5">${c.ctaFinal.title}</h2>
-    <p class="text-xl mb-8 opacity-95">${c.ctaFinal.subtitle}</p>
-    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+    <p class="text-lg md:text-xl mb-8 text-white/80">${c.ctaFinal.subtitle}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a href="${waUrl(c)}" data-action="whatsapp" data-location="cta-final" target="_blank" rel="noopener noreferrer"
-         class="bg-white text-gray-900 font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition text-lg">
-        <i class="fa-brands fa-whatsapp text-2xl align-middle"></i> ${c.ctaFinal.ctaPrimary}
+         class="inline-flex items-center gap-3 bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all text-lg">
+        <i class="fa-brands fa-whatsapp text-xl"></i>${c.ctaFinal.ctaPrimary}
       </a>
-      <a href="tel:${c.contact.phoneTel}" class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition text-lg">
+      <a href="tel:${c.contact.phoneTel}" class="inline-flex items-center gap-3 border-2 border-white/70 text-white font-semibold px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition text-base">
         <i class="fa-solid fa-phone"></i> ${c.contact.phoneDisplay}
       </a>
     </div>
