@@ -57,7 +57,7 @@
   },
   "products": [
     {
-      "img": "https://ramodigital.com.br/wp-content/uploads/2022/10/ramo_digital_banner_produto_totens_1200x800px_01.jpg",
+      "icon": "fa-scroll",
       "title": "Impressão em Lona",
       "desc": "Lona para fachada de loja, eventos e sinalização externa. Alta resolução, cores vivas e material resistente ao sol e à chuva.",
       "cta": "Orçamento de Lona",
@@ -65,7 +65,7 @@
       "msg": "Quero orçamento de Impressão em Lona"
     },
     {
-      "img": "https://http2.mlstatic.com/D_NQ_NP_890908-MLB52555188552_112022-O.webp",
+      "icon": "fa-ring",
       "title": "Lona com Ilhos",
       "desc": "Lona sob medida com ilhos de metal para fixação em fachadas, tendas e estruturas. Acabamento profissional e durabilidade garantida.",
       "cta": "Orçamento de Lona com Ilhos",
@@ -73,7 +73,7 @@
       "msg": "Quero orçamento de Lona com Ilhos"
     },
     {
-      "img": "https://img.elo7.com.br/product/zoom/3BA6A85/placa-de-identificacao-de-sala-personalizada.jpg",
+      "icon": "fa-store",
       "title": "Adesivo Para Vitrine",
       "desc": "Vinil impresso para vitrine, promoções e identidade visual da loja. Aplicação limpa, remoção sem dano ao vidro.",
       "cta": "Orçamento de Adesivo Vitrine",
@@ -81,7 +81,7 @@
       "msg": "Quero orçamento de Adesivo para Vitrine"
     },
     {
-      "img": "https://static.wixstatic.com/media/55e50b_58185430fd4942fcb611bc5d80688f82~mv2.jpg",
+      "icon": "fa-building",
       "title": "Adesivo Para Fachada",
       "desc": "Adesivo de vinil personalizado para fachada de loja, PDV e comunicação visual externa. Resistente ao clima, cores duradouras.",
       "cta": "Orçamento de Adesivo Fachada",
@@ -100,23 +100,14 @@
       "Atendimento direto pelo WhatsApp com resposta rápida",
       "Qualidade, precisão e compromisso com o prazo"
     ],
-    "image": "https://phfcomunicacaovisual.com.br/wp-content/uploads/2025/01/letreiro-luminoso-philips-1024x1024.jpg",
+    "image": "",
     "cta": "Falar com Especialista"
   },
   "gallery": {
     "kicker": "Portfólio",
     "title": "Trabalhos em destaque",
-    "subtitle": "",
-    "images": [
-      "https://ramodigital.com.br/wp-content/uploads/2022/10/ramo_digital_banner_produto_totens_1200x800px_01.jpg",
-      "https://img.elo7.com.br/product/zoom/3BA6A85/placa-de-identificacao-de-sala-personalizada.jpg",
-      "https://static.wixstatic.com/media/55e50b_58185430fd4942fcb611bc5d80688f82~mv2.jpg",
-      "https://http2.mlstatic.com/D_NQ_NP_890908-MLB52555188552_112022-O.webp",
-      "https://phfcomunicacaovisual.com.br/wp-content/uploads/2025/01/letreiro-luminoso-philips-1024x1024.jpg",
-      "https://www.emplaca.com.br/img/works/placas-de-sinalizacao-seguranca-do-trabalho-02-grande.jpg",
-      "https://img.elo7.com.br/product/600x380/470B1AA/placa-de-comercio-frente-30x60-identificacao.jpg",
-      "https://http.mlstatic.com/D_NQ_NP_890908-MLB52555188552_112022-O.webp"
-    ]
+    "subtitle": "Fotos reais serão adicionadas em breve.",
+    "images": []
   },
   "ctaFinal": {
     "title": "Precisa de lona ou adesivo para a sua loja?",

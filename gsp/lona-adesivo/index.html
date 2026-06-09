@@ -161,12 +161,12 @@ function render(c) {
       ${c.hero.h1Pre} <span class="underline decoration-white/60">${c.hero.h1Highlight}</span> ${c.hero.h1Pos}
     </h1>
     <p class="text-lg md:text-2xl mb-8 max-w-3xl mx-auto opacity-95">${c.hero.subtitle}</p>
-    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a href="${waUrl(c)}" data-action="whatsapp" data-location="hero" target="_blank" rel="noopener noreferrer"
-         class="bg-white text-gray-900 font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition text-lg">
-        <i class="fa-brands fa-whatsapp text-2xl align-middle"></i> ${c.hero.ctaPrimary}
+         class="inline-flex items-center gap-3 bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all text-lg">
+        <i class="fa-brands fa-whatsapp text-xl"></i>${c.hero.ctaPrimary}
       </a>
-      <a href="#produtos" class="border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition text-lg">${c.hero.ctaSecondary}</a>
+      <a href="#produtos" class="inline-flex items-center gap-2 border-2 border-white/70 text-white font-semibold px-8 py-4 rounded-full hover:bg-white hover:text-gray-900 transition text-base">${c.hero.ctaSecondary}</a>
     </div>
     <span class="sr-only">${c.hero.hiddenSeo}</span>
   </div>
@@ -190,17 +190,19 @@ function render(c) {
       <h2 class="font-black text-3xl md:text-5xl text-gray-900 mt-2">${c.productsSection.title}<br>${c.productsSection.titleSub}</h2>
       <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">${c.productsSection.subtitle}</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
       ${c.products.map(p => `
-        <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100">
-          <img src="${p.img}" alt="${p.title}" class="w-full h-56 object-cover">
-          <div class="p-6">
+        <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition overflow-hidden border border-gray-100 flex flex-col">
+          <div class="bg-gradient-to-br from-brand to-brand-dark flex items-center justify-center py-10">
+            <i class="fa-solid ${p.icon || 'fa-print'} text-white text-5xl"></i>
+          </div>
+          <div class="p-6 flex flex-col flex-1">
             <h3 class="font-bold text-xl mb-2 text-gray-900">${p.title}</h3>
-            <p class="text-gray-600 mb-4">${p.desc}</p>
+            <p class="text-gray-600 mb-6 flex-1">${p.desc}</p>
             <a href="${waUrl(c, p.msg)}" data-action="whatsapp" data-location="produto-${p.slug}"
                target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 text-brand font-bold hover:gap-3 transition">
-              ${p.cta} <i class="fa-solid fa-arrow-right"></i>
+               class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-bold px-5 py-3 rounded-xl transition justify-center">
+              <i class="fa-brands fa-whatsapp"></i> ${p.cta}
             </a>
           </div>
         </article>`).join('')}
@@ -209,7 +211,7 @@ function render(c) {
 </section>
 
 <section class="bg-slate-900 text-white py-20">
-  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+  <div class="max-w-7xl mx-auto px-4 ${c.authority.image ? 'grid md:grid-cols-2 gap-12 items-center' : 'max-w-3xl'}">
     <div>
       <span class="text-brand font-bold uppercase tracking-wider text-sm">${c.authority.kicker}</span>
       <h2 class="font-black text-3xl md:text-5xl mt-2 mb-6">${c.authority.title}<br>${c.authority.titleSub}</h2>
@@ -217,29 +219,29 @@ function render(c) {
         ${c.authority.items.map(i => `<li class="flex items-start gap-3"><i class="fa-solid fa-circle-check text-brand text-xl mt-1"></i> ${i}</li>`).join('')}
       </ul>
       <a href="${waUrl(c)}" data-action="whatsapp" data-location="autoridade" target="_blank" rel="noopener noreferrer"
-         class="inline-block mt-8 bg-brand hover:bg-brand-dark text-white font-bold px-8 py-4 rounded-full transition shadow-lg">
+         class="inline-flex items-center gap-3 mt-8 bg-brand hover:bg-brand-dark text-white font-bold px-8 py-4 rounded-full transition shadow-lg">
         <i class="fa-brands fa-whatsapp"></i> ${c.authority.cta}
       </a>
     </div>
-    <div><img src="${c.authority.image}" alt="GSP Print — Produção" class="rounded-2xl shadow-2xl w-full object-cover"></div>
+    ${c.authority.image ? `<div><img src="${c.authority.image}" alt="GSP Print — Produção" class="rounded-2xl shadow-2xl w-full object-cover"></div>` : ''}
   </div>
 </section>
 
+${c.gallery.images && c.gallery.images.length ? `
 <section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-12">
       <span class="text-brand font-bold uppercase tracking-wider text-sm">${c.gallery.kicker}</span>
       <h2 class="font-black text-3xl md:text-5xl text-gray-900 mt-2">${c.gallery.title}</h2>
-      ${c.gallery.subtitle ? `<p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">${c.gallery.subtitle}</p>` : ''}
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
       ${c.gallery.images.map(img => {
         const src = typeof img === 'string' ? img : img.url;
-        return `<img src="${src}" alt="GSP Print — Portfólio" class="aspect-square object-cover rounded-2xl shadow-sm w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox('${src}')">`;
+        return '<img src="' + src + '" alt="GSP Print — Portfólio" class="aspect-square object-cover rounded-2xl shadow-sm w-full cursor-pointer hover:opacity-90 transition" onclick="openLightbox(\'' + src + '\')">';
       }).join('')}
     </div>
   </div>
-</section>
+</section>` : ''}
 
 <section class="py-20 bg-brand text-white">
   <div class="max-w-4xl mx-auto px-4 text-center">
