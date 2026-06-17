@@ -1,3 +1,11 @@
+﻿<?php
+/**
+ * Template Name: LP Vender
+ * Template Post Type: page
+ */
+// Homepage customizada Visual MKT — bypassa WP/Elementor/Yoast
+// SEO, Schema.org e sinais GEO/LLM embutidos diretamente neste template
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,14 +16,14 @@
 <meta name="keywords" content="agência de anúncios para comunicação visual, google ads comunicação visual, meta ads comunicação visual, tráfego pago comunicação visual, anúncios letra caixa, marketing para gráfica, gestão de campanhas comunicação visual, Visual MKT, Andrézão">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#0b1120">
-<link rel="canonical" href="https://www.visualmkt.com.br/vender">
-<link rel="icon" type="image/webp" href="imagens/andrezao.webp">
+<link rel="canonical" href="https://www.visualmkt.com.br/agencia/">
+<link rel="icon" type="image/webp" href="https://www.visualmkt.com.br/vender/imagens/andrezao.webp">
 <meta name="geo.region" content="BR">
 <meta name="geo.placename" content="Brasil">
 <meta property="og:title" content="Agência de Anúncios para Comunicação Visual — Visual MKT">
 <meta property="og:description" content="Especialistas em Google Ads e Meta Ads para empresas de comunicação visual. Letra caixa, fachadas, adesivos, sinalização. +100 empresas atendidas · R$27M+ em vendas geradas.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.visualmkt.com.br/vender">
+<meta property="og:url" content="https://www.visualmkt.com.br/agencia/">
 <meta property="og:image" content="https://www.visualmkt.com.br/vender/imagens/andrezao.webp">
 <meta property="og:image:alt" content="Andrézão — fundador Visual MKT, agência especializada em anúncios para comunicação visual">
 <script type="application/ld+json">
@@ -23,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Visual MKT",
-  "url": "https://www.visualmkt.com.br/vender",
+  "url": "https://www.visualmkt.com.br/agencia/",
   "telephone": "+55-51-99193-7179",
   "description": "Visual MKT é uma agência de tráfego pago especializada em empresas de comunicação visual. Gerencia Google Ads e Meta Ads para empresas que vendem letra caixa, fachadas, adesivos, plotagem, sinalização e outros serviços de comunicação visual em qualquer país.",
   "areaServed": {
@@ -103,7 +111,7 @@
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", ".geo-entity-statement"]
   },
-  "url": "https://www.visualmkt.com.br/vender"
+  "url": "https://www.visualmkt.com.br/agencia/"
 }
 </script>
 <!-- Google Tag Manager -->
@@ -299,10 +307,10 @@ tailwind.config = {
         <h2 class="ink font-display font-black text-3xl md:text-5xl text-center text-ink mb-3">Marcas que confiam</h2>
         <p class="ink text-center text-slate-500 mb-12 md:text-lg">Gerimos os anúncios de quem lidera em comunicação visual.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-          <div class="ink client-tile"><img src="imagens/open.png" alt="Open Criativa" class="max-h-14 max-w-[80%] object-contain"></div>
-          <div class="ink client-tile"><img src="imagens/artefinal-ig.webp" alt="Arte Final Brasil" class="h-16 w-16 object-cover rounded-full"></div>
-          <div class="ink client-tile"><img src="imagens/zoonn.webp" alt="Zoonn Experiências" class="h-16 w-16 object-cover rounded-full"></div>
-          <div class="ink client-tile"><img src="imagens/holdprint.png" alt="Holdprint Sistemas" class="max-h-9 max-w-[82%] object-contain"></div>
+          <div class="ink client-tile"><img src="https://www.visualmkt.com.br/vender/imagens/open.png" alt="Open Criativa" class="max-h-14 max-w-[80%] object-contain"></div>
+          <div class="ink client-tile"><img src="https://www.visualmkt.com.br/vender/imagens/artefinal-ig.webp" alt="Arte Final Brasil" class="h-16 w-16 object-cover rounded-full"></div>
+          <div class="ink client-tile"><img src="https://www.visualmkt.com.br/vender/imagens/zoonn.webp" alt="Zoonn Experiências" class="h-16 w-16 object-cover rounded-full"></div>
+          <div class="ink client-tile"><img src="https://www.visualmkt.com.br/vender/imagens/holdprint.png" alt="Holdprint Sistemas" class="max-h-9 max-w-[82%] object-contain"></div>
         </div>
 
         <!-- Faixa de clientes secundários -->
@@ -426,7 +434,7 @@ tailwind.config = {
           <div class="flex flex-col items-center text-center">
             <div class="w-44 h-44 rounded-full p-1 bg-black">
               <div class="w-full h-full rounded-full overflow-hidden bg-black">
-                <img src="imagens/andrezao.webp" alt="Andrézão — fundador Visual MKT"
+                <img src="https://www.visualmkt.com.br/vender/imagens/andrezao.webp" alt="Andrézão — fundador Visual MKT"
                   class="w-full h-full object-cover object-top">
               </div>
             </div>
@@ -752,7 +760,7 @@ const WA = '5551991937179';
 const SEC = ['a6.png','artlogica.webp','amevisual.png','anelo-comunicacao.png','art-talento.webp','acao-visual.png','duarte-placas.png','ebg.webp','grafissima-willian-gestor.png','grafica-viniltec.webp','lc-on.png','new-rotulo.png','pincelos.png','revitality-fachadas-acm.png','tijolos-de-demolicao.webp','velox-multiprint.webp'];
 (function(){
   const t=document.getElementById('mtrack'); if(!t) return;
-  const html=SEC.map(f=>`<img src="imagens/sec/${f}" alt="" loading="lazy">`).join('');
+  const html=SEC.map(f=>`<img src="https://www.visualmkt.com.br/vender/imagens/sec/${f}" alt="" loading="lazy">`).join('');
   t.innerHTML=html+html; // duplicado p/ loop contínuo
 })();
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
