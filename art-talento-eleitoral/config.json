@@ -55,7 +55,7 @@
       ],
       "msg": "Olá! Quero orçamento de Adesivo Perfurado Eleitoral para campanha 2026.",
       "cta": "Orçamento de Adesivo Perfurado",
-      "img": "",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/art-talento-eleitoral/imagens/adesivo-perfurado.webp",
       "imgAlt": "Adesivo perfurado eleitoral aplicado em vidro traseiro de carro de campanha",
       "imgStyle": "linear-gradient(135deg, #0D1B2A 0%, #1e3a5f 50%, #C8102E 100%)",
       "imgIcon": "fa-car-rear"
@@ -73,7 +73,7 @@
       ],
       "msg": "Olá! Quero orçamento de Praguinhas e Praguinhões para campanha 2026.",
       "cta": "Orçamento de Praguinhas",
-      "img": "",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/art-talento-eleitoral/imagens/praguinhas.webp",
       "imgAlt": "Praguinhas eleitorais aplicadas em para-choque de veículo e carro de campanha",
       "imgStyle": "linear-gradient(135deg, #FFC600 0%, #e05500 50%, #C8102E 100%)",
       "imgIcon": "fa-circle-dot"
@@ -91,7 +91,7 @@
       ],
       "msg": "Olá! Quero orçamento de Adesivação de Comitê para campanha 2026.",
       "cta": "Orçamento de Adesivação",
-      "img": "",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/art-talento-eleitoral/imagens/adesivacao-comite.webp",
       "imgAlt": "Fachada de comitê eleitoral plotada com lona e vinil em grandes formatos coloridos",
       "imgStyle": "linear-gradient(135deg, #C8102E 0%, #7b0000 50%, #0D1B2A 100%)",
       "imgIcon": "fa-store"
@@ -109,7 +109,7 @@
       ],
       "msg": "Olá! Quero orçamento de Citru e Seethru para campanha 2026.",
       "cta": "Orçamento de Citru/Seethru",
-      "img": "",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/art-talento-eleitoral/imagens/citru-seethru.webp",
       "imgAlt": "Vitrine de comitê eleitoral com material translúcido Seethru impresso com efeito de luz",
       "imgStyle": "linear-gradient(135deg, #0D1B2A 0%, #1a3a5c 50%, #2980b9 100%)",
       "imgIcon": "fa-window-maximize"
@@ -118,6 +118,8 @@
   "authority": {
     "kicker": "Por que escolher a Art & Talento",
     "title": "+10 anos fazendo campanhas vencerem no Paraná",
+    "image": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/art-talento-eleitoral/imagens/producao.webp",
+    "imageAlt": "Impressora de grande formato da Art & Talento produzindo material eleitoral",
     "items": [
       "Produção própria em Curitiba — controle total de qualidade e prazo",
       "+1.000 projetos eleitorais realizados no Paraná",
