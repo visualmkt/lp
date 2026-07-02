@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "title": "Material Eleitoral 2026 em Ilhéus-BA | NF para TRE | HD Comunicação Visual",
+    "description": "Adesivo perfurado, praguinhas, adesivação de comitê, citru e seethru para eleições 2026. Produção própria em Ilhéus, NF para prestação de contas ao TRE, entrega em Ilhéus e região sul da Bahia.",
+    "keywords": "material eleitoral 2026 ilheus, adesivo perfurado eleitoral, praguinhas eleição, adesivação comitê eleitoral, seethru vitrine campanha, citru eleitoral, NF TRE campanha eleitoral, comunicação visual eleitoral ilheus bahia, material gráfico eleitoral sul da bahia"
+  },
+  "brand": {
+    "primary": "#EB1313",
+    "dark": "#0F0F0F",
+    "gold": "#FFA800",
+    "logo": "https://hdcoberturas.com.br/wp-content/uploads/2025/02/LOGO-BRANCA.png",
+    "logoAlt": "HD Coberturas e Comunicação Visual"
+  },
+  "contact": {
+    "whatsapp": "557330844724",
+    "whatsappDisplay": "(73) 3084-4724",
+    "phoneTel": "+557330844724",
+    "phoneDisplay": "(73) 3084-4724",
+    "whatsappMsgDefault": "Olá! Vim pelo site e quero orçamento de material eleitoral 2026."
+  },
+  "address": {
+    "city": "Ilhéus",
+    "state": "BA",
+    "schemaHours": "Mo-Fr 08:00-18:00",
+    "areaServed": ["Ilhéus", "Itabuna", "Região Sul da Bahia"]
+  },
+  "hero": {
+    "badge": "⚡ Eleições 2026 — Prazo apertado. Peça já.",
+    "h1Pre": "Material Eleitoral",
+    "h1Highlight": "com NF para o TRE",
+    "subtitle": "Adesivo perfurado, praguinhas, adesivação de comitê, citru e seethru. Produção própria em Ilhéus, entrega em toda a região sul da Bahia.",
+    "ctaPrimary": "Orçamento no WhatsApp",
+    "ctaSecondary": "Ver Produtos",
+    "bgImage": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/hd-eleitoral/imagens/hero-campanha-ilheus.webp",
+    "hiddenSeo": "material eleitoral ilheus itabuna sul da bahia adesivo perfurado praguinhas praguinhões adesivação comitê seethru citru nota fiscal TRE prestação de contas campanha 2026 vereador prefeito deputado marqueteiro comunicação visual gráfica eleitoral serralheria"
+  },
+  "trust": [
+    { "icon": "fa-file-invoice", "title": "NF para o TRE", "subtitle": "Prestação de contas facilitada" },
+    { "icon": "fa-industry", "title": "Produção Própria", "subtitle": "Serralheria + CV em Ilhéus" },
+    { "icon": "fa-trophy", "title": "+13 Anos", "subtitle": "De experiência no mercado" },
+    { "icon": "fa-star", "title": "Milhares de Projetos", "subtitle": "Coca-Cola e O Boticário na carteira" },
+    { "icon": "fa-truck-fast", "title": "Ilhéus e Região", "subtitle": "Entrega no sul da Bahia" },
+    { "icon": "fa-shield-halved", "title": "100% Regularizado", "subtitle": "Conforme normas do TSE" }
+  ],
+  "products": [
+    {
+      "id": "adesivo-perfurado",
+      "title": "Adesivo Perfurado Eleitoral",
+      "subtitle": "Para vidros de veículos de campanha",
+      "desc": "Transforme o vidro traseiro ou lateral do veículo de campanha em mídia de alto impacto. De fora, a arte do candidato em tela cheia. De dentro, quem está no carro enxerga a rua normalmente. Ideal para frotas, carros de som e caminhonetes.",
+      "bullets": [
+        "Visão interna 100% preservada",
+        "Impressão digital colorida full-color",
+        "Adesivo específico para vidros automotivos",
+        "Corte e aplicação sob medida"
+      ],
+      "msg": "Olá! Quero orçamento de Adesivo Perfurado Eleitoral para campanha 2026.",
+      "cta": "Orçamento de Adesivo Perfurado",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/hd-eleitoral/imagens/adesivo-perfurado.webp",
+      "imgAlt": "Adesivo perfurado eleitoral aplicado em vidro traseiro de carro de campanha",
+      "imgStyle": "linear-gradient(135deg, #0F0F0F 0%, #3a3a3a 50%, #EB1313 100%)",
+      "imgIcon": "fa-car-rear"
+    },
+    {
+      "id": "praguinhas",
+      "title": "Praguinhas e Praguinhões",
+      "subtitle": "Adesivos redondos para distribuição em massa",
+      "desc": "Os clássicos adesivos redondos de campanha — em quantidade e qualidade. Praguinhas (pequenas) para colar em para-choques, capacetes, cadernos e geladeiras. Praguinhões (tamanho maior) para postes, portões e muros. Distribuição em massa, custo baixo, exposição total.",
+      "bullets": [
+        "Vinil com cola agressiva de longa duração",
+        "Impressão colorida de alta resolução",
+        "Formatos: redondo, oval ou recortado",
+        "Grandes volumes para o dia a dia da campanha"
+      ],
+      "msg": "Olá! Quero orçamento de Praguinhas Eleitorais para campanha 2026.",
+      "cta": "Orçamento de Praguinhas",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/hd-eleitoral/imagens/praguinhas.webp",
+      "imgAlt": "Praguinhas eleitorais aplicadas em carro, capacete de moto e pilha de adesivos em campanha de rua",
+      "imgStyle": "linear-gradient(135deg, #FFA800 0%, #e05500 50%, #EB1313 100%)",
+      "imgIcon": "fa-circle-dot"
+    },
+    {
+      "id": "adesivacao-comite",
+      "title": "Adesivação de Comitê",
+      "subtitle": "Plotagem de fachada e vitrine do QG de campanha",
+      "desc": "Transforme a fachada, vidraças e paredes externas do comitê em poderosa peça de comunicação. Plotagem em lona, vinil ou adesivo em grandes formatos — com estrutura metálica da nossa serralheria própria quando o projeto pedir. O QG da campanha vira referência visual no bairro.",
+      "bullets": [
+        "Plotagem de fachada em grande formato",
+        "Lona impressa, vinil ou adesivo de parede",
+        "Serralheria própria para estruturas e suportes",
+        "Aplicação por equipe especializada"
+      ],
+      "msg": "Olá! Quero orçamento de Adesivação de Comitê para campanha 2026.",
+      "cta": "Orçamento de Adesivação",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/hd-eleitoral/imagens/adesivacao-comite.webp",
+      "imgAlt": "Fachada de comitê eleitoral de esquina plotada com lona e vinil em grandes formatos",
+      "imgStyle": "linear-gradient(135deg, #EB1313 0%, #7b0000 50%, #0F0F0F 100%)",
+      "imgIcon": "fa-store"
+    },
+    {
+      "id": "citru-seethru",
+      "title": "Citru e Seethru",
+      "subtitle": "Material translúcido para vidraças e vitrines",
+      "desc": "Citru e Seethru são filmes translúcidos impressos que transformam a vitrine do comitê em diferencial visual único. A imagem é impressa num filme com fundo translúcido — de dia, a luz atravessa parcialmente criando um efeito luminoso impressionante. De dentro, é possível enxergar a rua.",
+      "bullets": [
+        "Efeito translúcido de alto impacto visual",
+        "Ideal para vidraças de comitê e vitrines",
+        "Visão interna preservada",
+        "Diferencial estético que chama atenção"
+      ],
+      "msg": "Olá! Quero orçamento de Citru e Seethru para campanha 2026.",
+      "cta": "Orçamento de Citru/Seethru",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/hd-eleitoral/imagens/citru-seethru.webp",
+      "imgAlt": "Vitrine de comitê eleitoral com material translúcido Seethru impresso e luz do sol atravessando",
+      "imgStyle": "linear-gradient(135deg, #0F0F0F 0%, #1a3a5c 50%, #2980b9 100%)",
+      "imgIcon": "fa-window-maximize"
+    }
+  ],
+  "authority": {
+    "kicker": "Por que escolher a HD Comunicação Visual",
+    "title": "+13 anos fazendo campanhas acontecerem no sul da Bahia",
+    "items": [
+      "Produção própria em Ilhéus — serralheria e comunicação visual na mesma fábrica",
+      "Milhares de projetos realizados em 13 anos de mercado",
+      "Clientes de peso na carteira: Coca-Cola e O Boticário",
+      "NF Eletrônica para 100% das vendas — TRE sem stress",
+      "Processo 100% regularizado conforme normas do TSE",
+      "Atendimento consultivo — ajudamos a escolher o produto certo para cada candidato",
+      "Entrega rápida em Ilhéus, Itabuna e região sul da Bahia"
+    ],
+    "image": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/hd-eleitoral/imagens/producao.webp",
+    "imageAlt": "Fábrica da HD Comunicação Visual em Ilhéus com plotter de grande formato e serralheria"
+  },
+  "faq": [
+    {
+      "q": "Vocês emitem NF para prestação de contas ao TRE?",
+      "a": "Sim. Toda venda é acompanhada de Nota Fiscal Eletrônica (NF-e) com CNPJ, descrição detalhada dos produtos e valor. A NF pode ser utilizada diretamente na prestação de contas ao TRE, conforme as normas eleitorais vigentes."
+    },
+    {
+      "q": "Qual o prazo de entrega para Ilhéus e região?",
+      "a": "Para Ilhéus e Itabuna, entregamos em poucos dias úteis após a aprovação da arte. Para outras cidades do sul da Bahia (raio de ~60km), o prazo varia conforme a cidade e o volume. Consulte pelo WhatsApp com a sua cidade e quantidade."
+    },
+    {
+      "q": "Qual a quantidade mínima de praguinhas ou adesivos?",
+      "a": "Trabalhamos com quantidades variadas, desde pedidos menores para candidatos a vereador até grandes volumes para deputados e prefeitos. Consulte pelo WhatsApp informando produto e quantidade desejada — fazemos orçamento sem compromisso."
+    },
+    {
+      "q": "Vocês fazem a arte/criação do material eleitoral?",
+      "a": "Orientamos sobre formatos e especificações técnicas para você enviar a arte pronta. Nosso atendimento consultivo ajuda a definir o material certo para cada aplicação."
+    },
+    {
+      "q": "O processo está regularizado para a legislação eleitoral?",
+      "a": "Sim. Nossa produção é 100% regularizada e em conformidade com as normas do TSE para material de campanha eleitoral. Emitimos NF para todas as vendas, garantindo lisura na prestação de contas ao TRE."
+    }
+  ],
+  "ctaFinal": {
+    "title": "Eleições 2026 chegam rápido.",
+    "subtitle": "Não deixe para a última hora. Garanta seus materiais eleitorais com NF e entrega rápida em Ilhéus e região sul da Bahia.",
+    "cta": "Orçamento no WhatsApp Agora"
+  },
+  "footer": {
+    "name": "HD Coberturas e Comunicação Visual",
+    "address": "Ilhéus — BA",
+    "tagline": "Material eleitoral com NF para o TRE. Produção própria em Ilhéus, entrega no sul da Bahia.",
+    "copyright": "© 2026 HD Coberturas e Comunicação Visual. Todos os direitos reservados."
+  },
+  "tracking": {
+    "gtm": "GTM-WM8Q8PP7",
+    "gtag": "",
+    "metaPixel": ""
+  }
+}
