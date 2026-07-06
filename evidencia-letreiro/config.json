@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "title": "Letra Caixa e Letreiro em Ipixuna do Pará | Gráfica Evidência",
+    "description": "Letra caixa em ACM, PVC e com LED, letreiros para fachada de loja. Fabricação sob medida em Ipixuna do Pará, atendemos toda a região. Orçamento rápido pelo WhatsApp.",
+    "keywords": "letra caixa, letreiro, letreiro iluminado, letra caixa 3d, letra caixa led, letras fachada loja, letreiro para fachada de loja, fabricante de letras caixa, letra caixa acm, letra caixa pvc, letreiro ipixuna do para, comunicação visual ipixuna"
+  },
+  "brand": {
+    "primary": "#EA0A0A",
+    "dark": "#111111",
+    "gold": "#FFA800",
+    "logo": "https://graficaevidencia.com/wp-content/uploads/2025/11/cropped-cropped-Grafica-evidencia-222-1-600x209.png",
+    "logoAlt": "Gráfica Evidência — Impressos Gráficos e Comunicação Visual"
+  },
+  "contact": {
+    "whatsapp": "5591984551220",
+    "whatsappDisplay": "(91) 98455-1220",
+    "phoneTel": "+5591984551220",
+    "phoneDisplay": "(91) 98455-1220",
+    "whatsappMsgDefault": "Olá! Vim pelo site e quero orçamento de letra caixa / letreiro."
+  },
+  "address": {
+    "street": "Rua José Bonifácio, Centro",
+    "city": "Ipixuna do Pará",
+    "state": "PA",
+    "schemaHours": "Mo-Fr 08:00-18:00",
+    "areaServed": ["Ipixuna do Pará", "Paragominas", "Tomé-Açu", "Nordeste do Pará"]
+  },
+  "hero": {
+    "badge": "Fabricação sob medida — Ipixuna do Pará e região",
+    "h1Pre": "Letra Caixa e Letreiro",
+    "h1Highlight": "para a Fachada da Sua Loja",
+    "subtitle": "Letras caixa em ACM, PVC e com iluminação LED. Sua fachada valorizada com letreiro profissional feito sob medida. Orçamento rápido pelo WhatsApp.",
+    "ctaPrimary": "Orçamento Rápido pelo Whats",
+    "ctaSecondary": "Ver Modelos",
+    "bgImage": "",
+    "hiddenSeo": "letra caixa letreiro letreiro iluminado letra caixa 3d letra caixa led letras fachada loja letreiro para fachada de loja letreiro de loja fabricante de letras caixa letra caixa em acm letra caixa pvc letreiro luminoso fachada comercial ipixuna do para paragominas tome-acu nordeste do para comunicação visual"
+  },
+  "trust": [
+    { "icon": "fa-ruler-combined", "title": "Sob Medida", "subtitle": "Projeto para a sua fachada" },
+    { "icon": "fa-bolt", "title": "Orçamento Rápido", "subtitle": "Resposta ágil pelo WhatsApp" },
+    { "icon": "fa-layer-group", "title": "Vários Materiais", "subtitle": "ACM, PVC, com ou sem LED" },
+    { "icon": "fa-truck-fast", "title": "Ipixuna e Região", "subtitle": "Atendemos o nordeste do PA" },
+    { "icon": "fa-store", "title": "Gráfica + CV", "subtitle": "Impressos e comunicação visual" },
+    { "icon": "fa-thumbs-up", "title": "Acabamento Profissional", "subtitle": "Corte preciso e instalação" }
+  ],
+  "products": [
+    {
+      "id": "letra-caixa-acm",
+      "title": "Letra Caixa em ACM",
+      "subtitle": "Resistência e elegância para fachadas",
+      "desc": "A letra caixa em ACM é a escolha certa para quem busca durabilidade e visual sofisticado. Resistente a sol e chuva, mantém a aparência por anos — ideal para o clima do Pará. Disponível em diversas cores e acabamentos, com relevo 3D que dá profundidade à sua marca.",
+      "bullets": [
+        "Alta resistência ao tempo",
+        "Efeito 3D com profundidade",
+        "Diversas cores e acabamentos",
+        "Ideal para fachadas comerciais"
+      ],
+      "msg": "Olá! Quero orçamento de Letra Caixa em ACM.",
+      "cta": "Orçamento de Letra Caixa ACM",
+      "img": "",
+      "imgAlt": "Letra caixa em ACM aplicada em fachada comercial",
+      "imgStyle": "linear-gradient(135deg, #111111 0%, #3a3a3a 50%, #EA0A0A 100%)",
+      "imgIcon": "fa-font"
+    },
+    {
+      "id": "letra-caixa-pvc",
+      "title": "Letra Caixa em PVC",
+      "subtitle": "Ótimo custo-benefício com acabamento premium",
+      "desc": "A letra caixa em PVC expandido é leve, versátil e tem excelente relação custo-benefício. Permite cortes precisos em qualquer fonte ou formato, pintura na cor da sua marca e instalação simples. Perfeita para lojas, consultórios, escritórios e ambientes internos ou fachadas cobertas.",
+      "bullets": [
+        "Leve e fácil de instalar",
+        "Corte preciso em qualquer fonte",
+        "Pintura na cor da sua marca",
+        "Excelente custo-benefício"
+      ],
+      "msg": "Olá! Quero orçamento de Letra Caixa em PVC.",
+      "cta": "Orçamento de Letra Caixa PVC",
+      "img": "",
+      "imgAlt": "Letra caixa em PVC pintada aplicada em parede interna de loja",
+      "imgStyle": "linear-gradient(135deg, #EA0A0A 0%, #7b0000 50%, #111111 100%)",
+      "imgIcon": "fa-pen-ruler"
+    },
+    {
+      "id": "letra-caixa-led",
+      "title": "Letra Caixa Iluminada (LED)",
+      "subtitle": "Sua marca visível de dia e de noite",
+      "desc": "O letreiro luminoso com LED faz sua loja se destacar 24 horas por dia. Iluminação frontal, de borda ou halo (efeito flutuante) — cada estilo cria um impacto diferente na fachada. Baixo consumo de energia e alta durabilidade, com o acabamento que a sua marca merece.",
+      "bullets": [
+        "Visibilidade dia e noite",
+        "LED frontal, borda ou halo",
+        "Baixo consumo de energia",
+        "Destaque total na fachada"
+      ],
+      "msg": "Olá! Quero orçamento de Letra Caixa Iluminada com LED.",
+      "cta": "Orçamento de Letra Caixa LED",
+      "img": "",
+      "imgAlt": "Letra caixa iluminada com LED em fachada de loja à noite",
+      "imgStyle": "linear-gradient(135deg, #0a0a2e 0%, #111111 60%, #EA0A0A 100%)",
+      "imgIcon": "fa-lightbulb"
+    },
+    {
+      "id": "letreiro-fachada",
+      "title": "Letreiro para Fachada de Loja",
+      "subtitle": "O conjunto completo da sua identidade",
+      "desc": "Do projeto à instalação: letreiro completo para a fachada da sua loja, combinando letra caixa, painel e acabamento. Fazemos o levantamento das medidas, orientamos sobre o melhor material para o seu ponto e entregamos a fachada pronta para chamar clientes.",
+      "bullets": [
+        "Projeto sob medida para o seu ponto",
+        "Combinação de letra caixa e painel",
+        "Orientação sobre o melhor material",
+        "Instalação com acabamento profissional"
+      ],
+      "msg": "Olá! Quero orçamento de Letreiro para a fachada da minha loja.",
+      "cta": "Orçamento de Letreiro",
+      "img": "",
+      "imgAlt": "Letreiro completo instalado em fachada de loja comercial",
+      "imgStyle": "linear-gradient(135deg, #111111 0%, #EA0A0A 60%, #ff6a00 100%)",
+      "imgIcon": "fa-shop"
+    }
+  ],
+  "authority": {
+    "kicker": "Por que escolher a Gráfica Evidência",
+    "title": "Sua fachada feita por quem entende de marca",
+    "items": [
+      "Gráfica e comunicação visual no mesmo lugar — sua identidade completa",
+      "Fabricação sob medida para cada fachada",
+      "Letras caixa em ACM, PVC, com ou sem iluminação LED",
+      "Atendimento consultivo — orientamos o melhor material para o seu ponto",
+      "Orçamento rápido pelo WhatsApp",
+      "Atendemos Ipixuna do Pará, Paragominas, Tomé-Açu e região"
+    ],
+    "image": "",
+    "imageAlt": "Produção de letra caixa na Gráfica Evidência"
+  },
+  "faq": [
+    {
+      "q": "Qual o prazo para produzir um letreiro ou letra caixa?",
+      "a": "O prazo varia conforme o tamanho, material e complexidade do projeto. Após a aprovação da arte e das medidas, informamos o prazo exato no orçamento. Consulte pelo WhatsApp — a resposta é rápida."
+    },
+    {
+      "q": "Qual material é melhor: ACM ou PVC?",
+      "a": "Depende do uso. ACM é mais resistente ao tempo e indicado para fachadas externas expostas a sol e chuva. PVC tem ótimo custo-benefício e é ideal para ambientes internos ou fachadas cobertas. No orçamento, orientamos a melhor opção para o seu ponto."
+    },
+    {
+      "q": "Vocês fazem a instalação?",
+      "a": "Sim. Fazemos o levantamento das medidas, a fabricação e a instalação com acabamento profissional. Você recebe a fachada pronta."
+    },
+    {
+      "q": "Atendem outras cidades além de Ipixuna do Pará?",
+      "a": "Sim. Atendemos Ipixuna do Pará e região, incluindo Paragominas, Tomé-Açu e cidades próximas do nordeste do Pará. Consulte pelo WhatsApp informando a sua cidade."
+    },
+    {
+      "q": "Como funciona o orçamento?",
+      "a": "É simples: chame no WhatsApp, envie o nome da sua loja, uma foto da fachada e as medidas aproximadas (se tiver). Retornamos com orientação de material e valor. Sem compromisso."
+    }
+  ],
+  "ctaFinal": {
+    "title": "Sua fachada merece destaque.",
+    "subtitle": "Peça agora o orçamento da sua letra caixa ou letreiro. Atendimento rápido pelo WhatsApp para Ipixuna do Pará e região.",
+    "cta": "Orçamento Rápido pelo Whats"
+  },
+  "footer": {
+    "name": "Gráfica Evidência",
+    "address": "Rua José Bonifácio, Centro — Ipixuna do Pará, PA",
+    "tagline": "Impressos gráficos e comunicação visual. Letra caixa, letreiros e fachadas sob medida.",
+    "copyright": "© 2026 Gráfica Evidência. Todos os direitos reservados."
+  },
+  "tracking": {
+    "gtm": "",
+    "gtag": "",
+    "metaPixel": ""
+  }
+}
