@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "Placas para Imobiliárias e Corretores em Campinas | Junior Comunicação Visual",
+    "description": "Placas de fachada para imobiliárias e placas portáteis para corretores autônomos. Qualidade industrial, produção própria em Campinas há mais de 29 anos.",
+    "keywords": "placa para imobiliaria, placa para corretor, placa vende-se, placa aluga-se, bandeirola corretor, placa fachada imobiliaria campinas, comunicação visual imobiliaria, placa personalizada corretor autonomo"
+  },
+  "brand": {
+    "primary": "#E8520E",
+    "secondary": "#EE7D00",
+    "dark": "#1A1A1A",
+    "logo": "https://juniorcomvisual.com.br/wp-content/uploads/2025/11/Logo-Junior.svg",
+    "logoAlt": "Junior Comunicação Visual"
+  },
+  "contact": {
+    "whatsapp": "551935222566",
+    "whatsappDisplay": "(19) 3522-2566",
+    "phoneTel": "+551935222566",
+    "phoneDisplay": "(19) 3522-2566",
+    "whatsappMsgDefault": "Olá! Vim pelo site e quero orçamento de placa para imobiliária/corretor."
+  },
+  "address": {
+    "city": "Campinas",
+    "state": "SP",
+    "schemaHours": "Mo-Fr 08:00-18:00",
+    "areaServed": ["Campinas", "Região Metropolitana de Campinas"]
+  },
+  "hero": {
+    "badge": "Qualidade industrial aplicada ao seu negócio imobiliário",
+    "h1Pre": "Placas para Imobiliárias",
+    "h1Highlight": "e Corretores em Campinas",
+    "subtitle": "Fachada, plotagem e placas portáteis com o padrão de qualidade que atende indústrias como Whirlpool e Embraco. Produção própria, mais de 29 anos de experiência.",
+    "ctaPrimary": "Orçamento no WhatsApp",
+    "ctaSecondary": "Ver Placas",
+    "bgImage": "",
+    "hiddenSeo": "placa para imobiliaria placa para corretor placa vende-se placa aluga-se bandeirola corretor estaca corretor placa fachada imobiliaria campinas comunicação visual imobiliaria placa personalizada corretor autonomo sinalização imobiliaria"
+  },
+  "trust": [
+    { "icon": "fa-industry", "title": "Qualidade Industrial", "subtitle": "Mesmo padrão de Whirlpool e Embraco" },
+    { "icon": "fa-trophy", "title": "+29 Anos", "subtitle": "De experiência em comunicação visual" },
+    { "icon": "fa-warehouse", "title": "Produção Própria", "subtitle": "Fábrica em Campinas" },
+    { "icon": "fa-sun", "title": "Alta Durabilidade", "subtitle": "Resistente a sol e chuva" },
+    { "icon": "fa-map-location-dot", "title": "Campinas e Região", "subtitle": "Atendimento local" },
+    { "icon": "fa-bolt", "title": "Orçamento Rápido", "subtitle": "Resposta ágil pelo WhatsApp" }
+  ],
+  "products": [
+    {
+      "id": "placa-imobiliaria",
+      "title": "Placa para Imobiliária",
+      "subtitle": "Fachada, plotagem e sinalização com a sua marca",
+      "desc": "Sua imobiliária com a identidade visual que transmite confiança. Placas de fachada, plotagem de vitrine e sinalização interna produzidas com o mesmo padrão de qualidade que usamos para grandes indústrias — resistência, acabamento e durabilidade que representam bem a sua marca no dia a dia.",
+      "bullets": [
+        "Placa de fachada personalizada com sua marca",
+        "Plotagem de vitrine e sinalização interna",
+        "Materiais de alta durabilidade (ACM, PS, policarbonato)",
+        "Produção própria — prazo e qualidade sob controle"
+      ],
+      "msg": "Olá! Quero orçamento de Placa para a minha Imobiliária.",
+      "cta": "Orçamento para Imobiliária",
+      "img": "",
+      "imgAlt": "Fachada de imobiliária com placa personalizada de alta qualidade",
+      "imgStyle": "linear-gradient(135deg, #1A1A1A 0%, #3a3a3a 50%, #E8520E 100%)",
+      "imgIcon": "fa-building"
+    },
+    {
+      "id": "placa-corretor",
+      "title": "Placa para Corretor",
+      "subtitle": "Bandeirola, estaca e placa Vende-se/Aluga-se",
+      "desc": "Você é corretor autônomo e precisa de placas que resistam ao uso diário — sol, chuva, transporte de imóvel em imóvel. Bandeirolas, estacas e placas Vende-se/Aluga-se personalizadas com seu nome e contato, feitas para durar e passar profissionalismo em cada plantão.",
+      "bullets": [
+        "Placa Vende-se / Aluga-se personalizada",
+        "Bandeirola e estaca portátil e resistente",
+        "Seu nome e contato em destaque",
+        "Material reforçado para uso constante"
+      ],
+      "msg": "Olá! Quero orçamento de Placa para Corretor (Vende-se/Aluga-se ou bandeirola).",
+      "cta": "Orçamento para Corretor",
+      "img": "",
+      "imgAlt": "Placa Vende-se personalizada para corretor autônomo em frente a imóvel",
+      "imgStyle": "linear-gradient(135deg, #E8520E 0%, #7b2a00 50%, #1A1A1A 100%)",
+      "imgIcon": "fa-signs-post"
+    }
+  ],
+  "authority": {
+    "kicker": "Por que escolher a Junior Comunicação Visual",
+    "title": "Quem atende a indústria também cuida da sua placa",
+    "items": [
+      "+29 anos produzindo comunicação visual de alta performance",
+      "Clientes industriais exigentes: Whirlpool, Embraco, Agroceres e outros",
+      "Produção própria em Campinas — controle total de qualidade e prazo",
+      "Materiais de alta durabilidade, resistentes a sol e chuva",
+      "Atendimento consultivo — ajudamos a escolher o material certo",
+      "Orçamento rápido pelo WhatsApp"
+    ],
+    "image": "",
+    "imageAlt": "Produção industrial da Junior Comunicação Visual em Campinas"
+  },
+  "faq": [
+    {
+      "q": "Qual o prazo de entrega?",
+      "a": "O prazo varia conforme o tipo de placa e a quantidade solicitada. Após a aprovação da arte, informamos o prazo exato no orçamento. Consulte pelo WhatsApp — a resposta é rápida."
+    },
+    {
+      "q": "Vocês personalizam com a marca da minha imobiliária ou meu nome de corretor?",
+      "a": "Sim. Todas as placas podem ser personalizadas com sua logo, cores, nome e contato. Envie sua arte pronta ou nos conte o que precisa que orientamos sobre o melhor formato."
+    },
+    {
+      "q": "Qual material é mais indicado para placa Vende-se/Aluga-se?",
+      "a": "Depende do uso: PS (poliestireno) é leve e econômico para uso temporário; ACM é mais resistente para uso prolongado ao ar livre. No orçamento, indicamos a melhor opção para o seu caso."
+    },
+    {
+      "q": "Atendem outras cidades além de Campinas?",
+      "a": "Atendemos Campinas e a região metropolitana. Consulte pelo WhatsApp informando sua cidade para confirmarmos o atendimento."
+    },
+    {
+      "q": "Como funciona o orçamento?",
+      "a": "Simples: chame no WhatsApp, informe o tipo de placa (imobiliária ou corretor), quantidade e, se tiver, a arte ou logo. Retornamos com orientação de material e valor, sem compromisso."
+    }
+  ],
+  "ctaFinal": {
+    "title": "Sua placa com qualidade de indústria.",
+    "subtitle": "Peça agora o orçamento da sua placa para imobiliária ou corretor. Atendimento rápido pelo WhatsApp em Campinas e região.",
+    "cta": "Orçamento Rápido pelo Whats"
+  },
+  "footer": {
+    "name": "Junior Comunicação Visual",
+    "address": "Campinas — SP",
+    "tagline": "Comunicação visual de alta performance há mais de 29 anos. Placas para imobiliárias e corretores com qualidade industrial.",
+    "copyright": "© 2026 Junior Comunicação Visual. Todos os direitos reservados."
+  },
+  "tracking": {
+    "gtm": "GTM-M7KHQH4S",
+    "gtag": "G-2PL9GVNY6V",
+    "metaPixel": ""
+  }
+}

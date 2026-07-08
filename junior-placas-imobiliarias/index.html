@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placas para Imobiliárias e Corretores em Campinas | Junior Comunicação Visual</title>
+  <meta name="description" content="Placas de fachada para imobiliárias e placas portáteis para corretores autônomos. Qualidade industrial, produção própria em Campinas há mais de 29 anos.">
+  <meta name="theme-color" content="#E8520E">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PrintingBusiness",
+    "name": "Junior Comunicação Visual",
+    "telephone": "+551935222566",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Campinas",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHours": "Mo-Fr 08:00-18:00",
+    "image": "https://juniorcomvisual.com.br/wp-content/uploads/2025/11/Logo-Junior.svg",
+    "description": "Placas de fachada para imobiliárias e placas portáteis para corretores autônomos. Qualidade industrial, produção própria em Campinas.",
+    "areaServed": ["Campinas", "Região Metropolitana de Campinas"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#E8520E',
+            brand2: '#EE7D00',
+            dark:  '#1A1A1A',
+          },
+          fontFamily: {
+            title: ['Poppins', 'sans-serif'],
+            body:  ['Barlow', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Barlow', sans-serif; opacity: 0; transition: opacity .3s; background: #1A1A1A; }
+    body.ready { opacity: 1; }
+    .wha-pulse { animation: wha-pulse 2.5s infinite; }
+    @keyframes wha-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
+      60%       { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    }
+    details summary { list-style: none; cursor: pointer; user-select: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform .25s ease; }
+    .dashline { height: 1px; background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 0 10px); opacity: .2; }
+    .tag-seal {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #EE7D00; color: #1A1A1A;
+      font-family: 'Poppins', sans-serif; font-weight: 600;
+      font-size: .7rem; letter-spacing: .04em; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 999px;
+    }
+    .hero-glow { background: radial-gradient(ellipse at 70% 30%, rgba(232,82,14,.28) 0%, transparent 65%); }
+  </style>
+</head>
+
+<body class="bg-white text-dark font-body antialiased">
+
+<!-- App shell -->
+<div id="app" class="min-h-screen">
+  <div class="flex items-center justify-center min-h-screen bg-dark">
+    <div class="text-center text-white">
+      <div class="w-10 h-10 border-4 border-brand border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p class="font-title text-base tracking-widest uppercase opacity-50">Carregando...</p>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="hidden fixed inset-0 z-[999] bg-black/90 flex items-center justify-center p-4"
+     onclick="if(event.target===this)this.classList.add('hidden')">
+  <img id="lb-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl">
+  <button onclick="document.getElementById('lightbox').classList.add('hidden')"
+          class="absolute top-4 right-4 text-white/70 hover:text-white text-5xl leading-none transition">&times;</button>
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────────
+const CONFIG_URL = 'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-placas-imobiliarias/config.json';
+
+async function loadConfig() {
+  try {
+    const r = await fetch(CONFIG_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (r.ok) return await r.json();
+  } catch {}
+  return (await fetch('./config.json')).json();
+}
+
+// ── TRACKING ────────────────────────────────────────────────────────────────
+function injectTracking(t) {
+  if (!t) return;
+  window.dataLayer = window.dataLayer || [];
+
+  if (t.gtm) {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',t.gtm);
+    const ns=document.createElement('noscript');
+    ns.innerHTML=`<iframe src="https://www.googletagmanager.com/ns.html?id=${t.gtm}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`;
+    document.body.insertBefore(ns, document.body.firstChild);
+  }
+
+  if (t.gtag) {
+    const ids = Array.isArray(t.gtag) ? t.gtag : [t.gtag];
+    const s = document.createElement('script');
+    s.async = true; s.src = `https://www.googletagmanager.com/gtag/js?id=${ids[0]}`;
+    document.head.appendChild(s);
+    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); ids.forEach(id => gtag('config', id));
+  }
+
+  if (t.metaPixel) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', t.metaPixel); fbq('track', 'PageView');
+  }
+}
+
+// ── HELPERS ─────────────────────────────────────────────────────────────────
+const wa = (num, msg) =>
+  `https://api.whatsapp.com/send?phone=${num}&text=${encodeURIComponent(msg)}`;
+
+const waBtn = (num, msg, label, loc, cls) =>
+  `<a href="${wa(num,msg)}" target="_blank" rel="noopener noreferrer"
+     data-action="whatsapp" data-location="${loc}" class="${cls}">
+    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>${label}
+  </a>`;
+
+// ── SECTIONS ─────────────────────────────────────────────────────────────────
+
+function renderHeader(c) {
+  const { whatsapp: num, whatsappMsgDefault: msg, phoneDisplay, phoneTel } = c.contact;
+  const logoHtml = c.brand.logo
+    ? `<img src="${c.brand.logo}" alt="${c.brand.logoAlt}" class="h-9 md:h-11 w-auto">`
+    : `<span class="font-title font-semibold text-white text-2xl">Junior</span>`;
+
+  return `
+  <header class="fixed top-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b-2 border-brand shadow-xl">
+    <div class="max-w-6xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between gap-4">
+      <a href="#" class="flex items-center gap-3 min-w-0">${logoHtml}</a>
+      <div class="flex items-center gap-2 md:gap-4 shrink-0">
+        <a href="tel:${phoneTel}" class="hidden md:flex items-center gap-2 text-white/70 hover:text-brand2 transition-colors text-sm font-semibold font-body">
+          <i class="fa-solid fa-phone text-brand2 text-xs"></i>${phoneDisplay}
+        </a>
+        ${waBtn(num, msg, 'Orçamento', 'header',
+          'flex items-center bg-brand hover:bg-orange-700 text-white font-body font-semibold text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full transition-all shadow-lg')}
+      </div>
+    </div>
+  </header>`;
+}
+
+function renderHero(c) {
+  const { whatsapp: num, whatsappMsgDefault: msg } = c.contact;
+  const h = c.hero;
+  const bg = h.bgImage
+    ? `<img src="${h.bgImage}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+       <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/70 to-dark/90"></div>`
+    : `<div class="absolute inset-0 bg-dark"></div>
+       <div class="hero-glow absolute inset-0"></div>
+       <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, #fff 40px, #fff 41px);"></div>`;
+
+  return `
+  <section class="relative min-h-screen flex items-center text-white pt-20 overflow-hidden bg-dark">
+    ${bg}
+
+    <div class="relative max-w-5xl mx-auto px-4 py-16 md:py-24 text-center">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 border border-brand/60 bg-brand/15 backdrop-blur-sm text-brand2 px-4 py-2 rounded-full text-sm font-body font-semibold mb-8">
+        <i class="fa-solid fa-industry text-brand2 text-xs"></i>
+        ${h.badge}
+      </div>
+
+      <!-- H1 -->
+      <h1 class="font-title font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-6 drop-shadow-lg">
+        ${h.h1Pre}<br><span class="text-brand2" style="text-shadow: 0 2px 20px rgba(0,0,0,.6)">${h.h1Highlight}</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-body leading-relaxed drop-shadow">
+        ${h.subtitle}
+      </p>
+
+      <!-- Seals row -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+        <span class="tag-seal"><i class="fa-solid fa-trophy"></i>&nbsp;+29 anos de experiência</span>
+        <span class="inline-flex items-center gap-1.5 text-white/80 text-xs font-body">
+          <i class="fa-solid fa-warehouse text-brand2 text-xs"></i> Produção própria em Campinas
+        </span>
+        <span class="inline-flex items-center gap-1.5 text-white/80 text-xs font-body">
+          <i class="fa-solid fa-shield-halved text-brand2 text-xs"></i> Qualidade industrial
+        </span>
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        ${waBtn(num, msg, h.ctaPrimary, 'hero',
+          'flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105 wha-pulse')}
+        <a href="#produtos"
+           class="flex items-center justify-center border-2 border-white/40 backdrop-blur-sm text-white hover:bg-white/10 font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl transition-all">
+          <i class="fa-solid fa-arrow-down mr-2 text-base"></i>${h.ctaSecondary}
+        </a>
+      </div>
+
+      <!-- Hidden SEO -->
+      <span class="sr-only">${h.hiddenSeo}</span>
+    </div>
+  </section>`;
+}
+
+function renderTrust(c) {
+  const items = c.trust.map(t => `
+    <div class="flex flex-col items-center text-center p-4 md:p-5">
+      <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-3"
+           style="background:rgba(232,82,14,.08);">
+        <i class="fa-solid ${t.icon} text-xl md:text-2xl text-brand"></i>
+      </div>
+      <p class="font-title font-semibold text-sm md:text-base tracking-tight leading-tight text-dark">${t.title}</p>
+      <p class="text-slate-500 text-xs mt-0.5 font-body">${t.subtitle}</p>
+    </div>`).join('');
+
+  return `
+  <section class="py-10 bg-white border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-1">${items}</div>
+    </div>
+  </section>`;
+}
+
+function renderProducts(c) {
+  const { whatsapp: num } = c.contact;
+
+  const sections = c.products.map((p, i) => {
+    const isEven = i % 2 === 0;
+    const bg = isEven ? 'bg-white' : 'bg-slate-50';
+
+    const bullets = p.bullets.map(b => `
+      <li class="flex items-start gap-2 text-sm md:text-base text-slate-600 font-body">
+        <i class="fa-solid fa-check text-brand mt-0.5 shrink-0"></i><span>${b}</span>
+      </li>`).join('');
+
+    const imgBlock = `
+      <div class="relative rounded-3xl overflow-hidden aspect-video md:aspect-square flex items-center justify-center shadow-2xl"
+           style="background: ${p.imgStyle};">
+        ${p.img
+          ? `<img src="${p.img}" alt="${p.imgAlt}" class="w-full h-full object-cover" loading="lazy">`
+          : `<div class="flex flex-col items-center justify-center text-white text-center p-10 absolute inset-0">
+               <i class="fa-solid ${p.imgIcon} text-7xl md:text-8xl opacity-30 mb-4"></i>
+               <p class="text-sm opacity-40 font-body max-w-[200px] leading-tight">${p.imgAlt}</p>
+             </div>`
+        }
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+      </div>`;
+
+    const textBlock = `
+      <div class="flex flex-col justify-center">
+        <span class="text-brand font-title font-semibold text-xs uppercase tracking-[.15em] mb-2">${p.subtitle}</span>
+        <h2 class="font-title font-semibold text-3xl md:text-4xl leading-snug tracking-tight text-dark mb-4">${p.title}</h2>
+        <div class="dashline text-dark mb-6"></div>
+        <p class="text-slate-600 font-body leading-relaxed mb-6">${p.desc}</p>
+        <ul class="space-y-2 mb-8">${bullets}</ul>
+        ${waBtn(num, p.msg, p.cta, `produto-${p.id}`,
+          'inline-flex items-center justify-center w-full sm:w-auto bg-brand hover:bg-orange-700 text-white font-body font-semibold text-base px-8 py-4 rounded-2xl transition-all hover:scale-105 shadow-lg')}
+      </div>`;
+
+    return `
+    <section id="${p.id}" class="${bg} py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          ${isEven ? imgBlock + textBlock : textBlock + imgBlock}
+        </div>
+      </div>
+    </section>`;
+  }).join('');
+
+  return `<div id="produtos">${sections}</div>`;
+}
+
+function renderAuthority(c) {
+  const a = c.authority;
+  const items = a.items.map(item => `
+    <li class="flex items-start gap-3 text-slate-300 font-body text-sm md:text-base">
+      <i class="fa-solid fa-circle-check text-brand2 text-base mt-0.5 shrink-0"></i>${item}
+    </li>`).join('');
+
+  return `
+  <section class="py-20 md:py-28 bg-dark text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="text-brand2 font-title font-semibold text-xs uppercase tracking-[.15em]">${a.kicker}</span>
+          <h2 class="font-title font-semibold text-3xl md:text-4xl leading-snug tracking-tight mt-3 mb-8">${a.title}</h2>
+          <ul class="space-y-4">${items}</ul>
+        </div>
+        <div class="hidden md:block">
+          <div class="rounded-3xl aspect-square overflow-hidden relative shadow-2xl">
+            ${a.image
+              ? `<img src="${a.image}" alt="${a.imageAlt || ''}" class="w-full h-full object-cover" loading="lazy">`
+              : `<div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#3a3a3a,#1A1A1A)"><i class="fa-solid fa-industry text-white/10 text-[10rem]"></i></div>`
+            }
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent pointer-events-none"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="tag-seal"><i class="fa-solid fa-industry"></i>&nbsp;Padrão industrial</span>
+              <p class="text-white/60 text-xs mt-3 font-body leading-tight">O mesmo cuidado de qualidade que aplicamos para grandes indústrias, na sua placa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderFaq(c) {
+  const items = c.faq.map((f, i) => `
+    <details class="border border-slate-200 rounded-2xl overflow-hidden group bg-white" ${i===0?'open':''}>
+      <summary class="flex items-center justify-between gap-4 p-5 md:p-6">
+        <span class="font-body font-semibold text-base md:text-lg text-dark">${f.q}</span>
+        <i class="fa-solid fa-chevron-down text-brand shrink-0 faq-chevron"></i>
+      </summary>
+      <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 font-body text-sm md:text-base leading-relaxed border-t border-slate-100 pt-4">
+        ${f.a}
+      </div>
+    </details>`).join('');
+
+  return `
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-brand font-title font-semibold text-xs uppercase tracking-[.15em]">Tire suas dúvidas</span>
+        <h2 class="font-title font-semibold text-3xl md:text-4xl leading-snug tracking-tight text-dark mt-2">Perguntas Frequentes</h2>
+      </div>
+      <div class="space-y-3">${items}</div>
+    </div>
+  </section>`;
+}
+
+function renderCtaFinal(c) {
+  const ct = c.ctaFinal;
+  const { whatsapp: num, whatsappMsgDefault: msg, phoneTel, phoneDisplay } = c.contact;
+  return `
+  <section class="py-20 md:py-28 bg-brand text-white text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="tag-seal mx-auto w-fit mb-6"><i class="fa-solid fa-bolt"></i>&nbsp;Resposta rápida no WhatsApp</div>
+      <h2 class="font-title font-semibold text-3xl md:text-5xl leading-snug tracking-tight mb-4">${ct.title}</h2>
+      <p class="text-white/85 font-body text-lg mb-10 max-w-xl mx-auto leading-relaxed">${ct.subtitle}</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        ${waBtn(num, msg, ct.cta, 'cta-final',
+          'inline-flex items-center justify-center bg-white text-brand hover:bg-slate-50 font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105')}
+        <a href="tel:${phoneTel}"
+           class="inline-flex items-center justify-center border-2 border-white/40 text-white hover:bg-white/10 font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl transition-all">
+          <i class="fa-solid fa-phone mr-2"></i>${phoneDisplay}
+        </a>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderFooter(c) {
+  const f = c.footer;
+  const { phoneTel, phoneDisplay, whatsapp: num, whatsappMsgDefault: msg } = c.contact;
+  const logoHtml = c.brand.logo
+    ? `<img src="${c.brand.logo}" alt="${c.brand.logoAlt}" class="h-10 w-auto mx-auto mb-4">` : '';
+  return `
+  <footer class="bg-dark text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      ${logoHtml}
+      <p class="font-title font-semibold text-2xl tracking-tight mb-1">${f.name}</p>
+      <p class="text-slate-400 text-sm font-body mb-1">${f.address}</p>
+      <p class="text-slate-400 text-sm font-body mb-6">${f.tagline}</p>
+      <div class="flex items-center justify-center gap-4 mb-8">
+        <a href="tel:${phoneTel}" class="flex items-center gap-1.5 text-slate-400 hover:text-brand2 transition text-sm font-body">
+          <i class="fa-solid fa-phone text-xs"></i>${phoneDisplay}
+        </a>
+        <span class="text-slate-700">|</span>
+        <a href="${wa(num, msg)}" target="_blank" rel="noopener noreferrer"
+           class="flex items-center gap-1.5 text-slate-400 hover:text-green-400 transition text-sm font-body"
+           data-action="whatsapp" data-location="footer">
+          <i class="fa-brands fa-whatsapp text-sm"></i>WhatsApp
+        </a>
+      </div>
+      <div class="dashline text-slate-700 mb-6"></div>
+      <p class="text-slate-600 text-xs font-body">${f.copyright}</p>
+      <p class="text-slate-700 text-xs mt-1 font-body">
+        Desenvolvido por <a href="https://visualmkt.com.br" class="hover:text-brand2 transition" target="_blank" rel="noopener">VisualMKT</a>
+      </p>
+    </div>
+  </footer>
+  <noscript>
+    <p style="text-align:center;padding:20px;font-family:sans-serif;">
+      ${f.name} — ${f.address} — Tel: ${phoneDisplay}
+    </p>
+  </noscript>`;
+}
+
+function renderFloatingWA(c) {
+  const { whatsapp: num, whatsappMsgDefault: msg } = c.contact;
+  return `
+  <a href="${wa(num, msg)}" target="_blank" rel="noopener noreferrer"
+     data-action="whatsapp" data-location="flutuante"
+     class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-body font-semibold py-3 px-5 rounded-full shadow-2xl wha-pulse transition-all hover:scale-105">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    <span class="hidden sm:inline text-sm">Orçamento Rápido</span>
+  </a>`;
+}
+
+function renderExitPopup(c) {
+  const { whatsapp: num } = c.contact;
+  const msg = 'Olá! Quero orçamento de placa para imobiliária/corretor.';
+  return `
+  <div id="exit-popup" class="hidden fixed inset-0 z-[998] bg-black/75 flex items-center justify-center p-4"
+       onclick="if(event.target===this)this.classList.add('hidden')">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-8 text-center shadow-2xl relative">
+      <button onclick="document.getElementById('exit-popup').classList.add('hidden')"
+              class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl leading-none transition">&times;</button>
+      <span class="tag-seal mx-auto w-fit mb-5 block"><i class="fa-solid fa-bolt"></i>&nbsp;Orçamento rápido</span>
+      <h3 class="font-title font-semibold text-3xl text-dark leading-tight mb-3">Antes de ir...</h3>
+      <p class="text-slate-500 font-body text-sm mb-6 leading-relaxed">
+        Placas com qualidade industrial para sua imobiliária ou para você, corretor. Peça o orçamento em 2 minutos.
+      </p>
+      ${waBtn(num, msg, 'Quero Orçamento Agora', 'popup-exit',
+        'flex items-center justify-center w-full bg-brand hover:bg-orange-700 text-white font-body font-semibold px-8 py-4 rounded-2xl transition-all mb-3')}
+      <button onclick="document.getElementById('exit-popup').classList.add('hidden')"
+              class="text-slate-400 text-xs hover:text-slate-600 transition font-body">Não, obrigado</button>
+    </div>
+  </div>`;
+}
+
+// ── EVENTS ───────────────────────────────────────────────────────────────────
+function bindEvents() {
+  document.querySelectorAll('[data-action="whatsapp"]').forEach(el => {
+    el.addEventListener('click', () => {
+      if (window.dataLayer) dataLayer.push({
+        event: 'whatsapp_click',
+        location: el.dataset.location || 'unknown'
+      });
+    });
+  });
+
+  let popupShown = false;
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY < 20 && !popupShown && !sessionStorage.getItem('ep_shown')) {
+      setTimeout(() => {
+        const el = document.getElementById('exit-popup');
+        if (el) { el.classList.remove('hidden'); popupShown = true; sessionStorage.setItem('ep_shown', '1'); }
+        if (window.dataLayer) dataLayer.push({ event: 'exit_intent_show' });
+      }, 300);
+    }
+  });
+
+  document.querySelectorAll('#produtos img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
+      document.getElementById('lb-img').src = img.src;
+      document.getElementById('lightbox').classList.remove('hidden');
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+}
+
+// ── MAIN ──────────────────────────────────────────────────────────────────────
+(async () => {
+  try {
+    const c = await loadConfig();
+    injectTracking(c.tracking);
+
+    document.getElementById('app').innerHTML =
+      renderHeader(c) +
+      renderHero(c) +
+      renderTrust(c) +
+      renderProducts(c) +
+      renderAuthority(c) +
+      renderFaq(c) +
+      renderCtaFinal(c) +
+      renderFooter(c) +
+      renderFloatingWA(c) +
+      renderExitPopup(c);
+
+    bindEvents();
+  } catch (err) {
+    document.getElementById('app').innerHTML = `
+      <div class="min-h-screen flex items-center justify-center bg-dark text-white text-center p-8">
+        <div>
+          <p class="font-title text-3xl font-semibold mb-2">Junior Comunicação Visual</p>
+          <p class="text-slate-400 mb-6 text-sm">Campinas — SP</p>
+          <a href="https://api.whatsapp.com/send?phone=551935222566&text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20de%20placa%20para%20imobili%C3%A1ria%2Fcorretor."
+             class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-body font-semibold text-lg transition-all"
+             target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp text-2xl"></i> Orçamento no WhatsApp
+          </a>
+        </div>
+      </div>`;
+  } finally {
+    document.body.classList.add('ready');
+  }
+})();
+</script>
+</body>
+</html>
