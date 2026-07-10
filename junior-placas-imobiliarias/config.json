@@ -1,8 +1,8 @@
 {
   "meta": {
-    "title": "Placas para Imobiliárias e Corretores em Campinas | Junior Comunicação Visual",
-    "description": "Placas de fachada para imobiliárias e placas portáteis para corretores autônomos. Qualidade industrial, produção própria em Campinas há mais de 29 anos.",
-    "keywords": "placa para imobiliaria, placa para corretor, placa vende-se, placa aluga-se, bandeirola corretor, placa fachada imobiliaria campinas, comunicação visual imobiliaria, placa personalizada corretor autonomo"
+    "title": "Placas para Imobiliárias e Corretores em Rio Claro | Junior Comunicação Visual",
+    "description": "Placas de fachada para imobiliárias e placas portáteis para corretores autônomos. Qualidade industrial, produção própria em Rio Claro há mais de 29 anos.",
+    "keywords": "placa para imobiliaria, placa para corretor, placa vende-se, placa aluga-se, bandeirola corretor, placa fachada imobiliaria rio claro, comunicação visual imobiliaria, placa personalizada corretor autonomo"
   },
   "brand": {
     "primary": "#E8520E",
@@ -19,27 +19,29 @@
     "whatsappMsgDefault": "Olá! Vim pelo site e quero orçamento de placa para imobiliária/corretor."
   },
   "address": {
-    "city": "Campinas",
+    "street": "Rua 26, 996 — Jardim Mirassol",
+    "city": "Rio Claro",
     "state": "SP",
+    "zip": "13503-135",
     "schemaHours": "Mo-Fr 08:00-18:00",
-    "areaServed": ["Campinas", "Região Metropolitana de Campinas"]
+    "areaServed": ["Rio Claro", "Região de Rio Claro"]
   },
   "hero": {
     "badge": "Qualidade industrial aplicada ao seu negócio imobiliário",
     "h1Pre": "Placas para Imobiliárias",
-    "h1Highlight": "e Corretores em Campinas",
+    "h1Highlight": "e Corretores em Rio Claro",
     "subtitle": "Fachada, plotagem e placas portáteis com o padrão de qualidade que atende indústrias como Whirlpool e Embraco. Produção própria, mais de 29 anos de experiência.",
     "ctaPrimary": "Orçamento no WhatsApp",
     "ctaSecondary": "Ver Placas",
     "bgImage": "",
-    "hiddenSeo": "placa para imobiliaria placa para corretor placa vende-se placa aluga-se bandeirola corretor estaca corretor placa fachada imobiliaria campinas comunicação visual imobiliaria placa personalizada corretor autonomo sinalização imobiliaria"
+    "hiddenSeo": "placa para imobiliaria placa para corretor placa vende-se placa aluga-se bandeirola corretor estaca corretor placa fachada imobiliaria rio claro comunicação visual imobiliaria placa personalizada corretor autonomo sinalização imobiliaria"
   },
   "trust": [
     { "icon": "fa-industry", "title": "Qualidade Industrial", "subtitle": "Mesmo padrão de Whirlpool e Embraco" },
     { "icon": "fa-trophy", "title": "+29 Anos", "subtitle": "De experiência em comunicação visual" },
-    { "icon": "fa-warehouse", "title": "Produção Própria", "subtitle": "Fábrica em Campinas" },
+    { "icon": "fa-warehouse", "title": "Produção Própria", "subtitle": "Fábrica em Rio Claro" },
     { "icon": "fa-sun", "title": "Alta Durabilidade", "subtitle": "Resistente a sol e chuva" },
-    { "icon": "fa-map-location-dot", "title": "Campinas e Região", "subtitle": "Atendimento local" },
+    { "icon": "fa-map-location-dot", "title": "Rio Claro e Região", "subtitle": "Atendimento local" },
     { "icon": "fa-bolt", "title": "Orçamento Rápido", "subtitle": "Resposta ágil pelo WhatsApp" }
   ],
   "products": [
@@ -86,13 +88,13 @@
     "items": [
       "+29 anos produzindo comunicação visual de alta performance",
       "Clientes industriais exigentes: Whirlpool, Embraco, Agroceres e outros",
-      "Produção própria em Campinas — controle total de qualidade e prazo",
+      "Produção própria em Rio Claro — controle total de qualidade e prazo",
       "Materiais de alta durabilidade, resistentes a sol e chuva",
       "Atendimento consultivo — ajudamos a escolher o material certo",
       "Orçamento rápido pelo WhatsApp"
     ],
     "image": "",
-    "imageAlt": "Produção industrial da Junior Comunicação Visual em Campinas"
+    "imageAlt": "Produção industrial da Junior Comunicação Visual em Rio Claro"
   },
   "faq": [
     {
@@ -108,8 +110,8 @@
       "a": "Depende do uso: PS (poliestireno) é leve e econômico para uso temporário; ACM é mais resistente para uso prolongado ao ar livre. No orçamento, indicamos a melhor opção para o seu caso."
     },
     {
-      "q": "Atendem outras cidades além de Campinas?",
-      "a": "Atendemos Campinas e a região metropolitana. Consulte pelo WhatsApp informando sua cidade para confirmarmos o atendimento."
+      "q": "Atendem outras cidades além de Rio Claro?",
+      "a": "Atendemos Rio Claro e região. Consulte pelo WhatsApp informando sua cidade para confirmarmos o atendimento."
     },
     {
       "q": "Como funciona o orçamento?",
@@ -118,12 +120,12 @@
   ],
   "ctaFinal": {
     "title": "Sua placa com qualidade de indústria.",
-    "subtitle": "Peça agora o orçamento da sua placa para imobiliária ou corretor. Atendimento rápido pelo WhatsApp em Campinas e região.",
+    "subtitle": "Peça agora o orçamento da sua placa para imobiliária ou corretor. Atendimento rápido pelo WhatsApp em Rio Claro e região.",
     "cta": "Orçamento Rápido pelo Whats"
   },
   "footer": {
     "name": "Junior Comunicação Visual",
-    "address": "Campinas — SP",
+    "address": "Rua 26, 996 — Jardim Mirassol, Rio Claro — SP · CEP 13503-135",
     "tagline": "Comunicação visual de alta performance há mais de 29 anos. Placas para imobiliárias e corretores com qualidade industrial.",
     "copyright": "© 2026 Junior Comunicação Visual. Todos os direitos reservados."
   },
