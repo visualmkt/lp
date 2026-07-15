@@ -58,8 +58,8 @@
       ],
       "msg": "Olá! Quero orçamento de Placa para a minha Imobiliária.",
       "cta": "Orçamento para Imobiliária",
-      "img": "",
-      "imgAlt": "Fachada de imobiliária com placa personalizada de alta qualidade",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-placas-imobiliarias/imagens/placa-vende-portao.webp",
+      "imgAlt": "Placa Vende personalizada com logo da imobiliária instalada em portão de imóvel",
       "imgStyle": "linear-gradient(135deg, #1A1A1A 0%, #3a3a3a 50%, #E8520E 100%)",
       "imgIcon": "fa-building"
     },
@@ -76,8 +76,8 @@
       ],
       "msg": "Olá! Quero orçamento de Placa para Corretor (Vende-se/Aluga-se ou bandeirola).",
       "cta": "Orçamento para Corretor",
-      "img": "",
-      "imgAlt": "Placa Vende-se personalizada para corretor autônomo em frente a imóvel",
+      "img": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-placas-imobiliarias/imagens/placa-vende-terreno.webp",
+      "imgAlt": "Placa Vende personalizada para corretor fixada em estaca de madeira em terreno",
       "imgStyle": "linear-gradient(135deg, #E8520E 0%, #7b2a00 50%, #1A1A1A 100%)",
       "imgIcon": "fa-signs-post"
     }
@@ -93,8 +93,8 @@
       "Atendimento consultivo — ajudamos a escolher o material certo",
       "Orçamento rápido pelo WhatsApp"
     ],
-    "image": "",
-    "imageAlt": "Produção industrial da Junior Comunicação Visual em Rio Claro"
+    "image": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-placas-imobiliarias/imagens/placa-ilhos-g-marinho.webp",
+    "imageAlt": "Detalhe do acabamento com ilhós metálico em placa de polionda personalizada da Junior Comunicação Visual"
   },
   "faq": [
     {
