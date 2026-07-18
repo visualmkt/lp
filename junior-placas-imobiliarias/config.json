@@ -33,7 +33,7 @@
     "subtitle": "Fachada, plotagem e placas portáteis com o padrão de qualidade que atende indústrias como Whirlpool e Embraco. Produção própria, mais de 29 anos de experiência.",
     "ctaPrimary": "Orçamento no WhatsApp",
     "ctaSecondary": "Ver Placas",
-    "bgImage": "",
+    "bgImage": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-placas-imobiliarias/imagens/placa-vende-portao.webp",
     "hiddenSeo": "placa para imobiliaria placa para corretor placa vende-se placa aluga-se bandeirola corretor estaca corretor placa fachada imobiliaria rio claro comunicação visual imobiliaria placa personalizada corretor autonomo sinalização imobiliaria"
   },
   "trust": [
@@ -130,8 +130,8 @@
     "copyright": "© 2026 Junior Comunicação Visual. Todos os direitos reservados."
   },
   "tracking": {
-    "gtm": "GTM-M7KHQH4S",
-    "gtag": "G-2PL9GVNY6V",
+    "gtm": "GTM-KBZ7XH3G",
+    "gtag": "",
     "metaPixel": ""
   }
 }
