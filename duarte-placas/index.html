@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letreiros Luminosos e Letra Caixa em Belo Horizonte | Duarte Placas</title>
+<meta name="description" content="Fabricação e instalação de letreiros luminosos e letra caixa em LED para fachadas comerciais em Belo Horizonte. Orçamento grátis pelo WhatsApp. Rua Rho, 26 — Caiçaras, BH/MG.">
+<meta property="og:title" content="Letreiros e Letra Caixa em BH | Duarte Placas">
+<meta property="og:description" content="Transforme a fachada do seu negócio. Fabricação própria de letreiros e letra caixa em Belo Horizonte.">
+<meta property="og:image" content="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Duarte Placas","description":"Fabricação e instalação de letreiros luminosos, letra caixa e fachadas comerciais em Belo Horizonte","address":{"@type":"PostalAddress","streetAddress":"Rua Rho, 26","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"},"telephone":"+55-31-3422-1475","url":"https://www.duarteplacas.com.br","openingHours":"Mo-Fr 08:00-18:00"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--gold:#C9A84C;--gold-l:#E8C96D;--dark:#0a0a0a;--dark2:#111;--dark3:#161616;--border:rgba(255,255,255,.08);--muted:#888;--wa:#25D366}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--dark);color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* HEADER */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:68px;background:transparent;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+.hdr.on{background:rgba(10,10,10,.96);border-color:var(--border);backdrop-filter:blur(12px)}
+.hdr img{height:36px;width:auto}
+.btn-wa-sm{display:flex;align-items:center;gap:7px;background:var(--wa);color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.04em;text-decoration:none;padding:8px 18px;border-radius:40px;transition:opacity .2s}
+.btn-wa-sm:hover{opacity:.85}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.55) 40%,rgba(0,0,0,.12) 100%)}
+.hero-ct{position:relative;z-index:2;padding:0 5vw 9vh;max-width:900px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:.67rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.4);padding:4px 12px;border-radius:2px;margin-bottom:18px}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%}
+.hero h1{font-size:clamp(2rem,5vw,3.8rem);font-weight:900;line-height:1.05;text-transform:uppercase;letter-spacing:-.015em;margin-bottom:18px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero-sub{font-size:clamp(.9rem,1.8vw,1.05rem);color:rgba(255,255,255,.7);line-height:1.7;max-width:520px;margin-bottom:36px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+/* BUTTONS */
+.btn-gold{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#000;font-family:'Outfit',sans-serif;font-weight:800;font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:14px 28px;border-radius:3px;transition:background .2s,transform .2s;border:none;cursor:pointer}
+.btn-gold:hover{background:var(--gold-l);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border:1.5px solid rgba(255,255,255,.3);color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:.88rem;letter-spacing:.04em;text-decoration:none;padding:14px 28px;border-radius:3px;transition:border-color .2s,transform .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.6);transform:translateY(-2px)}
+.btn-wa-lg{display:inline-flex;align-items:center;gap:12px;background:var(--wa);color:#fff;font-family:'Outfit',sans-serif;font-weight:800;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:18px 40px;border-radius:50px;box-shadow:0 8px 32px rgba(37,211,102,.2);transition:transform .2s,box-shadow .2s}
+.btn-wa-lg:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(37,211,102,.3)}
+
+/* STATS */
+.stats{background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:26px 20px;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat-v{display:block;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--gold);line-height:1;margin-bottom:4px}
+.stat-l{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(3){border-top:1px solid var(--border)}}
+
+/* SECTION */
+.sec{padding:80px 5vw}
+.sec-alt{background:var(--dark2)}
+.sec-lbl{font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.sec-ttl{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;margin-bottom:48px}
+.sec-hd{text-align:center;margin-bottom:56px}
+.sec-hd .sec-ttl{margin-bottom:12px}
+.sec-hd .sec-desc{color:var(--muted);font-size:.95rem;line-height:1.65;max-width:540px;margin:0 auto}
+
+/* IMPACTO */
+.impacto{padding:80px 5vw;background:var(--dark2);text-align:center}
+.impacto blockquote{font-size:clamp(1.2rem,2.8vw,1.85rem);font-weight:700;line-height:1.45;max-width:780px;margin:0 auto 16px}
+.impacto blockquote em{color:var(--gold);font-style:normal}
+.impacto .qsub{color:var(--muted);font-size:.95rem;max-width:560px;margin:0 auto;line-height:1.7}
+
+/* PRODUTOS TABS */
+.tabs{display:flex;gap:8px;margin-bottom:40px;flex-wrap:wrap}
+.tab-btn{background:none;border:1.5px solid var(--border);color:var(--muted);font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:10px 22px;border-radius:2px;cursor:pointer;transition:all .2s}
+.tab-btn:hover,.tab-btn.active{background:var(--gold);border-color:var(--gold);color:#000}
+.tab-panel{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:768px){.tab-panel{grid-template-columns:1fr}}
+.tab-vis{aspect-ratio:4/3;background:var(--dark3);border-radius:6px;overflow:hidden;position:relative}
+.tab-vis img{width:100%;height:100%;object-fit:cover;display:block}
+.tab-badge{position:absolute;bottom:14px;left:14px;background:var(--gold);color:#000;font-size:.67rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:2px}
+.tab-txt h3{font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:900;text-transform:uppercase;margin-bottom:14px;line-height:1.1}
+.tab-txt h3 em{color:var(--gold);font-style:normal}
+.tab-txt>p{color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:24px;font-size:.9rem}
+.feats{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+.feats li{display:flex;align-items:flex-start;gap:10px;font-size:.87rem;color:rgba(255,255,255,.8);line-height:1.5}
+.feats li::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:6px}
+.mats{display:flex;gap:8px;flex-wrap:wrap}
+.mat{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(201,168,76,.3);color:var(--gold);padding:4px 12px;border-radius:2px}
+
+/* PILARES */
+.pilares-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.pilar{background:var(--dark3);border:1px solid var(--border);border-radius:6px;padding:30px 26px}
+.pilar-ico{width:50px;height:50px;background:linear-gradient(135deg,rgba(201,168,76,.18),rgba(201,168,76,.04));border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.pilar-ico svg{width:24px;height:24px}
+.pilar h3{font-size:.92rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.pilar p{font-size:.85rem;color:var(--muted);line-height:1.65}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.step{background:var(--dark3);border:1px solid var(--border);border-radius:4px;padding:32px 26px}
+.step-n{font-size:3rem;font-weight:900;color:rgba(201,168,76,.13);line-height:1;margin-bottom:12px;letter-spacing:-.03em}
+.step h3{font-size:.88rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin-bottom:10px}
+.step p{font-size:.83rem;color:var(--muted);line-height:1.65}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:6px}
+.faq-item{border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.faq-q{width:100%;background:var(--dark3);border:none;color:#fff;font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:600;text-align:left;padding:17px 22px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .2s}
+.faq-q:hover{background:var(--dark)}
+.faq-chv{flex-shrink:0;width:17px;height:17px;color:var(--gold);transition:transform .25s}
+.faq-chv.open{transform:rotate(180deg)}
+.faq-a{background:var(--dark3);padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s}
+.faq-a.open{max-height:320px;padding:0 22px 18px}
+.faq-a p{font-size:.85rem;color:var(--muted);line-height:1.7;padding-top:12px;border-top:1px solid var(--border)}
+
+/* GALERIA */
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.gal-item{overflow:hidden;aspect-ratio:4/3;background:var(--dark3);position:relative}
+.gal-item.wide{grid-column:span 2;aspect-ratio:8/5}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.gal-item:hover img{transform:scale(1.05)}
+.gal-lbl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);padding:20px 14px 10px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+@media(max-width:640px){.gal-grid{grid-template-columns:1fr 1fr}.gal-item.wide{grid-column:span 2}}
+
+/* CTA FINAL */
+.cta-final{padding:100px 5vw;background:var(--dark2);text-align:center;position:relative;overflow:hidden}
+.cta-final::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,.06) 0%,transparent 70%);pointer-events:none}
+.cta-final h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;margin-bottom:12px;max-width:620px;margin-left:auto;margin-right:auto}
+.cta-final h2 em{color:var(--gold);font-style:normal}
+.cta-final p{color:var(--muted);font-size:.92rem;line-height:1.65;max-width:440px;margin:0 auto 40px}
+
+/* FOOTER */
+footer{background:#000;padding:40px 5vw;border-top:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer img{height:30px;width:auto;opacity:.6}
+.ft-info{font-size:.8rem;color:var(--muted);line-height:1.85}
+.ft-info a{color:var(--muted);text-decoration:none}
+.ft-info a:hover{color:#fff}
+@media(max-width:540px){footer{flex-direction:column}}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:300;background:var(--wa);color:#fff;font-family:'Outfit',sans-serif;font-weight:700;font-size:.82rem;text-decoration:none;display:flex;align-items:center;gap:8px;padding:13px 20px;border-radius:50px;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.4)}
+.wa-float span{display:none}
+@media(min-width:480px){.wa-float span{display:inline}}
+</style>
+</head>
+<body>
+
+<div id="app">
+
+<!-- HEADER -->
+<header class="hdr" :class="{on:scrolled}">
+  <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2025/01/Header.png?fit=400%2C28&ssl=1" alt="Duarte Placas — Letreiros e Comunicação Visual em BH">
+  <a class="btn-wa-sm" :href="wa" target="_blank" rel="noopener">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Orçamento
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg" src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=1920%2C1314&ssl=1" alt="Letra caixa iluminada — Duarte Placas Belo Horizonte" fetchpriority="high">
+  <div class="hero-ov"></div>
+  <div class="hero-ct">
+    <p class="hero-tag">Belo Horizonte — MG</p>
+    <h1>Letreiros &amp; <em>Letra Caixa</em> que vendem antes de você abrir a boca</h1>
+    <p class="hero-sub">Fabricação e instalação de letreiros luminosos, letra caixa em acrílico e alumínio para fachadas comerciais de alto impacto em Belo Horizonte.</p>
+    <div class="hero-ctas">
+      <a class="btn-gold" :href="wa" target="_blank" rel="noopener">Pedir Orçamento Grátis</a>
+      <a class="btn-ghost" href="#produtos">Ver Produtos ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat reveal" v-for="s in stats" :key="s.v">
+    <strong class="stat-v">{{s.v}}</strong>
+    <span class="stat-l">{{s.l}}</span>
+  </div>
+</div>
+
+<!-- IMPACTO -->
+<section class="impacto">
+  <blockquote class="reveal">Não é só sobre letreiros — é sobre o <em>impacto</em> que sua fachada causa nos seus clientes.</blockquote>
+  <p class="qsub reveal">Afinal, o que a sua fachada diz sobre o seu negócio quando seus clientes passam por ela? Uma fachada bem feita trabalha por você 24 horas por dia, 7 dias por semana.</p>
+</section>
+
+<!-- PRODUTOS -->
+<section class="sec" id="produtos">
+  <div class="reveal">
+    <p class="sec-lbl">O que fazemos</p>
+    <h2 class="sec-ttl">Nossas Especialidades</h2>
+  </div>
+  <div class="tabs reveal">
+    <button class="tab-btn" v-for="t in tabs" :key="t.id" :class="{active:tab===t.id}" @click="tab=t.id">{{t.l}}</button>
+  </div>
+
+  <!-- Letra Caixa -->
+  <div class="tab-panel" v-show="tab==='lc'">
+    <div class="tab-vis">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=800%2C600&ssl=1" alt="Letra caixa em LED — Duarte Placas BH" loading="lazy">
+      <span class="tab-badge">Letra Caixa</span>
+    </div>
+    <div class="tab-txt">
+      <h3>Letra <em>Caixa</em> em LED</h3>
+      <p>Letras tridimensionais fixadas diretamente na fachada, fabricadas em acrílico ou alumínio com iluminação interna em LED. Garantem visibilidade dia e noite com visual premium que valoriza qualquer negócio.</p>
+      <ul class="feats">
+        <li>Letras com até 1,5m de altura</li>
+        <li>Iluminação interna em LED de alta eficiência</li>
+        <li>Iluminação de contorno (halo) por trás da letra</li>
+        <li>Acabamento em inox, alumínio escovado ou pintado</li>
+        <li>Instalação direta na parede, sem painel de fundo</li>
+        <li>Durabilidade superior a 10 anos</li>
+      </ul>
+      <div class="mats">
+        <span class="mat">Acrílico</span><span class="mat">Alumínio</span><span class="mat">Inox</span><span class="mat">LED</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Letreiros -->
+  <div class="tab-panel" v-show="tab==='lt'">
+    <div class="tab-vis">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=800%2C600&ssl=1" alt="Letreiro luminoso — Duarte Placas BH" loading="lazy" style="object-position:35% center">
+      <span class="tab-badge">Letreiro</span>
+    </div>
+    <div class="tab-txt">
+      <h3><em>Letreiros</em> Luminosos</h3>
+      <p>Painéis de identificação visual fabricados em ACM, acrílico ou vidro temperado, com iluminação frontal, backlit ou via caixa de luz. Alta visibilidade 24h e identidade visual consistente para o seu negócio.</p>
+      <ul class="feats">
+        <li>Painéis em ACM com impressão digital em alta resolução</li>
+        <li>Iluminação backlit (translúcido iluminado por trás)</li>
+        <li>Letreiros de fachada, teto e vitrine</li>
+        <li>Lona tensionada com caixa de luz</li>
+        <li>Projetos para lojas de rua e shoppings</li>
+        <li>Instalação e manutenção incluídas</li>
+      </ul>
+      <div class="mats">
+        <span class="mat">ACM</span><span class="mat">Acrílico</span><span class="mat">Lona</span><span class="mat">Vidro</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fachadas -->
+  <div class="tab-panel" v-show="tab==='fc'">
+    <div class="tab-vis">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=800%2C600&ssl=1" alt="Fachada comercial em Belo Horizonte" loading="lazy" style="object-position:65% center">
+      <span class="tab-badge">Fachada</span>
+    </div>
+    <div class="tab-txt">
+      <h3><em>Fachadas</em> Comerciais</h3>
+      <p>Projeto completo de comunicação visual que combina revestimento em ACM, letra caixa e iluminação estratégica. Do projeto visual 3D à instalação final, cuidamos de tudo para que sua fachada transmita profissionalismo.</p>
+      <ul class="feats">
+        <li>Projeto visual 3D aprovado antes da fabricação</li>
+        <li>Revestimento em ACM (várias cores e acabamentos)</li>
+        <li>Combinação de letra caixa + letreiro + iluminação</li>
+        <li>Design adaptado à identidade visual da marca</li>
+        <li>Execução por equipe técnica especializada em BH</li>
+        <li>Garantia de instalação documentada</li>
+      </ul>
+      <div class="mats">
+        <span class="mat">ACM</span><span class="mat">Vidro</span><span class="mat">Letra Caixa</span><span class="mat">LED</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE DUARTE PLACAS -->
+<section class="sec sec-alt">
+  <div class="sec-hd">
+    <p class="sec-lbl reveal">Diferenciais</p>
+    <h2 class="sec-ttl reveal">Por que Escolher a Duarte Placas</h2>
+    <p class="sec-desc reveal">Especialistas em comunicação visual para fachadas comerciais em Belo Horizonte e Região Metropolitana há mais de 20 anos.</p>
+  </div>
+  <div class="pilares-grid">
+    <article class="pilar reveal" v-for="p in pilares" :key="p.t">
+      <div class="pilar-ico" v-html="p.ico"></div>
+      <h3>{{p.t}}</h3>
+      <p>{{p.d}}</p>
+    </article>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec">
+  <div class="sec-hd">
+    <p class="sec-lbl reveal">Simples e rápido</p>
+    <h2 class="sec-ttl reveal">Como Funciona</h2>
+    <p class="sec-desc reveal">Da primeira mensagem até a sua fachada pronta — sem burocracia.</p>
+  </div>
+  <div class="steps">
+    <div class="step reveal" v-for="s in steps" :key="s.n">
+      <div class="step-n">{{s.n}}</div>
+      <h3>{{s.t}}</h3>
+      <p>{{s.d}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ — SEO rich content -->
+<section class="sec sec-alt">
+  <div class="sec-hd">
+    <p class="sec-lbl reveal">Tire suas dúvidas</p>
+    <h2 class="sec-ttl reveal">Perguntas Frequentes</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal" v-for="(f,i) in faqs" :key="i">
+      <button class="faq-q" @click="faq=faq===i?null:i">
+        {{f.q}}
+        <svg class="faq-chv" :class="{open:faq===i}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a" :class="{open:faq===i}"><p>{{f.a}}</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="sec">
+  <div class="sec-hd">
+    <p class="sec-lbl reveal">Nosso trabalho</p>
+    <h2 class="sec-ttl reveal">Portfólio de Projetos</h2>
+    <p class="sec-desc reveal">Letreiros, letra caixa e fachadas entregues em Belo Horizonte e região metropolitana.</p>
+  </div>
+  <div class="gal-grid">
+    <div class="gal-item wide reveal">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=1200%2C750&ssl=1" alt="Letreiro letra caixa iluminado — Duarte Placas">
+      <span class="gal-lbl">Letra Caixa Iluminada</span>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=600%2C600&ssl=1" alt="Letreiro luminoso comercial" style="object-position:25% 40%">
+      <span class="gal-lbl">Letreiro Luminoso</span>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=600%2C600&ssl=1" alt="Fachada ACM em BH" style="object-position:75% 50%">
+      <span class="gal-lbl">Fachada Comercial</span>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=600%2C600&ssl=1" alt="Letreiro restaurante BH" style="object-position:15% 65%">
+      <span class="gal-lbl">Restaurante</span>
+    </div>
+    <div class="gal-item reveal">
+      <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2024/12/1-1.webp?fit=600%2C600&ssl=1" alt="Letra caixa loja de rua" style="object-position:85% 30%">
+      <span class="gal-lbl">Loja de Rua</span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <p class="sec-lbl reveal">Pronto para se destacar?</p>
+  <h2 class="reveal">Transforme sua <em>fachada</em> agora</h2>
+  <p class="reveal">Envie fotos da sua fachada pelo WhatsApp e receba um orçamento sem compromisso em até 24 horas.</p>
+  <a class="btn-wa-lg reveal" :href="wa" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Pedir Orçamento pelo WhatsApp
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://i0.wp.com/www.duarteplacas.com.br/wp-content/uploads/2025/01/Header.png?fit=400%2C28&ssl=1" alt="Duarte Placas">
+  <address class="ft-info">
+    Rua Rho, 26 — Caiçaras<br>
+    Belo Horizonte / MG<br>
+    <a href="tel:+553134221475">(31) 3422-1475</a>
+  </address>
+  <div class="ft-info">
+    Segunda a Sexta: 08h às 18h<br>
+    <a :href="wa" target="_blank" rel="noopener" style="color:var(--wa)">WhatsApp disponível</a>
+  </div>
+</footer>
+
+</div><!-- #app -->
+
+<!-- WA FLOAT (fora do app, sempre visível) -->
+<a class="wa-float" href="https://api.whatsapp.com/send?phone=553134221475&text=Ol%C3%A1%2C%20estava%20no%20site%20e%20gostei%20dos%20letreiros.%20Pode%20me%20enviar%20um%20or%C3%A7amento%3F" target="_blank" rel="noopener">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script type="module">
+import { createApp, ref, onMounted } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+import { animate } from 'https://cdn.jsdelivr.net/npm/motion@12/+esm'
+
+const WA = 'https://api.whatsapp.com/send?phone=553134221475&text=Ol%C3%A1%2C%20estava%20no%20site%20e%20gostei%20dos%20letreiros.%20Pode%20me%20enviar%20um%20or%C3%A7amento%3F'
+
+createApp({
+  setup() {
+    const scrolled = ref(false)
+    const tab = ref('lc')
+    const faq = ref(null)
+    const wa = WA
+
+    const tabs = [
+      { id: 'lc', l: 'Letra Caixa' },
+      { id: 'lt', l: 'Letreiros' },
+      { id: 'fc', l: 'Fachadas' }
+    ]
+
+    const stats = [
+      { v: '20+', l: 'Anos de experiência' },
+      { v: '500+', l: 'Projetos entregues' },
+      { v: '100%', l: 'Fabricação própria' },
+      { v: 'BH+', l: 'Região metropolitana' }
+    ]
+
+    const ico = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8">${d}</svg>`
+    const pilares = [
+      { ico: ico('<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>'), t: 'Projeto 3D Antes de Fabricar', d: 'Você aprova o visual completo em 3D antes de qualquer fabricação. Sem surpresas, sem retrabalho.' },
+      { ico: ico('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>'), t: 'Entrega no Prazo', d: 'Fabricação própria em BH garante controle de qualidade e cumprimento rigoroso dos prazos acordados.' },
+      { ico: ico('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'), t: 'Garantia na Instalação', d: 'Todos os projetos incluem garantia de instalação e suporte pós-venda para manutenção elétrica e estrutural.' },
+      { ico: ico('<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>'), t: 'Atendimento Direto', d: 'Da consulta ao pós-instalação, você fala diretamente com a equipe técnica — sem intermediários ou call centers.' }
+    ]
+
+    const steps = [
+      { n: '01', t: 'Orçamento', d: 'Envie fotos da sua fachada pelo WhatsApp. Retornamos com orçamento detalhado em até 24 horas, sem compromisso.' },
+      { n: '02', t: 'Projeto', d: 'Desenvolvemos o projeto visual em 3D com medidas reais. Você aprova tudo antes de iniciar a produção.' },
+      { n: '03', t: 'Fabricação', d: 'Produção 100% própria na nossa fábrica em BH, com controle de qualidade em cada etapa do processo.' },
+      { n: '04', t: 'Instalação', d: 'Equipe técnica especializada realiza a instalação completa com infraestrutura elétrica e acabamento profissional.' }
+    ]
+
+    const faqs = [
+      { q: 'Qual o prazo de fabricação de um letreiro ou letra caixa?', a: 'O prazo varia conforme tamanho e complexidade. Em média, letreiros simples ficam prontos em 5 a 7 dias úteis após aprovação do projeto. Projetos mais complexos com letra caixa e instalação elétrica podem levar de 10 a 15 dias úteis.' },
+      { q: 'Vocês fazem o projeto antes da fabricação?', a: 'Sim! Desenvolvemos um projeto visual 3D com as medidas reais da sua fachada para aprovação antes de qualquer fabricação. Assim garantimos que o resultado final seja exatamente o que você imaginou.' },
+      { q: 'Quanto custa um letreiro luminoso em Belo Horizonte?', a: 'O valor depende do tipo (letra caixa, painel, fachada completa), material, tamanho e iluminação. Para receber um orçamento preciso, entre em contato pelo WhatsApp com fotos da sua fachada e as dimensões aproximadas.' },
+      { q: 'Vocês atendem qual região?', a: 'Atendemos Belo Horizonte e toda a Região Metropolitana, incluindo Contagem, Betim, Santa Luzia, Sabará e municípios próximos. Consulte disponibilidade para outras cidades de MG.' },
+      { q: 'A instalação está incluída no orçamento?', a: 'Sim. O orçamento inclui fabricação e instalação completa, com toda a infraestrutura elétrica para iluminação LED. Oferecemos garantia na instalação e suporte pós-venda.' },
+      { q: 'Quais materiais são usados na letra caixa?', a: 'Utilizamos acrílico colorido ou translúcido, alumínio (natural, pintado ou anodizado) e inox. A iluminação interna é em LED de alta eficiência e longa durabilidade. O material mais adequado é definido conforme projeto e orçamento.' }
+    ]
+
+    onMounted(() => {
+      // Header scroll
+      window.addEventListener('scroll', () => { scrolled.value = window.scrollY > 60 }, { passive: true })
+
+      // Hero: set opacity via JS then animate (conteúdo visível sem JS por padrão)
+      const heroAnims = [
+        ['.hero-tag', 0.2], ['.hero h1', 0.4], ['.hero-sub', 0.6], ['.hero-ctas', 0.8]
+      ]
+      heroAnims.forEach(([sel, delay]) => {
+        const el = document.querySelector(sel)
+        if (!el) return
+        el.style.cssText += ';opacity:0;transform:translateY(18px)'
+        animate(el, { opacity: [0, 1], y: [18, 0] }, { duration: 0.55, delay })
+      })
+
+      // Scroll reveal via IntersectionObserver (não usa motion inView — mais confiável)
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return
+          animate(e.target, { opacity: [0, 1], y: [20, 0] }, { duration: 0.5, easing: [0.25, 0.1, 0.25, 1] })
+          obs.unobserve(e.target)
+        })
+      }, { rootMargin: '-48px 0px' })
+
+      // Set initial hidden state via JS (não CSS — garante visibilidade sem JS)
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.style.cssText += ';opacity:0;transform:translateY(20px)'
+        obs.observe(el)
+      })
+    })
+
+    return { scrolled, tab, tabs, faq, wa, stats, pilares, steps, faqs }
+  }
+}).mount('#app')
+</script>
+</body>
+</html>

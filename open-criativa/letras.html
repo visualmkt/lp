@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon LED, Letra Caixa e Letra 3D | Open Criativa — Anápolis GO</title>
+  <meta name="description" content="Neon LED personalizado, Letra Caixa iluminada e Letra 3D para fachadas e decoração. Fabricação própria em Anápolis GO. Entrega em todo o Brasil.">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TKC8SWC8');</script>
+  <!-- End Google Tag Manager -->
+  <!-- GA4 direto (backup) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSSSJJDKYH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QSSSJJDKYH');
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{width:100%;overflow-x:hidden}
+    :root{
+      --pink:#e91e8c;
+      --pink-dark:#c4177a;
+      --bg:#0f0f0f;
+      --bg2:#1a1a1a;
+      --bg3:#222;
+      --text:#fff;
+      --text-muted:#aaa;
+      --border:#2a2a2a;
+      --neon-glow: 0 0 20px rgba(233,30,140,.6), 0 0 40px rgba(233,30,140,.3);
+    }
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;width:100%;overflow-x:hidden}
+
+    /* HEADER */
+    header{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .header-inner{max-width:1200px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo img{height:72px;filter:drop-shadow(0 0 16px rgba(233,30,140,.4))}
+    .btn-wpp{background:var(--pink);color:#fff;padding:12px 28px;border-radius:4px;text-decoration:none;font-size:15px;font-weight:700;white-space:nowrap;transition:background .2s}
+    .btn-wpp:hover{background:var(--pink-dark)}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden;min-height:600px;display:flex;align-items:center;padding:90px 24px 100px;text-align:center}
+    .hero-bg{position:absolute;inset:0;background-image:url('https://visualmkt.com.br/claude/open-letras/img/hero-letras.jpg');background-size:cover;background-position:center;filter:brightness(.3)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(233,30,140,.2) 0%,rgba(0,0,0,.7) 100%)}
+    .hero-inner{max-width:800px;margin:0 auto;position:relative;z-index:1}
+    .hero-badge{display:inline-block;border:1px solid var(--pink);border-radius:20px;padding:5px 18px;font-size:12px;font-weight:700;color:var(--pink);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+    .hero h1{font-size:50px;font-weight:700;line-height:1.1;margin-bottom:20px;color:#fff}
+    .hero h1 em{font-style:normal;color:var(--pink);text-shadow:var(--neon-glow)}
+    .hero p{font-size:18px;color:var(--text-muted);margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
+    .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+    .btn-main{background:var(--pink);color:#fff;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:16px;border:none;cursor:pointer;transition:background .2s}
+    .btn-main:hover{background:var(--pink-dark)}
+    .btn-outline{background:transparent;color:#fff;padding:14px 32px;border:2px solid var(--border);border-radius:4px;text-decoration:none;font-weight:600;font-size:16px;cursor:pointer;transition:border-color .2s,color .2s}
+    .btn-outline:hover{border-color:var(--pink);color:var(--pink)}
+    .hero-trust{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;font-size:13px;color:var(--text-muted)}
+    .hero-trust span::before{content:"✓ ";color:var(--pink);font-weight:700}
+
+    /* SECTION LABELS */
+    .label{text-align:center;font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--pink);text-transform:uppercase;margin-bottom:10px}
+    .h2{text-align:center;font-size:34px;font-weight:700;color:#fff;margin-bottom:8px}
+    .sub{text-align:center;color:var(--text-muted);font-size:16px;margin-bottom:52px}
+
+    /* PRODUTOS */
+    .produtos{padding:80px 24px;background:var(--bg)}
+    .produtos-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;display:flex;flex-direction:column}
+    .card:hover{transform:translateY(-3px);border-color:var(--pink);box-shadow:0 8px 32px rgba(233,30,140,.15)}
+    .card-thumb{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--bg3)}
+    .card-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+    .card:hover .card-thumb img{transform:scale(1.04)}
+    .card-body{padding:22px;flex:1;display:flex;flex-direction:column}
+    .card-tag{display:inline-block;background:rgba(233,30,140,.15);color:var(--pink);border:1px solid rgba(233,30,140,.3);padding:3px 12px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
+    .card h3{font-size:19px;font-weight:700;margin-bottom:10px;color:#fff}
+    .card p{color:var(--text-muted);font-size:14px;line-height:1.6;margin-bottom:14px}
+    .card-bullets{list-style:none;margin-bottom:20px;flex:1}
+    .card-bullets li{color:var(--text-muted);font-size:13px;padding:5px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:8px}
+    .card-bullets li:last-child{border-bottom:none}
+    .card-bullets li::before{content:"●";color:var(--pink);font-size:8px;margin-top:5px;flex-shrink:0}
+    .card-cta{display:block;text-align:center;background:var(--pink);color:#fff;padding:12px;border-radius:4px;text-decoration:none;font-size:14px;font-weight:700;transition:background .2s;margin-top:auto}
+    .card-cta:hover{background:var(--pink-dark)}
+
+    /* DIFERENCIAIS */
+    .difs{background:var(--bg2);padding:72px 24px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .difs-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px 40px}
+    .dif{padding:8px}
+    .dif-icon{font-size:36px;margin-bottom:14px}
+    .dif h4{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}
+    .dif p{color:var(--text-muted);font-size:14px}
+
+    /* GALERIA */
+    .galeria{padding:80px 24px;background:var(--bg)}
+    .galeria-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .galeria-item{aspect-ratio:4/3;overflow:hidden;border-radius:8px;cursor:pointer;position:relative;background:var(--bg3)}
+    .galeria-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+    .galeria-item:hover img{transform:scale(1.06)}
+    .galeria-item-label{position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(to top,rgba(0,0,0,.8),transparent);font-size:12px;font-weight:600;color:rgba(255,255,255,.85);transform:translateY(4px);opacity:0;transition:all .3s}
+    .galeria-item:hover .galeria-item-label{transform:translateY(0);opacity:1}
+
+    /* CTA FINAL */
+    .cta-final{background:var(--bg2);border-top:1px solid var(--border);padding:90px 24px;text-align:center;position:relative;overflow:hidden}
+    .cta-final::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(233,30,140,.12) 0%,transparent 70%);pointer-events:none}
+    .cta-final-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+    .cta-final h2{font-size:38px;font-weight:700;color:#fff;margin-bottom:16px;line-height:1.2}
+    .cta-final h2 em{font-style:normal;color:var(--pink);text-shadow:var(--neon-glow)}
+    .cta-final p{font-size:17px;color:var(--text-muted);margin-bottom:36px}
+    .cta-final .btn-main{font-size:17px;padding:16px 44px}
+    .cta-phone{display:block;margin-top:18px;font-size:15px;color:var(--text-muted)}
+    .cta-phone a{color:var(--text-muted);text-decoration:none;transition:color .2s}
+    .cta-phone a:hover{color:var(--pink)}
+
+    /* FOOTER */
+    footer{background:#080808;border-top:1px solid var(--border);padding:52px 24px 28px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px;margin-bottom:36px}
+    footer h5{font-size:13px;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+    footer a{display:block;color:var(--text-muted);text-decoration:none;font-size:13px;margin-bottom:7px;transition:color .2s}
+    footer a:hover{color:var(--pink)}
+    footer p{color:var(--text-muted);font-size:13px;margin-bottom:6px}
+    .footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid var(--border);padding-top:20px;text-align:center;color:#444;font-size:12px}
+
+    /* LIGHTBOX */
+    #lightbox{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:20px}
+    #lightbox.active{display:flex}
+    #lightbox img{max-height:90vh;max-width:90vw;border-radius:8px;object-fit:contain}
+    #lb-close{position:absolute;top:20px;right:28px;color:#fff;font-size:36px;cursor:pointer;line-height:1;opacity:.7;transition:opacity .2s}
+    #lb-close:hover{opacity:1}
+
+    /* WPPFLOAT */
+    .wpp-float{position:fixed;bottom:24px;right:24px;z-index:200;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;font-weight:700;font-size:14px;padding:12px 20px 12px 16px;border-radius:50px;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:background .2s,transform .2s}
+    .wpp-float:hover{background:#1ebe5d;transform:scale(1.04)}
+    .wpp-float svg{width:22px;height:22px;flex-shrink:0}
+
+    @media(max-width:900px){
+      .produtos-grid{grid-template-columns:1fr}
+      .difs-grid{grid-template-columns:repeat(2,1fr)}
+      .galeria-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:680px){
+      .hero h1{font-size:32px}
+      .hero p{font-size:15px}
+      .h2{font-size:26px}
+      .cta-final h2{font-size:26px}
+      .difs-grid{grid-template-columns:1fr}
+      .galeria-grid{grid-template-columns:repeat(2,1fr)}
+      .header-inner{padding:12px 16px}
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKC8SWC8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <a href="/"><img src="https://static.wixstatic.com/media/7aa391_0e216ff8a89e4e1895230685a17f1923~mv2.png" alt="Open Criativa"></a>
+    </div>
+    <a href="https://wa.me/5562981938851?text=Olá!%20Quero%20orçamento%20de%20letra%20luminosa." class="btn-wpp"
+       onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'header'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'header'});">
+      Pedir Orçamento
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Fabricação Própria · Anápolis GO · Todo o Brasil</div>
+    <h1>Sua marca <em>iluminada</em><br>do jeito certo</h1>
+    <p>Neon LED, Letra Caixa e Luminoso Sem Fio — personalizados para destacar sua empresa em qualquer ambiente.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/5562981938851?text=Olá!%20Quero%20orçamento%20de%20letra%20luminosa." class="btn-main"
+         onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_hero'});window.dataLayer.push({event:'wpp_click',wpp_source:'hero'});if(typeof gtag!=='undefined'){gtag('event','cta_hero');gtag('event','wpp_click',{wpp_source:'hero'});}">
+        Pedir Orçamento Agora
+      </a>
+      <button class="btn-outline" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver Produtos</button>
+    </div>
+    <div class="hero-trust">
+      <span>11 anos de mercado</span>
+      <span>Fabricação própria</span>
+      <span>Referência nacional em Neon LED</span>
+      <span>Entrega em todo o Brasil</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" class="produtos">
+  <div class="label">O que produzimos</div>
+  <div class="h2">Três produtos, uma especialidade</div>
+  <div class="sub">Cada peça fabricada com material premium, acabamento profissional e garantia de qualidade</div>
+
+  <div class="produtos-grid">
+
+    <!-- Neon LED -->
+    <div class="card">
+      <div class="card-thumb">
+        <img src="https://visualmkt.com.br/claude/open-letras/img/produto-neon-led.jpg" alt="Neon LED personalizado" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Mais Pedido</span>
+        <h3>Neon LED</h3>
+        <p>Letreiro neon moderno com tubo de silicone flexível e LED de alta luminosidade. Sem gás, sem fragilidade, sem ruído.</p>
+        <ul class="card-bullets">
+          <li>Qualquer formato ou frase personalizada</li>
+          <li>Consumo até 80% menor que neon tradicional</li>
+          <li>Ideal para ambientes internos, fotografias e fachadas</li>
+          <li>Cores vibrantes: rosa, azul, branco, verde e mais</li>
+        </ul>
+        <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20Neon%20LED%20personalizado." class="card-cta"
+           onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'neon-led'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'neon-led'});">
+          Orçamento de Neon LED
+        </a>
+      </div>
+    </div>
+
+    <!-- Letra Caixa -->
+    <div class="card">
+      <div class="card-thumb">
+        <img src="https://visualmkt.com.br/claude/open-letras/img/produto-letra-caixa.jpg" alt="Letra caixa iluminada para fachada" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Fachada</span>
+        <h3>Letra Caixa</h3>
+        <p>Letras tridimensionais em ACM, inox ou acrílico com iluminação LED interna. A escolha certa para fachadas e painéis de alto impacto.</p>
+        <ul class="card-bullets">
+          <li>Face em acrílico iluminado ou espelhado</li>
+          <li>Estrutura em alumínio para maior durabilidade</li>
+          <li>Iluminação frontal, lateral ou back-light</li>
+          <li>Resistente a intempéries para uso externo</li>
+        </ul>
+        <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20Letra%20Caixa%20para%20fachada." class="card-cta"
+           onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'letra-caixa'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'letra-caixa'});">
+          Orçamento de Letra Caixa
+        </a>
+      </div>
+    </div>
+
+    <!-- Letra 3D / Luminoso -->
+    <div class="card">
+      <div class="card-thumb">
+        <img src="https://visualmkt.com.br/claude/open-letras/img/produto-letra-3d.jpg" alt="Letra 3D e luminoso personalizado" loading="lazy">
+      </div>
+      <div class="card-body">
+        <span class="card-tag">Decoração</span>
+        <h3>Letra 3D e Luminoso</h3>
+        <p>Letras e logotipos tridimensionais para decoração de ambientes, vitrines e eventos. Com ou sem iluminação LED interna.</p>
+        <ul class="card-bullets">
+          <li>MDF, acrílico ou foam em alta precisão</li>
+          <li>Pintura personalizada ou acabamento espelhado</li>
+          <li>Perfeito para lojas, eventos e fotografia</li>
+          <li>Versão com LED wireless (sem fio)</li>
+        </ul>
+        <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20Letra%203D%20ou%20Luminoso." class="card-cta"
+           onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'letra-3d'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'letra-3d'});">
+          Orçamento de Letra 3D
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="difs">
+  <div class="label">Por que Open Criativa</div>
+  <div class="h2">Referência nacional em luminosos</div>
+  <div class="sub">Fabricação própria, atendimento direto e experiência de sobra para garantir o melhor resultado</div>
+
+  <div class="difs-grid">
+    <div class="dif">
+      <div class="dif-icon">🏭</div>
+      <h4>Fábrica Própria</h4>
+      <p>Sem intermediários. Produzimos tudo internamente — mais controle de qualidade, prazo e custo direto para você.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">⚡</div>
+      <h4>11 Anos de Mercado</h4>
+      <p>Mais de uma década fabricando comunicação visual para empresas de todo o Brasil. Experiência que faz diferença no resultado final.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">🌟</div>
+      <h4>Referência em Neon LED</h4>
+      <p>Somos reconhecidos nacionalmente como uma das principais referências em neon LED personalizado. Projetos em todos os estados.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">🚚</div>
+      <h4>Entrega em Todo o Brasil</h4>
+      <p>Embalagem especializada para garantir que sua peça chegue intacta, seja para o escritório ao lado ou para outro estado.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">💬</div>
+      <h4>Atendimento no WhatsApp</h4>
+      <p>Fale diretamente com nossa equipe. Sem formulários, sem espera, sem robô. Resposta rápida e acompanhamento do seu pedido.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">✅</div>
+      <h4>Aprovação Antes de Produzir</h4>
+      <p>Você visualiza a arte antes de qualquer produção. Só avançamos para fabricação após sua aprovação.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="galeria">
+  <div class="label">Nossos Projetos</div>
+  <div class="h2">Trabalhos realizados</div>
+  <div class="sub">Algumas das peças que fabricamos para clientes em todo o Brasil</div>
+
+  <div class="galeria-grid">
+    <div class="galeria-item" onclick="openLightbox(0)">
+      <img src="https://visualmkt.com.br/claude/open-letras/img/galeria-01.jpg" alt="Letra caixa bar copa do mundo" loading="lazy">
+      <div class="galeria-item-label">Bar / Copa do Mundo</div>
+    </div>
+    <div class="galeria-item" onclick="openLightbox(1)">
+      <img src="https://visualmkt.com.br/claude/open-letras/img/galeria-02.jpg" alt="Letra caixa fachada restaurante noturno" loading="lazy">
+      <div class="galeria-item-label">Fachada Noturna</div>
+    </div>
+    <div class="galeria-item" onclick="openLightbox(2)">
+      <img src="https://visualmkt.com.br/claude/open-letras/img/galeria-03.jpg" alt="Neon LED logo personalizado" loading="lazy">
+      <div class="galeria-item-label">Neon LED Personalizado</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <div class="label">Pronto para iluminar sua marca?</div>
+    <h2>Peça seu orçamento<br><em>sem compromisso</em></h2>
+    <p>Nossa equipe responde no WhatsApp. Informe o que você precisa e receba uma proposta personalizada.</p>
+    <a href="https://wa.me/5562981938851?text=Olá!%20Quero%20orçamento%20de%20letra%20luminosa%20para%20minha%20empresa." class="btn-main"
+       onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'cta-final'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'cta-final'});">
+      Falar no WhatsApp Agora
+    </a>
+    <div class="cta-phone">
+      Ou ligue: <a href="tel:6237716465">(62) 3771-6465</a> &nbsp;·&nbsp; <a href="tel:6298193-8851">(62) 98193-8851</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="https://static.wixstatic.com/media/7aa391_0e216ff8a89e4e1895230685a17f1923~mv2.png" alt="Open Criativa" style="height:56px;filter:drop-shadow(0 0 8px rgba(233,30,140,.3));margin-bottom:14px;display:block">
+      <p>Comunicação visual com fabricação própria em Anápolis, GO. Neon LED, Letra Caixa e Letra 3D para todo o Brasil.</p>
+    </div>
+    <div>
+      <h5>Produtos</h5>
+      <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20Neon%20LED.">Neon LED</a>
+      <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20Letra%20Caixa.">Letra Caixa</a>
+      <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20Letra%203D.">Letra 3D e Luminoso</a>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <a href="https://wa.me/5562981938851">📱 (62) 98193-8851</a>
+      <a href="tel:6237716465">📞 (62) 3771-6465</a>
+      <p style="margin-top:8px">Av. Brasil Norte, 1500<br>Anápolis, GO — 75080-130</p>
+      <p>CNPJ: 10.646.533/0001-04</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2024 Open Criativa — Todos os direitos reservados · Desenvolvido por <a href="https://visualmkt.com.br" style="color:#555">VisualMKT</a>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lb-close" onclick="closeLightbox()">×</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<!-- WPP FLOAT -->
+<a href="https://wa.me/5562981938851?text=Olá!%20Quero%20orçamento%20de%20letra%20luminosa." class="wpp-float"
+   onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'flutuante'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'flutuante'});"
+   target="_blank" rel="noopener noreferrer">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.139.564 4.145 1.549 5.878L0 24l6.304-1.524A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.003-1.371l-.357-.214-3.742.904.944-3.644-.234-.374A9.764 9.764 0 012.182 12C2.182 6.584 6.584 2.182 12 2.182S21.818 6.584 21.818 12 17.416 21.818 12 21.818z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+  // Lightbox
+  const lbImgs = [
+    'https://visualmkt.com.br/claude/open-letras/img/galeria-01.jpg',
+    'https://visualmkt.com.br/claude/open-letras/img/galeria-02.jpg',
+    'https://visualmkt.com.br/claude/open-letras/img/galeria-03.jpg',
+  ];
+  function openLightbox(i) {
+    document.getElementById('lb-img').src = lbImgs[i];
+    document.getElementById('lightbox').classList.add('active');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.getElementById('lb-img').src = '';
+  }
+  document.getElementById('lightbox').addEventListener('click', e => { if(e.target.id==='lightbox') closeLightbox(); });
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
+
+  // postMessage auto-resize para iframe Wix
+  function sendHeight() {
+    const h = document.body.scrollHeight;
+    window.parent.postMessage({ type: 'setHeight', height: h }, '*');
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  new ResizeObserver(sendHeight).observe(document.body);
+</script>
+</body>
+</html>

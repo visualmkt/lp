@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Eleitoral | Open Criativa — Anápolis GO</title>
+  <meta name="description" content="Praguinha, adesivo perfurado, Seethru, adesivação de comitê. Comunicação visual eleitoral para candidatos em Goiás. NF para TRE.">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TKC8SWC8');</script>
+  <!-- End Google Tag Manager -->
+  <!-- GA4 direto (backup) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QSSSJJDKYH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QSSSJJDKYH');
+  </script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --pink:#e91e8c;
+      --pink-dark:#c4177a;
+      --bg:#0f0f0f;
+      --bg2:#1a1a1a;
+      --bg3:#222;
+      --text:#fff;
+      --text-muted:#aaa;
+      --border:#2a2a2a;
+    }
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+
+    /* HEADER */
+    header{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+    .header-inner{max-width:1200px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo img{height:72px;filter:drop-shadow(0 0 16px rgba(233,30,140,.4))}
+    .btn-wpp{background:var(--pink);color:#fff;padding:12px 28px;border-radius:4px;text-decoration:none;font-size:15px;font-weight:700;white-space:nowrap;transition:background .2s}
+    .btn-wpp:hover{background:var(--pink-dark)}
+
+    /* HERO */
+    .hero{position:relative;overflow:hidden;min-height:600px;display:flex;align-items:center}
+    .hero-bg{position:absolute;inset:0;background-image:url('https://visualmkt.com.br/claude/open-politica/img/hero-campanha.jpg');background-size:cover;background-position:center;filter:brightness(.35)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(233,30,140,.25) 0%,rgba(0,0,0,.6) 100%)}
+    .hero{padding:90px 24px 100px;text-align:center}
+    .hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
+    .hero-badge{display:inline-block;border:1px solid var(--pink);border-radius:20px;padding:5px 18px;font-size:12px;font-weight:700;color:var(--pink);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
+    .hero h1{font-size:46px;font-weight:700;line-height:1.15;margin-bottom:18px;color:#fff}
+    .hero h1 em{font-style:normal;color:var(--pink)}
+    .hero p{font-size:18px;color:var(--text-muted);margin-bottom:36px;max-width:580px;margin-left:auto;margin-right:auto}
+    .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+    .btn-main{background:var(--pink);color:#fff;padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:700;font-size:16px;border:none;cursor:pointer;transition:background .2s}
+    .btn-main:hover{background:var(--pink-dark)}
+    .btn-outline{background:transparent;color:#fff;padding:14px 32px;border:2px solid var(--border);border-radius:4px;text-decoration:none;font-weight:600;font-size:16px;cursor:pointer;transition:border-color .2s,color .2s}
+    .btn-outline:hover{border-color:var(--pink);color:var(--pink)}
+    .hero-trust{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;font-size:13px;color:var(--text-muted)}
+    .hero-trust span::before{content:"✓ ";color:var(--pink);font-weight:700}
+
+    /* SECTION LABELS */
+    .label{text-align:center;font-size:11px;font-weight:700;letter-spacing:2.5px;color:var(--pink);text-transform:uppercase;margin-bottom:10px}
+    .h2{text-align:center;font-size:34px;font-weight:700;color:#fff;margin-bottom:8px}
+    .sub{text-align:center;color:var(--text-muted);font-size:16px;margin-bottom:52px}
+
+    /* PRODUTOS */
+    .produtos{padding:80px 24px;background:var(--bg)}
+    .produtos-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+    .card:hover{transform:translateY(-3px);border-color:var(--pink);box-shadow:0 8px 32px rgba(233,30,140,.15)}
+    .card-thumb{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--bg3)}
+    .card-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,rgba(0,0,0,.5))}
+    .card-body{padding:22px}
+    .card-tag{display:inline-block;background:rgba(233,30,140,.15);color:var(--pink);border:1px solid rgba(233,30,140,.3);padding:3px 12px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
+    .card-tag.gold{background:rgba(255,214,0,.1);color:#ffd600;border-color:rgba(255,214,0,.3)}
+    .card h3{font-size:18px;font-weight:700;margin-bottom:8px;color:#fff}
+    .card p{color:var(--text-muted);font-size:14px;line-height:1.6;margin-bottom:16px}
+    .card-specs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+    .spec{background:var(--bg3);border-radius:4px;padding:4px 10px;font-size:11px;color:var(--text-muted);border:1px solid var(--border)}
+    .card-cta{display:block;text-align:center;background:var(--pink);color:#fff;padding:11px;border-radius:4px;text-decoration:none;font-size:14px;font-weight:700;transition:background .2s}
+    .card-cta:hover{background:var(--pink-dark)}
+
+    /* DIFERENCIAIS */
+    .difs{background:var(--bg2);padding:72px 24px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .difs-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px 40px}
+    .dif{padding:8px}
+    .dif-icon{font-size:36px;margin-bottom:14px}
+    .dif h4{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}
+    .dif p{color:var(--text-muted);font-size:14px}
+
+    /* PROCESSO */
+    .processo{padding:80px 24px;background:var(--bg)}
+    .steps{max-width:960px;margin:40px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px}
+    .step{text-align:center;padding:20px 12px;position:relative}
+    .step::after{content:"→";position:absolute;right:-4px;top:28px;color:var(--border);font-size:20px}
+    .step:last-child::after{display:none}
+    .step-n{width:48px;height:48px;border-radius:50%;background:var(--pink);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+    .step h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+    .step p{font-size:13px;color:var(--text-muted)}
+
+    /* FAQ */
+    .faq-wrap{max-width:760px;margin:0 auto;padding:80px 24px}
+    .faq-item{border:1px solid var(--border);border-radius:8px;margin-bottom:10px;overflow:hidden;background:var(--bg2)}
+    .faq-q{padding:18px 20px;cursor:pointer;font-weight:600;font-size:15px;color:#fff;display:flex;justify-content:space-between;align-items:center;user-select:none;transition:background .2s}
+    .faq-q:hover{background:var(--bg3)}
+    .faq-q span{color:var(--pink);font-size:20px;font-weight:400;line-height:1;flex-shrink:0;margin-left:12px;transition:transform .2s}
+    .faq-item.open .faq-q span{transform:rotate(45deg)}
+    .faq-a{padding:18px 20px;color:var(--text-muted);font-size:14px;display:none;border-top:1px solid var(--border)}
+    .faq-item.open .faq-a{display:block}
+
+    /* CTA FINAL */
+    .cta-final{background:var(--bg2);border-top:1px solid var(--border);padding:80px 24px;text-align:center;position:relative;overflow:hidden}
+    .cta-final::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(233,30,140,.15) 0%,transparent 70%);pointer-events:none}
+    .cta-final-inner{max-width:600px;margin:0 auto;position:relative;z-index:1}
+    .cta-final h2{font-size:36px;font-weight:700;color:#fff;margin-bottom:16px}
+    .cta-final h2 em{font-style:normal;color:var(--pink)}
+    .cta-final p{font-size:17px;color:var(--text-muted);margin-bottom:32px}
+    .cta-final .btn-main{font-size:17px;padding:16px 40px}
+
+    /* FOOTER */
+    footer{background:#080808;border-top:1px solid var(--border);padding:52px 24px 28px}
+    .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px;margin-bottom:36px}
+    footer h5{font-size:13px;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+    footer a{display:block;color:var(--text-muted);text-decoration:none;font-size:13px;margin-bottom:7px;transition:color .2s}
+    footer a:hover{color:var(--pink)}
+    footer p{color:var(--text-muted);font-size:13px;margin-bottom:6px}
+    .footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid var(--border);padding-top:20px;text-align:center;color:#444;font-size:12px}
+
+    /* DIVIDER */
+    .divider{max-width:1200px;margin:0 auto;height:1px;background:var(--border)}
+
+    @media(max-width:900px){
+      .produtos-grid{grid-template-columns:1fr}
+      .difs-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:680px){
+      .hero h1{font-size:30px}
+      .hero p{font-size:15px}
+      .h2{font-size:26px}
+      .step::after{display:none}
+      .cta-final h2{font-size:26px}
+      .difs-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKC8SWC8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <a href="/"><img src="https://static.wixstatic.com/media/7aa391_0e216ff8a89e4e1895230685a17f1923~mv2.png" alt="Open Criativa"></a>
+    </div>
+    <a href="https://wa.me/5562981938851?text=Olá!%20Quero%20orçamento%20de%20material%20eleitoral." class="btn-wpp" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'header'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'header'});">Pedir Orçamento</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Material Eleitoral · NF para TRE</div>
+    <h1>Sua Campanha Visível<br>Do Comitê às <em>Ruas do Brasil</em></h1>
+    <p>Praguinha, adesivo perfurado, Seethru e adesivação de comitê. Produção ágil, NF para prestação ao TRE e entrega em todo o estado.</p>
+    <div class="hero-ctas">
+      <a href="https://wa.me/5562981938851?text=Olá!%20Quero%20orçamento%20de%20material%20eleitoral." class="btn-main" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_hero'});window.dataLayer.push({event:'wpp_click',wpp_source:'hero'});if(typeof gtag!=='undefined'){gtag('event','cta_hero');gtag('event','wpp_click',{wpp_source:'hero'});}">Solicitar Orçamento no WhatsApp</a>
+      <button class="btn-outline" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Ver Produtos</button>
+    </div>
+    <div class="hero-trust">
+      <span>NF para TRE</span>
+      <span>Entrega em todo Goiás</span>
+      <span>10 anos de comunicação visual</span>
+      <span>Prazo de campanha garantido</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="produtos" id="produtos">
+  <div class="label">Produtos Eleitorais</div>
+  <h2 class="h2">Tudo Que Sua Campanha Precisa</h2>
+  <p class="sub">Do adesivo de distribuição em massa ao comitê plotado — produção própria, prazo reduzido.</p>
+  <div class="produtos-grid">
+
+    <div class="card">
+      <div class="card-thumb" style="background-image:url('https://visualmkt.com.br/claude/open-politica/img/produto-praguinha.jpg');background-size:cover;background-position:center"></div>
+      <div class="card-body">
+        <span class="card-tag gold">Mais Pedido</span>
+        <h3>Praguinha e Praguinhão</h3>
+        <p>Adesivo redondo em vinil com impressão 4 cores full color. Cola de alta aderência para carros, capacetes e portas. A partir de 100 unidades.</p>
+        <div class="card-specs">
+          <span class="spec">Vinil autoadesivo</span>
+          <span class="spec">Redondo / personalizado</span>
+          <span class="spec">A partir de 100 un</span>
+        </div>
+        <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20praguinha%20eleitoral." class="card-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'praguinha'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'praguinha'});">Pedir Orçamento</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-thumb" style="background-image:url('https://visualmkt.com.br/claude/open-politica/img/produto-perfurado.jpg');background-size:cover;background-position:center"></div>
+      <div class="card-body">
+        <span class="card-tag">Carro de Campanha</span>
+        <h3>Adesivo Perfurado para Vidro</h3>
+        <p>Impressão de alta resolução com laminação solar. Visão interna preservada, remoção sem danos ao vidro. Ideal para frota de carros de campanha.</p>
+        <div class="card-specs">
+          <span class="spec">Vinil microperfurado</span>
+          <span class="spec">Visão interna OK</span>
+          <span class="spec">UV + laminação solar</span>
+        </div>
+        <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20adesivo%20perfurado%20eleitoral." class="card-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'perfurado'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'perfurado'});">Pedir Orçamento</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-thumb" style="background-image:url('https://visualmkt.com.br/claude/open-politica/img/produto-seethru.jpg');background-size:cover;background-position:center"></div>
+      <div class="card-body">
+        <span class="card-tag">Comitê e Vitrine</span>
+        <h3>Seethru e Citru Eleitoral</h3>
+        <p>Ver de dentro, impacto total de fora. Seethru para vidraças do comitê, Citru translúcido para vitrines. Impressão UV alta definição que diferencia sua campanha.</p>
+        <div class="card-specs">
+          <span class="spec">Vinil seethru / citru</span>
+          <span class="spec">Impressão UV</span>
+          <span class="spec">Para vidraças</span>
+        </div>
+        <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20Seethru%20ou%20Citru%20eleitoral." class="card-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'seethru'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'seethru'});">Pedir Orçamento</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-thumb" style="background-image:url('https://visualmkt.com.br/claude/open-politica/img/produto-comite.jpg');background-size:cover;background-position:center"></div>
+      <div class="card-body">
+        <span class="card-tag">QG de Campanha</span>
+        <h3>Adesivação de Comitê</h3>
+        <p>Plotagem de fachada, vitrines e painéis com a identidade da campanha. Lona e vinil de qualidade. Seu QG visível e profissional do lado de fora.</p>
+        <div class="card-specs">
+          <span class="spec">Grande formato</span>
+          <span class="spec">Fachada + vitrine</span>
+          <span class="spec">Aplicação profissional</span>
+        </div>
+        <a href="https://wa.me/5562981938851?text=Quero%20orçamento%20de%20adesivação%20de%20comitê." class="card-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'comite'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'comite'});">Pedir Orçamento</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="difs">
+  <div class="label">Por Que a Open Criativa</div>
+  <h2 class="h2" style="margin-bottom:40px">Especialistas em Material Eleitoral</h2>
+  <div class="difs-grid">
+    <div class="dif">
+      <div class="dif-icon">🧾</div>
+      <h4>NF para o TRE</h4>
+      <p>Nota fiscal para sua prestação de contas ao Tribunal Regional Eleitoral. Processo 100% regularizado.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">⚡</div>
+      <h4>Prazo de Campanha</h4>
+      <p>Em eleição, dia perdido é voto perdido. Produção ágil com prazo garantido para sua campanha.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">🚚</div>
+      <h4>Entrega em Todo o Brasil</h4>
+      <p>Produção em Anápolis-GO, entregamos para qualquer estado via transportadora ou Sedex. Consulte prazo.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">🏗️</div>
+      <h4>10 Anos de Experiência</h4>
+      <p>Uma década em comunicação visual. Materiais que resistem ao sol e à chuva durante toda a campanha.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">💬</div>
+      <h4>Atendimento Rápido</h4>
+      <p>Resposta ágil pelo WhatsApp, orçamento detalhado no mesmo dia. Sem burocracia, sem espera.</p>
+    </div>
+    <div class="dif">
+      <div class="dif-icon">⭐</div>
+      <h4>+500 Candidatos Atendidos</h4>
+      <p>Vereadores, prefeitos e deputados em todo o Brasil confiam na Open Criativa para suas campanhas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="processo">
+  <div class="label">Como Funciona</div>
+  <h2 class="h2">Do Briefing à Entrega</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">1</div>
+      <h4>Briefing</h4>
+      <p>Manda no WhatsApp: produto, quantidade, cores e foto do candidato.</p>
+    </div>
+    <div class="step">
+      <div class="step-n">2</div>
+      <h4>Arte</h4>
+      <p>Você envia o arquivo pronto ou combinamos a criação. Aprovação antes de produzir.</p>
+    </div>
+    <div class="step">
+      <div class="step-n">3</div>
+      <h4>Produção</h4>
+      <p>Arte aprovada, entramos em produção imediatamente. Prazo garantido.</p>
+    </div>
+    <div class="step">
+      <div class="step-n">4</div>
+      <h4>Entrega + NF</h4>
+      <p>Material entregue com nota fiscal para prestação de contas no TRE.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-wrap" id="faq">
+  <div class="label">Dúvidas</div>
+  <h2 class="h2" style="margin-bottom:32px">Perguntas Frequentes</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Vocês emitem nota fiscal para prestação ao TRE? <span>+</span></div>
+    <div class="faq-a">Sim. Toda compra tem nota fiscal. A NF é emitida pela Open Criativa LTDA, CNPJ 19.958.199/0001-93, e pode ser usada normalmente na prestação de contas ao TRE de Goiás.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Qual a quantidade mínima de praguinha? <span>+</span></div>
+    <div class="faq-a">A partir de 100 unidades. Quanto maior o volume, melhor o preço por unidade. Peça orçamento pelo WhatsApp informando quantidade e tamanho.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">O adesivo perfurado compromete a visão do motorista? <span>+</span></div>
+    <div class="faq-a">Não. O vinil microperfurado permite visão interna normal. Do lado de fora o efeito visual é total. Usamos laminação solar que também filtra calor e raios UV.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">O que é Seethru e Citru? Vale para campanha? <span>+</span></div>
+    <div class="faq-a">São materiais em vinil para vidraças. O Seethru permite ver de dentro para fora enquanto transmite a imagem da campanha para quem está na rua. O Citru é translúcido, ideal para vitrines com iluminação interna. Ambos diferenciam visualmente sua campanha.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Atendem candidatos fora de Anápolis? <span>+</span></div>
+    <div class="faq-a">Sim. Atendemos candidatos em Goiânia, Anápolis e todo o estado de Goiás. Para regiões mais distantes o material é enviado via transportadora ou Sedex. Consulte frete e prazo pelo WhatsApp.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Qual o prazo de produção? <span>+</span></div>
+    <div class="faq-a">Praguinhas: 3-5 dias úteis após aprovação de arte. Adesivo perfurado: 5-7 dias. Adesivação de comitê: consultivo conforme projeto. Em urgências de campanha, entre em contato para avaliarmos prioridade.</div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="cta-final-inner">
+    <h2>Garanta Sua Produção<br><em>Antes da Campanha</em></h2>
+    <p>Não deixe para a última semana. Fale agora com nossa equipe e garanta prazo, qualidade e NF para o TRE.</p>
+    <a href="https://wa.me/5562981938851?text=Olá!%20Quero%20orçamento%20de%20material%20eleitoral." class="btn-main" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'wpp_click',wpp_source:'cta_final'});if(typeof gtag!=='undefined')gtag('event','wpp_click',{wpp_source:'cta_final'});">Falar no WhatsApp Agora</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="https://static.wixstatic.com/media/7aa391_0e216ff8a89e4e1895230685a17f1923~mv2.png" alt="Open Criativa" style="height:38px;margin-bottom:16px">
+      <p>10 anos criando comunicação visual de impacto em Goiás.</p>
+      <p style="margin-top:8px">CNPJ: 19.958.199/0001-93</p>
+    </div>
+    <div>
+      <h5>Contato</h5>
+      <a href="https://wa.me/5562981938851">📱 (62) 98193-8851</a>
+      <a href="tel:6237716465">📞 (62) 3771-6465</a>
+      <a href="mailto:opencriativa@gmail.com">✉️ opencriativa@gmail.com</a>
+      <p style="margin-top:10px">Av. Patriarca, Qd 01 Lt 14<br>Lourdes, Anápolis - GO · CEP 75095-310</p>
+    </div>
+    <div>
+      <h5>Produtos Eleitorais</h5>
+      <a href="#produtos">Praguinha e Praguinhão</a>
+      <a href="#produtos">Adesivo Perfurado</a>
+      <a href="#produtos">Seethru e Citru</a>
+      <a href="#produtos">Adesivação de Comitê</a>
+    </div>
+    <div>
+      <h5>Outros Serviços</h5>
+      <a href="/">Comunicação Visual</a>
+      <a href="/">Gráfica Rápida</a>
+      <a href="/">Fachadas</a>
+      <a href="/">Sinalização</a>
+      <h5 style="margin-top:18px">Redes</h5>
+      <a href="https://instagram.com/opencriativa" target="_blank">@opencriativa</a>
+      <a href="https://facebook.com/opencomunicacoes" target="_blank">Facebook</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Open Criativa LTDA · Material eleitoral produzido conforme legislação eleitoral vigente.
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', function() {
+    const item = this.parentElement;
+    document.querySelectorAll('.faq-item').forEach(i => { if(i !== item) i.classList.remove('open'); });
+    item.classList.toggle('open');
+  });
+});
+</script>
+
+<script>
+(function() {
+  function sendHeight() {
+    window.parent.postMessage({ type: 'wix-iframe-height', height: document.documentElement.scrollHeight }, '*');
+  }
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+  setTimeout(sendHeight, 500);
+  setTimeout(sendHeight, 1500);
+  setTimeout(sendHeight, 3000);
+})();
+</script>
+
+</body>
+</html>
