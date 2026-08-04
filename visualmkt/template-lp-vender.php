@@ -310,6 +310,10 @@ tailwind.config = {
           <div class="ink client-tile"><img src="https://www.visualmkt.com.br/vender/imagens/artefinal-ig.webp" alt="Arte Final Brasil" class="h-16 w-16 object-cover rounded-full"></div>
           <div class="ink client-tile"><img src="https://www.visualmkt.com.br/vender/imagens/zoonn.webp" alt="Zoonn Experiências" class="h-16 w-16 object-cover rounded-full"></div>
           <div class="ink client-tile"><img src="https://www.visualmkt.com.br/vender/imagens/holdprint.png" alt="Holdprint Sistemas" class="max-h-9 max-w-[82%] object-contain"></div>
+          <div class="ink client-tile"><img src="https://upload.imprimastore.net/file/storage1-files-imprimastore/grafissima/aparencia/1775790000/logotipo_244aa5799fe0d09fb0ffa2cc54d7470d.png" alt="Grafíssima" class="max-h-14 max-w-[80%] object-contain"></div>
+          <div class="ink client-tile"><img src="https://www.duarteplacas.com.br/wp-content/uploads/2026/07/Logo-Vertical-290px-RGB.png" alt="Duarte Placas" class="max-h-14 max-w-[80%] object-contain"></div>
+          <div class="ink client-tile"><img src="https://pincelos.com.br/wp-content/uploads/2022/10/cropped-Design-sem-nome-3-1-180x180.png" alt="Pincelos" class="h-16 w-16 object-cover rounded-full"></div>
+          <div class="ink client-tile"><img src="https://kdoze.com.br/wp-content/uploads/2026/05/Logo-decorativo-Kdoze.svg" alt="Kdoze Impressão Digital" class="max-h-9 max-w-[80%] object-contain"></div>
         </div>
 
         <!-- Faixa de clientes secundários -->
