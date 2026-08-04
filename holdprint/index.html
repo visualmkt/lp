@@ -7,28 +7,9 @@
 <meta name="description" content="Software de gestão para empresas de comunicação visual. Orçamento preciso, produção organizada, margem real em cada job.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        navy:  '#0B1220',
-        navy2: '#111827',
-        navy3: '#162035',
-        teal:  '#29B393',
-        teal2: '#1e9b7d',
-      },
-      fontFamily: {
-        display: ['Montserrat', 'sans-serif'],
-        body: ['Open Sans', 'sans-serif'],
-      }
-    }
-  }
-}
-</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/visualmkt/lp@main/holdprint/style.css">
 <style>
 *, *::before, *::after { box-sizing: border-box; }
 :root { --teal: #29B393; --navy: #0B1220; --navy2: #111827; }
@@ -309,6 +290,12 @@ select.form-field option { background: #111827; }
   .feat-grid { grid-template-columns: 1fr !important; }
 }
 </style>
+
+<style>
+  .fa-spin { animation: fa-spin-kf 1s linear infinite; }
+  @keyframes fa-spin-kf { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
+
 </head>
 <body>
 
@@ -353,7 +340,7 @@ select.form-field option { background: #111827; }
       <div style="display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .6s .3s both;">
         <a href="#form" class="btn-cta">
           Quero testar grátis por 7 dias
-          <i class="fa-solid fa-arrow-right text-xs"></i>
+          <svg class="inline-svg text-xs" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
         </a>
         <a href="https://holdprint.net" target="_blank" class="btn-ghost">Ver o sistema</a>
       </div>
@@ -379,7 +366,7 @@ select.form-field option { background: #111827; }
         <div style="font-size:.65rem;color:rgba(255,255,255,.4);margin-bottom:4px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;">Margem real</div>
         <div style="font-family:'Montserrat',sans-serif;font-size:1.3rem;font-weight:800;color:#fff;">por serviço</div>
         <div style="display:flex;align-items:center;gap:4px;margin-top:2px;">
-          <i class="fa-solid fa-arrow-trend-up" style="color:#29B393;font-size:.7rem;"></i>
+          <svg class="inline-svg " viewBox="0 0 576 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:.7rem;" aria-hidden="true"><path fill="currentColor" d="M384 160c-17.7 0-32-14.3-32-32s14.3-32 32-32H544c17.7 0 32 14.3 32 32V288c0 17.7-14.3 32-32 32s-32-14.3-32-32V205.3L342.6 374.6c-12.5 12.5-32.8 12.5-45.3 0L192 269.3 54.6 406.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160c12.5-12.5 32.8-12.5 45.3 0L320 306.7 466.7 160H384z"></path></svg>
           <span style="font-size:.65rem;color:#29B393;font-weight:700;">Visível</span>
         </div>
       </div>
@@ -431,7 +418,7 @@ select.form-field option { background: #111827; }
       <div class="step-card reveal">
         <div class="step-num">01</div>
         <div style="width:44px;height:44px;border-radius:12px;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-          <i class="fa-solid fa-sliders" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm73.3-64C253 35.7 224.8 16 192 16s-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l86.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L265.3 64z"></path></svg>
         </div>
         <h3 style="font-size:1.1rem;margin-bottom:10px;line-height:1.3;">Materiais já cadastrados</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.875rem;line-height:1.7;">
@@ -442,11 +429,11 @@ select.form-field option { background: #111827; }
       <div class="step-card reveal reveal-delay-1" style="position:relative;">
         <!-- connector arrow left -->
         <div class="hidden lg:block" style="position:absolute;left:-14px;top:50%;transform:translateY(-50%);color:rgba(41,179,147,.25);font-size:.9rem;">
-          <i class="fa-solid fa-chevron-right"></i>
+          <svg class="inline-svg " viewBox="0 0 320 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg>
         </div>
         <div class="step-num">02</div>
         <div style="width:44px;height:44px;border-radius:12px;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-          <i class="fa-solid fa-calculator" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 384 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM96 64H288c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"></path></svg>
         </div>
         <h3 style="font-size:1.1rem;margin-bottom:10px;line-height:1.3;">Crie orçamentos em minutos</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.875rem;line-height:1.7;">
@@ -457,11 +444,11 @@ select.form-field option { background: #111827; }
       <div class="step-card reveal reveal-delay-2" style="position:relative;">
         <!-- connector arrow left -->
         <div class="hidden lg:block" style="position:absolute;left:-14px;top:50%;transform:translateY(-50%);color:rgba(41,179,147,.25);font-size:.9rem;">
-          <i class="fa-solid fa-chevron-right"></i>
+          <svg class="inline-svg " viewBox="0 0 320 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"></path></svg>
         </div>
         <div class="step-num">03</div>
         <div style="width:44px;height:44px;border-radius:12px;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-          <i class="fa-solid fa-truck-fast" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 640 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"></path></svg>
         </div>
         <h3 style="font-size:1.1rem;margin-bottom:10px;line-height:1.3;">Acompanhe do job à entrega</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.875rem;line-height:1.7;">
@@ -474,7 +461,7 @@ select.form-field option { background: #111827; }
     <div class="reveal" style="text-align:center;margin-top:48px;">
       <a href="#form" class="btn-cta">
         Ver como funciona na prática
-        <i class="fa-solid fa-arrow-right text-xs"></i>
+        <svg class="inline-svg text-xs" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
       </a>
     </div>
 
@@ -563,7 +550,7 @@ select.form-field option { background: #111827; }
 
       <div class="feat-card">
         <div class="feat-icon">
-          <i class="fa-solid fa-calculator" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 384 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM96 64H288c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96c0-17.7 14.3-32 32-32zm32 160a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM96 352a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM64 416c0-17.7 14.3-32 32-32h96c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM192 256a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zm64-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm32 64a32 32 0 1 1 -64 0 32 32 0 1 1 64 0zM288 448a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"></path></svg>
         </div>
         <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Precificação por IA</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
@@ -573,7 +560,7 @@ select.form-field option { background: #111827; }
 
       <div class="feat-card">
         <div class="feat-icon">
-          <i class="fa-solid fa-clipboard-list" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 384 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M192 0c-41.8 0-77.4 26.7-90.5 64H64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H282.5C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM72 272a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm104-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zM72 368a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 0c0-8.8 7.2-16 16-16H304c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16z"></path></svg>
         </div>
         <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Ordem de produção</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
@@ -583,7 +570,7 @@ select.form-field option { background: #111827; }
 
       <div class="feat-card">
         <div class="feat-icon">
-          <i class="fa-solid fa-eye" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 576 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"></path></svg>
         </div>
         <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Status em tempo real</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
@@ -593,7 +580,7 @@ select.form-field option { background: #111827; }
 
       <div class="feat-card">
         <div class="feat-icon">
-          <i class="fa-solid fa-chart-line" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"></path></svg>
         </div>
         <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Financeiro integrado</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
@@ -603,7 +590,7 @@ select.form-field option { background: #111827; }
 
       <div class="feat-card">
         <div class="feat-icon">
-          <i class="fa-solid fa-clock-rotate-left" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"></path></svg>
         </div>
         <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Histórico de orçamentos</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
@@ -613,7 +600,7 @@ select.form-field option { background: #111827; }
 
       <div class="feat-card">
         <div class="feat-icon">
-          <i class="fa-solid fa-users" style="color:#29B393;font-size:18px;"></i>
+          <svg class="inline-svg " viewBox="0 0 640 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:18px;" aria-hidden="true"><path fill="currentColor" d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"></path></svg>
         </div>
         <h3 style="font-size:.95rem;font-weight:700;margin-bottom:8px;">Multi-usuário</h3>
         <p style="color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.65;">
@@ -636,7 +623,7 @@ select.form-field option { background: #111827; }
         </p>
         <a href="#form" class="btn-cta">
           Começar agora — grátis
-          <i class="fa-solid fa-arrow-right text-xs"></i>
+          <svg class="inline-svg text-xs" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
         </a>
       </div>
       <div style="position:relative;">
@@ -676,7 +663,7 @@ select.form-field option { background: #111827; }
         </h3>
 
         <div class="trial-item">
-          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div class="trial-check"><svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:9px;color:#29B393;" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></div>
           <div>
             <span style="font-size:.9rem;font-weight:600;">Precificação por IA completa</span>
             <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Letra caixa, ACM, adesivo, envelopamento e todos os materiais</p>
@@ -684,7 +671,7 @@ select.form-field option { background: #111827; }
         </div>
 
         <div class="trial-item">
-          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div class="trial-check"><svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:9px;color:#29B393;" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></div>
           <div>
             <span style="font-size:.9rem;font-weight:600;">Orçamentos ilimitados</span>
             <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Crie, envie e acompanhe todos os seus orçamentos</p>
@@ -692,7 +679,7 @@ select.form-field option { background: #111827; }
         </div>
 
         <div class="trial-item">
-          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div class="trial-check"><svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:9px;color:#29B393;" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></div>
           <div>
             <span style="font-size:.9rem;font-weight:600;">Ordens de produção</span>
             <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Do orçamento aprovado à OP em um clique</p>
@@ -700,7 +687,7 @@ select.form-field option { background: #111827; }
         </div>
 
         <div class="trial-item">
-          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div class="trial-check"><svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:9px;color:#29B393;" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></div>
           <div>
             <span style="font-size:.9rem;font-weight:600;">Painel financeiro</span>
             <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Margem real por serviço e visão do mês</p>
@@ -708,7 +695,7 @@ select.form-field option { background: #111827; }
         </div>
 
         <div class="trial-item">
-          <div class="trial-check"><i class="fa-solid fa-check" style="font-size:9px;color:#29B393;"></i></div>
+          <div class="trial-check"><svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:9px;color:#29B393;" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></div>
           <div>
             <span style="font-size:.9rem;font-weight:600;">Suporte direto com a equipe</span>
             <p style="color:rgba(255,255,255,.35);font-size:.8rem;margin-top:2px;line-height:1.5;">Onboarding via WhatsApp para você começar rápido</p>
@@ -717,7 +704,7 @@ select.form-field option { background: #111827; }
 
         <div style="margin-top:28px;padding:16px;background:rgba(41,179,147,.06);border:1px solid rgba(41,179,147,.15);border-radius:12px;">
           <p style="color:rgba(255,255,255,.5);font-size:.82rem;line-height:1.6;">
-            <i class="fa-solid fa-lock" style="color:#29B393;margin-right:6px;font-size:.75rem;"></i>
+            <svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;margin-right:6px;font-size:.75rem;" aria-hidden="true"><path fill="currentColor" d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"></path></svg>
             Seus dados estão seguros. Você cancela quando quiser, sem burocracia.
           </p>
         </div>
@@ -744,27 +731,27 @@ select.form-field option { background: #111827; }
             <input type="hidden" name="utm_term"     id="utm_term">
 
             <div class="field-wrap">
-              <i class="fa-regular fa-user field-icon"></i>
+              <svg class="inline-svg field-icon" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464H398.7c-8.9-63.3-63.3-112-129-112H178.3c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3z"></path></svg>
               <input type="text" name="nome" placeholder="Seu nome" class="form-field" required>
             </div>
             <div class="field-wrap">
-              <i class="fa-regular fa-envelope field-icon"></i>
+              <svg class="inline-svg field-icon" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"></path></svg>
               <input type="email" name="email" placeholder="Seu melhor e-mail" class="form-field" required>
             </div>
             <div class="field-wrap">
-              <i class="fa-regular fa-building field-icon"></i>
+              <svg class="inline-svg field-icon" viewBox="0 0 384 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M64 48c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16h80V400c0-26.5 21.5-48 48-48s48 21.5 48 48v64h80c8.8 0 16-7.2 16-16V64c0-8.8-7.2-16-16-16H64zM0 64C0 28.7 28.7 0 64 0H320c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm88 40c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H104c-8.8 0-16-7.2-16-16V104zM232 88h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H232c-8.8 0-16-7.2-16-16V104c0-8.8 7.2-16 16-16zM88 232c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H104c-8.8 0-16-7.2-16-16V232zm144-16h48c8.8 0 16 7.2 16 16v48c0 8.8-7.2 16-16 16H232c-8.8 0-16-7.2-16-16V232c0-8.8 7.2-16 16-16z"></path></svg>
               <input type="text" name="empresa" placeholder="Nome da empresa" class="form-field" required>
             </div>
             <div class="field-wrap">
-              <i class="fa-solid fa-phone field-icon" style="font-size:12px;"></i>
+              <svg class="inline-svg field-icon" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:12px;" aria-hidden="true"><path fill="currentColor" d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg>
               <input type="tel" name="telefone" placeholder="(00) 9 0000-0000" class="form-field" required>
             </div>
             <div class="field-wrap">
-              <i class="fa-solid fa-desktop field-icon" style="font-size:12px;"></i>
+              <svg class="inline-svg field-icon" viewBox="0 0 576 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:12px;" aria-hidden="true"><path fill="currentColor" d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64H240l-10.7 32H160c-17.7 0-32 14.3-32 32s14.3 32 32 32H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H346.7L336 416H512c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64zM512 64V288H64V64H512z"></path></svg>
               <input type="text" name="sistema_atual" placeholder="Qual sistema usa hoje?" class="form-field" required>
             </div>
             <div class="field-wrap" style="margin-bottom:20px;">
-              <i class="fa-solid fa-chart-bar field-icon" style="font-size:12px;"></i>
+              <svg class="inline-svg field-icon" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;font-size:12px;" aria-hidden="true"><path fill="currentColor" d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zm96 96c0-17.7 14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-192 0c-17.7 0-32-14.3-32-32zm32 64H288c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32s14.3-32 32-32zm0 96H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H160c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg>
               <select name="faturamento" class="form-field" required>
                 <option value="">Faturamento mensal</option>
                 <option value="Até R$30.000">Até R$ 30.000</option>
@@ -777,13 +764,13 @@ select.form-field option { background: #111827; }
 
             <button type="submit" id="btn-submit" class="btn-cta" style="width:100%;justify-content:center;padding:16px;font-size:1rem;">
               Quero testar grátis
-              <i class="fa-solid fa-arrow-right text-xs"></i>
+              <svg class="inline-svg text-xs" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
             </button>
           </form>
 
           <div id="form-sucesso" style="display:none;text-align:center;padding:40px 0;">
             <div style="width:56px;height:56px;border-radius:50%;background:rgba(41,179,147,.15);border:1px solid rgba(41,179,147,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-              <i class="fa-solid fa-check" style="color:#29B393;font-size:1.3rem;"></i>
+              <svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:1.3rem;" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>
             </div>
             <h3 style="font-size:1.3rem;margin-bottom:8px;">Cadastro recebido!</h3>
             <p style="color:rgba(255,255,255,.4);font-size:.88rem;">Nossa equipe entrará em contato em breve para liberar seu acesso.</p>
@@ -805,9 +792,9 @@ select.form-field option { background: #111827; }
       <a href="https://holdprint.net/politica-de-privacidade" target="_blank" style="color:rgba(255,255,255,.3);text-decoration:none;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.3)'">Política de Privacidade</a>
     </p>
     <div style="display:flex;gap:16px;">
-      <a href="https://www.instagram.com/holdprintbrasil/" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.facebook.com/holdprint" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><i class="fa-brands fa-facebook"></i></a>
-      <a href="https://www.youtube.com/holdprintbrasil" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.instagram.com/holdprintbrasil/" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><svg class="inline-svg " viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>
+      <a href="https://www.facebook.com/holdprint" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><svg class="inline-svg " viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"></path></svg></a>
+      <a href="https://www.youtube.com/holdprintbrasil" target="_blank" style="color:rgba(255,255,255,.2);transition:color .2s;" onmouseover="this.style.color='#29B393'" onmouseout="this.style.color='rgba(255,255,255,.2)'"><svg class="inline-svg " viewBox="0 0 576 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a>
     </div>
   </div>
 </footer>
@@ -820,7 +807,7 @@ select.form-field option { background: #111827; }
 
     <div style="text-align:center;margin-bottom:28px;">
       <div style="width:52px;height:52px;border-radius:50%;background:rgba(41,179,147,.1);border:1px solid rgba(41,179,147,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-        <i class="fa-solid fa-gift" style="color:#29B393;font-size:1.2rem;"></i>
+        <svg class="inline-svg " viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em;color:#29B393;font-size:1.2rem;" aria-hidden="true"><path fill="currentColor" d="M190.5 68.8L225.3 128H224 152c-22.1 0-40-17.9-40-40s17.9-40 40-40h2.2c14.9 0 28.8 7.9 36.3 20.8zM64 88c0 14.4 3.5 28 9.6 40H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32H480c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32H438.4c6.1-12 9.6-25.6 9.6-40c0-48.6-39.4-88-88-88h-2.2c-31.9 0-61.5 16.9-77.7 44.4L256 85.5l-24.1-41C215.7 16.9 186.1 0 154.2 0H152C103.4 0 64 39.4 64 88zm336 0c0 22.1-17.9 40-40 40H288h-1.3l34.8-59.2C329.1 55.9 342.9 48 357.8 48H360c22.1 0 40 17.9 40 40zM32 288V464c0 26.5 21.5 48 48 48H224V288H32zM288 512H432c26.5 0 48-21.5 48-48V288H288V512z"></path></svg>
       </div>
       <h3 style="font-size:1.4rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;">
         Espera — 7 dias grátis ainda<br>estão disponíveis
@@ -832,7 +819,7 @@ select.form-field option { background: #111827; }
 
     <a href="#form" id="popup-cta" class="btn-cta" style="width:100%;justify-content:center;padding:14px;">
       Quero testar grátis agora
-      <i class="fa-solid fa-arrow-right text-xs"></i>
+      <svg class="inline-svg text-xs" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>
     </a>
 
     <button id="popup-dismiss" style="width:100%;margin-top:12px;background:none;border:none;color:rgba(255,255,255,.25);font-size:.8rem;cursor:pointer;padding:8px;transition:color .2s;"
@@ -866,7 +853,7 @@ const ok   = document.getElementById('form-sucesso');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   btn.disabled = true;
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+  btn.innerHTML = '<svg class="inline-svg fa-spin" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"></path></svg> Enviando...';
   try {
     await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
     form.style.display = 'none';
@@ -876,7 +863,7 @@ form.addEventListener('submit', async (e) => {
     // gtag('event', 'conversion', { send_to: 'AW-CONVERSION_ID/LABEL' });
   } catch {
     btn.disabled = false;
-    btn.innerHTML = 'Tentar novamente <i class="fa-solid fa-arrow-right text-xs"></i>';
+    btn.innerHTML = 'Tentar novamente <svg class="inline-svg text-xs" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg>';
   }
 });
 
