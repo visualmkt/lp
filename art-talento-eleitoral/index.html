@@ -27,27 +27,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#C8102E',
-            navy:  '#0D1B2A',
-            gold:  '#FFC600',
-          },
-          fontFamily: {
-            title: ['"Barlow Condensed"', 'sans-serif'],
-            body:  ['Barlow', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/visualmkt/lp@main/art-talento-eleitoral/style.css">
 
   <style>
     body { font-family: 'Barlow', sans-serif; opacity: 0; transition: opacity .3s; background: #0D1B2A; }
@@ -72,6 +54,17 @@
     .hero-glow-red  { background: radial-gradient(ellipse at 70% 30%, rgba(200,16,46,.25) 0%, transparent 65%); }
     .hero-glow-gold { background: radial-gradient(ellipse at 30% 70%, rgba(255,198,0,.08) 0%, transparent 60%); }
   </style>
+
+  <script>
+    const ICONS = {"file-invoice":{"viewBox":"0 0 384 512","paths":["M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM80 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H80c-8.8 0-16-7.2-16-16s7.2-16 16-16zm16 96H288c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm0 32v64H288V256H96zM240 416h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16s7.2-16 16-16z"]},"industry":{"viewBox":"0 0 576 512","paths":["M64 32C46.3 32 32 46.3 32 64V304v48 80c0 26.5 21.5 48 48 48H496c26.5 0 48-21.5 48-48V304 152.2c0-18.2-19.4-29.7-35.4-21.1L352 215.4V152.2c0-18.2-19.4-29.7-35.4-21.1L160 215.4V64c0-17.7-14.3-32-32-32H64z"]},"trophy":{"viewBox":"0 0 576 512","paths":["M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"]},"star":{"viewBox":"0 0 576 512","paths":["M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"]},"truck-fast":{"viewBox":"0 0 640 512","paths":["M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"]},"shield-halved":{"viewBox":"0 0 512 512","paths":["M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"]},"arrow-down":{"viewBox":"0 0 384 512","paths":["M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"]},"check":{"viewBox":"0 0 448 512","paths":["M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"]},"chevron-down":{"viewBox":"0 0 512 512","paths":["M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"]},"circle-check":{"viewBox":"0 0 512 512","paths":["M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"]},"phone":{"viewBox":"0 0 512 512","paths":["M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"]},"whatsapp":{"viewBox":"0 0 448 512","paths":["M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"]},"car-rear":{"viewBox":"0 0 512 512","paths":["M165.4 96H346.6c13.6 0 25.7 8.6 30.2 21.4L402.9 192H109.1l26.1-74.6c4.5-12.8 16.6-21.4 30.2-21.4zm-90.6 .3L39.6 196.8C16.4 206.4 0 229.3 0 256v80c0 23.7 12.9 44.4 32 55.4V448c0 17.7 14.3 32 32 32H96c17.7 0 32-14.3 32-32V400H384v48c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V391.4c19.1-11.1 32-31.7 32-55.4V256c0-26.7-16.4-49.6-39.6-59.2L437.2 96.3C423.7 57.8 387.4 32 346.6 32H165.4c-40.8 0-77.1 25.8-90.6 64.3zM208 272h96c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H208c-8.8 0-16-7.2-16-16V288c0-8.8 7.2-16 16-16zM48 280c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H72c-13.3 0-24-10.7-24-24zm360-24h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H408c-13.3 0-24-10.7-24-24s10.7-24 24-24z"]},"circle-dot":{"viewBox":"0 0 512 512","paths":["M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-352a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"]},"store":{"viewBox":"0 0 576 512","paths":["M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z"]},"window-maximize":{"viewBox":"0 0 512 512","paths":["M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM96 96H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32s14.3-32 32-32z"]}};
+    function icon(name, cls) {
+      const d = ICONS[name];
+      if (!d) return '';
+      const paths = d.paths.map(p => '<path fill="currentColor" d="' + p + '"></path>').join('');
+      return '<svg class="inline-svg ' + (cls || '') + '" viewBox="' + d.viewBox + '" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true">' + paths + '</svg>';
+    }
+  </script>
+
 </head>
 
 <body class="bg-white text-navy font-body antialiased">
@@ -148,7 +141,7 @@ const wa = (num, msg) =>
 const waBtn = (num, msg, label, loc, cls) =>
   `<a href="${wa(num,msg)}" target="_blank" rel="noopener noreferrer"
      data-action="whatsapp" data-location="${loc}" class="${cls}">
-    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>${label}
+    ${icon('whatsapp', 'mr-2 text-lg')}${label}
   </a>`;
 
 // ── SECTIONS ─────────────────────────────────────────────────────────────────
@@ -168,7 +161,7 @@ function renderHeader(c) {
       <a href="#" class="flex items-center gap-3 min-w-0">${logoHtml}</a>
       <div class="flex items-center gap-2 md:gap-4 shrink-0">
         <a href="tel:${phoneTel}" class="hidden md:flex items-center gap-2 text-white/70 hover:text-gold transition-colors text-sm font-semibold font-body">
-          <i class="fa-solid fa-phone text-gold text-xs"></i>${phoneDisplay}
+          ${icon('phone', 'text-gold text-xs')}${phoneDisplay}
         </a>
         ${waBtn(num, msg, 'Orçamento', 'header',
           'flex items-center bg-brand hover:bg-red-700 text-white font-title font-black uppercase tracking-wide text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full transition-all shadow-lg')}
@@ -210,15 +203,15 @@ function renderHero(c) {
 
       <!-- Seals row -->
       <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
-        <span class="nf-seal"><i class="fa-solid fa-file-invoice"></i>&nbsp;NF para o TRE</span>
+        <span class="nf-seal">${icon('file-invoice', '')}&nbsp;NF para o TRE</span>
         <span class="inline-flex items-center gap-1.5 text-white/60 text-xs font-body">
-          <i class="fa-solid fa-industry text-gold text-xs"></i> Produção própria Curitiba
+          ${icon('industry', 'text-gold text-xs')} Produção própria Curitiba
         </span>
         <span class="inline-flex items-center gap-1.5 text-white/60 text-xs font-body">
-          <i class="fa-solid fa-truck-fast text-gold text-xs"></i> Entrega em todo o Paraná
+          ${icon('truck-fast', 'text-gold text-xs')} Entrega em todo o Paraná
         </span>
         <span class="inline-flex items-center gap-1.5 text-white/60 text-xs font-body">
-          <i class="fa-solid fa-shield-halved text-gold text-xs"></i> +10 anos · +1.000 projetos
+          ${icon('shield-halved', 'text-gold text-xs')} +10 anos · +1.000 projetos
         </span>
       </div>
 
@@ -228,7 +221,7 @@ function renderHero(c) {
           'flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-title font-black uppercase tracking-wide text-lg px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105 wha-pulse')}
         <a href="#produtos"
            class="flex items-center justify-center border-2 border-white/25 text-white hover:bg-white/10 font-title font-bold uppercase tracking-wide text-lg px-10 py-4 md:py-5 rounded-2xl transition-all">
-          <i class="fa-solid fa-arrow-down mr-2 text-base"></i>Ver Produtos
+          ${icon('arrow-down', 'mr-2 text-base')}Ver Produtos
         </a>
       </div>
 
@@ -243,7 +236,7 @@ function renderTrust(c) {
     <div class="flex flex-col items-center text-center p-4 md:p-5">
       <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-3"
            style="background:rgba(200,16,46,.1);">
-        <i class="fa-solid ${t.icon} text-xl md:text-2xl text-brand"></i>
+        ${icon(t.icon.replace('fa-',''), 'text-xl md:text-2xl text-brand')}
       </div>
       <p class="font-title font-black text-sm md:text-base uppercase tracking-tight leading-tight text-navy">${t.title}</p>
       <p class="text-slate-500 text-xs mt-0.5 font-body">${t.subtitle}</p>
@@ -266,7 +259,7 @@ function renderProducts(c) {
 
     const bullets = p.bullets.map(b => `
       <li class="flex items-start gap-2 text-sm md:text-base text-slate-600 font-body">
-        <i class="fa-solid fa-check text-brand mt-0.5 shrink-0"></i><span>${b}</span>
+        ${icon('check', 'text-brand mt-0.5 shrink-0')}<span>${b}</span>
       </li>`).join('');
 
     const imgBlock = `
@@ -275,7 +268,7 @@ function renderProducts(c) {
         ${p.img
           ? `<img src="${p.img}" alt="${p.imgAlt}" class="w-full h-full object-cover" loading="lazy">`
           : `<div class="flex flex-col items-center justify-center text-white text-center p-10 absolute inset-0">
-               <i class="fa-solid ${p.imgIcon} text-7xl md:text-8xl opacity-30 mb-4"></i>
+               ${icon(p.imgIcon.replace('fa-',''), 'text-7xl md:text-8xl opacity-30 mb-4')}
                <p class="text-sm opacity-40 font-body max-w-[200px] leading-tight">${p.imgAlt}</p>
              </div>`
         }
@@ -310,7 +303,7 @@ function renderAuthority(c) {
   const a = c.authority;
   const items = a.items.map(item => `
     <li class="flex items-start gap-3 text-slate-300 font-body text-sm md:text-base">
-      <i class="fa-solid fa-circle-check text-gold text-base mt-0.5 shrink-0"></i>${item}
+      ${icon('circle-check', 'text-gold text-base mt-0.5 shrink-0')}${item}
     </li>`).join('');
 
   return `
@@ -326,11 +319,11 @@ function renderAuthority(c) {
           <div class="rounded-3xl aspect-square overflow-hidden relative shadow-2xl">
             ${a.image
               ? `<img src="${a.image}" alt="${a.imageAlt || ''}" class="w-full h-full object-cover">`
-              : `<div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#1e3a5f,#0D1B2A)"><i class="fa-solid fa-industry text-white/10 text-[10rem]"></i></div>`
+              : `<div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#1e3a5f,#0D1B2A)">${icon('industry', 'text-white/10 text-[10rem]')}</div>`
             }
             <div class="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent pointer-events-none"></div>
             <div class="absolute bottom-6 left-6 right-6">
-              <span class="nf-seal"><i class="fa-solid fa-file-invoice"></i>&nbsp;NF para o TRE</span>
+              <span class="nf-seal">${icon('file-invoice', '')}&nbsp;NF para o TRE</span>
               <p class="text-white/60 text-xs mt-3 font-body leading-tight">Prestação de contas ao TRE sem stress. NF-e para 100% das vendas.</p>
             </div>
           </div>
@@ -345,7 +338,7 @@ function renderFaq(c) {
     <details class="border border-slate-200 rounded-2xl overflow-hidden group bg-white" ${i===0?'open':''}>
       <summary class="flex items-center justify-between gap-4 p-5 md:p-6">
         <span class="font-title font-black text-base md:text-lg uppercase tracking-tight text-navy">${f.q}</span>
-        <i class="fa-solid fa-chevron-down text-brand shrink-0 faq-chevron"></i>
+        ${icon('chevron-down', 'text-brand shrink-0 faq-chevron')}
       </summary>
       <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 font-body text-sm md:text-base leading-relaxed border-t border-slate-100 pt-4">
         ${f.a}
@@ -370,7 +363,7 @@ function renderCtaFinal(c) {
   return `
   <section class="py-20 md:py-28 bg-brand text-white text-center">
     <div class="max-w-3xl mx-auto px-4">
-      <div class="nf-seal mx-auto w-fit mb-6"><i class="fa-solid fa-file-invoice"></i>&nbsp;NF para o TRE incluída</div>
+      <div class="nf-seal mx-auto w-fit mb-6">${icon('file-invoice', '')}&nbsp;NF para o TRE incluída</div>
       <h2 class="font-title font-black text-4xl md:text-6xl uppercase leading-none tracking-tight mb-4">${ct.title}</h2>
       <p class="text-white/80 font-body text-lg mb-10 max-w-xl mx-auto leading-relaxed">${ct.subtitle}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -378,7 +371,7 @@ function renderCtaFinal(c) {
           'inline-flex items-center justify-center bg-white text-brand hover:bg-slate-50 font-title font-black uppercase tracking-wide text-lg px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105')}
         <a href="tel:${phoneTel}"
            class="inline-flex items-center justify-center border-2 border-white/40 text-white hover:bg-white/10 font-title font-bold uppercase tracking-wide text-lg px-10 py-4 md:py-5 rounded-2xl transition-all">
-          <i class="fa-solid fa-phone mr-2"></i>${phoneDisplay}
+          ${icon('phone', 'mr-2')}${phoneDisplay}
         </a>
       </div>
     </div>
@@ -396,13 +389,13 @@ function renderFooter(c) {
       <p class="text-slate-400 text-sm font-body mb-6">${f.tagline}</p>
       <div class="flex items-center justify-center gap-4 mb-8">
         <a href="tel:${phoneTel}" class="flex items-center gap-1.5 text-slate-400 hover:text-gold transition text-sm font-body">
-          <i class="fa-solid fa-phone text-xs"></i>${phoneDisplay}
+          ${icon('phone', 'text-xs')}${phoneDisplay}
         </a>
         <span class="text-slate-700">|</span>
         <a href="${wa(num, msg)}" target="_blank" rel="noopener noreferrer"
            class="flex items-center gap-1.5 text-slate-400 hover:text-green-400 transition text-sm font-body"
            data-action="whatsapp" data-location="footer">
-          <i class="fa-brands fa-whatsapp text-sm"></i>WhatsApp
+          ${icon('whatsapp', 'text-sm')}WhatsApp
         </a>
       </div>
       <div class="dashline text-slate-700 mb-6"></div>
@@ -425,7 +418,7 @@ function renderFloatingWA(c) {
   <a href="${wa(num, msg)}" target="_blank" rel="noopener noreferrer"
      data-action="whatsapp" data-location="flutuante"
      class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-title font-black uppercase tracking-wide py-3 px-5 rounded-full shadow-2xl wha-pulse transition-all hover:scale-105">
-    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    ${icon('whatsapp', 'text-2xl')}
     <span class="hidden sm:inline text-sm">Orçamento no WhatsApp</span>
   </a>`;
 }
@@ -439,7 +432,7 @@ function renderExitPopup(c) {
     <div class="bg-white rounded-3xl max-w-sm w-full p-8 text-center shadow-2xl relative">
       <button onclick="document.getElementById('exit-popup').classList.add('hidden')"
               class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl leading-none transition">&times;</button>
-      <span class="nf-seal mx-auto w-fit mb-5 block"><i class="fa-solid fa-file-invoice"></i>&nbsp;NF para o TRE</span>
+      <span class="nf-seal mx-auto w-fit mb-5 block">${icon('file-invoice', '')}&nbsp;NF para o TRE</span>
       <h3 class="font-title font-black text-3xl uppercase text-navy leading-tight mb-3">Antes de ir...</h3>
       <p class="text-slate-500 font-body text-sm mb-6 leading-relaxed">
         Material eleitoral com NF, produção própria em Curitiba e entrega em todo o Paraná.
@@ -514,7 +507,7 @@ function bindEvents() {
           <a href="https://api.whatsapp.com/send?phone=554133878068&text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20de%20material%20eleitoral%202026."
              class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-title font-black uppercase tracking-wide text-lg transition-all"
              target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp text-2xl"></i> Orçamento no WhatsApp
+            ${icon('whatsapp', 'text-2xl')} Orçamento no WhatsApp
           </a>
         </div>
       </div>`;
