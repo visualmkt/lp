@@ -520,22 +520,22 @@ tailwind.config = {
             <div class="grid grid-cols-2 md:grid-cols-4 border-b border-slate-100 divide-x divide-slate-100">
               <div class="p-5">
                 <p class="text-xs text-slate-400 font-semibold uppercase tracking-wide">Leads / mês</p>
-                <p class="font-display font-black text-3xl text-ink mt-1">2.919</p>
+                <p class="font-display font-black text-4xl text-ink mt-1">2.919</p>
                 <p class="text-green-500 text-xs font-semibold mt-1 flex items-center gap-1"><svg class="w-3 h-3" viewBox="0 0 12 12" fill="none"><path d="M6 9V3M3 6l3-3 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>+18%</p>
               </div>
               <div class="p-5">
                 <p class="text-xs text-slate-400 font-semibold uppercase tracking-wide">Custo / lead</p>
-                <p class="font-display font-black text-3xl text-ink mt-1">R$13,60</p>
+                <p class="font-display font-black text-4xl text-ink mt-1">R$13,60</p>
                 <p class="text-green-500 text-xs font-semibold mt-1 flex items-center gap-1"><svg class="w-3 h-3" viewBox="0 0 12 12" fill="none"><path d="M6 3v6M3 6l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>−11%</p>
               </div>
               <div class="p-5">
                 <p class="text-xs text-slate-400 font-semibold uppercase tracking-wide">Impressões</p>
-                <p class="font-display font-black text-3xl text-ink mt-1">1,2M</p>
+                <p class="font-display font-black text-4xl text-ink mt-1">1,2M</p>
                 <p class="text-[#00AEEF] text-xs font-semibold mt-1">Google + Meta</p>
               </div>
               <div class="p-5">
                 <p class="text-xs text-slate-400 font-semibold uppercase tracking-wide">Verba gerida</p>
-                <p class="font-display font-black text-3xl text-ink mt-1">R$39.7K</p>
+                <p class="font-display font-black text-4xl text-ink mt-1">R$39.7K</p>
                 <p class="text-slate-400 text-xs font-semibold mt-1">100+ empresas ativas</p>
               </div>
             </div>
