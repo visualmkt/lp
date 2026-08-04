@@ -30,27 +30,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#E8520E',
-            brand2: '#EE7D00',
-            dark:  '#1A1A1A',
-          },
-          fontFamily: {
-            title: ['Poppins', 'sans-serif'],
-            body:  ['Barlow', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-placas-imobiliarias/imagens/placa-vende-portao.webp">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-placas-imobiliarias/style.css">
 
   <style>
     body { font-family: 'Barlow', sans-serif; opacity: 0; transition: opacity .3s; background: #1A1A1A; }
@@ -74,6 +57,17 @@
     }
     .hero-glow { background: radial-gradient(ellipse at 70% 30%, rgba(232,82,14,.28) 0%, transparent 65%); }
   </style>
+
+  <script>
+    const ICONS = {"industry":{"viewBox":"0 0 576 512","paths":["M64 32C46.3 32 32 46.3 32 64V304v48 80c0 26.5 21.5 48 48 48H496c26.5 0 48-21.5 48-48V304 152.2c0-18.2-19.4-29.7-35.4-21.1L352 215.4V152.2c0-18.2-19.4-29.7-35.4-21.1L160 215.4V64c0-17.7-14.3-32-32-32H64z"]},"trophy":{"viewBox":"0 0 576 512","paths":["M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"]},"warehouse":{"viewBox":"0 0 640 512","paths":["M0 488V171.3c0-26.2 15.9-49.7 40.2-59.4L308.1 4.8c7.6-3.1 16.1-3.1 23.8 0L599.8 111.9c24.3 9.7 40.2 33.3 40.2 59.4V488c0 13.3-10.7 24-24 24H568c-13.3 0-24-10.7-24-24V224c0-17.7-14.3-32-32-32H128c-17.7 0-32 14.3-32 32V488c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zm488 24l-336 0c-13.3 0-24-10.7-24-24V432H512l0 56c0 13.3-10.7 24-24 24zM128 400V336H512v64H128zm0-96V224H512l0 80H128z"]},"shield-halved":{"viewBox":"0 0 512 512","paths":["M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"]},"arrow-down":{"viewBox":"0 0 384 512","paths":["M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"]},"check":{"viewBox":"0 0 448 512","paths":["M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"]},"circle-check":{"viewBox":"0 0 512 512","paths":["M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"]},"chevron-down":{"viewBox":"0 0 512 512","paths":["M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"]},"bolt":{"viewBox":"0 0 448 512","paths":["M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"]},"sun":{"viewBox":"0 0 512 512","paths":["M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"]},"map-location-dot":{"viewBox":"0 0 576 512","paths":["M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152V422.8c0 9.8-6 18.6-15.1 22.3L416 503V200.4zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6V451.8L32.9 502.7C17.1 509 0 497.4 0 480.4V209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77V504.3L192 449.4V255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"]},"building":{"viewBox":"0 0 384 512","paths":["M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"]},"signs-post":{"viewBox":"0 0 512 512","paths":["M224 32H64C46.3 32 32 46.3 32 64v64c0 17.7 14.3 32 32 32H441.4c4.2 0 8.3-1.7 11.3-4.7l48-48c6.2-6.2 6.2-16.4 0-22.6l-48-48c-3-3-7.1-4.7-11.3-4.7H288c0-17.7-14.3-32-32-32s-32 14.3-32 32zM480 256c0-17.7-14.3-32-32-32H288V192H224v32H70.6c-4.2 0-8.3 1.7-11.3 4.7l-48 48c-6.2 6.2-6.2 16.4 0 22.6l48 48c3 3 7.1 4.7 11.3 4.7H448c17.7 0 32-14.3 32-32V256zM288 480V384H224v96c0 17.7 14.3 32 32 32s32-14.3 32-32z"]},"phone":{"viewBox":"0 0 512 512","paths":["M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"]},"whatsapp":{"viewBox":"0 0 448 512","paths":["M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"]}};
+    function icon(name, cls) {
+      const d = ICONS[name];
+      if (!d) return '';
+      const paths = d.paths.map(p => '<path fill="currentColor" d="' + p + '"></path>').join('');
+      return '<svg class="inline-svg ' + (cls || '') + '" viewBox="' + d.viewBox + '" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true">' + paths + '</svg>';
+    }
+  </script>
+
 </head>
 
 <body class="bg-white text-dark font-body antialiased">
@@ -149,7 +143,7 @@ const wa = (num, msg) =>
 const waBtn = (num, msg, label, loc, cls) =>
   `<a href="${wa(num,msg)}" target="_blank" rel="noopener noreferrer"
      data-action="whatsapp" data-location="${loc}" class="${cls}">
-    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>${label}
+    ${icon('whatsapp', 'mr-2 text-lg')}${label}
   </a>`;
 
 // ── SECTIONS ─────────────────────────────────────────────────────────────────
@@ -166,7 +160,7 @@ function renderHeader(c) {
       <a href="#" class="flex items-center gap-3 min-w-0">${logoHtml}</a>
       <div class="flex items-center gap-2 md:gap-4 shrink-0">
         <a href="tel:${phoneTel}" class="hidden md:flex items-center gap-2 text-white/70 hover:text-brand2 transition-colors text-sm font-semibold font-body">
-          <i class="fa-solid fa-phone text-brand2 text-xs"></i>${phoneDisplay}
+          ${icon('phone', 'text-brand2 text-xs')}${phoneDisplay}
         </a>
         ${waBtn(num, msg, 'Orçamento', 'header',
           'flex items-center bg-brand hover:bg-orange-700 text-white font-body font-semibold text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full transition-all shadow-lg')}
@@ -193,7 +187,7 @@ function renderHero(c) {
 
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 border border-brand/60 bg-brand/15 backdrop-blur-sm text-brand2 px-4 py-2 rounded-full text-sm font-body font-semibold mb-8">
-        <i class="fa-solid fa-industry text-brand2 text-xs"></i>
+        ${icon('industry', 'text-brand2 text-xs')}
         ${h.badge}
       </div>
 
@@ -209,12 +203,12 @@ function renderHero(c) {
 
       <!-- Seals row -->
       <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
-        <span class="tag-seal"><i class="fa-solid fa-trophy"></i>&nbsp;+29 anos de experiência</span>
+        <span class="tag-seal">${icon('trophy', '')}&nbsp;+29 anos de experiência</span>
         <span class="inline-flex items-center gap-1.5 text-white/80 text-xs font-body">
-          <i class="fa-solid fa-warehouse text-brand2 text-xs"></i> Produção própria em Rio Claro
+          ${icon('warehouse', 'text-brand2 text-xs')} Produção própria em Rio Claro
         </span>
         <span class="inline-flex items-center gap-1.5 text-white/80 text-xs font-body">
-          <i class="fa-solid fa-shield-halved text-brand2 text-xs"></i> Qualidade industrial
+          ${icon('shield-halved', 'text-brand2 text-xs')} Qualidade industrial
         </span>
       </div>
 
@@ -224,7 +218,7 @@ function renderHero(c) {
           'flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105 wha-pulse')}
         <a href="#produtos"
            class="flex items-center justify-center border-2 border-white/40 backdrop-blur-sm text-white hover:bg-white/10 font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl transition-all">
-          <i class="fa-solid fa-arrow-down mr-2 text-base"></i>${h.ctaSecondary}
+          ${icon('arrow-down', 'mr-2 text-base')}${h.ctaSecondary}
         </a>
       </div>
 
@@ -239,7 +233,7 @@ function renderTrust(c) {
     <div class="flex flex-col items-center text-center p-4 md:p-5">
       <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-3"
            style="background:rgba(232,82,14,.08);">
-        <i class="fa-solid ${t.icon} text-xl md:text-2xl text-brand"></i>
+        ${icon(t.icon.replace('fa-',''), 'text-xl md:text-2xl text-brand')}
       </div>
       <p class="font-title font-semibold text-sm md:text-base tracking-tight leading-tight text-dark">${t.title}</p>
       <p class="text-slate-500 text-xs mt-0.5 font-body">${t.subtitle}</p>
@@ -262,7 +256,7 @@ function renderProducts(c) {
 
     const bullets = p.bullets.map(b => `
       <li class="flex items-start gap-2 text-sm md:text-base text-slate-600 font-body">
-        <i class="fa-solid fa-check text-brand mt-0.5 shrink-0"></i><span>${b}</span>
+        ${icon('check', 'text-brand mt-0.5 shrink-0')}<span>${b}</span>
       </li>`).join('');
 
     const imgBlock = `
@@ -271,7 +265,7 @@ function renderProducts(c) {
         ${p.img
           ? `<img src="${p.img}" alt="${p.imgAlt}" class="w-full h-full object-cover" loading="lazy">`
           : `<div class="flex flex-col items-center justify-center text-white text-center p-10 absolute inset-0">
-               <i class="fa-solid ${p.imgIcon} text-7xl md:text-8xl opacity-30 mb-4"></i>
+               ${icon(p.imgIcon.replace('fa-',''), 'text-7xl md:text-8xl opacity-30 mb-4')}
                <p class="text-sm opacity-40 font-body max-w-[200px] leading-tight">${p.imgAlt}</p>
              </div>`
         }
@@ -306,7 +300,7 @@ function renderAuthority(c) {
   const a = c.authority;
   const items = a.items.map(item => `
     <li class="flex items-start gap-3 text-slate-300 font-body text-sm md:text-base">
-      <i class="fa-solid fa-circle-check text-brand2 text-base mt-0.5 shrink-0"></i>${item}
+      ${icon('circle-check', 'text-brand2 text-base mt-0.5 shrink-0')}${item}
     </li>`).join('');
 
   return `
@@ -322,11 +316,11 @@ function renderAuthority(c) {
           <div class="rounded-3xl aspect-square overflow-hidden relative shadow-2xl">
             ${a.image
               ? `<img src="${a.image}" alt="${a.imageAlt || ''}" class="w-full h-full object-cover" loading="lazy">`
-              : `<div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#3a3a3a,#1A1A1A)"><i class="fa-solid fa-industry text-white/10 text-[10rem]"></i></div>`
+              : `<div class="w-full h-full flex items-center justify-center" style="background:linear-gradient(135deg,#3a3a3a,#1A1A1A)">${icon('industry', 'text-white/10 text-[10rem]')}</div>`
             }
             <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent pointer-events-none"></div>
             <div class="absolute bottom-6 left-6 right-6">
-              <span class="tag-seal"><i class="fa-solid fa-industry"></i>&nbsp;Padrão industrial</span>
+              <span class="tag-seal">${icon('industry', '')}&nbsp;Padrão industrial</span>
               <p class="text-white/60 text-xs mt-3 font-body leading-tight">O mesmo cuidado de qualidade que aplicamos para grandes indústrias, na sua placa.</p>
             </div>
           </div>
@@ -341,7 +335,7 @@ function renderFaq(c) {
     <details class="border border-slate-200 rounded-2xl overflow-hidden group bg-white" ${i===0?'open':''}>
       <summary class="flex items-center justify-between gap-4 p-5 md:p-6">
         <span class="font-body font-semibold text-base md:text-lg text-dark">${f.q}</span>
-        <i class="fa-solid fa-chevron-down text-brand shrink-0 faq-chevron"></i>
+        ${icon('chevron-down', 'text-brand shrink-0 faq-chevron')}
       </summary>
       <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 font-body text-sm md:text-base leading-relaxed border-t border-slate-100 pt-4">
         ${f.a}
@@ -366,7 +360,7 @@ function renderCtaFinal(c) {
   return `
   <section class="py-20 md:py-28 bg-brand text-white text-center">
     <div class="max-w-3xl mx-auto px-4">
-      <div class="tag-seal mx-auto w-fit mb-6"><i class="fa-solid fa-bolt"></i>&nbsp;Resposta rápida no WhatsApp</div>
+      <div class="tag-seal mx-auto w-fit mb-6">${icon('bolt', '')}&nbsp;Resposta rápida no WhatsApp</div>
       <h2 class="font-title font-semibold text-3xl md:text-5xl leading-snug tracking-tight mb-4">${ct.title}</h2>
       <p class="text-white/85 font-body text-lg mb-10 max-w-xl mx-auto leading-relaxed">${ct.subtitle}</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -374,7 +368,7 @@ function renderCtaFinal(c) {
           'inline-flex items-center justify-center bg-white text-brand hover:bg-slate-50 font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105')}
         <a href="tel:${phoneTel}"
            class="inline-flex items-center justify-center border-2 border-white/40 text-white hover:bg-white/10 font-body font-semibold text-lg px-10 py-4 md:py-5 rounded-2xl transition-all">
-          <i class="fa-solid fa-phone mr-2"></i>${phoneDisplay}
+          ${icon('phone', 'mr-2')}${phoneDisplay}
         </a>
       </div>
     </div>
@@ -395,13 +389,13 @@ function renderFooter(c) {
       <p class="text-slate-400 text-sm font-body mb-6">${f.tagline}</p>
       <div class="flex items-center justify-center gap-4 mb-8">
         <a href="tel:${phoneTel}" class="flex items-center gap-1.5 text-slate-400 hover:text-brand2 transition text-sm font-body">
-          <i class="fa-solid fa-phone text-xs"></i>${phoneDisplay}
+          ${icon('phone', 'text-xs')}${phoneDisplay}
         </a>
         <span class="text-slate-700">|</span>
         <a href="${wa(num, msg)}" target="_blank" rel="noopener noreferrer"
            class="flex items-center gap-1.5 text-slate-400 hover:text-green-400 transition text-sm font-body"
            data-action="whatsapp" data-location="footer">
-          <i class="fa-brands fa-whatsapp text-sm"></i>WhatsApp
+          ${icon('whatsapp', 'text-sm')}WhatsApp
         </a>
       </div>
       <div class="dashline text-slate-700 mb-6"></div>
@@ -424,7 +418,7 @@ function renderFloatingWA(c) {
   <a href="${wa(num, msg)}" target="_blank" rel="noopener noreferrer"
      data-action="whatsapp" data-location="flutuante"
      class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-body font-semibold py-3 px-5 rounded-full shadow-2xl wha-pulse transition-all hover:scale-105">
-    <i class="fa-brands fa-whatsapp text-2xl"></i>
+    ${icon('whatsapp', 'text-2xl')}
     <span class="hidden sm:inline text-sm">Orçamento Rápido</span>
   </a>`;
 }
@@ -438,7 +432,7 @@ function renderExitPopup(c) {
     <div class="bg-white rounded-3xl max-w-sm w-full p-8 text-center shadow-2xl relative">
       <button onclick="document.getElementById('exit-popup').classList.add('hidden')"
               class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 text-2xl leading-none transition">&times;</button>
-      <span class="tag-seal mx-auto w-fit mb-5 block"><i class="fa-solid fa-bolt"></i>&nbsp;Orçamento rápido</span>
+      <span class="tag-seal mx-auto w-fit mb-5 block">${icon('bolt', '')}&nbsp;Orçamento rápido</span>
       <h3 class="font-title font-semibold text-3xl text-dark leading-tight mb-3">Antes de ir...</h3>
       <p class="text-slate-500 font-body text-sm mb-6 leading-relaxed">
         Placas com qualidade industrial para sua imobiliária ou para você, corretor. Peça o orçamento em 2 minutos.
@@ -517,7 +511,7 @@ function bindEvents() {
           <a href="https://api.whatsapp.com/send?phone=551935222566&text=Ol%C3%A1!%20Quero%20or%C3%A7amento%20de%20placa%20para%20imobili%C3%A1ria%2Fcorretor."
              class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-2xl font-body font-semibold text-lg transition-all"
              target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-whatsapp text-2xl"></i> Orçamento no WhatsApp
+            ${icon('whatsapp', 'text-2xl')} Orçamento no WhatsApp
           </a>
         </div>
       </div>`;
