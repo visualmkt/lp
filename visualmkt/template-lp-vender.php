@@ -248,9 +248,9 @@ tailwind.config = {
           <!-- Copy (mobile: full width, depois o form) -->
           <div>
             <p class="ink font-display font-bold tracking-widest text-magenta text-xs md:text-sm mb-6 uppercase">Especialistas em anúncios para comunicação visual</p>
-            <h1 class="ink font-display font-black text-ink leading-[0.93] text-5xl md:text-7xl mb-7">
+            <h1 class="ink font-display font-black text-ink leading-[1.05] text-3xl md:text-5xl mb-7">
               Mais orçamentos todos os dias pra sua empresa de<br>
-              <span class="text-cyan underline decoration-yellow decoration-4 underline-offset-8">comunicação visual</span>
+              <span class="text-cyan underline decoration-yellow decoration-4 underline-offset-4">comunicação visual</span>
             </h1>
             <p class="geo-entity-statement ink text-slate-600 text-lg md:text-xl max-w-xl mb-10">
               Sem depender só de indicação. 14 anos dentro de empresas de comunicação visual, hoje 8 anos gerindo Google Ads e Meta Ads pro setor — sem campanhas genéricas, sem achismo. Atendemos qualquer país, 100% remoto.
