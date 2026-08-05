@@ -112,20 +112,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    fontFamily: { display: ['Montserrat','sans-serif'], body: ['Inter','sans-serif'] },
-    colors: {
-      ink: '#0b1120', graphite: '#111827',
-      cyan: '#00AEEF', magenta: '#EC008C', yellow: '#FFD400', key: '#0b1120'
-    }
-  }}
-}
-</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/visualmkt/lp@main/visualmkt/style.css">
 <style>
   :root{ --c:#00AEEF; --m:#EC008C; --y:#FFD400; }
   html{ scroll-behavior:auto; }
@@ -251,13 +240,13 @@ tailwind.config = {
             <div class="flex flex-wrap gap-4">
               <a data-wa data-loc="hero" data-msg="Olá! Vim pela landing page e quero saber mais sobre os anúncios da Visual MKT."
                  class="ink inline-flex items-center gap-3 bg-magenta text-white font-display font-bold text-lg px-8 py-4 rounded-full hover:bg-ink transition-colors cursor-pointer">
-                <i class="fa-brands fa-whatsapp text-xl"></i> Falar agora
+                <svg class="inline-svg text-xl" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg> Falar agora
               </a>
               <a href="#planos" class="ink inline-flex items-center gap-3 border-2 border-ink text-ink font-display font-bold text-lg px-8 py-4 rounded-full hover:bg-ink hover:text-white transition-colors">
                 Ver planos
               </a>
             </div>
-            <p class="ink mt-8 text-xs text-slate-400 tracking-widest uppercase hidden md:block"><i class="fa-solid fa-arrow-down animate-bounce"></i>&nbsp; role para imprimir o resto</p>
+            <p class="ink mt-8 text-xs text-slate-400 tracking-widest uppercase hidden md:block"><svg class="inline-svg animate-bounce" viewBox="0 0 384 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"></path></svg>&nbsp; role para imprimir o resto</p>
           </div>
 
           <!-- Form de conversão -->
@@ -272,12 +261,12 @@ tailwind.config = {
               <input type="text" name="_honey_h" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
               <button type="submit"
                 class="w-full py-4 rounded-full font-display font-bold bg-magenta text-white hover:bg-ink transition flex items-center justify-center gap-2">
-                <i class="fa-brands fa-whatsapp text-lg"></i> Quero mais orçamentos
+                <svg class="inline-svg text-lg" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg> Quero mais orçamentos
               </button>
               <p class="text-center text-xs text-slate-400">Seus dados ficam protegidos.</p>
             </form>
             <div id="hero-form-ok" class="hidden text-center py-4">
-              <i class="fa-solid fa-circle-check text-green-500 text-4xl mb-3"></i>
+              <svg class="inline-svg text-green-500 text-4xl mb-3" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></svg>
               <p class="font-display font-bold text-ink">Recebido! Abrindo WhatsApp...</p>
             </div>
           </div>
@@ -354,12 +343,12 @@ tailwind.config = {
             <p class="mt-4 font-display font-black text-4xl text-ink">R$2.000<span class="text-base font-semibold text-slate-400">/mês</span></p>
             <p class="mt-3 text-xs text-slate-400 uppercase tracking-wide font-semibold">Google Ads <b>ou</b> Meta Ads — escolha 1</p>
             <ul class="mt-5 space-y-3 text-slate-600 text-sm flex-grow">
-              <li><i class="fa-solid fa-check text-cyan mr-2"></i>Setup completo: conta, pixel e públicos</li>
-              <li><i class="fa-solid fa-check text-cyan mr-2"></i>Otimização semanal de lances e segmentação</li>
-              <li><i class="fa-solid fa-check text-cyan mr-2"></i>Acompanhamento do investimento mínimo diário</li>
-              <li><i class="fa-solid fa-check text-cyan mr-2"></i>Relatórios mensais de desempenho</li>
-              <li><i class="fa-solid fa-check text-cyan mr-2"></i>Suporte ágil via WhatsApp</li>
-              <li><i class="fa-solid fa-check text-cyan mr-2"></i>Até 4 landing pages grátis</li>
+              <li><svg class="inline-svg text-cyan mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Setup completo: conta, pixel e públicos</li>
+              <li><svg class="inline-svg text-cyan mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Otimização semanal de lances e segmentação</li>
+              <li><svg class="inline-svg text-cyan mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Acompanhamento do investimento mínimo diário</li>
+              <li><svg class="inline-svg text-cyan mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Relatórios mensais de desempenho</li>
+              <li><svg class="inline-svg text-cyan mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Suporte ágil via WhatsApp</li>
+              <li><svg class="inline-svg text-cyan mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Até 4 landing pages grátis</li>
             </ul>
             <a data-wa data-loc="plano-basico" data-msg="Olá! Tenho interesse no Plano Básico (R$2.000/mês) da Visual MKT." class="mt-8 text-center py-4 rounded-full font-display font-bold border-2 border-ink text-ink hover:bg-ink hover:text-white transition cursor-pointer">Começar Agora</a>
           </div>
@@ -371,13 +360,13 @@ tailwind.config = {
             <p class="mt-4 font-display font-black text-4xl">R$2.500<span class="text-base font-semibold text-white/50">/mês</span></p>
             <p class="mt-3 text-xs text-white/40 uppercase tracking-wide font-semibold">Google Ads <b>e</b> Meta Ads — as duas plataformas</p>
             <ul class="mt-5 space-y-3 text-white/85 text-sm flex-grow">
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Gestão 360: Google Ads + Meta Ads completo</li>
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Consultoria de criativos para alta conversão</li>
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Google Meu Negócio otimizado (SEO local)</li>
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Dashboard em tempo real 24/7</li>
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Reunião estratégica mensal</li>
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Suporte prioritário via WhatsApp</li>
-              <li><i class="fa-solid fa-check text-yellow mr-2"></i>Até 6 landing pages grátis + hospedagem</li>
+              <li><svg class="inline-svg text-yellow mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Gestão 360: Google Ads + Meta Ads completo</li>
+              <li><svg class="inline-svg text-yellow mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Consultoria de criativos para alta conversão</li>
+              <li><svg class="inline-svg text-yellow mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Google Meu Negócio otimizado (SEO local)</li>
+              <li><svg class="inline-svg text-yellow mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Dashboard em tempo real 24/7</li>
+              <li><svg class="inline-svg text-yellow mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Reunião estratégica mensal</li>
+              <li><svg class="inline-svg text-yellow mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Suporte prioritário via WhatsApp</li>
+              <li><svg class="inline-svg text-yellow mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Até 6 landing pages grátis + hospedagem</li>
             </ul>
             <a data-wa data-loc="plano-completo" data-msg="Olá! Quero o Plano Completo (R$2.500/mês) da Visual MKT." class="mt-8 text-center py-4 rounded-full font-display font-bold bg-magenta text-white hover:bg-cyan transition cursor-pointer">Escolher Plano</a>
           </div>
@@ -388,12 +377,12 @@ tailwind.config = {
             <p class="mt-4 font-display font-black text-4xl text-ink">Sob medida</p>
             <p class="mt-3 text-xs text-slate-400 uppercase tracking-wide font-semibold">Tudo do Completo + exclusivos</p>
             <ul class="mt-5 space-y-3 text-slate-600 text-sm flex-grow">
-              <li><i class="fa-solid fa-check text-magenta mr-2"></i>Estratégia multicanal personalizada para o seu segmento</li>
-              <li><i class="fa-solid fa-check text-magenta mr-2"></i>Criação de criativos: vídeos e estáticos</li>
-              <li><i class="fa-solid fa-check text-magenta mr-2"></i>Postagens regulares no Google Meu Negócio</li>
-              <li><i class="fa-solid fa-check text-magenta mr-2"></i>Estratégia exclusiva para o seu segmento</li>
-              <li><i class="fa-solid fa-check text-magenta mr-2"></i>Gestão de conta dedicada (fila prioritária)</li>
-              <li><i class="fa-solid fa-check text-magenta mr-2"></i>Landing pages ilimitadas</li>
+              <li><svg class="inline-svg text-magenta mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Estratégia multicanal personalizada para o seu segmento</li>
+              <li><svg class="inline-svg text-magenta mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Criação de criativos: vídeos e estáticos</li>
+              <li><svg class="inline-svg text-magenta mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Postagens regulares no Google Meu Negócio</li>
+              <li><svg class="inline-svg text-magenta mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Estratégia exclusiva para o seu segmento</li>
+              <li><svg class="inline-svg text-magenta mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Gestão de conta dedicada (fila prioritária)</li>
+              <li><svg class="inline-svg text-magenta mr-2" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg>Landing pages ilimitadas</li>
             </ul>
             <a data-wa data-loc="plano-personalizado" data-msg="Olá! Quero uma proposta personalizada da Visual MKT." class="mt-8 text-center py-4 rounded-full font-display font-bold border-2 border-ink text-ink hover:bg-ink hover:text-white transition cursor-pointer">Solicitar Proposta</a>
           </div>
@@ -413,7 +402,7 @@ tailwind.config = {
             <p class="text-white/80 leading-relaxed mb-6">Não somos uma agência genérica. Andrézão, fundador da Visual MKT, acumula 21+ anos focados em comunicação visual — 14 dentro do setor (arte finalista, impressor, gerente) e 7 gerenciando anúncios exclusivamente para empresas de CV. Sabemos a diferença entre vender letra caixa e vender panfleto — e montamos a campanha certa para cada um.</p>
             <p class="text-white font-display font-bold text-lg mb-6"><span class="text-yellow">+R$23 milhões</span> em vendas geradas para os nossos clientes.</p>
             <a data-wa data-loc="autoridade" data-msg="Olá! Quero conversar sobre anúncios para a minha empresa de comunicação visual." class="inline-flex items-center gap-3 bg-white text-ink font-display font-bold px-7 py-4 rounded-full hover:bg-yellow transition cursor-pointer">
-              <i class="fa-brands fa-whatsapp text-xl"></i> Falar com especialista
+              <svg class="inline-svg text-xl" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg> Falar com especialista
             </a>
           </div>
         </div>
@@ -548,17 +537,17 @@ tailwind.config = {
         <p class="ink text-center text-slate-500 mb-12 md:text-lg">Histórias reais de quem transformou os resultados.</p>
         <div class="grid md:grid-cols-3 gap-6">
           <figure class="ink bg-white rounded-3xl border border-slate-200 p-8 flex flex-col">
-            <i class="fa-solid fa-quote-left text-cyan text-3xl mb-4"></i>
+            <svg class="inline-svg text-cyan text-3xl mb-4" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"></path></svg>
             <blockquote class="text-slate-700 flex-grow leading-relaxed">De tudo que já tentei como forma de prospecção, a única que deu certo foi através da empresa do André. Hoje eu não paro de fazer orçamentos e o melhor, as vendas aumentaram demais.</blockquote>
             <figcaption class="mt-6 font-display font-bold text-ink">Alan<span class="block text-sm font-medium text-slate-400">Empresa de Comunicação Visual</span></figcaption>
           </figure>
           <figure class="ink bg-white rounded-3xl border border-slate-200 p-8 flex flex-col">
-            <i class="fa-solid fa-quote-left text-magenta text-3xl mb-4"></i>
+            <svg class="inline-svg text-magenta text-3xl mb-4" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"></path></svg>
             <blockquote class="text-slate-700 flex-grow leading-relaxed">No início eu não queria investir no Google, mas passados 3 meses o nosso resultado melhorou muito. Foi um ótimo negócio pra empresa.</blockquote>
             <figcaption class="mt-6 font-display font-bold text-ink">Yuri Cunha<span class="block text-sm font-medium text-slate-400">Empresa de Comunicação Visual</span></figcaption>
           </figure>
           <figure class="ink bg-white rounded-3xl border border-slate-200 p-8 flex flex-col">
-            <i class="fa-solid fa-quote-left text-yellow text-3xl mb-4"></i>
+            <svg class="inline-svg text-yellow text-3xl mb-4" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"></path></svg>
             <blockquote class="text-slate-700 flex-grow leading-relaxed">Fechamos outra venda vinda do Google! Se eu soubesse antes disso... Os anúncios online, quando bem feitos, aumentam as vendas de uma empresa e muito.</blockquote>
             <figcaption class="mt-6 font-display font-bold text-ink">Jonathas Braga<span class="block text-sm font-medium text-slate-400">Empresa de Comunicação Visual</span></figcaption>
           </figure>
@@ -577,7 +566,7 @@ tailwind.config = {
               class="w-full px-5 py-4 rounded-xl border border-slate-300 focus:border-cyan focus:ring-2 focus:ring-cyan/30 outline-none transition">
             <!-- captcha simples (anti-spam, sem dependência externa) -->
             <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
-              <i class="fa-solid fa-shield-halved text-slate-400"></i>
+              <svg class="inline-svg text-slate-400" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"></path></svg>
               <label for="captcha" class="text-slate-600 text-sm">Confirme: <span id="cap-q" class="font-bold text-ink"></span></label>
               <input type="text" id="captcha" name="captcha" inputmode="numeric" required autocomplete="off"
                 class="w-20 ml-auto px-3 py-2 rounded-lg border border-slate-300 focus:border-cyan outline-none text-center">
@@ -587,12 +576,12 @@ tailwind.config = {
             <p id="cap-err" class="hidden text-sm text-magenta font-semibold">Resposta incorreta, tente de novo.</p>
             <button type="submit"
               class="w-full py-5 rounded-full font-display font-bold text-lg bg-magenta text-white hover:bg-ink transition flex items-center justify-center gap-3">
-              <i class="fa-brands fa-whatsapp text-xl"></i> Quero vender mais
+              <svg class="inline-svg text-xl" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg> Quero vender mais
             </button>
             <p class="text-center text-xs text-slate-400">Resposta no mesmo dia útil. Seus dados ficam protegidos.</p>
           </form>
           <div id="form-ok" class="hidden text-center py-6">
-            <i class="fa-solid fa-circle-check text-green-500 text-5xl mb-4"></i>
+            <svg class="inline-svg text-green-500 text-5xl mb-4" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path></svg>
             <p class="text-xl font-display font-bold text-ink">Recebido!</p>
             <p class="text-slate-500 mt-2">Abrimos o WhatsApp para falar agora mesmo.</p>
           </div>
@@ -658,35 +647,35 @@ tailwind.config = {
             <details class="ink bg-white rounded-2xl border border-slate-200 group">
               <summary class="px-7 py-5 font-display font-bold text-ink cursor-pointer list-none flex justify-between items-center">
                 A Visual MKT atende empresas de comunicação visual em qualquer país?
-                <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform group-open:rotate-180"></i>
+                <svg class="inline-svg text-slate-400 text-sm transition-transform group-open:rotate-180" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg>
               </summary>
               <p class="px-7 pb-6 text-slate-600 leading-relaxed">Sim. Atendemos empresas de comunicação visual em qualquer país. O trabalho é 100% remoto — estratégia, setup, gestão e relatórios via WhatsApp e reunião online. Nossas campanhas já rodaram em múltiplos países e plataformas.</p>
             </details>
             <details class="ink bg-white rounded-2xl border border-slate-200 group">
               <summary class="px-7 py-5 font-display font-bold text-ink cursor-pointer list-none flex justify-between items-center">
                 O que diferencia a Visual MKT de uma agência convencional?
-                <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform group-open:rotate-180"></i>
+                <svg class="inline-svg text-slate-400 text-sm transition-transform group-open:rotate-180" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg>
               </summary>
               <p class="px-7 pb-6 text-slate-600 leading-relaxed">Especialização total. O fundador Andrézão tem 21+ anos focados em comunicação visual — 14 dentro do setor (arte finalista, impressor e gerente) e 7 gerenciando anúncios exclusivamente para empresas de CV. Isso significa que os anúncios usam os termos certos do setor, as palavras-chave certas e o copy fala diretamente com quem compra letra caixa, fachada, adesivo ou sinalização.</p>
             </details>
             <details class="ink bg-white rounded-2xl border border-slate-200 group">
               <summary class="px-7 py-5 font-display font-bold text-ink cursor-pointer list-none flex justify-between items-center">
                 Quais serviços de comunicação visual funcionam melhor com Google Ads?
-                <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform group-open:rotate-180"></i>
+                <svg class="inline-svg text-slate-400 text-sm transition-transform group-open:rotate-180" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg>
               </summary>
               <p class="px-7 pb-6 text-slate-600 leading-relaxed">Os de maior retorno são: letra caixa e letreiros luminosos, fachadas em ACM, adesivos e plotagem veicular, sinalização corporativa, placas em PVC e acrílico, envelopamento e displays de ponto de venda. Todos têm alta intenção de compra nas buscas — quem pesquisa está pronto para pedir orçamento.</p>
             </details>
             <details class="ink bg-white rounded-2xl border border-slate-200 group">
               <summary class="px-7 py-5 font-display font-bold text-ink cursor-pointer list-none flex justify-between items-center">
                 Quanto custa contratar a Visual MKT?
-                <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform group-open:rotate-180"></i>
+                <svg class="inline-svg text-slate-400 text-sm transition-transform group-open:rotate-180" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg>
               </summary>
               <p class="px-7 pb-6 text-slate-600 leading-relaxed">Os planos começam em R$2.000/mês (Google Ads ou Meta Ads) e R$2.500/mês para as duas plataformas. Além disso, o investimento direto em anúncios é feito separado na própria plataforma, a partir de R$40/dia. Há também planos personalizados para operações maiores.</p>
             </details>
             <details class="ink bg-white rounded-2xl border border-slate-200 group">
               <summary class="px-7 py-5 font-display font-bold text-ink cursor-pointer list-none flex justify-between items-center">
                 Como são medidos os resultados?
-                <i class="fa-solid fa-chevron-down text-slate-400 text-sm transition-transform group-open:rotate-180"></i>
+                <svg class="inline-svg text-slate-400 text-sm transition-transform group-open:rotate-180" viewBox="0 0 512 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></svg>
               </summary>
               <p class="px-7 pb-6 text-slate-600 leading-relaxed">Cada cliente tem acesso a um painel em tempo real com cliques, conversões, custo por lead e investimento total. A métrica principal é o número de orçamentos gerados — formulários e mensagens de WhatsApp vindos diretamente das campanhas. A Visual MKT já gerou mais de 163 mil conversões e R$27 milhões em vendas para clientes de comunicação visual.</p>
             </details>
@@ -699,7 +688,7 @@ tailwind.config = {
         <h2 class="ink font-display font-black text-4xl md:text-6xl text-ink mb-5">Pronto para imprimir<br>mais vendas?</h2>
         <p class="ink text-slate-500 text-lg mb-10 max-w-xl mx-auto">Comece hoje e veja os primeiros orçamentos chegarem.</p>
         <a data-wa data-loc="cta-final" data-msg="Olá! Vim pela landing page e quero começar com a Visual MKT." class="ink inline-flex items-center gap-3 bg-magenta text-white font-display font-bold text-xl px-10 py-6 rounded-full hover:bg-ink transition cursor-pointer">
-          <i class="fa-brands fa-whatsapp text-2xl"></i> Começar agora
+          <svg class="inline-svg text-2xl" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg> Começar agora
         </a>
       </section>
 
@@ -720,7 +709,7 @@ tailwind.config = {
 <!-- WhatsApp flutuante -->
 <a data-wa data-loc="flutuante" data-msg="Olá! Vim pela landing page da Visual MKT."
    class="fixed bottom-6 right-6 z-[60] flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-display font-bold py-3 px-5 rounded-full shadow-lg transition cursor-pointer">
-  <i class="fa-brands fa-whatsapp text-2xl"></i><span class="hidden sm:inline">Fale conosco</span>
+  <svg class="inline-svg text-2xl" viewBox="0 0 448 512" style="display:inline-block;width:1em;height:1em;vertical-align:-0.125em" aria-hidden="true"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg><span class="hidden sm:inline">Fale conosco</span>
 </a>
 
 <style>
