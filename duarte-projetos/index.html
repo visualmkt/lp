@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Letreiro e Letra Caixa para Projetos, Feiras e Eventos em BH | Duarte Placas</title>
 <meta name="description" content="Letreiro e letra caixa executados exatamente como no seu projeto: fachadas, ambientação corporativa e cenografia de feiras. Fábrica própria em BH desde 1995, ART e licenciamento junto à PBH. Atendemos BH e Região Metropolitana.">
-<link rel="preload" as="image" href="imagens/hero-coco-bambu-full.webp" fetchpriority="high">
+<link rel="preload" as="image" href="imagens/hero-coco-bambu-crop.webp" fetchpriority="high">
 <meta property="og:title" content="Executamos o letreiro que está no seu projeto | Duarte Placas">
 <meta property="og:description" content="Para arquitetos, engenharia, produtoras de evento e empresas de alto padrão. Fábrica própria em BH desde 1995, +5.000 projetos realizados.">
 <meta property="og:type" content="website">
@@ -99,7 +99,8 @@ img{max-width:100%;display:block}
 .sel-h{font-family:'Sora',sans-serif;font-size:1.12rem;font-weight:700;color:var(--ink);margin-bottom:5px}
 .sel-p{font-size:.93rem;margin-bottom:20px}
 .parceiros{background:#0B1B2B;padding:64px 0}
-.parceiros img{display:block;width:100%;height:auto;max-width:1180px;margin:0 auto}
+.parceiros .wrap{max-width:1560px}
+.parceiros img{display:block;width:100%;height:auto;max-width:1536px;margin:0 auto}
 .parceiros .pc-mobile{display:block}
 .parceiros .pc-desktop{display:none}
 .paths{display:flex;flex-direction:column;gap:11px}
@@ -161,11 +162,13 @@ img{max-width:100%;display:block}
 .gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;
   background:linear-gradient(to top,rgba(6,16,26,.9),transparent);
   font-family:'Sora',sans-serif;font-size:.7rem;font-weight:600;color:#fff;letter-spacing:.02em}
+/* ── PARÁGRAFO-RESPOSTA (GEO) ── */
+.geo-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
+.geo-photo{border-radius:18px;overflow:hidden;box-shadow:0 22px 50px -26px rgba(11,27,43,.32)}
+.geo-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
 /* ── FÁBRICA ── */
-.fab-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;margin-top:32px}
-.fab-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 22px 50px -26px rgba(11,27,43,.35)}
-.fab-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block}
-.fab{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.fab{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}
 .fab figure{position:relative;border-radius:12px;overflow:hidden}
 .fab img{width:100%;aspect-ratio:16/10;object-fit:cover}
 .fab figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;
@@ -248,8 +251,8 @@ img{max-width:100%;display:block}
   .form-g{grid-template-columns:1.15fr .85fr;gap:56px}
   .form-card{padding:38px 34px}
   .gal{grid-template-columns:repeat(4,1fr);gap:16px}
-  .fab{grid-template-columns:repeat(2,1fr);gap:16px}
-  .fab-grid{grid-template-columns:1fr .85fr;gap:52px}
+  .fab{grid-template-columns:repeat(4,1fr);gap:16px}
+  .geo-grid{grid-template-columns:1.2fr .9fr;gap:52px}
   .route{padding:32px 30px}
   .route-hd h3{font-size:1.24rem}
   .ft-g{grid-template-columns:1.4fr 1fr 1fr}
@@ -280,7 +283,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ══ HERO + SELETOR ══ -->
 <section class="hero" id="topo">
-  <img class="hero-photo" src="imagens/hero-coco-bambu-full.webp" alt="Fachada com letra caixa iluminada COCOBAMBU executada pela Duarte Placas" width="1600" height="1095" fetchpriority="high">
+  <img class="hero-photo" src="imagens/hero-coco-bambu-crop.webp" alt="Fachada com letra caixa iluminada COCOBAMBU executada pela Duarte Placas" width="1600" height="679" fetchpriority="high">
   <h1 class="sr-only">Executamos o letreiro que está no seu projeto</h1>
   <div class="wrap hero-below">
     <div class="hero-grid">
@@ -409,28 +412,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ══ PARÁGRAFO-RESPOSTA (GEO/LLM) ══ -->
 <section class="sec" style="padding-top:120px;padding-bottom:0">
   <div class="wrap">
-    <p class="lede">
-      A <strong style="color:var(--ink)">Duarte Placas</strong> é uma fábrica de comunicação visual em
-      Belo Horizonte, em operação desde 1995, especializada em executar letreiros, letra caixa,
-      fachadas, cenografia de feiras e eventos e sinalização corporativa a partir de projetos de arquitetura e design.
-      Produz em aço inox, aço galvanizado, ACM, acrílico e PVC, com iluminação em LED,
-      emite ART e conduz o licenciamento junto à Prefeitura de Belo Horizonte.
-      Atende Belo Horizonte e a Região Metropolitana.
-    </p>
+    <div class="geo-grid">
+      <div>
+        <p class="lede">
+          A <strong style="color:var(--ink)">Duarte Placas</strong> é uma fábrica de comunicação visual em
+          Belo Horizonte, em operação desde 1995, especializada em executar letreiros, letra caixa,
+          fachadas, cenografia de feiras e eventos e sinalização corporativa a partir de projetos de arquitetura e design.
+          Produz em aço inox, aço galvanizado, ACM, acrílico e PVC, com iluminação em LED,
+          emite ART e conduz o licenciamento junto à Prefeitura de Belo Horizonte.
+          Atende Belo Horizonte e a Região Metropolitana.
+        </p>
 
-      <div class="segs">
-        <span>Perfis que atendemos</span>
-        <ul>
-          <li>Engenharia e construtoras</li>
-          <li>Escritórios de arquitetura e design</li>
-          <li>Condomínios e incorporações</li>
-          <li>Instituições de ensino</li>
-          <li>Indústria e mineração</li>
-          <li>Farmacêutica e saúde</li>
-          <li>Produtoras de eventos e feiras</li>
-          <li>Órgãos públicos</li>
-        </ul>
+        <div class="segs">
+          <span>Perfis que atendemos</span>
+          <ul>
+            <li>Engenharia e construtoras</li>
+            <li>Escritórios de arquitetura e design</li>
+            <li>Condomínios e incorporações</li>
+            <li>Instituições de ensino</li>
+            <li>Indústria e mineração</li>
+            <li>Farmacêutica e saúde</li>
+            <li>Produtoras de eventos e feiras</li>
+            <li>Órgãos públicos</li>
+          </ul>
+        </div>
       </div>
+      <div class="geo-photo">
+        <img src="imagens/ambiente-interno-corporativo.webp" alt="Ambientação corporativa com letra caixa e painel decorativo executados pela Duarte Placas" width="941" height="627" loading="lazy">
+      </div>
+    </div>
   </div>
 </section>
 
@@ -556,21 +566,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ══ FÁBRICA ══ -->
 <section class="sec">
   <div class="wrap">
-    <div class="fab-grid">
-      <div>
-        <span class="num">03 — DENTRO DA FÁBRICA</span>
-        <h2>Fabricação e instalação são nossas</h2>
-        <p class="lede">Do desenho aprovado à peça instalada, sem terceirizar a etapa que define o acabamento.</p>
-        <div class="fab">
-          <figure><img src="imagens/design-e-producao.webp" alt="Etapa de design e produção na fábrica" loading="lazy"><figcaption>Design e produção</figcaption></figure>
-          <figure><img src="imagens/producao-2.webp" alt="Produção de peças de comunicação visual na fábrica" loading="lazy"><figcaption>Produção</figcaption></figure>
-          <figure><img src="imagens/expedicao.webp" alt="Expedição das peças produzidas" loading="lazy"><figcaption>Expedição</figcaption></figure>
-          <figure><img src="imagens/instalacao.webp" alt="Equipe própria durante a instalação em fachada" loading="lazy"><figcaption>Instalação com equipe própria</figcaption></figure>
-        </div>
-      </div>
-      <div class="fab-photo">
-        <img src="imagens/instalacao.webp" alt="Técnico da equipe própria da Duarte Placas instalando letra caixa em fachada" width="1280" height="960" loading="lazy">
-      </div>
+    <span class="num">03 — DENTRO DA FÁBRICA</span>
+    <h2>Fabricação e instalação são nossas</h2>
+    <p class="lede">Do desenho aprovado à peça instalada, sem terceirizar a etapa que define o acabamento.</p>
+    <div class="fab">
+      <figure><img src="imagens/design-e-producao.webp" alt="Etapa de design e produção na fábrica" loading="lazy"><figcaption>Design e produção</figcaption></figure>
+      <figure><img src="imagens/producao-2.webp" alt="Produção de peças de comunicação visual na fábrica" loading="lazy"><figcaption>Produção</figcaption></figure>
+      <figure><img src="imagens/expedicao.webp" alt="Expedição das peças produzidas" loading="lazy"><figcaption>Expedição</figcaption></figure>
+      <figure><img src="imagens/instalacao.webp" alt="Equipe própria durante a instalação em fachada" loading="lazy"><figcaption>Instalação com equipe própria</figcaption></figure>
     </div>
   </div>
 </section>
