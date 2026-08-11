@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Letreiro e Letra Caixa para Projetos, Feiras e Eventos em BH | Duarte Placas</title>
 <meta name="description" content="Letreiro e letra caixa executados exatamente como no seu projeto: fachadas, ambientação corporativa e cenografia de feiras. Fábrica própria em BH desde 1995, ART e licenciamento junto à PBH. Atendemos BH e Região Metropolitana.">
-<link rel="preload" as="image" href="imagens/hero-coco-bambu.webp" fetchpriority="high">
+<link rel="preload" as="image" href="imagens/hero-coco-bambu-full.webp" fetchpriority="high">
 <meta property="og:title" content="Executamos o letreiro que está no seu projeto | Duarte Placas">
 <meta property="og:description" content="Para arquitetos, engenharia, produtoras de evento e empresas de alto padrão. Fábrica própria em BH desde 1995, +5.000 projetos realizados.">
 <meta property="og:type" content="website">
@@ -84,21 +84,16 @@ img{max-width:100%;display:block}
 .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan-d)}
 .btn-sm{padding:10px 18px;font-size:.85rem}
 
-/* ── HERO (full-bleed, estilo letreiro-2026) ── */
-.hero{position:relative;overflow:hidden;background:#0B1B2B;padding:0;isolation:isolate}
-.hero-bg{position:absolute;inset:0;background:url('imagens/hero-coco-bambu.webp') center/cover no-repeat;z-index:0}
-.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,27,43,.35) 0%,rgba(11,27,43,.78) 55%,rgba(11,27,43,.96) 100%)}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr;gap:0;padding:56px 0 44px;min-height:min(78vh,720px);align-items:end}
-.eyebrow{display:block;font-family:'Sora',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:18px;line-height:1.5}
-.hero h1{color:#fff;font-size:clamp(2.05rem,5.2vw,3.3rem);font-weight:800;line-height:1.06;margin-bottom:20px}
-.hero h1 em{font-style:normal;color:#0B1B2B;position:relative;white-space:nowrap;padding:0 .1em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.hero h1 em::after{content:'';position:absolute;inset:.02em -.06em;background:var(--cyan);z-index:-1;border-radius:3px}
+/* ── HERO (imagem cheia, igual letreiro-2026) ── */
+.hero{position:relative;background:#0B1B2B;padding:0}
+.hero-photo{display:block;width:100%;height:auto}
+.hero-below{padding:36px 0 0}
+.eyebrow{display:block;font-family:'Sora',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-d);margin-bottom:18px;line-height:1.5}
 .rule{width:56px;height:3px;background:var(--cyan);border-radius:2px;margin:0 0 20px}
-.hero-sub{color:rgba(255,255,255,.88);font-size:1.03rem;line-height:1.65;max-width:44ch;margin-bottom:34px}
 
 /* ── SELETOR DE CAMINHOS ── */
-.sel-h{font-family:'Sora',sans-serif;font-size:1.12rem;font-weight:700;color:#fff;margin-bottom:5px}
-.sel-p{font-size:.93rem;margin-bottom:20px;color:rgba(255,255,255,.75)}
+.sel-h{font-family:'Sora',sans-serif;font-size:1.12rem;font-weight:700;color:var(--ink);margin-bottom:5px}
+.sel-p{font-size:.93rem;margin-bottom:20px}
 .parceiros{background:#fff;padding:34px 0}
 .parceiros p{text-align:center;font-family:'Sora',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8496A5;margin-bottom:18px}
 .parceiros img{display:block;width:100%;height:auto;max-width:960px;margin:0 auto}
@@ -231,7 +226,7 @@ img{max-width:100%;display:block}
 .ft-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:22px;font-size:.8rem;color:rgba(255,255,255,.42)}
 
 @media(min-width:900px){
-  .hero-grid{grid-template-columns:1fr;max-width:640px;min-height:min(74vh,640px)}
+  .hero-below .wrap>div:first-child{max-width:640px}
   .parceiros .pc-mobile{display:none}
   .parceiros .pc-desktop{display:block}
   .proof-g{grid-template-columns:repeat(4,1fr)}
@@ -275,18 +270,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ══ HERO + SELETOR ══ -->
 <section class="hero" id="topo">
-  <div class="hero-bg"></div>
-  <div class="wrap">
+  <img class="hero-photo" src="imagens/hero-coco-bambu-full.webp" alt="Fachada com letra caixa iluminada COCOBAMBU executada pela Duarte Placas" width="1600" height="1095" fetchpriority="high">
+  <h1 class="sr-only">Executamos o letreiro que está no seu projeto</h1>
+  <div class="wrap hero-below">
     <div class="hero-grid">
 
       <div>
         <span class="eyebrow">Para arquitetos, engenharia, produtoras de evento e projetos de alto padrão</span>
-        <h1>Executamos o letreiro que está <em>no seu projeto</em>.</h1>
-        <div class="rule"></div>
-        <p class="hero-sub">
-          Fábrica própria em Belo Horizonte desde 1995. Da concepção à instalação,
-          com ART emitida e licenciamento junto à PBH.
-        </p>
 
         <p class="sel-h">Como podemos ajudar no seu projeto hoje?</p>
         <p class="sel-p">Escolha a opção que melhor descreve sua necessidade.</p>
