@@ -65,11 +65,11 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 
 /* ── FAIXA DE PROVA ── */
 .proof{background:#fff;border-bottom:1px solid var(--line)}
-.proof-g{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
-.proof-i{padding:20px 14px;text-align:center;border-bottom:1px solid var(--line)}
-.proof-i:nth-child(odd){border-right:1px solid var(--line)}
+.proof-g{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.proof-i{padding:20px 12px;text-align:center;border-bottom:1px solid var(--line)}
+.proof-i:not(:last-child){border-right:1px solid var(--line)}
 .proof-i svg{width:1.3rem;height:1.3rem;color:var(--red);margin-bottom:8px}
-.proof-i b{display:block;font-size:.88rem;font-weight:700}
+.proof-i b{display:block;font-size:.85rem;font-weight:700}
 
 /* ── SEÇÃO GENÉRICA ── */
 .sec{padding:64px 0}
@@ -85,23 +85,26 @@ header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid 
 .prod{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 34px -26px rgba(0,0,0,.25)}
 .prod-media{aspect-ratio:16/10;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .prod-media img{width:100%;height:100%;object-fit:cover}
-.prod-media.icon-media img{width:96px;height:96px;object-fit:contain}
 .prod-c{padding:20px}
 .prod-c h3{font-size:1.05rem;font-weight:800;margin-bottom:8px}
 .prod-c p{font-size:.9rem;margin-bottom:14px}
 .prod-cta{font-size:.85rem;font-weight:700;color:var(--red-d);display:inline-flex;align-items:center;gap:6px}
 .prod-cta svg{width:.85em;height:.85em}
 
-/* ── MOSAICO/TRABALHOS ── */
-.mosaico{border-radius:var(--radius);overflow:hidden;margin-top:26px}
-.mosaico .m-desktop{display:none}
-.mosaico .m-mobile{display:block}
+/* ── TRABALHOS ── */
+.trab-g{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+.trab-g figure{position:relative;border-radius:12px;overflow:hidden;background:var(--bg)}
+.trab-g img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.trab-g figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;
+  background:linear-gradient(to top,rgba(0,0,0,.75),transparent);
+  font-size:.76rem;font-weight:700;color:#fff}
 
 /* ── MARCAS ── */
 .marcas{background:var(--ink);padding:44px 0}
 .marcas p.tt{text-align:center;color:rgba(255,255,255,.55);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:24px}
-.marcas-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:center}
-.marcas-g img{filter:grayscale(1) brightness(0) invert(1);opacity:.75;width:100%;height:auto}
+.marcas-g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:center}
+.marcas-g div{background:#fff;border-radius:10px;padding:16px 14px;display:flex;align-items:center;justify-content:center;aspect-ratio:2/1}
+.marcas-g img{width:100%;height:100%;object-fit:contain}
 
 /* ── SOBRE ── */
 .sobre-g{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;margin-top:26px}
@@ -141,14 +144,11 @@ footer a:hover{color:#fff}
 
 @media(min-width:760px){
   .header-phone{display:inline-flex;align-items:center}
-  .proof-g{grid-template-columns:repeat(4,1fr)}
   .proof-i{border-bottom:none!important}
-  .proof-i:not(:last-child){border-right:1px solid var(--line)}
   .prod-g{grid-template-columns:repeat(2,1fr)}
   .marcas-g{grid-template-columns:repeat(5,1fr)}
   .sobre-g{grid-template-columns:.9fr 1.1fr}
-  .mosaico .m-desktop{display:block}
-  .mosaico .m-mobile{display:none}
+  .trab-g{grid-template-columns:repeat(3,1fr)}
   .ft-g{grid-template-columns:1.3fr 1fr 1fr}
 }
 @media(min-width:1000px){
@@ -194,10 +194,6 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <div class="proof-g">
       <div class="proof-i">
-        <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
-        <b>Arte grátis</b>
-      </div>
-      <div class="proof-i">
         <svg viewBox="0 0 640 512" fill="currentColor" aria-hidden="true"><path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"/></svg>
         <b>Fábrica própria</b>
       </div>
@@ -229,7 +225,7 @@ footer a:hover{color:#fff}
         </div>
       </article>
       <article class="prod">
-        <div class="prod-media icon-media"><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-icone-adesivo.png" alt="Ícone de adesivo" loading="lazy" width="280" height="280"></div>
+        <div class="prod-media"><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-adesivo-veicular.webp" alt="Envelopamento veicular com adesivo impresso, aplicado em carro" loading="lazy" width="1000" height="625"></div>
         <div class="prod-c">
           <h3>Adesivo, Rótulo e Etiqueta</h3>
           <p>Vitrine, parede, veículo, lacre de segurança, rótulo de produto e etiqueta — corte e impressão sob medida.</p>
@@ -237,7 +233,7 @@ footer a:hover{color:#fff}
         </div>
       </article>
       <article class="prod">
-        <div class="prod-media icon-media"><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-icone-impressao.png" alt="Ícone de impressão digital" loading="lazy" width="280" height="280"></div>
+        <div class="prod-media"><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-faixa-banner.webp" alt="Painel digital impresso instalado em fachada de empresa" loading="lazy" width="1000" height="625"></div>
         <div class="prod-c">
           <h3>Faixa e Banner</h3>
           <p>Para eventos, promoções e pontos de venda — prontos pra pendurar, com acabamento e ilhoses.</p>
@@ -245,9 +241,7 @@ footer a:hover{color:#fff}
         </div>
       </article>
       <article class="prod">
-        <div class="prod-media" style="background:var(--ink);display:flex;align-items:center;justify-content:center">
-          <svg viewBox="0 0 448 512" fill="#fff" aria-hidden="true" style="width:64px;height:64px;opacity:.85"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
-        </div>
+        <div class="prod-media"><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-trabalho-treinointegrado.webp" alt="Letra caixa iluminada instalada em fachada" loading="lazy" width="1000" height="625"></div>
         <div class="prod-c">
           <h3>E muito mais</h3>
           <p>Fachadas em ACM, letra caixa, wind banner e gráfica expressa — conheça o restante do nosso portfólio.</p>
@@ -265,9 +259,13 @@ footer a:hover{color:#fff}
     <span class="num">02 — PORTFÓLIO</span>
     <h2>Alguns trabalhos que já saíram da nossa fábrica</h2>
     <p class="lede">Adesivos, rótulos, envelopamento de veículos, fachadas e muito mais — projetos reais de clientes reais.</p>
-    <div class="mosaico">
-      <img class="m-desktop" src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-mosaico-trabalhos.webp" alt="Mosaico de trabalhos executados pela New: fachadas, adesivos, rótulos e envelopamento de veículos" loading="lazy" width="1400" height="700">
-      <img class="m-mobile" src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-mosaico-trabalhos-mobile.webp" alt="Mosaico de trabalhos executados pela New: fachadas, adesivos, rótulos e envelopamento de veículos" loading="lazy" width="700" height="933">
+    <div class="trab-g">
+      <figure><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-adesivo-veicular.webp" alt="Envelopamento veicular com adesivo impresso" loading="lazy"><figcaption>Envelopamento veicular</figcaption></figure>
+      <figure><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-trabalho-forcasolar.webp" alt="Van com adesivo impresso de grande formato" loading="lazy"><figcaption>Adesivo de grande formato</figcaption></figure>
+      <figure><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-lona-via-marte.webp" alt="Lona com impressão digital instalada como outdoor" loading="lazy"><figcaption>Lona para outdoor</figcaption></figure>
+      <figure><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-faixa-banner.webp" alt="Painel digital impresso instalado em fachada" loading="lazy"><figcaption>Painel digital impresso</figcaption></figure>
+      <figure><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-trabalho-happycode.webp" alt="Testeira colorida com impressão digital" loading="lazy"><figcaption>Testeira e fachada</figcaption></figure>
+      <figure><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-producao-plotter.webp" alt="Plotter imprimindo lona em nossa fábrica" loading="lazy"><figcaption>Nossa produção</figcaption></figure>
     </div>
   </div>
 </section>
@@ -277,15 +275,15 @@ footer a:hover{color:#fff}
   <div class="wrap">
     <p class="tt">Marcas que já produziram com a gente</p>
     <div class="marcas-g">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-panvel.webp" alt="Panvel Farmácias" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-wizard.webp" alt="Wizard" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-moura.webp" alt="Moura Baterias" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-mormaii.webp" alt="Mormaii" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-mobil.webp" alt="Mobil" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-asun.webp" alt="Asun" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-radan.webp" alt="Radan" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-pioneiro.webp" alt="Jornal Pioneiro" loading="lazy" width="400" height="200">
-      <img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-farmacia.webp" alt="Farmácia parceira" loading="lazy" width="400" height="200">
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-panvel.webp" alt="Panvel Farmácias" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-wizard.webp" alt="Wizard" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-moura.webp" alt="Moura Baterias" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-mormaii.webp" alt="Mormaii" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-mobil.webp" alt="Mobil" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-asun.webp" alt="Asun" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-radan.webp" alt="Radan" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-pioneiro.webp" alt="Jornal Pioneiro" loading="lazy" width="400" height="200"></div>
+      <div><img src="https://newdg.com.br/wp-content/uploads/2026/08/adesivo-lona-faixa-banner-farmacia.webp" alt="Farmácia parceira" loading="lazy" width="400" height="200"></div>
     </div>
   </div>
 </section>
