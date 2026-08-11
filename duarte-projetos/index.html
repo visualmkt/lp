@@ -85,17 +85,21 @@ img{max-width:100%;display:block}
 .btn-sm{padding:10px 18px;font-size:.85rem}
 
 /* ── HERO (imagem cheia, igual letreiro-2026) ── */
-.hero{position:relative;background:#0B1B2B;padding:0}
+.hero{position:relative;background:#fff;padding:0}
 .hero-photo{display:block;width:100%;height:auto}
-.hero-below{padding:36px 0 0}
+.hero-below{padding:40px 0 0}
 .eyebrow{display:block;font-family:'Sora',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan-d);margin-bottom:18px;line-height:1.5}
 .rule{width:56px;height:3px;background:var(--cyan);border-radius:2px;margin:0 0 20px}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:36px}
+.hero-form-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;box-shadow:0 22px 50px -28px rgba(11,27,43,.28)}
+.hero-form-card h3{font-family:'Sora',sans-serif;font-size:1.08rem;font-weight:700;color:var(--ink);margin-bottom:4px}
+.hero-form-card .form-note-top{font-size:.86rem;color:var(--body);margin-bottom:18px}
 
 /* ── SELETOR DE CAMINHOS ── */
 .sel-h{font-family:'Sora',sans-serif;font-size:1.12rem;font-weight:700;color:var(--ink);margin-bottom:5px}
 .sel-p{font-size:.93rem;margin-bottom:20px}
-.parceiros{background:#0B1B2B;padding:44px 0}
-.parceiros img{display:block;width:100%;height:auto;max-width:960px;margin:0 auto}
+.parceiros{background:#0B1B2B;padding:64px 0}
+.parceiros img{display:block;width:100%;height:auto;max-width:1180px;margin:0 auto}
 .parceiros .pc-mobile{display:block}
 .parceiros .pc-desktop{display:none}
 .paths{display:flex;flex-direction:column;gap:11px}
@@ -158,18 +162,23 @@ img{max-width:100%;display:block}
   background:linear-gradient(to top,rgba(6,16,26,.9),transparent);
   font-family:'Sora',sans-serif;font-size:.7rem;font-weight:600;color:#fff;letter-spacing:.02em}
 /* ── FÁBRICA ── */
-.fab{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:32px}
+.fab-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center;margin-top:32px}
+.fab-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 22px 50px -26px rgba(11,27,43,.35)}
+.fab-photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block}
+.fab{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .fab figure{position:relative;border-radius:12px;overflow:hidden}
 .fab img{width:100%;aspect-ratio:16/10;object-fit:cover}
 .fab figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;
   background:linear-gradient(to top,rgba(6,16,26,.9),transparent);
   font-family:'Sora',sans-serif;font-size:.72rem;font-weight:600;color:#fff}
 /* ── DEPOIMENTOS ── */
-.deps{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px}
-.dep{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column}
-.dep i{color:var(--cyan);font-size:1.3rem;margin-bottom:14px}
-.dep p{font-size:.96rem;line-height:1.62;margin-bottom:18px}
-.dep b{margin-top:auto;font-family:'Sora',sans-serif;font-size:.86rem;font-weight:700;color:var(--ink)}
+.deps{display:grid;grid-template-columns:1fr;gap:18px;margin-top:32px}
+.dep{background:#fff;border:1px solid var(--line);border-top:3px solid var(--cyan);border-radius:16px;padding:28px 26px;display:flex;flex-direction:column;box-shadow:0 16px 36px -26px rgba(11,27,43,.28)}
+.dep .fa-ico{color:rgba(33,198,214,.35);width:2.1rem!important;height:2.1rem!important;margin-bottom:14px}
+.dep p{font-size:.98rem;line-height:1.62;margin-bottom:22px;color:var(--ink)}
+.dep-who{margin-top:auto;display:flex;align-items:center;gap:12px}
+.dep-av{flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:'Sora',sans-serif;font-weight:700;font-size:.86rem}
+.dep b{display:block;font-family:'Sora',sans-serif;font-size:.9rem;font-weight:700;color:var(--ink)}
 .dep span{font-size:.8rem;color:#8496A5}
 
 /* ── FORMULÁRIO ── */
@@ -225,7 +234,8 @@ img{max-width:100%;display:block}
 .ft-bot{border-top:1px solid rgba(255,255,255,.1);margin-top:38px;padding-top:22px;font-size:.8rem;color:rgba(255,255,255,.42)}
 
 @media(min-width:900px){
-  .hero-below .wrap>div:first-child{max-width:640px}
+  .hero-grid{grid-template-columns:1.15fr .95fr;gap:48px;align-items:start}
+  .parceiros{padding:84px 0}
   .parceiros .pc-mobile{display:none}
   .parceiros .pc-desktop{display:block}
   .proof-g{grid-template-columns:repeat(4,1fr)}
@@ -238,7 +248,8 @@ img{max-width:100%;display:block}
   .form-g{grid-template-columns:1.15fr .85fr;gap:56px}
   .form-card{padding:38px 34px}
   .gal{grid-template-columns:repeat(4,1fr);gap:16px}
-  .fab{grid-template-columns:repeat(4,1fr);gap:16px}
+  .fab{grid-template-columns:repeat(2,1fr);gap:16px}
+  .fab-grid{grid-template-columns:1fr .85fr;gap:52px}
   .route{padding:32px 30px}
   .route-hd h3{font-size:1.24rem}
   .ft-g{grid-template-columns:1.4fr 1fr 1fr}
@@ -316,6 +327,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </span>
             <span class="path-ar"><svg class="fa-ico" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></span>
           </a>
+        </div>
+      </div>
+
+      <div class="hero-form-card">
+        <h3>Conte sobre o seu projeto</h3>
+        <p class="form-note-top">Resposta em horário comercial, de segunda a sexta.</p>
+
+        <form class="lead-form" data-location="hero" action="https://formsubmit.co/vendas@duarteplacas.com.br" method="POST">
+          <input type="hidden" name="_subject" value="Novo lead — LP Projetos / Hero (Duarte Placas)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="fld">
+            <label for="h-f-nome">Nome *</label>
+            <input id="h-f-nome" type="text" name="Nome" required autocomplete="name" placeholder="Seu nome">
+          </div>
+
+          <div class="fld">
+            <label for="h-f-wpp">WhatsApp *</label>
+            <input id="h-f-wpp" type="tel" name="WhatsApp" required autocomplete="tel" placeholder="(31) 90000-0000">
+          </div>
+
+          <div class="fld">
+            <label for="h-f-caminho">Como podemos ajudar?</label>
+            <select id="h-f-caminho" name="Necessidade" required>
+              <option value="">Selecione…</option>
+              <option value="Consultoria completa do zero">Consultoria completa do zero</option>
+              <option value="Tenho projeto e preciso executar">Tenho um projeto e preciso executar</option>
+              <option value="Estande, feira ou evento">Estande, feira ou evento</option>
+              <option value="Padronizar identidade em varias unidades">Padronizar identidade em várias unidades</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar para análise</button>
+          <p class="form-note">Seus dados são usados apenas para responder a este contato.</p>
+        </form>
+
+        <div class="form-ok" id="form-ok-hero">
+          <svg class="fa-ico" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+          <strong>Recebemos o seu contato.</strong>
+          <p>Nossa equipe vai analisar e responder em horário comercial.</p>
         </div>
       </div>
 
@@ -503,14 +556,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ══ FÁBRICA ══ -->
 <section class="sec">
   <div class="wrap">
-    <span class="num">03 — DENTRO DA FÁBRICA</span>
-    <h2>Fabricação e instalação são nossas</h2>
-    <p class="lede">Do desenho aprovado à peça instalada, sem terceirizar a etapa que define o acabamento.</p>
-    <div class="fab">
-      <figure><img src="imagens/design-e-producao.webp" alt="Etapa de design e produção na fábrica" loading="lazy"><figcaption>Design e produção</figcaption></figure>
-      <figure><img src="imagens/producao-2.webp" alt="Produção de peças de comunicação visual na fábrica" loading="lazy"><figcaption>Produção</figcaption></figure>
-      <figure><img src="imagens/expedicao.webp" alt="Expedição das peças produzidas" loading="lazy"><figcaption>Expedição</figcaption></figure>
-      <figure><img src="imagens/instalacao.webp" alt="Equipe própria durante a instalação em fachada" loading="lazy"><figcaption>Instalação com equipe própria</figcaption></figure>
+    <div class="fab-grid">
+      <div>
+        <span class="num">03 — DENTRO DA FÁBRICA</span>
+        <h2>Fabricação e instalação são nossas</h2>
+        <p class="lede">Do desenho aprovado à peça instalada, sem terceirizar a etapa que define o acabamento.</p>
+        <div class="fab">
+          <figure><img src="imagens/design-e-producao.webp" alt="Etapa de design e produção na fábrica" loading="lazy"><figcaption>Design e produção</figcaption></figure>
+          <figure><img src="imagens/producao-2.webp" alt="Produção de peças de comunicação visual na fábrica" loading="lazy"><figcaption>Produção</figcaption></figure>
+          <figure><img src="imagens/expedicao.webp" alt="Expedição das peças produzidas" loading="lazy"><figcaption>Expedição</figcaption></figure>
+          <figure><img src="imagens/instalacao.webp" alt="Equipe própria durante a instalação em fachada" loading="lazy"><figcaption>Instalação com equipe própria</figcaption></figure>
+        </div>
+      </div>
+      <div class="fab-photo">
+        <img src="imagens/instalacao.webp" alt="Técnico da equipe própria da Duarte Placas instalando letra caixa em fachada" width="1280" height="960" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -524,22 +584,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="dep">
         <svg class="fa-ico" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
         <p>"A Duarte Placas supera nossas expectativas a cada projeto, sempre com qualidade e atendimento impecáveis. Possui uma equipe atenciosa, ágil e muito comprometida com os prazos!"</p>
-        <b>Netimóveis</b><span>Rede imobiliária</span>
+        <div class="dep-who">
+          <span class="dep-av">NI</span>
+          <div><b>Netimóveis</b><span>Rede imobiliária</span></div>
+        </div>
       </div>
       <div class="dep">
         <svg class="fa-ico" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
         <p>"Profissionais de extrema paciência e envolvidos com o sucesso da empresa no sentido de que o cliente saia satisfeito."</p>
-        <b>PMMG</b><span>Polícia Militar de Minas Gerais</span>
+        <div class="dep-who">
+          <span class="dep-av">PM</span>
+          <div><b>PMMG</b><span>Polícia Militar de Minas Gerais</span></div>
+        </div>
       </div>
       <div class="dep">
         <svg class="fa-ico" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
         <p>"Desde o comercial, arte, cobrança, tudo impecável. Obrigada!"</p>
-        <b>SulAmérica</b><span>Seguros</span>
+        <div class="dep-who">
+          <span class="dep-av">SA</span>
+          <div><b>SulAmérica</b><span>Seguros</span></div>
+        </div>
       </div>
       <div class="dep">
         <svg class="fa-ico" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em"><path d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"/></svg>
         <p>"Acho que o destaque da Duarte Placas é a eficiência e a rapidez com que ela trabalha, além da qualidade que é inquestionável."</p>
-        <b>ADS Prev</b><span>Previdência</span>
+        <div class="dep-who">
+          <span class="dep-av">AP</span>
+          <div><b>ADS Prev</b><span>Previdência</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -646,7 +718,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="form-g">
       <div class="form-card">
-        <form id="lead-form" action="https://formsubmit.co/vendas@duarteplacas.com.br" method="POST">
+        <form class="lead-form" data-location="formulario-principal" action="https://formsubmit.co/vendas@duarteplacas.com.br" method="POST">
           <input type="hidden" name="_subject" value="Novo lead — LP Projetos (Duarte Placas)">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
@@ -702,7 +774,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p class="form-note">Seus dados são usados apenas para responder a este contato.</p>
         </form>
 
-        <div class="form-ok" id="form-ok">
+        <div class="form-ok" id="form-ok-principal">
           <svg class="fa-ico" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true" style="width:1em;height:1em;display:inline-block;vertical-align:-0.125em"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
           <strong>Recebemos o seu contato.</strong>
           <p>Nossa equipe vai analisar e responder em horário comercial.</p>
@@ -791,35 +863,37 @@ document.addEventListener('click', function (e) {
   });
 })();
 
-// Envio do formulário via AJAX (sem redirect)
+// Envio dos formulários via AJAX (sem redirect) — suporta múltiplos forms na página
 (function () {
-  var form = document.getElementById('lead-form');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = form.querySelector('button[type="submit"]');
-    var txt = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Enviando…';
+  document.querySelectorAll('.lead-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var txt = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      var ok = form.parentElement.querySelector('.form-ok');
 
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { Accept: 'application/json' }
-    }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      form.style.display = 'none';
-      document.getElementById('form-ok').classList.add('on');
-      window.dataLayer.push({
-        event: 'lead_form_submit',
-        perfil: (form.querySelector('#f-perfil') || {}).value || '',
-        caminho: (form.querySelector('#f-caminho') || {}).value || ''
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        form.style.display = 'none';
+        if (ok) ok.classList.add('on');
+        window.dataLayer.push({
+          event: 'lead_form_submit',
+          form_location: form.dataset.location || '',
+          perfil: (form.querySelector('[name="Perfil"]') || {}).value || '',
+          caminho: (form.querySelector('[name="Necessidade"]') || {}).value || ''
+        });
+        // === CONVERSÃO === (colar aqui o snippet de conversão quando o usuário enviar)
+      }).catch(function () {
+        btn.disabled = false;
+        btn.textContent = txt;
+        alert('Não foi possível enviar agora. Tente pelo WhatsApp (31) 3422-1475.');
       });
-      // === CONVERSÃO === (colar aqui o snippet de conversão quando o usuário enviar)
-    }).catch(function () {
-      btn.disabled = false;
-      btn.textContent = txt;
-      alert('Não foi possível enviar agora. Tente pelo WhatsApp (31) 3422-1475.');
     });
   });
 })();
