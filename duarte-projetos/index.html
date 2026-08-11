@@ -97,8 +97,13 @@ img{max-width:100%;display:block}
 .hero-sub{color:rgba(255,255,255,.88);font-size:1.03rem;line-height:1.65;max-width:44ch;margin-bottom:34px}
 
 /* ── SELETOR DE CAMINHOS ── */
-.sel-h{font-family:'Sora',sans-serif;font-size:1.12rem;font-weight:700;color:var(--ink);margin-bottom:5px}
-.sel-p{font-size:.93rem;margin-bottom:20px}
+.sel-h{font-family:'Sora',sans-serif;font-size:1.12rem;font-weight:700;color:#fff;margin-bottom:5px}
+.sel-p{font-size:.93rem;margin-bottom:20px;color:rgba(255,255,255,.75)}
+.parceiros{background:#fff;padding:34px 0}
+.parceiros p{text-align:center;font-family:'Sora',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8496A5;margin-bottom:18px}
+.parceiros img{display:block;width:100%;height:auto;max-width:960px;margin:0 auto}
+.parceiros .pc-mobile{display:block}
+.parceiros .pc-desktop{display:none}
 .paths{display:flex;flex-direction:column;gap:11px}
 .path{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:17px 18px;text-align:left;width:100%;cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s;font-family:inherit}
 .path:hover{border-color:var(--cyan);box-shadow:0 8px 24px -10px rgba(11,27,43,.22);transform:translateY(-2px)}
@@ -227,6 +232,8 @@ img{max-width:100%;display:block}
 
 @media(min-width:900px){
   .hero-grid{grid-template-columns:1fr;max-width:640px;min-height:min(74vh,640px)}
+  .parceiros .pc-mobile{display:none}
+  .parceiros .pc-desktop{display:block}
   .proof-g{grid-template-columns:repeat(4,1fr)}
   .proof-i{border-bottom:none!important}
   .proof-i:nth-child(odd){border-right:1px solid var(--line)}
@@ -346,6 +353,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ══ PARCEIROS/CLIENTES ══ -->
+<section class="parceiros">
+  <div class="wrap">
+    <p>Marcas que confiam na Duarte Placas</p>
+    <img class="pc-mobile" src="imagens/parceiros-mobile.webp" alt="Logotipos de marcas atendidas pela Duarte Placas" width="700" height="1241" loading="lazy">
+    <img class="pc-desktop" src="imagens/parceiros.webp" alt="Logotipos de marcas atendidas pela Duarte Placas" width="1600" height="471" loading="lazy">
   </div>
 </section>
 
