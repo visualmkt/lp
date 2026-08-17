@@ -90,14 +90,24 @@
 
 <script>
 // ── CONFIG ──────────────────────────────────────────────────────────────────
-const CONFIG_URL = 'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/config.json';
+const CONFIG_SOURCES = [
+  'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/config.json',
+  'https://cdn.statically.io/gh/visualmkt/lp/main/evidencia-letreiro/config.json',
+];
 
 async function loadConfig() {
-  try {
-    const r = await fetch(CONFIG_URL + '?t=' + Date.now(), { cache: 'no-store' });
-    if (r.ok) return await r.json();
-  } catch {}
-  return (await fetch('./config.json')).json();
+  for (const base of CONFIG_SOURCES) {
+    for (let i = 0; i < 2; i++) {
+      try {
+        const ctrl = new AbortController();
+        const to = setTimeout(() => ctrl.abort(), 4000);
+        const r = await fetch(base + '?t=' + Date.now(), { cache: 'no-store', signal: ctrl.signal });
+        clearTimeout(to);
+        if (r.ok) return await r.json();
+      } catch {}
+    }
+  }
+  throw new Error('config.json indisponível em todos os CDNs');
 }
 
 // ── TRACKING ────────────────────────────────────────────────────────────────
