@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revestimento em ACM para Fachadas Comerciais | Korteck</title>
+<meta name="description" content="Especialistas em revestimento em ACM para fachadas comerciais — consultoria técnica, pintura automotiva e instalação própria. Atendemos redes, franquias e projetos de arquitetura em todo o Brasil.">
+<link rel="preload" as="image" href="imagens/hero-kopenhagen-noite.webp" fetchpriority="high">
+<meta property="og:title" content="Revestimento em ACM para Fachadas Comerciais | Korteck">
+<meta property="og:description" content="Consultoria técnica, pintura automotiva e instalação própria. Atendemos redes, franquias e arquitetos em todo o Brasil.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PrintingBusiness",
+  "name": "Korteck",
+  "url": "https://www.korteck.com.br",
+  "telephone": "+55-11-99132-2938",
+  "email": "korteck@korteck.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Caetano Basso, 594 — Parque Savoy City",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "areaServed": "Brasil",
+  "description": "Revestimento em ACM para fachadas comerciais — consultoria técnica, fabricação, pintura automotiva e instalação própria para redes, franquias e projetos de arquitetura."
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0E0F11; --graphite:#1B1D21;
+  --blue:#2F6FED; --blue-d:#1E54C4;
+  --body:#4A5057; --line:#E4E6E9; --bg:#F5F6F7;
+  --wa:#25D366; --radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--body);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.dsp{font-family:'Sora',system-ui,sans-serif;color:var(--ink);letter-spacing:-.01em}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.wrap{width:100%;max-width:1220px;margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ── BOTÕES ── */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:15px 26px;border-radius:999px;font-weight:700;font-size:.96rem;border:none;cursor:pointer;font-family:'Sora',sans-serif;transition:transform .15s,box-shadow .15s}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 12px 28px -10px rgba(37,211,102,.5)}
+.btn-wa:hover{transform:translateY(-2px)}
+.btn-wa svg{width:1.1em;height:1.1em}
+
+/* ── HEADER ── */
+header{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.08)}
+.header-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.header-in img{height:26px;width:auto}
+
+/* ── HERO ── */
+.hero{position:relative;background:var(--ink)}
+.hero-bg{position:absolute;inset:0;background:url('imagens/hero-kopenhagen-noite.webp') center 55%/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,15,17,.5) 0%,rgba(14,15,17,.85) 65%,rgba(14,15,17,.97) 100%)}
+.hero-in{position:relative;z-index:1;padding:64px 0 54px;max-width:760px}
+.eyebrow{display:inline-block;font-family:'Sora',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#7DA6FF;margin-bottom:16px}
+.hero h1{color:#fff;font-size:clamp(1.9rem,4.4vw,2.9rem);font-weight:800;line-height:1.12;margin-bottom:18px}
+.hero .lede{color:rgba(255,255,255,.86);font-size:1.05rem;max-width:58ch;margin-bottom:28px;line-height:1.65}
+.hero-note{color:rgba(255,255,255,.5);font-size:.82rem;margin-top:16px}
+
+/* ── FAIXA DE PROVA ── */
+.proof{background:#fff;border-bottom:1px solid var(--line)}
+.proof-g{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.proof-i{padding:22px 14px;text-align:center;border-bottom:1px solid var(--line)}
+.proof-i:nth-child(odd){border-right:1px solid var(--line)}
+.proof-i svg{width:1.35rem;height:1.35rem;color:var(--blue);margin-bottom:9px}
+.proof-i b{display:block;font-family:'Sora',sans-serif;font-size:.86rem;font-weight:700;color:var(--ink);line-height:1.3}
+
+/* ── SEÇÃO GENÉRICA ── */
+.sec{padding:68px 0}
+.sec-alt{background:var(--bg)}
+.sec-dark{background:var(--ink);color:rgba(255,255,255,.72)}
+.sec-dark h2{color:#fff}
+.num{display:block;font-family:'Sora',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:11px}
+.sec h2{font-size:clamp(1.55rem,3.4vw,2.15rem);max-width:26ch;margin-bottom:16px}
+.sec .lede{max-width:66ch;font-size:1.02rem;line-height:1.65}
+.sec .lede p{margin-bottom:14px}
+
+/* ── GALERIA ── */
+.gal{display:grid;grid-template-columns:1fr;gap:14px;margin-top:30px}
+.gal figure{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--bg);box-shadow:0 14px 32px -26px rgba(0,0,0,.3)}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .4s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 14px 12px;
+  background:linear-gradient(to top,rgba(0,0,0,.75),transparent);
+  font-family:'Sora',sans-serif;font-size:.8rem;font-weight:700;color:#fff}
+
+/* ── PÚBLICO / PARA QUEM ── */
+.publico{display:grid;grid-template-columns:1fr;gap:14px;margin-top:30px}
+.pub-i{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;gap:16px;align-items:flex-start}
+.pub-i svg{width:1.3rem;height:1.3rem;color:var(--blue);flex:0 0 auto;margin-top:2px}
+.pub-i strong{display:block;font-family:'Sora',sans-serif;font-size:.98rem;color:var(--ink);margin-bottom:4px}
+.pub-i span{font-size:.9rem;line-height:1.5}
+
+/* ── FAQ ── */
+.faq{margin-top:28px;border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:19px 4px;display:flex;align-items:center;justify-content:space-between;gap:14px;font-weight:700;font-family:'Sora',sans-serif;font-size:.98rem;color:var(--ink);cursor:pointer}
+.faq-q svg{width:.9em;height:.9em;flex:0 0 auto;transition:transform .2s;color:var(--blue)}
+.faq-item.on .faq-q svg{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.faq-item.on .faq-a{max-height:240px}
+.faq-a p{padding:0 4px 19px;font-size:.92rem;color:var(--body);line-height:1.6}
+
+/* ── FORMULÁRIO ── */
+.form-sec{background:var(--ink)}
+.form-sec .num{color:var(--blue)}
+.form-sec h2{color:#fff}
+.form-sec .lede{color:rgba(255,255,255,.65)}
+.form-g{display:grid;grid-template-columns:1fr;gap:32px;margin-top:32px}
+.form-card{background:#fff;border-radius:16px;padding:28px 24px}
+.fld{margin-bottom:15px}
+.fld label{display:block;font-family:'Sora',sans-serif;font-size:.8rem;font-weight:600;color:var(--ink);margin-bottom:7px}
+.fld input,.fld select,.fld textarea{width:100%;font-family:'Inter',sans-serif;font-size:.95rem;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px 14px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--blue)}
+.fld textarea{resize:vertical;min-height:84px}
+.form-card .btn{width:100%;margin-top:6px}
+.form-note{font-size:.78rem;color:#8896A5;margin-top:12px;line-height:1.5;text-align:center}
+.form-ok{display:none;background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.4);border-radius:12px;padding:22px;text-align:center}
+.form-ok.on{display:block}
+.form-ok svg{width:1.8rem;height:1.8rem;color:var(--wa);margin-bottom:10px}
+.form-ok strong{display:block;font-family:'Sora',sans-serif;color:var(--ink);font-size:1.02rem;margin-bottom:6px}
+.form-side ul{list-style:none;display:grid;gap:15px;margin-top:20px}
+.form-side li{display:flex;gap:12px;font-size:.94rem;line-height:1.5;color:rgba(255,255,255,.78)}
+.form-side li svg{width:1em;height:1em;color:var(--blue);margin-top:.25em;flex:0 0 auto}
+.form-side .alt{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
+.form-side .alt a{color:#7DA6FF;font-weight:600}
+
+/* ── RODAPÉ ── */
+footer{background:#08090A;color:rgba(255,255,255,.55);padding:44px 0 24px;font-size:.86rem;line-height:1.75}
+footer img{height:22px;margin-bottom:14px}
+footer a:hover{color:#fff}
+.ft-g{display:grid;gap:26px;grid-template-columns:1fr}
+.ft-social{display:flex;gap:10px;margin-top:12px}
+.ft-social a{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center}
+.ft-social svg{width:.95em;height:.95em}
+.ft-bot{border-top:1px solid rgba(255,255,255,.08);margin-top:26px;padding-top:16px;font-size:.76rem;color:rgba(255,255,255,.35)}
+
+/* ── WHATSAPP FLUTUANTE ── */
+.fab-wa{position:fixed;bottom:18px;right:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(37,211,102,.6)}
+.fab-wa svg{width:1.6rem;height:1.6rem;color:#fff}
+
+@media(min-width:760px){
+  .proof-g{grid-template-columns:repeat(4,1fr)}
+  .proof-i{border-bottom:none!important}
+  .proof-i:not(:last-child){border-right:1px solid var(--line)}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .gal figure:first-child{grid-column:span 2;grid-row:span 2}
+  .gal figure:first-child img{aspect-ratio:8/7}
+  .publico{grid-template-columns:repeat(3,1fr)}
+  .form-g{grid-template-columns:1.15fr .85fr}
+  .ft-g{grid-template-columns:1.3fr 1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <div class="wrap header-in">
+    <a href="#topo"><img src="imagens/logo-korteck-branco.png" alt="Korteck"></a>
+    <a class="btn btn-wa" href="https://wa.me/5511991322938?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" data-action="whatsapp" data-location="header">
+      <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+      Orçamento
+    </a>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="topo">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow">Revestimento Metálico de Fachada</span>
+    <h1>Revestimento em ACM para fachadas comerciais</h1>
+    <p class="lede">Soluções que unem estética, durabilidade e padronização em projetos de alto padrão — da consultoria técnica à execução completa, com acabamento em pintura automotiva e instalação própria.</p>
+    <a class="btn btn-wa" href="https://wa.me/5511991322938?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" data-action="whatsapp" data-location="hero">
+      <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+      Solicitar orçamento
+    </a>
+    <p class="hero-note">Atendemos redes, franquias e projetos em todo o Brasil</p>
+  </div>
+</section>
+
+<!-- ══ FAIXA DE PROVA ══ -->
+<div class="proof">
+  <div class="wrap">
+    <div class="proof-g">
+      <div class="proof-i">
+        <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+        <b>Consultoria técnica à execução</b>
+      </div>
+      <div class="proof-i">
+        <svg viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M64 32C46.3 32 32 46.3 32 64V304v48 80c0 26.5 21.5 48 48 48H496c26.5 0 48-21.5 48-48V304 152.2c0-18.2-19.4-29.7-35.4-21.1L352 215.4V152.2c0-18.2-19.4-29.7-35.4-21.1L160 215.4V64c0-17.7-14.3-32-32-32H64z"/></svg>
+        <b>Acabamento em pintura automotiva</b>
+      </div>
+      <div class="proof-i">
+        <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+        <b>Instalação própria e precisa</b>
+      </div>
+      <div class="proof-i">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/></svg>
+        <b>Capacidade para redes e franquias</b>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SOBRE / GEO ══ -->
+<section class="sec">
+  <div class="wrap">
+    <span class="num">01 — SOBRE A KORTECK</span>
+    <h2>Um fornecedor confiável em revestimento de fachada</h2>
+    <div class="lede">
+      <p>Atuamos desde a consultoria técnica até a execução completa, garantindo a melhor especificação de materiais, acabamento em pintura automotiva e instalação precisa, alinhada ao conceito arquitetônico de cada marca.</p>
+      <p>Com experiência no atendimento a diversas redes e grandes marcas do varejo, a Korteck possui capacidade produtiva para projetos em escala, mantendo consistência visual e qualidade em todas as unidades.</p>
+      <p>Nossos projetos em ACM podem ser aplicados em fachadas completas, retrofit de lojas, painéis arquitetônicos e composição com elementos como brises metálicos e iluminação integrada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALERIA ══ -->
+<section class="sec sec-alt" id="portfolio">
+  <div class="wrap">
+    <span class="num">02 — PORTFÓLIO</span>
+    <h2>Projetos executados</h2>
+    <p class="lede">Fachadas comerciais reais, do varejo de rua a projetos em escala para redes nacionais.</p>
+    <div class="gal">
+      <figure><img src="imagens/hero-kopenhagen-noite.webp" alt="Revestimento em ACM ripado vermelho, fachada Kopenhagen" loading="lazy"><figcaption>ACM ripado — Kopenhagen</figcaption></figure>
+      <figure><img src="imagens/kopenhagen-madeira.webp" alt="Revestimento em ACM textura madeira com detalhe vermelho" loading="lazy"><figcaption>ACM textura madeira</figcaption></figure>
+      <figure><img src="imagens/dentz-azul.webp" alt="Revestimento em ACM azul brilhante, fachada Dentz Clínicas Odontológicas" loading="lazy"><figcaption>ACM azul — rede de clínicas</figcaption></figure>
+      <figure><img src="imagens/moldura-laranja.webp" alt="Revestimento da moldura em ACM laranja" loading="lazy"><figcaption>Moldura em ACM laranja</figcaption></figure>
+      <figure><img src="imagens/predial-cinza.webp" alt="Revestimento predial em ACM cinza e branco" loading="lazy"><figcaption>Fachada predial completa</figcaption></figure>
+      <figure><img src="imagens/guaco-detalhe.webp" alt="Detalhe de canto em revestimento ACM preto com letras metálicas" loading="lazy"><figcaption>Detalhe de acabamento</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PARA QUEM ══ -->
+<section class="sec">
+  <div class="wrap">
+    <span class="num">03 — PARA QUEM</span>
+    <h2>Uma escolha estratégica para quem precisa de consistência</h2>
+    <p class="lede">Arquitetos, franqueadoras e empresas que buscam um fornecedor confiável em comunicação visual e revestimento de fachada.</p>
+    <div class="publico">
+      <div class="pub-i">
+        <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
+        <div>
+          <strong>Arquitetos</strong>
+          <span>Fidelidade ao projeto, com especificação técnica de materiais e acompanhamento da execução.</span>
+        </div>
+      </div>
+      <div class="pub-i">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/></svg>
+        <div>
+          <strong>Franqueadoras e redes</strong>
+          <span>Padronização visual e qualidade consistente em todas as unidades, com capacidade produtiva para escala.</span>
+        </div>
+      </div>
+      <div class="pub-i">
+        <svg viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M64 32C46.3 32 32 46.3 32 64V304v48 80c0 26.5 21.5 48 48 48H496c26.5 0 48-21.5 48-48V304 152.2c0-18.2-19.4-29.7-35.4-21.1L352 215.4V152.2c0-18.2-19.4-29.7-35.4-21.1L160 215.4V64c0-17.7-14.3-32-32-32H64z"/></svg>
+        <div>
+          <strong>Empresas e varejo</strong>
+          <span>Retrofit de loja, fachada nova ou revitalização — do diagnóstico à instalação final.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sec sec-alt" id="faq">
+  <div class="wrap">
+    <span class="num">04 — DÚVIDAS FREQUENTES</span>
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <div class="faq-item on">
+        <button class="faq-q">O que é ACM e por que ele é usado em fachadas?
+          <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+        </button>
+        <div class="faq-a"><p>ACM (Composto de Alumínio e Polietileno) é um material de revestimento leve, durável e versátil, muito usado em fachadas comerciais por permitir acabamentos variados — cores sólidas, texturas e composições com brises e iluminação integrada.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">O serviço inclui projeto e instalação, ou só a fabricação?
+          <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+        </button>
+        <div class="faq-a"><p>Atuamos do início ao fim: consultoria técnica, especificação de materiais, fabricação com acabamento em pintura automotiva e instalação com equipe própria.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Vocês atendem redes com várias unidades?
+          <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+        </button>
+        <div class="faq-a"><p>Sim — temos experiência com redes e grandes marcas do varejo, com capacidade produtiva para manter consistência visual e qualidade em projetos de escala.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como faço pra receber um orçamento?
+          <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+        </button>
+        <div class="faq-a"><p>Chame no WhatsApp ou preencha o formulário abaixo contando sobre o seu projeto — nossa equipe faz o diagnóstico inicial e explica os próximos passos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FORMULÁRIO ══ -->
+<section class="sec form-sec" id="formulario">
+  <div class="wrap">
+    <span class="num">05 — FALE COM A GENTE</span>
+    <h2>Conte sobre o seu projeto</h2>
+    <p class="lede">Consultoria técnica e orçamento personalizado para o seu revestimento em ACM.</p>
+
+    <div class="form-g">
+      <div class="form-card">
+        <form class="lead-form" data-location="formulario-principal" action="https://formsubmit.co/korteck@korteck.com.br" method="POST">
+          <input type="hidden" name="_subject" value="Novo lead — LP ACM (Korteck)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="fld">
+            <label for="f-nome">Nome *</label>
+            <input id="f-nome" type="text" name="Nome" required autocomplete="name" placeholder="Seu nome">
+          </div>
+          <div class="fld">
+            <label for="f-wpp">WhatsApp *</label>
+            <input id="f-wpp" type="tel" name="WhatsApp" required autocomplete="tel" placeholder="(11) 90000-0000">
+          </div>
+          <div class="fld">
+            <label for="f-perfil">Você é</label>
+            <select id="f-perfil" name="Perfil" required>
+              <option value="">Selecione…</option>
+              <option value="Arquiteto ou designer">Arquiteto ou designer</option>
+              <option value="Franqueadora ou rede">Franqueadora ou rede</option>
+              <option value="Empresa/varejo">Empresa ou loja própria</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="fld">
+            <label for="f-msg">Conte sobre o projeto</label>
+            <textarea id="f-msg" name="Projeto" placeholder="Tipo de fachada, metragem aproximada, se já existe projeto..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-wa">Enviar para análise</button>
+          <p class="form-note">Seus dados são usados apenas para responder a este contato.</p>
+        </form>
+
+        <div class="form-ok" id="form-ok-principal">
+          <svg viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+          <strong>Recebemos o seu contato.</strong>
+          <p>Nossa equipe vai analisar e responder em breve.</p>
+        </div>
+      </div>
+
+      <div class="form-side">
+        <ul>
+          <li><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg> Consultoria técnica e especificação de materiais</li>
+          <li><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg> Acabamento em pintura automotiva</li>
+          <li><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg> Fabricação e instalação com equipe própria</li>
+          <li><svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg> Capacidade produtiva para projetos em escala</li>
+        </ul>
+        <div class="alt">
+          Prefere falar agora?<br>
+          <a href="https://wa.me/5511991322938?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" data-action="whatsapp" data-location="formulario-lateral">Chamar no WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RODAPÉ ══ -->
+<footer>
+  <div class="wrap ft-g">
+    <div>
+      <img src="imagens/logo-korteck-branco.png" alt="Korteck">
+      <p>Revestimento em ACM para fachadas comerciais — consultoria, fabricação e instalação própria.</p>
+      <div class="ft-social">
+        <a href="https://www.instagram.com/korteck" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 448 512" fill="#fff" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <p><strong style="color:#fff">Endereço</strong><br>Rua Caetano Basso, 594 — Parque Savoy City<br>São Paulo/SP</p>
+    </div>
+    <div>
+      <p><strong style="color:#fff">Contato</strong><br><a href="https://wa.me/5511991322938?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" data-action="whatsapp" data-location="footer">(11) 99132-2938 (WhatsApp)</a><br><a href="mailto:korteck@korteck.com.br">korteck@korteck.com.br</a></p>
+    </div>
+  </div>
+  <div class="wrap ft-bot">© Korteck — Todos os direitos reservados.</div>
+</footer>
+
+<!-- ══ WHATSAPP FLUTUANTE ══ -->
+<a class="fab-wa" href="https://wa.me/5511991322938?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" data-action="whatsapp" data-location="flutuante">
+  <svg viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+</a>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var item = btn.closest('.faq-item');
+    var wasOn = item.classList.contains('on');
+    document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('on'); });
+    if (!wasOn) item.classList.add('on');
+  });
+});
+
+// dataLayer para cliques de WhatsApp
+window.dataLayer = window.dataLayer || [];
+document.querySelectorAll('[data-action="whatsapp"]').forEach(function (el) {
+  el.addEventListener('click', function () {
+    window.dataLayer.push({ event: 'whatsapp_click', location: el.dataset.location });
+  });
+});
+
+// Envio do formulário via AJAX (sem redirect)
+(function () {
+  document.querySelectorAll('.lead-form').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('button[type="submit"]');
+      var txt = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Enviando…';
+      var ok = form.parentElement.querySelector('.form-ok');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        form.style.display = 'none';
+        if (ok) ok.classList.add('on');
+        window.dataLayer.push({ event: 'lead_form_submit', form_location: form.dataset.location || '' });
+      }).catch(function () {
+        btn.disabled = false;
+        btn.textContent = txt;
+        alert('Não foi possível enviar agora. Tente pelo WhatsApp (11) 99132-2938.');
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
