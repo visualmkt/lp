@@ -15,14 +15,14 @@
 <meta name="keywords" content="agência de anúncios para comunicação visual, google ads comunicação visual, meta ads comunicação visual, tráfego pago comunicação visual, anúncios letra caixa, marketing para gráfica, gestão de campanhas comunicação visual, Visual MKT, Andrézão">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#0b1120">
-<link rel="canonical" href="https://www.visualmkt.com.br/agencia/">
+<link rel="canonical" href="https://www.visualmkt.com.br/vender/">
 <link rel="icon" type="image/webp" href="https://www.visualmkt.com.br/vender/imagens/andrezao.webp">
 <meta name="geo.region" content="BR">
 <meta name="geo.placename" content="Brasil">
 <meta property="og:title" content="Agência de Anúncios para Comunicação Visual — Visual MKT">
 <meta property="og:description" content="Especialistas em Google Ads e Meta Ads para empresas de comunicação visual. Letra caixa, fachadas, adesivos, sinalização. +100 empresas atendidas · R$27M+ em vendas geradas.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.visualmkt.com.br/agencia/">
+<meta property="og:url" content="https://www.visualmkt.com.br/vender/">
 <meta property="og:image" content="https://www.visualmkt.com.br/vender/imagens/andrezao.webp">
 <meta property="og:image:alt" content="Andrézão — fundador Visual MKT, agência especializada em anúncios para comunicação visual">
 <script type="application/ld+json">
@@ -30,7 +30,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Visual MKT",
-  "url": "https://www.visualmkt.com.br/agencia/",
+  "url": "https://www.visualmkt.com.br/vender/",
   "telephone": "+55-51-99193-7179",
   "description": "Visual MKT é uma agência de tráfego pago especializada em empresas de comunicação visual. Gerencia Google Ads e Meta Ads para empresas que vendem letra caixa, fachadas, adesivos, plotagem, sinalização e outros serviços de comunicação visual em qualquer país.",
   "areaServed": {
@@ -110,7 +110,7 @@
     "@type": "SpeakableSpecification",
     "cssSelector": ["h1", ".geo-entity-statement"]
   },
-  "url": "https://www.visualmkt.com.br/agencia/"
+  "url": "https://www.visualmkt.com.br/vender/"
 }
 </script>
 <!-- Google Tag Manager -->
