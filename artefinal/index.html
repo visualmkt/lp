@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5J8RHRSS');</script>
+<!-- End Google Tag Manager -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon-180.png">
+<title>Arte Final Brasil — Comunicação Visual em Fortaleza, CE</title>
+<meta name="description" content="Arte Final Brasil: ACM, fachadas, letreiro luminoso, NeonLed, letra caixa e painéis em Fortaleza, CE. 4.7★ Google · 194K seguidores. Especialistas em comunicação visual.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Arte Final Brasil",
+  "description": "Comunicação Visual — ACM, Fachadas, Letreiro Luminoso, NeonLed, Letra Caixa em Fortaleza, CE",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Luiz Vieira, 1117",
+    "addressLocality": "Fortaleza",
+    "addressRegion": "CE",
+    "postalCode": "60541-672",
+    "addressCountry": "BR"
+  },
+  "telephone": "+5585988960705",
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "164" },
+  "sameAs": ["https://www.instagram.com/artefinal_brasil/", "https://www.facebook.com/artefinalbrasiloficial/"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #070705;
+  --surface: rgba(10,9,6,.94);
+  --border:  rgba(139,47,212,.16);
+  --brand:   #8B2FD4;
+  --brand2:  #6B1FAE;
+  --accent:  #ff6500;
+  --accent2: #cc4200;
+  --text:    #f5f2ed;
+  --muted:   #cdc4b8;
+  --white:   #f8f4ee;
+  --nav-h:   72px;
+}
+
+html { scroll-behavior: auto; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* VIDEO */
+.video-wrapper {
+  position: fixed; inset: 0; overflow: hidden; z-index: 0; pointer-events: none;
+}
+.video-bg {
+  position: absolute; inset: -6%; will-change: transform;
+}
+.video-bg video, .video-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.video-overlay {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background: rgba(7,7,5,.58);
+}
+
+/* NAV */
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100; height: var(--nav-h);
+  transition: background .3s, backdrop-filter .3s;
+}
+.site-nav.scrolled {
+  background: rgba(7,7,5,.93);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 1280px; margin: 0 auto; padding: 0 2rem;
+  height: 100%; display: flex; align-items: center; gap: 2rem;
+}
+.nav-logo {
+  display: flex; align-items: center;
+  text-decoration: none; flex-shrink: 0;
+}
+.nav-logo img { height: 40px; width: auto; display: block; }
+
+/* DROPDOWN */
+.has-dropdown { position: relative; }
+.dropdown {
+  position: absolute; top: 100%; left: -1rem;
+  min-width: 190px; background: rgba(7,7,5,.97); backdrop-filter: blur(18px);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: .75rem 0; list-style: none; display: flex; flex-direction: column; gap: 0;
+  opacity: 0; pointer-events: none; transform: translateY(-6px);
+  transition: opacity .2s, transform .2s; z-index: 200;
+}
+.has-dropdown:hover .dropdown,
+.has-dropdown.is-open .dropdown { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.dropdown li a {
+  display: flex; align-items: center; gap: .6rem;
+  padding: .6rem 1.25rem; font-size: .85rem; color: var(--muted);
+  text-decoration: none; transition: color .2s, background .2s;
+}
+.dropdown li a:hover { color: var(--white); background: rgba(139,47,212,.1); }
+.dropdown-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--brand); flex-shrink: 0; }
+.nav-links { display: flex; list-style: none; gap: 2rem; margin-left: auto; }
+.nav-links a {
+  color: var(--muted); text-decoration: none; font-size: .875rem; font-weight: 500; transition: color .2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--accent); color: #fff;
+  padding: .5rem 1.25rem; border-radius: 6px;
+  font-size: .875rem; font-weight: 700; text-decoration: none;
+  transition: background .2s, transform .15s; white-space: nowrap;
+}
+.nav-cta:hover { background: var(--accent2); transform: translateY(-1px); }
+.nav-toggle {
+  display: none; background: none; border: none; color: var(--white);
+  cursor: pointer; margin-left: auto; padding: .25rem;
+}
+.mobile-menu {
+  display: none; position: fixed; top: var(--nav-h); left: 0; right: 0;
+  background: rgba(7,7,5,.97); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border); padding: 1.5rem 2rem 2rem; z-index: 99;
+  flex-direction: column; gap: 1.25rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; }
+.mobile-menu .mob-cta {
+  background: var(--accent); color: #fff; padding: .75rem 1.5rem;
+  border-radius: 8px; font-weight: 700; text-align: center; margin-top: .5rem;
+}
+
+/* SECTIONS */
+section { position: relative; z-index: 10; background: transparent; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+.section-label {
+  display: inline-block; font-size: .72rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--brand); margin-bottom: .875rem;
+}
+h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--white); line-height: 1.1; letter-spacing: -.02em; }
+
+/* HERO */
+.s-hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: var(--nav-h) 0 4rem;
+}
+.hero-grid {
+  max-width: 1280px; margin: 0 auto; padding: 0 2rem;
+  width: 100%; display: grid;
+  grid-template-columns: 1fr 420px; gap: 3.5rem; align-items: center;
+}
+.hero-content { max-width: 620px; }
+.hero-visuals { display: grid; gap: .75rem; }
+.hero-v2 { aspect-ratio: 720 / 887; border-radius: 16px; overflow: hidden; position: relative; background: rgba(4,4,3,.6); display: flex; align-items: center; justify-content: center; }
+.hero-v2::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(7,7,5,.5));
+  pointer-events: none;
+}
+.hero-visuals img { width: 100%; height: 100%; object-fit: contain; transition: transform .5s ease; }
+.hero-v2:hover img { transform: scale(1.04); }
+.hero-pre {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .75rem; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--white);
+  background: rgba(139,47,212,.28); border: 1px solid rgba(139,47,212,.5);
+  border-radius: 100px; padding: .4rem 1rem;
+  margin-bottom: 1.75rem; opacity: 0;
+}
+.hero-pre::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.hero-content h1 {
+  font-size: clamp(3.5rem, 10vw, 8.5rem); font-weight: 900;
+  line-height: .95; letter-spacing: -.04em; color: var(--white); margin-bottom: 1.5rem; opacity: 0;
+}
+.hero-content h1 em { font-style: normal; color: var(--accent); }
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem); color: var(--muted);
+  max-width: 500px; margin-bottom: 2.5rem; line-height: 1.7; opacity: 0;
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--accent); color: #fff; padding: .875rem 2rem;
+  border-radius: 8px; font-size: 1rem; font-weight: 700; text-decoration: none;
+  transition: background .2s, transform .15s;
+}
+.btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: transparent; color: var(--white); padding: .875rem 2rem;
+  border-radius: 8px; font-size: 1rem; font-weight: 600; text-decoration: none;
+  border: 1px solid rgba(255,255,255,.18); transition: border-color .2s, background .2s;
+}
+.btn-ghost:hover { border-color: var(--accent); background: rgba(255,101,0,.07); }
+
+.scroll-hint {
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: .5rem;
+  color: var(--muted); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
+}
+.scroll-line {
+  width: 1px; height: 44px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity:.35 } 50% { opacity:1 } }
+
+/* NUMBERS */
+.s-numbers {
+  padding: 5rem 0;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.numbers-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; text-align: center; }
+.num-value { display: block; font-size: clamp(2.5rem,5vw,4rem); font-weight: 900; color: var(--brand); line-height: 1; letter-spacing: -.03em; }
+.num-label { display: block; font-size: .75rem; color: var(--muted); margin-top: .5rem; text-transform: uppercase; letter-spacing: .08em; }
+
+/* ABOUT */
+.s-about { padding: 9rem 0; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.about-text h2 { margin-bottom: 1.5rem; }
+.about-text p { color: var(--muted); font-size: 1.02rem; line-height: 1.8; margin-bottom: 1.25rem; }
+.about-text p strong { color: var(--accent); font-weight: 700; }
+.about-image {
+  aspect-ratio: 4/3;
+  background: rgba(255,101,0,.05); border: 1px solid var(--border); border-radius: 20px;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.about-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
+.about-placeholder {
+  color: rgba(255,101,0,.2); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.btn-link { color: var(--brand); text-decoration: none; font-weight: 600; font-size: .9rem; }
+.btn-link:hover { text-decoration: underline; }
+
+/* SERVICES */
+.s-services { padding: 9rem 0; }
+.s-header { margin-bottom: 3.5rem; }
+.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+.service-wa {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  margin-top: auto; padding-top: 1.5rem;
+  background: var(--accent); color: #fff; padding: .75rem 1.5rem; border-radius: 8px;
+  font-size: .85rem; font-weight: 700; text-decoration: none;
+  transition: background .2s, transform .15s; align-self: stretch;
+}
+.service-wa:hover { background: #cc4200; transform: translateY(-1px); }
+.service-card {
+  display: flex; flex-direction: column; text-decoration: none; color: var(--text);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+  padding: 2.5rem; position: relative; overflow: hidden;
+  transition: border-color .25s, transform .25s;
+}
+.service-card::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(135deg, rgba(139,47,212,.09) 0%, transparent 60%);
+  opacity: 0; transition: opacity .25s;
+}
+.service-card:hover { border-color: rgba(139,47,212,.5); transform: translateY(-4px); }
+.service-card:hover::after { opacity: 1; }
+.service-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(139,47,212,.12); border: 1px solid rgba(139,47,212,.25);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.service-icon svg { width: 22px; height: 22px; stroke: var(--brand); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.service-card h3 { font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: .75rem; letter-spacing: -.01em; }
+.service-card p { color: var(--muted); font-size: .94rem; line-height: 1.7; margin-bottom: 1.25rem; }
+.service-details { display: inline-flex; align-items: center; gap: .35rem; color: var(--brand); font-size: .82rem; font-weight: 700; text-decoration: none; margin-bottom: 1.25rem; transition: gap .2s; }
+.service-details:hover { gap: .55rem; }
+.service-more { font-size: .82rem; font-weight: 700; color: var(--brand); letter-spacing: .04em; }
+
+/* PORTFOLIO */
+.s-portfolio { padding: 9rem 0; }
+.portfolio-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 2.5rem; gap: 1rem; }
+.btn-outline-sm {
+  display: inline-block; padding: .5rem 1.25rem;
+  border: 1px solid var(--border); border-radius: 6px;
+  color: var(--muted); text-decoration: none; font-size: .82rem; font-weight: 500;
+  transition: border-color .2s, color .2s; white-space: nowrap;
+}
+.btn-outline-sm:hover { border-color: var(--brand); color: var(--brand); }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto auto;
+  gap: .875rem;
+}
+.portfolio-grid .p-item:first-child {
+  grid-column: span 2;
+}
+.p-item {
+  aspect-ratio: 4/3; border-radius: 14px; overflow: hidden;
+  background: rgba(255,101,0,.05); border: 1px solid var(--border); position: relative; cursor: pointer;
+}
+.p-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.p-item:hover img { transform: scale(1.05); }
+.p-label {
+  position: absolute; bottom: 0; left: 0; right: 0; padding: 1.25rem 1rem .875rem;
+  background: linear-gradient(to top, rgba(7,7,5,.9) 0%, transparent 100%);
+  font-size: .78rem; font-weight: 600; color: var(--white);
+  transform: translateY(4px); opacity: 0; transition: opacity .3s, transform .3s;
+}
+.p-item:hover .p-label { opacity: 1; transform: translateY(0); }
+.p-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.p-placeholder span { color: rgba(255,101,0,.2); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; }
+
+/* REVIEWS */
+.s-reviews {
+  padding: 9rem 0;
+}
+.reviews-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; margin-top: 3rem; }
+@media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2,1fr); } }
+.review-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 2rem; }
+.review-stars { color: #fbbf24; font-size: .95rem; letter-spacing: .06em; margin-bottom: .875rem; }
+.review-text { color: var(--muted); font-size: .88rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+.review-text { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.review-meta { display: flex; align-items: center; gap: .75rem; }
+.review-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid var(--border); }
+.review-meta p { font-size: .78rem; font-weight: 600; color: var(--white); }
+.review-meta span { font-size: .72rem; color: var(--muted); }
+.review-meta span a { color: var(--brand); text-decoration: none; }
+.review-meta span a:hover { text-decoration: underline; }
+
+/* USP / DIFERENCIAL */
+.s-usp { padding: 9rem 0; }
+.usp-inner { text-align: center; max-width: 760px; margin: 0 auto; }
+.usp-inner h2 { font-size: clamp(2rem, 5vw, 3.8rem); margin-bottom: 1.5rem; }
+.usp-inner p { color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
+.usp-badge {
+  display: inline-flex; align-items: center; gap: .6rem;
+  background: rgba(139,47,212,.12); border: 1px solid rgba(139,47,212,.3);
+  border-radius: 100px; padding: .5rem 1.25rem;
+  font-size: .78rem; font-weight: 700; color: var(--brand);
+  letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2rem;
+}
+
+/* CTA FINAL */
+.s-cta { padding: 8rem 0; }
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.cta-left h2 { font-size: clamp(2.2rem, 5vw, 4.5rem); margin-bottom: 1rem; letter-spacing: -.03em; text-align: left; }
+.cta-left > p { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; line-height: 1.7; text-align: left; }
+.btn-xl { font-size: 1.1rem; padding: 1.1rem 3rem; border-radius: 10px; }
+.cta-form { display: flex; flex-direction: column; gap: .75rem; text-align: left; }
+.cta-form label { font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: .15rem; display: block; }
+.cta-form input { background: rgba(255,255,255,.07); border: 1px solid rgba(139,47,212,.22); border-radius: 9px; padding: .9rem 1.1rem; color: var(--white); font-size: 1rem; font-family: inherit; outline: none; transition: border-color .25s, background .25s; width: 100%; }
+.cta-form input::placeholder { color: rgba(205,196,184,.4); }
+.cta-form input:focus { border-color: var(--brand); background: rgba(139,47,212,.08); }
+.cta-form .btn-send { background: var(--accent); color: #fff; border: none; border-radius: 9px; padding: 1rem 1.5rem; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background .2s, transform .15s; display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: .5rem; width: 100%; }
+.cta-form .btn-send:hover:not(:disabled) { background: #cc4200; transform: translateY(-2px); }
+.cta-form .btn-send:disabled { opacity: .6; cursor: default; transform: none; }
+.cta-divider { color: var(--muted); font-size: .78rem; margin: .5rem 0 1rem; opacity: .55; letter-spacing: .05em; text-transform: uppercase; }
+.cta-success { display: none; align-items: center; justify-content: center; gap: .75rem; background: rgba(37,211,102,.1); border: 1px solid rgba(37,211,102,.3); border-radius: 9px; padding: 1.25rem; color: #25d366; font-weight: 600; margin-bottom: 2rem; }
+.cta-form-wrap { background: rgba(10,9,6,.7); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; }
+.cta-divider { color: var(--muted); font-size: .78rem; margin: .5rem 0 1rem; opacity: .55; letter-spacing: .05em; text-transform: uppercase; text-align: left; }
+@media(max-width: 900px) {
+  .cta-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+/* FOOTER */
+footer { position: relative; z-index: 10; background: rgba(4,4,3,.98); border-top: 1px solid var(--border); }
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 4rem;
+  padding: 5rem 2rem 4rem; max-width: 1280px; margin: 0 auto;
+}
+.f-logo { font-size: 1.4rem; font-weight: 800; color: var(--white); letter-spacing: -.025em; margin-bottom: .4rem; }
+.f-tagline { color: var(--muted); font-size: .85rem; line-height: 1.65; margin-top: .875rem; max-width: 280px; }
+footer h4 { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand); margin-bottom: 1.25rem; }
+footer ul { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
+footer ul a { color: var(--muted); text-decoration: none; font-size: .875rem; transition: color .2s; }
+footer ul a:hover { color: var(--white); }
+.f-contact address { font-style: normal; color: var(--muted); font-size: .875rem; line-height: 1.8; }
+.f-contact address a { color: var(--muted); text-decoration: none; transition: color .2s; }
+.f-contact address a:hover { color: var(--accent); }
+.social-row { display: flex; gap: 1rem; margin-top: 1.25rem; }
+.social-row a { color: var(--muted); text-decoration: none; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: color .2s; }
+.social-row a:hover { color: var(--brand); }
+.footer-bottom {
+  max-width: 1280px; margin: 0 auto; padding: 1.5rem 2rem;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+}
+.footer-bottom p { color: var(--muted); font-size: .75rem; }
+
+/* WA FLOAT */
+.wa-float {
+  position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 200;
+  width: 56px; height: 56px; background: #25d366; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,.38); text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 32px rgba(37,211,102,.55); }
+.wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+/* SERVICE CARD THUMBNAIL */
+.service-thumb {
+  width: calc(100% + 5rem); margin: -2.5rem -2.5rem 1.75rem;
+  aspect-ratio: 4 / 5; overflow: hidden; border-radius: 18px 18px 0 0;
+  background: rgba(4,4,3,.6); display: flex; align-items: center; justify-content: center;
+}
+.service-thumb img { width: 100%; height: 100%; object-fit: contain; transition: transform .45s ease; }
+.service-card:hover .service-thumb img { transform: scale(1.07); }
+.thumb-pending { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; background: rgba(139,47,212,.07); border-bottom: 1px dashed rgba(139,47,212,.25); color: rgba(139,47,212,.45); font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+
+/* FOUNDER */
+.s-founder { padding: 9rem 0; }
+.founder-grid { display: grid; grid-template-columns: 420px 1fr; gap: 6rem; align-items: center; }
+.founder-img-wrap { position: relative; }
+.founder-placeholder {
+  aspect-ratio: 3/4; border-radius: 20px; overflow: hidden;
+  background: rgba(139,47,212,.07); border: 1px solid rgba(139,47,212,.2);
+}
+.founder-placeholder img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.founder-badge {
+  position: absolute; bottom: 1.5rem; left: 1.5rem;
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--brand); color: #fff;
+  padding: .5rem 1rem; border-radius: 100px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+}
+.founder-text h2 { margin-bottom: .75rem; }
+.founder-role {
+  display: block; font-size: .85rem; font-weight: 600;
+  color: var(--brand); letter-spacing: .06em; text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+.founder-text p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.25rem; }
+.founder-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+.founder-timeline { display: flex; gap: 0; margin: 1.75rem 0; }
+.ft-step { flex: 1; position: relative; padding-top: 1.5rem; }
+.ft-step::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: rgba(139,47,212,.25); }
+.ft-step::after { content: ''; position: absolute; top: -3px; left: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
+.ft-step:not(:first-child) { margin-left: 1.25rem; }
+.ft-year { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--brand); margin-bottom: .35rem; display: block; }
+.ft-desc { font-size: .82rem; color: var(--muted); line-height: 1.5; }
+@media (max-width: 640px) { .founder-timeline { flex-direction: column; gap: 1.25rem; } .ft-step:not(:first-child) { margin-left: 0; } }
+.founder-link {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .6rem 1.25rem; border-radius: 8px;
+  border: 1px solid rgba(139,47,212,.3); color: var(--brand);
+  text-decoration: none; font-size: .82rem; font-weight: 600;
+  transition: background .2s, border-color .2s;
+}
+.founder-link:hover { background: rgba(139,47,212,.1); border-color: var(--brand); }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(28px); }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .hero-grid { grid-template-columns: 1fr 340px; gap: 2.5rem; }
+}
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visuals { display: none; }
+  .numbers-grid { grid-template-columns: repeat(2,1fr); }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2,1fr); }
+  .portfolio-grid .p-item:first-child { grid-column: span 1; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; padding: 3.5rem 2rem; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-toggle { display: block; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .btn-xl { font-size: .975rem; padding: 1rem 2rem; }
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5J8RHRSS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<!-- FUNDO (imagem fixa por hora — vídeo real pendente) -->
+<div class="video-wrapper">
+  <div class="video-bg" id="videoBg">
+    <img src="assets/img/IMG_0904.webp" alt="Fachada em ACM — Arte Final Brasil" fetchpriority="high">
+  </div>
+</div>
+<div class="video-overlay"></div>
+
+<!-- NAV -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="assets/img/Nova Logo - Arte Final - letras Brancas.png" alt="Arte Final Brasil">
+    </a>
+    <ul class="nav-links">
+      <li class="has-dropdown">
+        <a href="#servicos">Serviços ▾</a>
+        <ul class="dropdown">
+          <li><a href="servicos/fachada.html"><span class="dropdown-dot"></span>Fachada em ACM</a></li>
+          <li><a href="servicos/letra-caixa.html"><span class="dropdown-dot"></span>Letra Caixa & Letreiro</a></li>
+          <li><a href="servicos/brise-ripado-pergolado.html"><span class="dropdown-dot"></span>Brise, Ripado & Pergolado</a></li>
+          <li><a href="servicos/totem.html"><span class="dropdown-dot"></span>Totens</a></li>
+          <li><a href="servicos/placas.html"><span class="dropdown-dot"></span>Placas & Sinalização</a></li>
+          <li><a href="servicos/impressao-digital.html"><span class="dropdown-dot"></span>Impressão Digital</a></li>
+        </ul>
+      </li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="https://wa.me/5585988960705?text=Olá%2C+quero+falar+com+a+Arte+Final+Brasil." target="_blank" rel="noopener">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5585988960705?text=Olá%2C+vi+o+site+e+gostaria+de+um+orçamento." class="nav-cta" target="_blank" rel="noopener">Solicitar Orçamento</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="servicos/fachada.html">Fachada em ACM</a>
+  <a href="servicos/letra-caixa.html">Letra Caixa & Letreiro</a>
+  <a href="servicos/brise-ripado-pergolado.html">Brise, Ripado & Pergolado</a>
+  <a href="servicos/totem.html">Totens</a>
+  <a href="servicos/placas.html">Placas & Sinalização</a>
+  <a href="servicos/impressao-digital.html">Impressão Digital</a>
+  <a href="#portfolio">Portfólio</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="https://wa.me/5585988960705?text=Olá%2C+quero+falar+com+a+Arte+Final+Brasil." target="_blank" rel="noopener">Contato</a>
+  <a href="https://wa.me/5585988960705?text=Olá%2C+gostaria+de+um+orçamento." class="mob-cta" target="_blank" rel="noopener">Solicitar Orçamento →</a>
+</div>
+
+<!-- HERO -->
+<section class="s-hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <p class="hero-pre" id="heroPre">Comunicação Visual · Fortaleza, CE · Desde 2014</p>
+      <h1 id="heroH1">Arte<br><em>Final</em><br>Brasil</h1>
+      <p class="hero-sub" id="heroSub">Fachadas em ACM, letreiros, letra caixa, brise, ripado e pergolado em ACM — transformamos marcas em referências visuais em todo o Brasil.</p>
+      <div class="hero-ctas" id="heroCtas">
+        <a href="https://wa.me/5585988960705?text=Olá%2C+quero+um+orçamento+de+comunicação+visual." class="btn-primary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Solicitar Orçamento
+        </a>
+        <a href="#portfolio" class="btn-ghost">Ver Portfólio →</a>
+      </div>
+    </div>
+    <div class="hero-visuals">
+      <div class="hero-v2">
+        <img src="assets/img/giga-shopping-letra-caixa.webp" alt="Giga Shopping — letreiro instalado, projeto Arte Final Brasil" loading="eager">
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="s-numbers">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="reveal" style="text-align:center">
+        <span class="num-value">+228mil</span>
+        <span class="num-label">Seguidores Instagram</span>
+      </div>
+      <div class="reveal" style="text-align:center">
+        <span class="num-value">4.7★</span>
+        <span class="num-label">164 avaliações no Google</span>
+      </div>
+      <div class="reveal" style="text-align:center">
+        <span class="num-value">+12 anos</span>
+        <span class="num-label">de experiência — desde 2014</span>
+      </div>
+      <div class="reveal" style="text-align:center">
+        <span class="num-value">+5mil</span>
+        <span class="num-label">Projetos Entregues</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="s-about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-label">Quem somos</span>
+        <h2 class="reveal">Referência em<br>Comunicação Visual<br>no Brasil</h2>
+        <p class="reveal">Nascemos em Fortaleza e chegamos ao Brasil. Há mais de <strong>10 anos</strong>, combinamos tecnologia de corte, instalação própria e prazos que respeitam o seu negócio — do briefing à entrega na obra.</p>
+        <p class="reveal"><strong>4.7★ no Google</strong> e mais de <strong>228 mil seguidores</strong> que acompanham cada projeto são o resultado de uma equipe que não terceiriza nem a produção e nem o compromisso com o cliente.</p>
+        <a href="sobre.html" class="btn-link reveal">Conheça nossa história →</a>
+      </div>
+      <div class="about-image reveal">
+        <img src="assets/img/DSC09951-51.webp" alt="Thiago Bezerra analisando catálogo de cores ACM Arte Final Brasil" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THIAGO MACEDO — FUNDADOR -->
+<section class="s-founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-photo reveal">
+        <div class="founder-img-wrap">
+          <div class="founder-placeholder">
+            <img src="assets/img/DSC08065.webp" alt="Thiago Macedo — Fundador Arte Final Brasil" loading="lazy" decoding="async">
+          </div>
+          <div class="founder-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+            Referência Nacional
+          </div>
+        </div>
+      </div>
+      <div class="founder-text">
+        <span class="section-label">Por trás da Arte Final</span>
+        <h2 class="reveal">Thiago Macedo</h2>
+        <p class="founder-role reveal">Fundador &amp; CEO — Arte Final Brasil</p>
+        <p class="reveal">Thiago Macedo começou com as mãos na produção e transformou a Arte Final Brasil em uma das maiores referências de comunicação visual do país. Hoje lidera uma empresa com equipe própria, maquinário de ponta e capacidade de atender projetos de qualquer porte — de uma placa até uma fachada completa de shopping.</p>
+        <p class="reveal">Mais de <strong style="color:var(--brand)">228 mil pessoas</strong> acompanham o trabalho da empresa no Instagram porque Thiago acredita que transparência, qualidade e orgulho pelo ofício se mostram — não se prometem.</p>
+        <div class="founder-timeline reveal">
+          <div class="ft-step"><span class="ft-year">2014</span><p class="ft-desc">Uma oficina pequena, mãos na produção.</p></div>
+          <div class="ft-step"><span class="ft-year">Expansão</span><p class="ft-desc">Equipe própria, maquinário de ponta.</p></div>
+          <div class="ft-step"><span class="ft-year">Hoje</span><p class="ft-desc">+228 mil seguidores, atendimento nacional.</p></div>
+        </div>
+        <div class="founder-links reveal">
+          <a href="https://www.instagram.com/artefinal_brasil/" target="_blank" rel="noopener" class="founder-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            @artefinal_brasil
+          </a>
+          <a href="https://wa.me/5585988960705?text=Olá%2C+vi+o+site+da+Arte+Final+Brasil+e+gostaria+de+falar+com+o+comercial." target="_blank" rel="noopener" class="founder-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Falar com o Comercial
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="s-services">
+  <div class="container">
+    <div class="s-header">
+      <span class="section-label">O que fazemos</span>
+      <h2 class="reveal">Nossos Serviços</h2>
+    </div>
+    <div class="services-grid">
+
+      <!-- 1 FACHADA ACM -->
+      <div class="service-card reveal">
+        <div class="service-thumb">
+          <img src="assets/img/consolare-fachada-acm-drone.webp" alt="Fachada Consolare em ACM vazado com marquise 3D e letra iluminada — Arte Final Brasil" loading="lazy" decoding="async">
+        </div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Fachada em ACM</h3>
+        <p>Fachada premium com <strong style="color:var(--accent)">ACM vazado</strong>, marquise em 3D e letra caixa iluminada — projetos que elevam a presença da marca na rua, do conceito à instalação.</p>
+        <a href="servicos/fachada.html" class="service-details">Ver detalhes →</a>
+        <a href="https://wa.me/5585988960705?text=Olá%2C+quero+orçamento+de+Fachada+ACM." class="service-wa" target="_blank" rel="noopener">&#128172; Orçar minha fachada</a>
+      </div>
+
+      <!-- 2 LETRA CAIXA + LETREIRO (todos os materiais) -->
+      <div class="service-card reveal">
+        <div class="service-thumb">
+          <img src="assets/img/DSC08090.webp" alt="Letra Caixa e Letreiro — Arte Final Brasil" loading="lazy" decoding="async">
+        </div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></div>
+        <h3>Letra Caixa & Letreiro</h3>
+        <p>As <strong style="color:var(--accent)">menores letras caixa do Brasil</strong> são produzidas aqui — em ACM, acrílico, inox, alumínio ou plástico. Letra caixa simples, iluminada, letreiro luminoso e NeonLed. Qualquer escala, instalação inclusa.</p>
+        <a href="servicos/letra-caixa.html" class="service-details">Ver detalhes →</a>
+        <a href="https://wa.me/5585988960705?text=Olá%2C+quero+orçamento+de+Letra+Caixa+ou+Letreiro." class="service-wa" target="_blank" rel="noopener">&#128172; Quero meu letreiro</a>
+      </div>
+
+      <!-- 3 BRISE / RIPADO / PERGOLADO EM ACM -->
+      <div class="service-card reveal">
+        <div class="service-thumb">
+          <img src="assets/img/IMG_6032.webp" alt="Brise Ripado Pergolado em ACM — Arte Final Brasil" loading="lazy" decoding="async">
+        </div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></div>
+        <h3>Brise, Ripado & Pergolado <span style="color:var(--accent);font-size:.85em">em ACM</span></h3>
+        <p>Brise vertical, ripado decorativo e pergolado — tudo em <strong style="color:var(--accent)">ACM</strong>, não em madeira. Durabilidade superior, sem manutenção, com o visual amadeirado ou liso que você escolher.</p>
+        <a href="servicos/brise-ripado-pergolado.html" class="service-details">Ver detalhes →</a>
+        <a href="https://wa.me/5585988960705?text=Olá%2C+quero+orçamento+de+Brise%2C+Ripado+ou+Pergolado+em+ACM." class="service-wa" target="_blank" rel="noopener">&#128172; Quero meu projeto em ACM</a>
+      </div>
+
+      <!-- 4 TOTEM -->
+      <div class="service-card reveal">
+        <div class="service-thumb">
+          <div class="thumb-pending">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Foto em breve
+          </div>
+        </div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="20" rx="2"/><path d="M4 7h16M4 17h16"/></svg></div>
+        <h3>Totens de Identificação</h3>
+        <p>Totens externos em <strong style="color:var(--accent)">ACM</strong> ou inox — resistentes ao tempo e ao sol. Internos em acrílico ou ACM. Iluminados ou sem luz, para empresas, condomínios, clínicas e estabelecimentos.</p>
+        <a href="servicos/totem.html" class="service-details">Ver detalhes →</a>
+        <a href="https://wa.me/5585988960705?text=Olá%2C+quero+orçamento+de+Totem." class="service-wa" target="_blank" rel="noopener">&#128172; Quero meu totem</a>
+      </div>
+
+      <!-- 5 PLACAS -->
+      <div class="service-card reveal">
+        <div class="service-thumb">
+          <img src="assets/img/DSC09977-64.webp" alt="Painel de identificação ACM — Arte Final Brasil" loading="lazy" decoding="async">
+        </div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"/></svg></div>
+        <h3>Placas & Sinalização</h3>
+        <p>Numeração predial, placa de obra, sinalização interna e externa, identificação de ambiente. Em ACM, acrílico e PVC com acabamento profissional.</p>
+        <a href="servicos/placas.html" class="service-details">Ver detalhes →</a>
+        <a href="https://wa.me/5585988960705?text=Olá%2C+quero+orçamento+de+Placas+e+Sinalização." class="service-wa" target="_blank" rel="noopener">&#128172; Quero minha placa</a>
+      </div>
+
+      <!-- 6 IMPRESSÃO DIGITAL -->
+      <div class="service-card reveal">
+        <div class="service-thumb">
+          <div class="thumb-pending">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+            Foto em breve
+          </div>
+        </div>
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 14v3M9 14h6"/></svg></div>
+        <h3>Impressão Digital</h3>
+        <p>Grande formato em lona, adesivo e substratos rígidos. Cores vivas e acabamento preciso para banners, painéis e adesivações.</p>
+        <a href="servicos/impressao-digital.html" class="service-details">Ver detalhes →</a>
+        <a href="https://wa.me/5585988960705?text=Olá%2C+quero+orçamento+de+Impressão+Digital." class="service-wa" target="_blank" rel="noopener">&#128172; Quero minha impressão</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section class="s-portfolio" id="portfolio">
+  <div class="container">
+    <div class="portfolio-header">
+      <div>
+        <span class="section-label">Nosso trabalho</span>
+        <h2 class="reveal">Portfólio</h2>
+      </div>
+      <a href="https://www.instagram.com/artefinal_brasil/" target="_blank" rel="noopener" class="btn-outline-sm">Ver mais no Instagram →</a>
+    </div>
+    <div class="portfolio-grid">
+      <div class="p-item reveal">
+        <img src="assets/img/3Q9A6370.webp" alt="Blessfit Academias — fachada completa ACM e letra caixa Arte Final Brasil" loading="lazy" decoding="async">
+        <span class="p-label">Blessfit Academias — Fachada ACM + Letra Caixa</span>
+      </div>
+      <div class="p-item reveal">
+        <img src="assets/img/3Q9A6362.webp" alt="Blessfit Academias — sinalização fachada Art Final Brasil" loading="lazy" decoding="async">
+        <span class="p-label">Sinalização Comercial — Fortaleza, CE</span>
+      </div>
+      <div class="p-item reveal">
+        <img src="assets/img/IMG_5944.webp" alt="NeonLed borboleta personalizado Arte Final Brasil" loading="lazy" decoding="async">
+        <span class="p-label">NeonLed Personalizado — Borboleta</span>
+      </div>
+      <div class="p-item reveal">
+        <img src="assets/img/IMG_6030.webp" alt="AEME Shopping — fachada letra caixa dourada Arte Final Brasil" loading="lazy" decoding="async">
+        <span class="p-label">AEME Shopping — Letra Caixa Dourada</span>
+      </div>
+      <div class="p-item reveal">
+        <img src="assets/img/3Q9A6372.webp" alt="Fachada ACM comunicação visual Arte Final Brasil" loading="lazy" decoding="async">
+        <span class="p-label">Fachada ACM — Comunicação Visual Completa</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL / USP (depois do portfólio — já vendemos o que fazemos antes de flexar) -->
+<section class="s-usp">
+  <div class="container">
+    <div class="usp-inner">
+      <div class="usp-badge reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+        Diferenciais Arte Final
+      </div>
+      <h2 class="reveal">A menor letra caixa<br>de <em style="font-style:normal;color:var(--accent)">ACM do Brasil</em><br>é nossa</h2>
+      <p class="reveal" style="margin-top:1.5rem">Dominamos técnicas de corte e acabamento em ACM que permitem produzir letras caixa em dimensões que nenhuma outra empresa consegue. Seja qual for o projeto — grande ou pequeno — entregamos com o mesmo padrão de qualidade que nos tornou referência em Fortaleza.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="s-reviews">
+  <div class="container">
+    <div class="s-header">
+      <span class="section-label">O que dizem de nós</span>
+      <h2 class="reveal">4.7 <span style="color:#fbbf24">★</span> no Google <br><small style="font-size:.45em;color:var(--muted);font-weight:400">164 avaliações verificadas</small></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Atendimento rápido com serviço completo, produtos excelentes com ótimo padrão de qualidade."</p>
+        <div class="review-meta">
+          <img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjV1rg_Rhnbv-7EiwRpR6gy6-pIc5XViyDfujxSEcJN0hAsUbB3l=s128-c0x00000000-cc-rp-mo" alt="Vinícius Farias" loading="lazy">
+          <div><p>Vinícius Farias</p><span>Google Reviews · <a href="https://www.google.com/maps/contrib/109289817040551272173/reviews" target="_blank" rel="noopener nofollow">Ver avaliação →</a></span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Eles se garantem muito!!! Trabalho excelente! Super indico!"</p>
+        <div class="review-meta">
+          <img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocKcm6H9jDk3UsB0rR66Hv4_EZ6bTKUwydTeT5EYa85co_hxuA=s128-c0x00000000-cc-rp-mo" alt="Nayana Lis" loading="lazy">
+          <div><p>Nayana Lis</p><span>Google Reviews · <a href="https://www.google.com/maps/contrib/105218796570741297332/reviews" target="_blank" rel="noopener nofollow">Ver avaliação →</a></span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Atendimento e serviços de qualidade. Recomendo se você busca exclusividade e qualidade."</p>
+        <div class="review-meta">
+          <img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocLBHsXleF5Q7_Vwk5eIjUkFuhiYlSUOdQVdJAHCHiSgCW_LlA=s128-c0x00000000-cc-rp-mo" alt="Alcantara Matheus" loading="lazy">
+          <div><p>Alcantara Matheus</p><span>Google Reviews · <a href="https://www.google.com/maps/contrib/114217586504478892620/reviews" target="_blank" rel="noopener nofollow">Ver avaliação →</a></span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Excelente qualidade e atendimento"</p>
+        <div class="review-meta">
+          <img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjUbmXpzORMHGGY3w_jGdoPd-c_pzduZzOvuWkAuJK9hm0AUEz5tVA=s128-c0x00000000-cc-rp-mo" alt="Jave Jonnatha" loading="lazy">
+          <div><p>Jave Jonnatha</p><span>Google Reviews · <a href="https://www.google.com/maps/contrib/101019815448964732831/reviews" target="_blank" rel="noopener nofollow">Ver avaliação →</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="s-cta">
+  <div class="container">
+    <div class="cta-grid">
+
+      <!-- ESQUERDA: texto + CTA WA -->
+      <div class="cta-left reveal">
+        <h2>Transforme<br>sua marca<br><em style="font-style:normal;color:var(--accent)">agora</em></h2>
+        <p>Somos especialistas em comunicação visual de alto impacto — fachadas ACM, letreiros luminosos, NeonLed, letra caixa, placas e totens. Atendimento rápido, equipe própria de instalação, projetos para todo o Brasil.</p>
+        <ul style="color:var(--muted);font-size:.95rem;line-height:2;list-style:none;margin-bottom:2rem">
+          <li>✅ Equipe própria de instalação</li>
+          <li>✅ Projetos para todo o Brasil</li>
+          <li>✅ +228 mil seguidores confiam na Arte Final</li>
+        </ul>
+        <a href="https://wa.me/5585988960705?text=Olá%2C+vi+o+site+de+vocês+e+gostaria+de+um+orçamento+de+comunicação+visual." class="btn-primary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Falar no WhatsApp agora
+        </a>
+      </div>
+
+      <!-- DIREITA: formulário -->
+      <div class="cta-right reveal">
+        <div class="cta-form-wrap">
+          <p style="font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin-bottom:1.25rem">Solicitar orçamento</p>
+          <form class="cta-form" id="ctaForm" onsubmit="submitCta(event)">
+            <div>
+              <label for="ctaNome">Nome</label>
+              <input type="text" id="ctaNome" name="nome" placeholder="Seu nome completo" required autocomplete="name">
+            </div>
+            <div>
+              <label for="ctaWpp">WhatsApp</label>
+              <input type="tel" id="ctaWpp" name="whatsapp" placeholder="(85) 9 0000-0000" required autocomplete="tel">
+            </div>
+            <div>
+              <label for="ctaEmp">Empresa <span style="opacity:.5;font-weight:400;text-transform:none">(opcional)</span></label>
+              <input type="text" id="ctaEmp" name="empresa" placeholder="Nome da sua empresa" autocomplete="organization">
+            </div>
+            <button type="submit" class="btn-send" id="ctaBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Quero meu orçamento
+            </button>
+          </form>
+          <div class="cta-success" id="ctaSuccess">✓ Dados recebidos! Abrindo WhatsApp...</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <p class="f-logo">Arte Final Brasil</p>
+      <p style="color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem">Comunicação Visual</p>
+      <p class="f-tagline">Especialistas em ACM, fachadas, letreiro luminoso, NeonLed e letra caixa em Fortaleza, CE — desde 2014.</p>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="servicos/fachada.html">Fachada em ACM</a></li>
+        <li><a href="servicos/letra-caixa.html">Letra Caixa & Letreiro</a></li>
+        <li><a href="servicos/brise-ripado-pergolado.html">Brise, Ripado & Pergolado</a></li>
+        <li><a href="servicos/totem.html">Totens</a></li>
+        <li><a href="servicos/placas.html">Placas & Sinalização</a></li>
+        <li><a href="servicos/impressao-digital.html">Impressão Digital</a></li>
+      </ul>
+    </div>
+    <div class="f-contact">
+      <h4>Contato</h4>
+      <address>
+        Av. Luiz Vieira, 1117 — Bonsucesso<br>
+        Fortaleza, CE 60541-672<br><br>
+        <a href="tel:+5585988960705">(85) 98896-0705</a><br>
+        <a href="https://wa.me/5585988960705" target="_blank" rel="noopener">Abrir no WhatsApp →</a>
+      </address>
+      <div class="social-row">
+        <a href="https://instagram.com/artefinal_brasil" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/artefinalbrasiloficial" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Arte Final Brasil — Todos os direitos reservados</p>
+    <p>Fortaleza · Ceará · Brasil</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/5585988960705?text=Olá%2C+vi+o+site+de+vocês+e+gostaria+de+um+orçamento." class="wa-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Lenis smooth scroll — single RAF via gsap.ticker
+const lenis = new Lenis({
+  duration: 1.8,
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true
+});
+gsap.ticker.add(t => lenis.raf(t * 1000));
+gsap.ticker.lagSmoothing(0);
+lenis.on('scroll', ScrollTrigger.update);
+
+// Nav sticky
+const nav = document.getElementById('siteNav');
+ScrollTrigger.create({
+  trigger: document.body,
+  start: 'top -60px',
+  onEnter: () => nav.classList.add('scrolled'),
+  onLeaveBack: () => nav.classList.remove('scrolled')
+});
+
+// Mobile menu
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+navToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+// Dropdown — só o link-gatilho ("Serviços ▾") alterna; links do submenu navegam normal
+document.querySelectorAll('.has-dropdown > a').forEach(toggle => {
+  toggle.addEventListener('click', e => {
+    e.preventDefault();
+    const item = toggle.closest('.has-dropdown');
+    const isOpen = item.classList.contains('is-open');
+    document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('is-open'));
+    if (!isOpen) item.classList.add('is-open');
+    e.stopPropagation();
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.has-dropdown').forEach(el => el.classList.remove('is-open'));
+});
+
+// Formulário CTA → captura lead obrigatória ANTES de abrir WA
+async function submitCta(e) {
+  e.preventDefault();
+  const f      = e.target;
+  const btn    = document.getElementById('ctaBtn');
+  const ok     = document.getElementById('ctaSuccess');
+  const nome   = f.nome.value.trim();
+  const wpp    = f.whatsapp.value.trim();
+  const empresa = f.empresa.value.trim();
+
+  btn.disabled = true;
+  btn.textContent = 'Salvando...';
+
+  const leadPayload = { nome, whatsapp: wpp, empresa, origem: 'site-institucional', data: new Date().toISOString() };
+
+  // Planilha (Google Sheets, via Apps Script) — fire-and-forget, não bloqueia o fluxo
+  try {
+    fetch('https://script.google.com/macros/s/AKfycbxxlcJ5pCiJgko8VvHppv-mhfww8OQd1TPN3LZUVDzFic_Z4OeV86QG-ggBK_wn_Yvf/exec', {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(leadPayload)
+    });
+  } catch (_) {}
+
+  let capturado = false;
+  try {
+    const res = await fetch('lead.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(leadPayload)
+    });
+    capturado = res.ok;
+  } catch(_) {}
+
+  if (!capturado) {
+    // fallback: salva em localStorage se servidor falhar
+    try {
+      const leads = JSON.parse(localStorage.getItem('af_leads') || '[]');
+      leads.unshift({ nome, whatsapp: wpp, empresa, data: new Date().toISOString() });
+      localStorage.setItem('af_leads', JSON.stringify(leads));
+    } catch(_) {}
+  }
+
+  f.style.display = 'none';
+  ok.style.display = 'flex';
+
+  const empresaMsg = empresa ? ` Empresa: ${empresa}.` : '';
+  const msg = encodeURIComponent(`Olá, sou ${nome}.${empresaMsg} Vi o site da Arte Final Brasil e gostaria de um orçamento. Meu WhatsApp é ${wpp}.`);
+  window.open(`https://wa.me/5585988960705?text=${msg}`, '_blank');
+
+  setTimeout(() => {
+    f.reset(); f.style.display = 'flex'; ok.style.display = 'none';
+    btn.disabled = false;
+    btn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Quero meu orçamento`;
+  }, 4000);
+}
+
+// Mouse parallax — desktop only
+const isMobile = window.matchMedia('(max-width: 960px)').matches || ('ontouchstart' in window);
+if (!isMobile) (function() {
+  const bg = document.getElementById('videoBg');
+  let mx = 0, my = 0, cx = 0, cy = 0;
+  document.addEventListener('mousemove', e => {
+    mx = (e.clientX / window.innerWidth  - 0.5) * 2;
+    my = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+  gsap.ticker.add(() => {
+    cx += (mx - cx) * 0.05;
+    cy += (my - cy) * 0.05;
+    gsap.set(bg, { x: cx * -22, y: cy * -16, force3D: true });
+  });
+})();
+
+// Hero entrance
+gsap.timeline({ delay: .25 })
+  .fromTo('#heroPre',  { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: .6, ease: 'power2.out' })
+  .fromTo('#heroH1',   { opacity: 0, y: 48 }, { opacity: 1, y: 0, duration: .9, ease: 'power3.out' }, '-=.3')
+  .fromTo('#heroSub',  { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: .7, ease: 'power2.out' }, '-=.5')
+  .fromTo('#heroCtas', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: .6, ease: 'power2.out' }, '-=.4');
+
+// Scroll reveal
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 28 },
+    {
+      opacity: 1, y: 0, duration: .7, ease: 'power2.out',
+      delay: (i % 4) * 0.07,
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 88%',
+        toggleActions: 'play none none none'
+      }
+    }
+  );
+});
+</script>
+
+<!--
+  VIDEO: gravar ou gerar com IA
+  Prompt sugerido (Sora / Runway / Kling):
+  "Cinematic smooth camera journey inside a professional visual communication workshop in Brazil:
+   slow close-up of aluminum composite (ACM) sheets being cut with precision tools,
+   sparks and clean edges, transition to glowing LED letter boxes being assembled,
+   then wide-angle night shot of a modern illuminated ACM facade on a commercial building in Fortaleza,
+   people walking past admiring the signage, warm orange and white neon glow,
+   4K quality, no text or logos, fluid motion, 30 seconds duration."
+
+  FFMPEG para preparar o video (keyframes por frame + moov atom no início):
+  ffmpeg -i hero_original.mp4 -g 1 -movflags +faststart -c:v libx264 -crf 23 -preset slow hero_scrub.mp4
+-->
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Desativa compressão gzip/brotli para binários já comprimidos.
+# video/mp4 comprimido pelo servidor quebra HTTP Range requests
+# (o navegador não consegue fazer seek/scrub no vídeo — só reproduz sequencial).
+<IfModule mod_deflate.c>
+  SetEnvIfNoCase Request_URI \.(?:mp4|mov|webm|avi|mkv|webp|jpe?g|png|gif|woff2?|zip|gz|br)$ no-gzip dont-vary
+</IfModule>
+<IfModule mod_brotli.c>
+  SetEnvIfNoCase Request_URI \.(?:mp4|mov|webm|avi|mkv|webp|jpe?g|png|gif|woff2?|zip|gz|br)$ no-brotli
+</IfModule>
