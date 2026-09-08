@@ -172,15 +172,15 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--white); l
   grid-template-columns: 1fr 420px; gap: 3.5rem; align-items: center;
 }
 .hero-content { max-width: 620px; }
-.hero-visuals { display: grid; gap: .75rem; }
-.hero-v2 { aspect-ratio: 720 / 887; border-radius: 16px; overflow: hidden; position: relative; background: rgba(4,4,3,.6); display: flex; align-items: center; justify-content: center; }
-.hero-v2::after {
+.hero-visuals { display: grid; grid-template-rows: 260px 180px; gap: .75rem; }
+.hero-v1, .hero-v2 { border-radius: 16px; overflow: hidden; position: relative; }
+.hero-v1::after, .hero-v2::after {
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(to bottom, transparent 40%, rgba(7,7,5,.5));
   pointer-events: none;
 }
-.hero-visuals img { width: 100%; height: 100%; object-fit: contain; transition: transform .5s ease; }
-.hero-v2:hover img { transform: scale(1.04); }
+.hero-visuals img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.hero-v1:hover img, .hero-v2:hover img { transform: scale(1.04); }
 .hero-pre {
   display: inline-flex; align-items: center; gap: .5rem;
   font-size: .75rem; font-weight: 700; letter-spacing: .16em;
@@ -332,8 +332,7 @@ h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--white); l
 .s-reviews {
   padding: 9rem 0;
 }
-.reviews-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; margin-top: 3rem; }
-@media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2,1fr); } }
+.reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-top: 3rem; }
 .review-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 2rem; }
 .review-stars { color: #fbbf24; font-size: .95rem; letter-spacing: .06em; margin-bottom: .875rem; }
 .review-text { color: var(--muted); font-size: .88rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
@@ -419,10 +418,9 @@ footer ul a:hover { color: var(--white); }
 /* SERVICE CARD THUMBNAIL */
 .service-thumb {
   width: calc(100% + 5rem); margin: -2.5rem -2.5rem 1.75rem;
-  aspect-ratio: 4 / 5; overflow: hidden; border-radius: 18px 18px 0 0;
-  background: rgba(4,4,3,.6); display: flex; align-items: center; justify-content: center;
+  height: 180px; overflow: hidden; border-radius: 18px 18px 0 0;
 }
-.service-thumb img { width: 100%; height: 100%; object-fit: contain; transition: transform .45s ease; }
+.service-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
 .service-card:hover .service-thumb img { transform: scale(1.07); }
 .thumb-pending { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; background: rgba(139,47,212,.07); border-bottom: 1px dashed rgba(139,47,212,.25); color: rgba(139,47,212,.45); font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
 
@@ -572,8 +570,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="hero-visuals">
+      <div class="hero-v1">
+        <img src="assets/img/IMG_0889.webp" alt="Sede Arte Final Brasil — fachada ACM, brise em ACM e totem" loading="eager">
+      </div>
       <div class="hero-v2">
-        <img src="assets/img/giga-shopping-letra-caixa.webp" alt="Giga Shopping — letreiro instalado, projeto Arte Final Brasil" loading="eager">
+        <img src="assets/img/IMG_6031.webp" alt="AEME Shopping — letra caixa dourada Arte Final Brasil" loading="eager">
       </div>
     </div>
   </div>
@@ -678,11 +679,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- 1 FACHADA ACM -->
       <div class="service-card reveal">
         <div class="service-thumb">
-          <img src="assets/img/consolare-fachada-acm-drone.webp" alt="Fachada Consolare em ACM vazado com marquise 3D e letra iluminada — Arte Final Brasil" loading="lazy" decoding="async">
+          <img src="assets/img/IMG_0904.webp" alt="Fachada ACM Arte Final Brasil — sede própria em ACM roxo" loading="lazy" decoding="async">
         </div>
         <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
         <h3>Fachada em ACM</h3>
-        <p>Fachada premium com <strong style="color:var(--accent)">ACM vazado</strong>, marquise em 3D e letra caixa iluminada — projetos que elevam a presença da marca na rua, do conceito à instalação.</p>
+        <p>Revestimento de fachada comercial e corporativa em <strong style="color:var(--accent)">ACM</strong> — painéis, recortes, cores e texturas personalizadas. Do projeto técnico à instalação com equipe própria.</p>
         <a href="servicos/fachada.html" class="service-details">Ver detalhes →</a>
         <a href="https://wa.me/5585988960705?text=Olá%2C+quero+orçamento+de+Fachada+ACM." class="service-wa" target="_blank" rel="noopener">&#128172; Orçar minha fachada</a>
       </div>
@@ -741,10 +742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- 6 IMPRESSÃO DIGITAL -->
       <div class="service-card reveal">
         <div class="service-thumb">
-          <div class="thumb-pending">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-            Foto em breve
-          </div>
+          <img src="assets/img/3Q9A6370.webp" alt="Impressão Digital grande formato Arte Final Brasil" loading="lazy" decoding="async">
         </div>
         <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M12 14v3M9 14h6"/></svg></div>
         <h3>Impressão Digital</h3>
@@ -814,6 +812,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="reveal">4.7 <span style="color:#fbbf24">★</span> no Google <br><small style="font-size:.45em;color:var(--muted);font-weight:400">164 avaliações verificadas</small></h2>
     </div>
     <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Comprei uma fachada com essa empresa e saiu tudo como o alinhado, e um excelente padrão de qualidade! Parabéns."</p>
+        <div class="review-meta">
+          <img class="review-avatar" src="https://lh3.googleusercontent.com/a-/ALV-UjWDKaEmyiq-pgIJZ34NXUp1wYPtd_Fb_J5tMGFPxebS2mEBoaY6Ow=s128-c0x00000000-cc-rp-mo" alt="Veridiano Soares" loading="lazy">
+          <div><p>Veridiano Soares</p><span>Google Reviews · <a href="https://www.google.com/maps/contrib/105474428472961634059/reviews" target="_blank" rel="noopener nofollow">Ver avaliação →</a></span></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Estou simplesmente encantado com a experiência que tive com a empresa. Desde o primeiro contato até a entrega final, eles foram incríveis. A equipe foi tão atenciosa e realmente se esforçou para entender exatamente o que eu queria para o meu projeto. E o resultado final? superou todas as minhas expectativas! Recomendaria de olhos fechados para quem busca serviços de qualidade!"</p>
+        <div class="review-meta">
+          <img class="review-avatar" src="https://lh3.googleusercontent.com/a/ACg8ocIhxCk3rc3UgDw9pl6WUmWZ_d21mudWClNaBzUiEkDMf_9vnQ=s128-c0x00000000-cc-rp-mo" alt="Cynara Nobre" loading="lazy">
+          <div><p>Cynara Nobre</p><span>Google Reviews · <a href="https://www.google.com/maps/contrib/102887672809976165079/reviews" target="_blank" rel="noopener nofollow">Ver avaliação →</a></span></div>
+        </div>
+      </div>
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
         <p class="review-text">"Atendimento rápido com serviço completo, produtos excelentes com ótimo padrão de qualidade."</p>
