@@ -1,5 +1,8 @@
 # PLANO — Site institucional Zoonn (aprovação)
 
+> **STATUS 02/10/2026: fase 1 EXECUTADA e no ar** em https://www.visualmkt.com.br/claude/zoonn/ (+ `experiencias.html`).
+> Mudanças depois do plano: 11 serviços (não 6), fotos reais do Instagram (37 WebP), seção Nazir na home separada do destaque da Experiências, Experiências focada em terceirização + treinamentos + Churrascada. Detalhes na memória `project_zoonn_site_institucional`.
+
 > Plano aprovado em 02/10/2026. Quem executar: siga na ordem, sem inventar dados.
 > Repo `lp` é PÚBLICO — nunca colocar senha/token neste arquivo nem no HTML.
 
