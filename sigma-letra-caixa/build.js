@@ -5,10 +5,10 @@ const phone = '555130324009';
 const wa = (t) => `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(t)}`;
 const map = {
   LOGO: media.logo, HERO: media.hero, P1: media.p1, P2: media.p2, P3: media.p3, G1: media.g1, G2: media.g2, G3: media.g3,
-  WA_GERAL: wa('Olá, vim pelo site e gostaria de um orçamento de letra caixa'),
-  WA_ILUM: wa('Olá, vim pelo site e gostaria de um orçamento de letra caixa iluminada'),
-  WA_FACHADA: wa('Olá, vim pelo site e gostaria de um orçamento de letra caixa para fachada'),
-  WA_RECEPCAO: wa('Olá, vim pelo site e gostaria de um orçamento de letreiro para recepção'),
+  WA_GERAL: wa('Olá, vim pelo site e gostaria de um orçamento de letra caixa em impressão 3D'),
+  WA_ILUM: wa('Olá, vim pelo site e gostaria de um orçamento de letra caixa impressa em 3D'),
+  WA_FACHADA: wa('Olá, vim pelo site e gostaria de um orçamento de letra caixa 3D para recepção'),
+  WA_RECEPCAO: wa('Olá, vim pelo site e gostaria de um orçamento de letra caixa 3D para a minha marca'),
 };
 let html = fs.readFileSync(`${D}/template.html`, 'utf8');
 html = html.replace(/\{\{icon:([a-z-]+)\}\}/g, (_, n) => {
