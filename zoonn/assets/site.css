@@ -224,3 +224,31 @@ blockquote.quote cite{display:block;font-family:var(--body);font-style:normal;fo
 .speakers div{border-top:2px solid var(--accent);padding-top:.8rem}
 .speakers b{font-family:var(--display);font-size:1.1rem;display:block}
 .speakers span{color:#a8acb5;font-size:.92rem}
+
+/* fundo em vídeo (home) — scrub com a rolagem, sem barra de rolagem visível */
+html.cine{scrollbar-width:none;-ms-overflow-style:none}
+html.cine::-webkit-scrollbar{display:none;width:0;height:0}
+.cine body{background:#0b0c0f;color:var(--paper)}
+.cine-wrap{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#0b0c0f}
+.cine-wrap video{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;display:block;will-change:transform}
+.cine-ov{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(11,12,15,.5),rgba(11,12,15,.66))}
+.cine .hdr,.cine main,.cine .ftr{position:relative;z-index:10}
+.cine .hdr{position:fixed}
+.cine .hero{background:transparent}
+.cine .hero::after{background:linear-gradient(180deg,rgba(11,12,15,.25) 0%,rgba(11,12,15,0) 45%,rgba(11,12,15,.55) 100%)}
+.cine .sec,.cine .bridge,.cine .dark{background:transparent;color:var(--paper)}
+.cine .lead,.cine .sec-num{color:#c3c6cd}
+.cine .sec-num b{color:var(--accent-ink)}
+.cine .svc,.cine .rv{background:rgba(18,20,24,.74);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);color:var(--paper)}
+.cine .svc-body p{color:#b9bcc4}
+.cine .rv-meta span{color:#a8acb5}
+.cine .faq details{border-bottom-color:rgba(255,255,255,.14)}
+.cine .faq details p{color:#b9bcc4}
+.cine .geo{background:rgba(11,12,15,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.cine .geo p{color:#c3c6cd}
+.cine .bridge-list li{color:var(--paper)}
+.cine .btn-line{color:var(--paper)}
+.cine blockquote.quote cite{color:#a8acb5}
+.cine .ftr{background:rgba(11,12,15,.9)}
+.cine .lead[style*="color:var(--ink)"]{color:var(--paper)!important}
+@media (prefers-reduced-motion:reduce){.cine-wrap video{will-change:auto}}
