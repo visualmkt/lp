@@ -253,3 +253,7 @@ html.cine::-webkit-scrollbar{display:none;width:0;height:0}
 .cine .lead[style*="color:var(--ink)"]{color:var(--paper)!important}
 @media (prefers-reduced-motion:reduce){.cine-wrap video{will-change:auto}}
 .ct-list a.btn{color:var(--accent-ink)}
+
+.brand-logo{display:inline-flex;align-items:center}
+.brand-logo img{height:46px;width:auto;display:block}
+@media(max-width:900px){.brand-logo img{height:40px}}

@@ -52,6 +52,11 @@
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var bgv = document.getElementById('bgVideo');
+  if (bgv) {
+    var land = window.innerWidth > window.innerHeight;
+    if (land) bgv.poster = bgv.dataset.posterD;
+    bgv.src = land ? bgv.dataset.srcD : bgv.dataset.srcM;
+  }
   var END = function () { return Math.max(0, bgv.duration - 0.05); };
   if (reduce || !window.gsap || !window.ScrollTrigger) {
     document.querySelectorAll('.rv-up').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
