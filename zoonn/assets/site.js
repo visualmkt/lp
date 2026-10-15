@@ -53,11 +53,6 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var bgv = document.getElementById('bgVideo');
   var END = function () { return Math.max(0, bgv.duration - 0.05); };
-  if (bgv && reduce) {
-    var goEnd = function () { bgv.currentTime = END(); };
-    bgv.addEventListener('loadedmetadata', goEnd);
-    if (bgv.readyState >= 1) goEnd();
-  }
   if (reduce || !window.gsap || !window.ScrollTrigger) {
     document.querySelectorAll('.rv-up').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
     return;
