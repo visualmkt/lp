@@ -1,0 +1,4 @@
+<IfModule mod_setenvif.c>
+SetEnvIfNoCase Request_URI \.(?:mp4|webm|webp|jpe?g|png|woff2?)$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.(?:mp4|webm|webp|jpe?g|png|woff2?)$ no-brotli
+</IfModule>
