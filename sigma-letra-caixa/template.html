@@ -31,7 +31,7 @@
 .sg .top img{height:42px;width:auto}
 .sg .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
 .sg .hero-bg{position:absolute;inset:0}
-.sg .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.sg .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:62% 80%}
 .sg .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,14,.86) 0%,rgba(14,14,14,.62) 50%,rgba(14,14,14,.92) 100%)}
 .sg .hero .wrap{position:relative;z-index:1;padding-top:60px;padding-bottom:56px}
 .sg .tag{display:inline-flex;align-items:center;gap:9px;font-family:'Archivo',sans-serif;font-size:.74rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:20px}
@@ -64,8 +64,8 @@
 .sg .gal figure{border-radius:var(--r);overflow:hidden}
 .sg .gal img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .4s}
 .sg .gal figure:hover img{transform:scale(1.04)}
-.sg .gal figure:last-child{grid-column:span 2}
-.sg .gal figure:last-child img{aspect-ratio:2/1}
+.sg .gal figure:last-child:nth-child(odd){grid-column:span 2}
+.sg .gal figure:last-child:nth-child(odd) img{aspect-ratio:2/1}
 .sg .onde{display:grid;grid-template-columns:1fr;gap:12px;margin-top:30px}
 .sg .o{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1.5px solid var(--line);border-left:5px solid var(--g);border-radius:var(--r);padding:20px}
 .sg .o svg{width:1.6rem;height:1.6rem;color:var(--gd);flex:0 0 auto;margin-top:2px}
@@ -105,8 +105,8 @@
  .sg .row{grid-template-columns:1.1fr .9fr;gap:60px}
  .sg .row.rev figure{order:2}
  .sg .gal{grid-template-columns:repeat(3,1fr)}
- .sg .gal figure:last-child{grid-column:auto}
- .sg .gal figure:last-child img{aspect-ratio:1/1}
+ .sg .gal figure:last-child:nth-child(odd){grid-column:auto}
+ .sg .gal figure:last-child:nth-child(odd) img{aspect-ratio:1/1}
  .sg .onde{grid-template-columns:repeat(3,1fr)}
  .sg .steps{grid-template-columns:repeat(3,1fr);border-top:0;gap:30px}
  .sg .st{border-top:2px solid var(--ink);border-bottom:0;padding:62px 0 0}
@@ -124,7 +124,7 @@
 </div></header>
 
 <section class="hero" id="topo">
-  <div class="hero-bg"><img src="{{HERO}}" alt="Logotipo em letras 3D aplicado em parede de madeira" width="1400" height="788" fetchpriority="high"></div>
+  <div class="hero-bg"><img src="{{HERO}}" alt="Letras 3D iluminadas à noite na fachada do Golden Lake" width="1400" height="788" fetchpriority="high"></div>
   <div class="wrap">
     <span class="tag">Letra caixa em impressão 3D · Canoas/RS</span>
     <h1>Letra caixa em <span>impressão 3D</span> para a sua marca</h1>
@@ -202,6 +202,9 @@
     <figure><img src="{{G7}}" alt="Logotipo em relevo sobre parede de showroom" width="800" height="800" loading="lazy"></figure>
     <figure><img src="{{G8}}" alt="Logotipo em relevo sobre painel em parede interna" width="800" height="800" loading="lazy"></figure>
     <figure><img src="{{G9}}" alt="Letra caixa iluminada em parede" width="800" height="800" loading="lazy"></figure>
+    <figure><img src="{{G10}}" alt="Letras 3D iluminadas em parede da recepção Swan" width="800" height="800" loading="lazy"></figure>
+    <figure><img src="{{G11}}" alt="Letras 3D Swan sobre o balcão de recepção" width="800" height="800" loading="lazy"></figure>
+    <figure><img src="{{G12}}" alt="Letras 3D iluminadas em exposição de Natal no shopping Iguatemi" width="800" height="800" loading="lazy"></figure>
   </div>
 </div></section>
 
@@ -211,7 +214,7 @@
   <div class="onde">
     <div class="o">{{icon:store}}<div><b>Lojas e restaurantes</b><span>Nome da marca em relevo no ambiente de venda.</span></div></div>
     <div class="o">{{icon:building}}<div><b>Showrooms e concessionárias</b><span>Logotipos grandes e detalhados atrás do balcão e nas paredes.</span></div></div>
-    <div class="o">{{icon:door-open}}<div><b>Escritórios e clínicas</b><span>Logotipo em relevo na parede da recepção.</span></div></div>
+    <div class="o">{{icon:calendar-days}}<div><b>Eventos</b><span>Letras 3D para eventos, feiras e ações promocionais.</span></div></div>
   </div>
 </div></section>
 
