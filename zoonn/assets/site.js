@@ -51,12 +51,33 @@
   });
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bgv = document.getElementById('bgVideo');
+  var END = function () { return Math.max(0, bgv.duration - 0.05); };
+  if (bgv && reduce) {
+    bgv.addEventListener('loadedmetadata', function () { bgv.currentTime = END(); });
+  }
   if (reduce || !window.gsap || !window.ScrollTrigger) {
     document.querySelectorAll('.rv-up').forEach(function (el) { el.style.opacity = 1; el.style.transform = 'none'; });
     return;
   }
   gsap.registerPlugin(ScrollTrigger);
   var k = window.matchMedia('(max-width: 767px)').matches ? 0.5 : 1;
+
+  if (bgv) {
+    var startScrub = function () {
+      if (!bgv.duration || isNaN(bgv.duration) || bgv.dataset.ready) return;
+      bgv.dataset.ready = '1';
+      bgv.pause();
+      gsap.to(bgv, {
+        currentTime: END(), ease: 'none',
+        scrollTrigger: { trigger: document.body, start: 'top top', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true }
+      });
+    };
+    bgv.addEventListener('loadedmetadata', startScrub);
+    bgv.preload = 'auto';
+    bgv.load();
+    if (bgv.readyState >= 1) startScrub();
+  }
 
   document.querySelectorAll('[data-parallax]').forEach(function (el) {
     var amt = parseFloat(el.dataset.parallax) * k;
