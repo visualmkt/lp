@@ -190,3 +190,14 @@ h3{font-family:var(--cond);font-weight:800;font-style:italic;text-transform:uppe
 .others{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
 .others a{border:1px solid var(--line);padding:.6rem 1rem;font-weight:700;text-transform:uppercase;font-size:.9rem;text-decoration:none;background:rgba(1,1,1,.7)}
 .others a:hover{border-color:var(--yel);color:var(--yel)}
+.dd{position:relative;padding-block:1.6rem;margin-block:-1.6rem}
+.dd>a::after{content:" ▾";font-size:.8em}
+.dd-m{position:absolute;top:100%;left:-1rem;min-width:290px;background:var(--black);border:1px solid var(--line);border-top:3px solid var(--yel);padding:.4rem 0;display:none;box-shadow:0 20px 40px rgba(0,0,0,.6)}
+.dd-m a{display:block;padding:.7rem 1.1rem;font-size:.9rem;white-space:nowrap}
+.dd:hover>.dd-m,.dd:focus-within>.dd-m{display:block}
+@media(max-width:900px){
+  .dd{padding:0;margin:0}
+  .dd>a::after{content:""}
+  .dd-m{position:static;display:block;min-width:0;border:0;box-shadow:none;background:none;padding:0 0 .3rem 1rem}
+  .dd-m a{padding:.75rem 0;opacity:.8;font-size:.88rem;white-space:normal;border-bottom:1px solid var(--line)}
+}
