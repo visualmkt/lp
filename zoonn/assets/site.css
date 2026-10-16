@@ -257,3 +257,4 @@ html.cine::-webkit-scrollbar{display:none;width:0;height:0}
 .brand-logo{display:inline-flex;align-items:center}
 .brand-logo img{height:46px;width:auto;display:block}
 @media(max-width:900px){.brand-logo img{height:40px}}
+.cine .hdr{z-index:50}

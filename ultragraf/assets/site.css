@@ -174,3 +174,19 @@ h3{font-family:var(--cond);font-weight:800;font-style:italic;text-transform:uppe
 .form input,.form select{width:100%;min-width:0}
 
 .cine-wrap .cine-fallback{object-position:center 40%}
+.hdr{z-index:50}
+.more-link{align-self:flex-start;font-weight:800;font-style:italic;text-transform:uppercase;font-size:.85rem;letter-spacing:.05em;color:var(--yel);text-decoration:none;margin-top:.2rem}
+.more-link:hover{text-decoration:underline}
+.hero.sm{min-height:72svh}
+.hero.sm h1{font-size:clamp(1.25rem,5.2vw,4rem);max-width:16ch}
+.crumbs{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
+.crumbs a{text-decoration:none}.crumbs a:hover{color:var(--yel)}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1.25rem;margin-top:2.5rem}
+.feat{background:rgba(1,1,1,.78);backdrop-filter:blur(8px);border:1px solid var(--line);border-top:3px solid var(--yel);padding:1.4rem}
+.feat p{color:#bdbdb8;margin-top:.5rem;font-size:1rem}
+.gal-pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:1rem;margin-top:2.5rem}
+.gal-pg .ph{aspect-ratio:4/5}
+.gal-pg .ph.wide{aspect-ratio:4/3}
+.others{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.others a{border:1px solid var(--line);padding:.6rem 1rem;font-weight:700;text-transform:uppercase;font-size:.9rem;text-decoration:none;background:rgba(1,1,1,.7)}
+.others a:hover{border-color:var(--yel);color:var(--yel)}

@@ -8,13 +8,13 @@ const img = (f, alt, cap, cls = '', sz = SZ.pf) => `<figure class="ph ${cls}">${
 const IWA = '<svg><use href="#i-wa"/></svg>';
 
 const services = [
-  ['optica-centro-fachada-acm-3d', 'Fachada de Óptica Centro en ACM 3D con letras corpóreas', 'Fachadas premium en ACM y ACM 3D', 'Revestimientos en aluminio compuesto con relieves, cortes y luz integrada. Diseñamos, fabricamos y colocamos la fachada completa.', 'Cotizar fachada', 'Hola UltraGraf, quiero un presupuesto de fachada en ACM.', 'fachada-acm'],
-  ['klein-letra-corporea-roja', 'Letra corpórea de Klein, empresa constructora', 'Letras corpóreas', 'En chapa, impresión 3D, polyfan, acrílico, PVC y acero inoxidable. Con o sin iluminación.', 'Cotizar letras', 'Hola UltraGraf, quiero un presupuesto de letras corpóreas.', 'letras-corporeas'],
-  ['neon-que-bueno-es-verte', 'Cartel de neón LED con la frase Que bueno es verte', 'Carteles neón LED y back light', 'Neón LED para interiores y vidrieras, y carteles back light con luz pareja para exterior.', 'Cotizar neón / back light', 'Hola UltraGraf, quiero un presupuesto de cartel neón LED o back light.', 'neon-backlight'],
-  ['link-totem-estacion', 'Tótem de Link Combustibles en estación de servicio', 'Tótems en ACM', 'Tótems de identificación para estaciones, comercios y empresas, con base y estructura propia.', 'Cotizar tótem', 'Hola UltraGraf, quiero un presupuesto de tótem en ACM.', 'totem'],
-  ['axion-cartel-ruta', 'Cartel de ruta de Axion en Concepción de la Sierra', 'Carteles de ruta y pórticos', 'Carteles de ruta y pórticos personalizados en ACM, con estructura y colocación con camión grúa.', 'Cotizar cartel de ruta', 'Hola UltraGraf, quiero un presupuesto de cartel de ruta o pórtico.', 'ruta-portico'],
-  ['ploteo-auto-rally', 'Ploteo vehicular completo en auto de rally', 'Ploteo vehicular', 'Ploteos completos y parciales en autos, utilitarios y flotas, con gráfica autoadhesiva.', 'Cotizar ploteo', 'Hola UltraGraf, quiero un presupuesto de ploteo vehicular.', 'ploteo'],
-  ['velona-motos-pared-3d', 'Pared 3D roja con logo de Velona Motos', 'Puertas y revestimientos en ACM', 'Puertas de alto nivel y paredes de marca en ACM, con diseño a medida del local.', 'Cotizar ACM interior', 'Hola UltraGraf, quiero un presupuesto de puertas o revestimientos en ACM.', 'acm-interior'],
+  ['optica-centro-fachada-acm-3d', 'Fachada de Óptica Centro en ACM 3D con letras corpóreas', 'Fachadas premium en ACM y ACM 3D', 'Revestimientos en aluminio compuesto con relieves, cortes y luz integrada. Diseñamos, fabricamos y colocamos la fachada completa.', 'Cotizar fachada', 'Hola UltraGraf, quiero un presupuesto de fachada en ACM.', 'fachada-acm', 'fachadas-acm.html'],
+  ['klein-letra-corporea-roja', 'Letra corpórea de Klein, empresa constructora', 'Letras corpóreas', 'En chapa, impresión 3D, polyfan, acrílico, PVC y acero inoxidable. Con o sin iluminación.', 'Cotizar letras', 'Hola UltraGraf, quiero un presupuesto de letras corpóreas.', 'letras-corporeas', 'letras-corporeas.html'],
+  ['neon-que-bueno-es-verte', 'Cartel de neón LED con la frase Que bueno es verte', 'Carteles neón LED y back light', 'Neón LED para interiores y vidrieras, y carteles back light con luz pareja para exterior.', 'Cotizar neón / back light', 'Hola UltraGraf, quiero un presupuesto de cartel neón LED o back light.', 'neon-backlight', 'letras-corporeas.html#iluminacion'],
+  ['link-totem-estacion', 'Tótem de Link Combustibles en estación de servicio', 'Tótems en ACM', 'Tótems de identificación para estaciones, comercios y empresas, con base y estructura propia.', 'Cotizar tótem', 'Hola UltraGraf, quiero un presupuesto de tótem en ACM.', 'totem', 'totems-acm.html'],
+  ['axion-cartel-ruta', 'Cartel de ruta de Axion en Concepción de la Sierra', 'Carteles de ruta y pórticos', 'Carteles de ruta y pórticos personalizados en ACM, con estructura y colocación con camión grúa.', 'Cotizar cartel de ruta', 'Hola UltraGraf, quiero un presupuesto de cartel de ruta o pórtico.', 'ruta-portico', 'totems-acm.html#portico'],
+  ['ploteo-auto-rally', 'Ploteo vehicular completo en auto de rally', 'Ploteo vehicular', 'Gráfica autoadhesiva para vehículos: de la idea al ploteo terminado.', 'Cotizar ploteo', 'Hola UltraGraf, quiero un presupuesto de ploteo vehicular.', 'ploteo', 'ploteo-vehicular.html'],
+  ['velona-motos-pared-3d', 'Pared 3D roja con logo de Velona Motos', 'Puertas y revestimientos en ACM', 'Puertas de alto nivel y paredes de marca en ACM, con diseño a medida del local.', 'Cotizar ACM interior', 'Hola UltraGraf, quiero un presupuesto de puertas o revestimientos en ACM.', 'acm-interior', 'puertas-revestimientos-acm.html'],
   ['placa-reconocimiento-acrilico', 'Placa de reconocimiento en acrílico con base de madera', 'Trofeos, grabado láser e impresión 3D', 'Trofeos y premiaciones, grabados láser, calcos troquelados e impresiones 3D.', 'Cotizar trofeos / grabado', 'Hola UltraGraf, quiero un presupuesto de trofeos, grabado láser o impresión 3D.', 'laser-3d'],
 ];
 
@@ -48,7 +48,7 @@ const html = `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,800;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=6">
+<link rel="stylesheet" href="assets/site.css?v=8">
 <script>document.documentElement.classList.remove('no-js')</script>
 <script type="application/ld+json">
 {
@@ -63,7 +63,7 @@ const html = `<!DOCTYPE html>
       "foundingDate": "2016",
       "telephone": ["+54 3754 531596", "+54 3754 469388"],
       "email": "ultragraf.carteles24@gmail.com",
-      "address": { "@type": "PostalAddress", "streetAddress": "Av. Roque González 43", "addressLocality": "San Javier", "addressRegion": "Misiones", "addressCountry": "AR" },
+      "address": { "@type": "PostalAddress", "streetAddress": "25 de Mayo 488", "addressLocality": "San Javier", "postalCode": "3357", "addressRegion": "Misiones", "addressCountry": "AR" },
       "areaServed": "NEA, Argentina",
       "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "12:00" },
@@ -74,7 +74,7 @@ const html = `<!DOCTYPE html>
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Dónde está UltraGraf?", "acceptedAnswer": { "@type": "Answer", "text": "En Av. Roque González 43, San Javier, Misiones, Argentina. Hacemos transporte y colocación en todo el NEA." } },
+        { "@type": "Question", "name": "¿Dónde está UltraGraf?", "acceptedAnswer": { "@type": "Answer", "text": "En 25 de Mayo 488, San Javier, Misiones, Argentina. Hacemos transporte y colocación en todo el NEA." } },
         { "@type": "Question", "name": "¿El presupuesto tiene costo?", "acceptedAnswer": { "@type": "Answer", "text": "No. Los presupuestos son sin cargo y podemos hacer visitas con atención personalizada." } },
         { "@type": "Question", "name": "¿Qué materiales usan para las letras corpóreas?", "acceptedAnswer": { "@type": "Answer", "text": "Chapa, impresión 3D, polyfan, acrílico, PVC y acero inoxidable, con o sin iluminación." } },
         { "@type": "Question", "name": "¿Se encargan de la colocación?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. UltraGraf fabrica en su planta de más de 700 m² y coloca con camión grúa propio en todo el NEA." } },
@@ -150,7 +150,7 @@ const html = `<!DOCTYPE html>
 ${services.map(s => `      <article class="svc rv-up">
         <div class="svc-img">${pic(s[0], s[1], SZ.sv)}</div>
         <div class="svc-body"><h3>${s[2]}</h3><p>${s[3]}</p>
-        <a class="btn btn-acc" href="${wa(s[5])}" target="_blank" rel="noopener" data-loc="servicios" data-svc="${s[6]}">${IWA}${s[4]}</a></div>
+        <a class="btn btn-acc" href="${wa(s[5])}" target="_blank" rel="noopener" data-loc="servicios" data-svc="${s[6]}">${IWA}${s[4]}</a>${s[7] ? `<a class="more-link" href="${s[7]}">Ver detalles →</a>` : ''}</div>
       </article>`).join('\n')}
     </div>
     <div class="more rv-up">
@@ -222,7 +222,7 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
 
 <section class="geo">
   <div class="wrap">
-    <p><strong>UltraGraf</strong> es una industria publicitaria de <strong>San Javier, Misiones (Argentina)</strong>, fundada en 2016, con planta de producción de más de 700&nbsp;m² en Av. Roque González 43. Fabrica <strong>fachadas premium en ACM y ACM 3D</strong>, <strong>letras corpóreas</strong> en chapa, impresión 3D, polyfan, acrílico, PVC y acero inoxidable, <strong>carteles back light y neón LED</strong>, <strong>tótems en ACM</strong>, <strong>carteles de ruta y pórticos</strong>, <strong>ploteo vehicular</strong>, gráfica autoadhesiva, impresiones en gran formato, grabados láser, impresiones 3D y trofeos. Realiza transporte y colocación con camión grúa en todo el <strong>NEA</strong>. Presupuestos sin cargo por WhatsApp al +54 3754 531596.</p>
+    <p><strong>UltraGraf</strong> es una industria publicitaria de <strong>San Javier, Misiones (Argentina)</strong>, fundada en 2016, con planta de producción de más de 700&nbsp;m² en 25 de Mayo 488. Fabrica <strong>fachadas premium en ACM y ACM 3D</strong>, <strong>letras corpóreas</strong> en chapa, impresión 3D, polyfan, acrílico, PVC y acero inoxidable, <strong>carteles back light y neón LED</strong>, <strong>tótems en ACM</strong>, <strong>carteles de ruta y pórticos</strong>, <strong>ploteo vehicular</strong>, gráfica autoadhesiva, impresiones en gran formato, grabados láser, impresiones 3D y trofeos. Realiza transporte y colocación con camión grúa en todo el <strong>NEA</strong>. Presupuestos sin cargo por WhatsApp al +54 3754 531596.</p>
   </div>
 </section>
 
@@ -232,17 +232,17 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
     <h2 class="rv-up">Escribinos<br>o pasá por la planta.</h2>
     <div class="ct-grid">
       <ul class="ct-list rv-up">
-        <li><svg><use href="#i-pin"/></svg><div><b>Dirección</b><span>Av. Roque González 43<br>San Javier, Misiones, Argentina</span></div></li>
+        <li><svg><use href="#i-pin"/></svg><div><b>Dirección</b><span>25 de Mayo 488<br>San Javier, Misiones, Argentina</span></div></li>
         <li><svg><use href="#i-clock"/></svg><div><b>Horario</b><span>Lunes a viernes: 8 a 12 h y 15 a 19 h<br>Sábado y domingo: cerrado</span></div></li>
         <li><svg><use href="#i-phone"/></svg><div><b>WhatsApp</b><a href="${wa('Hola UltraGraf, quiero pedir un presupuesto.')}" target="_blank" rel="noopener" data-loc="contacto">+54 3754 531596</a><br><a href="${wa('Hola UltraGraf, quiero pedir un presupuesto.', WA2)}" target="_blank" rel="noopener" data-loc="contacto-2">+54 3754 469388</a></div></li>
         <li><svg><use href="#i-mail"/></svg><div><b>Correo</b><a href="mailto:ultragraf.carteles24@gmail.com">ultragraf.carteles24@gmail.com</a></div></li>
         <li><svg><use href="#i-ig"/></svg><div><b>Instagram</b><a href="https://www.instagram.com/ultragraf_carteles/" target="_blank" rel="noopener">@ultragraf_carteles</a></div></li>
         <li><svg><use href="#i-fb"/></svg><div><b>Facebook</b><a href="https://www.facebook.com/p/UltraGraf-100033686870263/" target="_blank" rel="noopener">UltraGraf</a></div></li>
-        <li><a class="btn btn-acc" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.+Roque+Gonz%C3%A1lez+43,+San+Javier,+Misiones,+Argentina" target="_blank" rel="noopener">Cómo llegar</a></li>
+        <li><a class="btn btn-acc" href="https://www.google.com/maps/dir/?api=1&amp;destination=25+de+Mayo+488,+San+Javier,+Misiones,+Argentina" target="_blank" rel="noopener">Cómo llegar</a></li>
       </ul>
       <div class="map rv-up">
         <svg class="map-pin"><use href="#i-pin"/></svg>
-        <p>Av. Roque González 43, San Javier, Misiones</p>
+        <p>25 de Mayo 488, San Javier, Misiones</p>
         <button class="btn btn-line" type="button" data-map-load>Abrir mapa</button>
       </div>
     </div>
@@ -280,9 +280,9 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
     <div class="ftr-grid">
       <div>
         <a href="./" class="brand" aria-label="UltraGraf — inicio"><img src="assets/img/logo-blanco.webp" alt="UltraGraf Industria Publicitaria" width="420" height="95" loading="lazy"></a>
-        <p style="margin-top:1rem">UltraGraf · Industria Publicitaria<br>Av. Roque González 43<br>San Javier, Misiones, Argentina</p>
+        <p style="margin-top:1rem">UltraGraf · Industria Publicitaria<br>25 de Mayo 488<br>San Javier, Misiones, Argentina</p>
       </div>
-      <div><h4>Servicios</h4><ul><li><a href="#servicios">Fachadas en ACM</a></li><li><a href="#servicios">Letras corpóreas</a></li><li><a href="#servicios">Neón LED y back light</a></li><li><a href="#servicios">Tótems y carteles de ruta</a></li><li><a href="#servicios">Ploteo vehicular</a></li></ul></div>
+      <div><h4>Servicios</h4><ul><li><a href="fachadas-acm.html">Fachadas en ACM</a></li><li><a href="letras-corporeas.html">Letras corpóreas</a></li><li><a href="totems-acm.html">Tótems y carteles de ruta</a></li><li><a href="ploteo-vehicular.html">Ploteo vehicular</a></li><li><a href="puertas-revestimientos-acm.html">Puertas y revestimientos en ACM</a></li></ul></div>
       <div><h4>Contacto</h4><ul><li><a href="${wa('Hola UltraGraf')}" target="_blank" rel="noopener" data-loc="footer">+54 3754 531596</a></li><li><a href="${wa('Hola UltraGraf', WA2)}" target="_blank" rel="noopener" data-loc="footer-2">+54 3754 469388</a></li><li><a href="mailto:ultragraf.carteles24@gmail.com">ultragraf.carteles24@gmail.com</a></li><li>Lun–Vie · 8–12 h · 15–19 h</li></ul></div>
     </div>
     <div class="ftr-bot">© 2026 UltraGraf · Materializamos tus ideas</div>
