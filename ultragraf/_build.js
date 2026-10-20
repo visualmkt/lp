@@ -48,7 +48,7 @@ const html = `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,800;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=16">
+<link rel="stylesheet" href="assets/site.css?v=18">
 <script>document.documentElement.classList.remove('no-js')</script>
 <script type="application/ld+json">
 {
@@ -105,33 +105,29 @@ const html = `<!DOCTYPE html>
 <div class="cine-ov" aria-hidden="true"></div>
 
 <header class="hdr">
-  <div class="wrap hdr-in">
-    <a href="./" class="brand" aria-label="UltraGraf — inicio"><img src="assets/img/logo-blanco.webp" alt="UltraGraf Industria Publicitaria" width="420" height="95"></a>
-    <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    <nav class="nav" id="nav">
-      <div class="dd">
-        <a href="#servicios" aria-haspopup="true">Servicios</a>
-        <div class="dd-m">
-          <a href="fachadas-acm.html">Fachadas en ACM</a>
-          <a href="letras-corporeas.html">Letras corpóreas</a>
-          <a href="totems-acm.html">Tótems y carteles de ruta</a>
-          <a href="ploteo-vehicular.html">Ploteo vehicular</a>
-          <a href="puertas-revestimientos-acm.html">Puertas y revestimientos en ACM</a>
-        </div>
+  <div class="hdr-top"><a href="./" class="brand" aria-label="UltraGraf — inicio"><img src="assets/img/logo-blanco.webp" alt="UltraGraf Industria Publicitaria" width="420" height="95"></a></div>
+  <nav class="nav hdr-nav" id="nav" aria-label="Principal">
+    <div class="dd">
+      <a href="#servicios" aria-haspopup="true">Servicios</a>
+      <div class="dd-m">
+        <a href="fachadas-acm.html">Fachadas en ACM</a>
+        <a href="letras-corporeas.html">Letras corpóreas</a>
+        <a href="totems-acm.html">Tótems y carteles de ruta</a>
+        <a href="ploteo-vehicular.html">Ploteo vehicular</a>
+        <a href="puertas-revestimientos-acm.html">Puertas y revestimientos en ACM</a>
       </div>
-      <a href="#trabajos">Trabajos</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
+    </div>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
 <main>
 
 <section class="hero" aria-label="Presentación">
+  <h1 class="sr-only">UltraGraf — Materializamos tus ideas</h1>
   <div class="wrap hero-in">
-    <span class="chip"><i></i>Industria publicitaria · San Javier, Misiones</span>
-    <h1>Materializamos <u>tus ideas</u></h1>
     <p class="sub">Transformamos ideas en identidad visual: soluciones integrales en comunicación visual y diseño arquitectónico comercial.</p>
     <div class="hero-ctas">
       <a class="btn btn-acc" href="${wa('Hola UltraGraf, quiero pedir un presupuesto sin cargo.')}" target="_blank" rel="noopener" data-loc="hero">${IWA}Pedí tu presupuesto sin cargo</a>
@@ -142,12 +138,19 @@ const html = `<!DOCTYPE html>
 
 <div class="trust">
   <div class="wrap trust-in">
-    <div class="trust-it"><strong>2016</strong><span>fabricando en Misiones</span></div>
-    <div class="trust-it"><strong>+700 m²</strong><span>de planta de producción</span></div>
-    <div class="trust-it"><strong>Todo el país</strong><span>instalación y colocación</span></div>
-    <div class="trust-it"><strong>$0</strong><span>presupuesto sin cargo</span></div>
+    <div class="ti"><b>Desde 2016</b></div>
+    <div class="ti ti-row"><b class="big">+1000 M²</b><small>de planta<br>de producción</small></div>
+    <div class="ti ti-s"><small>Transporte e instalación</small><b>en todo el NEA</b></div>
+    <div class="ti ti-s"><small>Envíos a</small><b>todo el país</b></div>
+    <div class="ti ti-s"><small>Presupuestos</small><b>sin cargo</b></div>
   </div>
 </div>
+
+<section class="obj" aria-label="Nuestro objetivo">
+  <img src="assets/img/maxs-el-24-fachada-noche-1400.webp" srcset="assets/img/maxs-el-24-fachada-noche-900.webp 900w, assets/img/maxs-el-24-fachada-noche-1400.webp 1400w" sizes="100vw" alt="Fachada de Max's El 24 iluminada de noche, hecha por UltraGraf" loading="lazy" decoding="async" width="1400" height="1050">
+  <h2 class="obj-t rv-up">Un objetivo: hacer que tu empresa se destaque</h2>
+  <div class="obj-band"><span>+10 años evolucionando</span><span>+1000 proyectos realizados</span><span>+1000 marcas impulsadas</span></div>
+</section>
 
 <section class="sec" id="servicios">
   <div class="wrap">
@@ -309,7 +312,7 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="assets/site.js?v=1" defer></script>
+<script src="assets/site.js?v=2" defer></script>
 </body>
 </html>
 `;

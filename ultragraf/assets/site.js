@@ -19,6 +19,15 @@
     });
   }
 
+  var dd = document.querySelector('.dd');
+  if (dd) {
+    var ddLink = dd.querySelector(':scope > a');
+    ddLink.addEventListener('click', function (e) {
+      if (window.matchMedia('(max-width: 900px)').matches && !dd.classList.contains('open')) { e.preventDefault(); dd.classList.add('open'); }
+    });
+    document.addEventListener('click', function (e) { if (!dd.contains(e.target)) dd.classList.remove('open'); });
+  }
+
   document.addEventListener('click', function (e) {
     var a = e.target.closest('a[href*="wa.me"]');
     if (!a) return;
