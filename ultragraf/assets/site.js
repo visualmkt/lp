@@ -39,8 +39,8 @@
     mapBtn.addEventListener('click', function () {
       var box = mapBtn.closest('.map');
       var f = document.createElement('iframe');
-      f.src = 'https://maps.google.com/maps?q=25+de+Mayo+488,+San+Javier,+Misiones,+Argentina&z=16&output=embed';
-      f.title = 'Mapa: UltraGraf, 25 de Mayo 488, San Javier, Misiones';
+      f.src = 'https://maps.google.com/maps?q=Roque+Gonz%C3%A1lez+430,+San+Javier,+Misiones,+Argentina&z=16&output=embed';
+      f.title = 'Mapa: UltraGraf, Roque González 430, San Javier, Misiones';
       f.loading = 'lazy';
       f.referrerPolicy = 'no-referrer-when-downgrade';
       box.appendChild(f);

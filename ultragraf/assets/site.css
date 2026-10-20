@@ -287,3 +287,4 @@ h3{font-family:var(--cond);font-weight:800;font-style:italic;text-transform:uppe
 .hdr .hdr-nav>a,.hdr .hdr-nav .dd>a{font-size:clamp(.74rem,1.34vw,.89rem)}
 .hdr .hdr-nav .dd-m a{font-size:.84rem}
 @media(max-width:900px){.hdr .hdr-nav .dd-m a{font-size:.84rem}}
+.cine-wrap .cine-fallback{object-position:center 50%}

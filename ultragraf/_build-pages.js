@@ -83,7 +83,7 @@ const pages = [
 for (const p of pages) {
   const ld = {
     '@context': 'https://schema.org', '@graph': [
-      { '@type': 'Service', name: p.name, provider: { '@type': 'LocalBusiness', name: 'UltraGraf', telephone: '+54 9 3754 53-1596', address: { '@type': 'PostalAddress', streetAddress: '25 de Mayo 488', addressLocality: 'San Javier', addressRegion: 'Misiones', postalCode: '3357', addressCountry: 'AR' } }, areaServed: 'NEA, Argentina', description: p.desc },
+      { '@type': 'Service', name: p.name, provider: { '@type': 'LocalBusiness', name: 'UltraGraf', telephone: '+54 9 3754 53-1596', address: { '@type': 'PostalAddress', streetAddress: 'Roque González 430', addressLocality: 'San Javier', addressRegion: 'Misiones', postalCode: '3357', addressCountry: 'AR' } }, areaServed: 'NEA, Argentina', description: p.desc },
       { '@type': 'FAQPage', mainEntity: p.faq.map(q => ({ '@type': 'Question', name: q[0], acceptedAnswer: { '@type': 'Answer', text: q[1] } })) },
     ],
   };
