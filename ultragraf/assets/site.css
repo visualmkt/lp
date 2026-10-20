@@ -201,3 +201,8 @@ h3{font-family:var(--cond);font-weight:800;font-style:italic;text-transform:uppe
   .dd-m{position:static;display:block;min-width:0;border:0;box-shadow:none;background:none;padding:0 0 .3rem 1rem}
   .dd-m a{padding:.75rem 0;opacity:.8;font-size:.88rem;white-space:normal;border-bottom:1px solid var(--line)}
 }
+/* hero compacto: altura pelo conteúdo, sem faixa vazia em cima */
+.hero,.hero.sm{min-height:0;align-items:center}
+.hero-in{padding-block:8.5rem 4rem}
+@media(max-width:900px){.hero-in{padding-block:7rem 3rem}}
+@media(min-width:1000px){.trust-in{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:1rem}.trust-it strong{font-size:1.25rem}.trust-it span{font-size:.85rem}}
