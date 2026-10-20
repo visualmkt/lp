@@ -270,3 +270,20 @@ h3{font-family:var(--cond);font-weight:800;font-style:italic;text-transform:uppe
   .hdr .hdr-nav .dd-m{display:none;position:absolute}
   .hdr .hdr-nav .dd.open .dd-m,.hdr .hdr-nav .dd:hover .dd-m,.hdr .hdr-nav .dd:focus-within .dd-m{display:block}
 }
+
+/* menu 30% menor */
+.hdr .hdr-nav{padding:.63rem 12px;gap:.3rem clamp(.7rem,2.8vw,2.2rem)}
+.hdr .hdr-nav>a,.hdr .hdr-nav .dd>a{font-size:clamp(.62rem,1.12vw,.74rem)}
+.hdr .hdr-nav .dd{padding-block:.2rem}
+.hdr .hdr-nav .dd-m a{font-size:.7rem;padding:.5rem .8rem}
+@media(max-width:900px){.hdr .hdr-nav .dd-m a{font-size:.7rem;padding:.6rem 0}}
+/* "Un objetivo": título sobre faixa preta, acima da foto (não cobre o letreiro) */
+.obj .obj-t{position:static;background:#000;padding:clamp(1.2rem,3vw,2rem) 20px clamp(1rem,2.5vw,1.6rem);font-size:clamp(1.05rem,3vw,2.2rem);text-shadow:none}
+.obj img{height:clamp(300px,52vw,620px)}
+.cine-wrap .cine-fallback{object-position:center 30%}
+/* logo -30% e texto do menu +20% */
+.hdr-top{min-height:clamp(68px,11.2vw,120px);padding-block:clamp(.7rem,2.1vw,1.26rem) clamp(.9rem,2.4vw,1.55rem)}
+.hdr .hdr-top .brand img{height:clamp(29px,5.6vw,60px)}
+.hdr .hdr-nav>a,.hdr .hdr-nav .dd>a{font-size:clamp(.74rem,1.34vw,.89rem)}
+.hdr .hdr-nav .dd-m a{font-size:.84rem}
+@media(max-width:900px){.hdr .hdr-nav .dd-m a{font-size:.84rem}}

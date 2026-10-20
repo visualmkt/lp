@@ -19,14 +19,46 @@ const services = [
 ];
 
 const works = [
-  ['optica-centro-fachada-acm-3d', 'Óptica Centro', 'Óptica Centro · fachada ACM 3D'], ['potschka-fachada-noche', 'Fachada de Potschka de noche', 'Potschka · fachada'], ['klein-letra-corporea-roja', 'Letra corpórea de Klein', 'Klein · letra corpórea'],
-  ['velona-letras-3d', 'Letras 3D de Velona Motos', 'Velona Motos · letras 3D'], ['maderera-ruff-fachada-noche', 'Fachada de Maderera Ruff iluminada', 'Maderera Ruff · fachada'], ['la-reina-letra-corporea', 'Letra corpórea La Reina', 'La Reina · letra corpórea'],
-  ['link-combustibles-letra-3d', 'Letra 3D de Link Combustibles', 'Link Combustibles · letra 3D'], ['zielke-logistica-acm-listones', 'Zielke Logística en ACM', 'Zielke Logística · ACM'], ['multipack-letras-noche', 'Letras de Multipack de noche', 'Multipack · letras iluminadas'],
-  ['mabel-letra-luminosa', 'Letra luminosa Mabel', 'Mabel · letra luminosa'], ['wichmann-wellness-totem', 'Tótem de Wichmann Wellness', 'Wichmann Wellness · tótem'], ['agroazul-fachada-noche', 'Fachada de AgroAzul', 'AgroAzul · fachada'],
-  ['legado-joyas-letras-doradas', 'Letras doradas de Legado Joyas', 'Legado Joyas · letras doradas'], ['garavano-fachada-acm', 'Fachada de Garavano', 'Garavano · fachada'], ['energym-letras-led', 'Letras LED de Energym', 'Energym · letras LED'],
-  ['bloome-estetica-letras-piedra', 'Letras de Bloomé Estética sobre piedra', 'Bloomé Estética · letras'], ['concepcion-letras-gigantes', 'Letras gigantes de Concepción', 'Concepción · letras gigantes'], ['truck-center-fachada-noche', 'Fachada de Truck Center', 'Truck Center · fachada'],
-  ['farmacia-central-totem', 'Tótem de Farmacia Central', 'Farmacia Central · tótem'], ['lgh-transporte-letras-backlight', 'Letras back light de LGH Transporte', 'LGH Transporte · back light'], ['rincon-regalos-fachada', 'Fachada de El Rincón de los Regalos', 'El Rincón de los Regalos'],
-  ['befit-letras-backlight', 'Letras back light de Befit', 'Befit · back light'], ['garruchos-letras-gigantes', 'Letras gigantes de Garruchos', 'Garruchos · letras gigantes'], ['lop-optica-totem', 'Tótem de LOP Óptica', 'LOP Óptica · tótem'],
+  ['trabajo-e0632e', "Stand de UltraGraf armado en una exposición, de noche", "UltraGraf · stand en exposición"],
+  ['trabajo-747792', "Armado del stand de UltraGraf con escalera", "UltraGraf · armado del stand"],
+  ['trabajo-5b62ce', "Stand de UltraGraf al atardecer", "UltraGraf · nuestro stand"],
+  ['trabajo-d6c2d5', "Fachada de Maderera Ruff iluminada de noche", "Maderera Ruff"],
+  ['trabajo-7d5017', "Letras de Potschka iluminadas de noche", "Potschka · letras iluminadas"],
+  ['trabajo-aef1bd', "Letras corpóreas de Potschka sobre fachada azul", "Potschka · letras corpóreas"],
+  ['trabajo-597285', "Colocación de las letras de Potschka", "Potschka · colocación"],
+  ['trabajo-ec0fce', "Fachada de Potschka de noche", "Potschka · de noche"],
+  ['trabajo-4db1f7', "Letras corpóreas de Austral II Supermercados", "Austral II"],
+  ['trabajo-e14868', "Letras corpóreas rojas de Austral", "Austral · letras corpóreas"],
+  ['trabajo-4c8e72', "Tótem de Link Combustibles", "Link Combustibles · tótem"],
+  ['trabajo-31c166', "Colocación del tótem de Link Combustibles con camión grúa", "Link Combustibles · colocación"],
+  ['trabajo-219dcb', "Fachada de Vértice Automotores de noche", "Vértice Automotores"],
+  ['trabajo-32baaf', "Letras luminosas de Jireh Automotores", "Jireh Automotores"],
+  ['trabajo-e84dc9', "Fachada de Garavano", "Garavano"],
+  ['trabajo-97b422', "Colocación de un cartel en altura", "Colocación en altura"],
+  ['trabajo-006ac0', "Colocación de letras en la fachada de Industrial Marcos", "Industrial Marcos · colocación"],
+  ['trabajo-1114c3', "Fachada de Industrial Marcos", "Industrial Marcos"],
+  ['trabajo-9eea21', "Colocación de letras corpóreas en fachada industrial", "Letras corpóreas · colocación"],
+  ['trabajo-d5e6b2', "Equipo de UltraGraf en obra, con arneses", "Equipo UltraGraf en obra"],
+  ['trabajo-4c0199', "Equipo de UltraGraf junto al camión", "Equipo UltraGraf"],
+  ['trabajo-b2ebc2', "Camión de UltraGraf con conductor", "Camión UltraGraf"],
+  ['trabajo-e57c39', "Colocación con canasto elevador de UltraGraf", "Colocación con canasto"],
+  ['trabajo-d42989', "Fachada de El Rincón de los Regalos", "El Rincón de los Regalos"],
+  ['trabajo-add726', "Equipo de UltraGraf frente a El Rincón de los Regalos", "El Rincón de los Regalos · equipo"],
+  ['trabajo-f677a0', "Fachada de Max's El 24 de noche con luces lineales", "Max's El 24"],
+  ['trabajo-2e6d27', "Colocación del cartel de Reich Motos con camión grúa", "Reich Motos"],
+  ['trabajo-e9ed20', "Fachada de Farmacia Miyoko con camión grúa", "Farmacia Miyoko"],
+  ['trabajo-d80bd9', "Interior comercial con revestimiento", "Interior comercial"],
+  ['trabajo-8526de', "Cartel luminoso de Spike sobre pared de ladrillo", "Spike"],
+  ['trabajo-a7b06d', "Fachada de Supermercados Don Gustavo con camiones", "Don Gustavo"],
+  ['trabajo-1a458a', "Letras de Supermercados Don Gustavo de noche", "Don Gustavo · de noche"],
+  ['trabajo-b3b81a', "Colocación de un cartel azul en fachada", "Colocación de cartel"],
+  ['trabajo-f7f0ca', "Letras luminosas de Multipack Descartables de noche", "Multipack"],
+  ['trabajo-296e7f', "Fachada de Óptica Centro en ACM 3D", "Óptica Centro · ACM 3D"],
+  ['trabajo-a789c4', "Equipo de UltraGraf frente a una fachada de Imagen", "Imagen · equipo"],
+  ['trabajo-3221b0', "Colocación de letras CAME", "Colocación · CAME"],
+  ['trabajo-002fbc', "Letras corpóreas CAME en colocación", "Letras CAME"],
+  ['trabajo-314889', "Fachada de La Ganchera con camión grúa", "La Ganchera"],
+  ['trabajo-5a629a', "Letras rojas de La Ganchera", "La Ganchera · letras"],
 ];
 const cols = [[], [], []]; works.forEach((w, i) => cols[i % 3].push(img(w[0], w[1], w[2], 'pf-it' + (i % 2 ? ' wide' : ''))));
 
@@ -48,7 +80,7 @@ const html = `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,800;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=18">
+<link rel="stylesheet" href="assets/site.css?v=21">
 <script>document.documentElement.classList.remove('no-js')</script>
 <script type="application/ld+json">
 {
@@ -99,7 +131,7 @@ const html = `<!DOCTYPE html>
 </svg>
 
 <div class="cine-wrap" aria-hidden="true">
-  <picture><source media="(min-width:900px)" srcset="assets/img/fondo-desk.webp"><img class="cine-fallback" src="assets/img/fondo.webp" alt="" fetchpriority="high" decoding="async"></picture>
+  <picture><source media="(min-width:900px)" srcset="assets/img/fondo-hero-desk.webp"><img class="cine-fallback" src="assets/img/fondo-hero.webp" alt="" fetchpriority="high" decoding="async"></picture>
   <video id="bgVideo" muted playsinline preload="metadata" tabindex="-1" data-src-m="assets/video/fundo-scrub-inv.mp4" data-src-d="assets/video/fundo-desk-inv.mp4"></video>
 </div>
 <div class="cine-ov" aria-hidden="true"></div>
@@ -147,8 +179,8 @@ const html = `<!DOCTYPE html>
 </div>
 
 <section class="obj" aria-label="Nuestro objetivo">
-  <img src="assets/img/maxs-el-24-fachada-noche-1400.webp" srcset="assets/img/maxs-el-24-fachada-noche-900.webp 900w, assets/img/maxs-el-24-fachada-noche-1400.webp 1400w" sizes="100vw" alt="Fachada de Max's El 24 iluminada de noche, hecha por UltraGraf" loading="lazy" decoding="async" width="1400" height="1050">
-  <h2 class="obj-t rv-up">Un objetivo: hacer que tu empresa se destaque</h2>
+    <h2 class="obj-t rv-up">Un objetivo: hacer que tu empresa se destaque</h2>
+<img src="assets/img/maxs-el-24-fachada-noche-1400.webp" srcset="assets/img/maxs-el-24-fachada-noche-900.webp 900w, assets/img/maxs-el-24-fachada-noche-1400.webp 1400w" sizes="100vw" alt="Fachada de Max's El 24 iluminada de noche, hecha por UltraGraf" loading="lazy" decoding="async" width="1400" height="1050">
   <div class="obj-band"><span>+10 años evolucionando</span><span>+1000 proyectos realizados</span><span>+1000 marcas impulsadas</span></div>
 </section>
 
@@ -221,7 +253,7 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
 
 <section class="sec" id="nea" style="padding-top:0;padding-bottom:clamp(2rem,4vw,3rem)">
   <div class="wrap">
-    <div class="nea rv-up">${'<svg><use href="#i-truck"/></svg>'}<div><b>Transporte y colocación en todo el NEA. Instalamos en todo el país.</b><span>Escribinos desde dónde sos y vemos cómo llegar con tu proyecto.</span></div></div>
+    <div class="nea rv-up">${'<svg><use href="#i-truck"/></svg>'}<div><b>Transporte y colocación en todo el NEA. Envíos a todo el país.</b><span>Escribinos desde dónde sos y vemos cómo llegar con tu proyecto.</span></div></div>
   </div>
 </section>
 
