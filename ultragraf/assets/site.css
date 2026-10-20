@@ -226,3 +226,11 @@ h3{font-family:var(--cond);font-weight:800;font-style:italic;text-transform:uppe
 .vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:1.25rem;margin-top:2.5rem}
 .val{background:rgba(1,1,1,.78);backdrop-filter:blur(8px);border:1px solid var(--line);border-top:3px solid var(--yel);padding:1.4rem}
 .val p{color:#bdbdb8;margin-top:.5rem;font-size:1rem}
+
+.mvv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.2rem,3vw,2.5rem);background:rgba(1,1,1,.8);backdrop-filter:blur(10px);border:1px solid var(--line);padding:clamp(1.5rem,4vw,3rem)}
+.mvv-it{text-align:center}
+.mvv-ic{width:44px;height:44px;margin:0 auto .8rem;color:var(--yel)}
+.mvv-ic svg{width:100%;height:100%}
+.mvv-it h2{font-size:clamp(1.4rem,3vw,2.2rem);margin-bottom:1rem}
+.mvv-it p{text-align:justify;hyphens:auto;color:#d6d6d1;font-size:1rem;line-height:1.6}
+@media(max-width:900px){.mvv{grid-template-columns:minmax(0,1fr)}}

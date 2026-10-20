@@ -48,7 +48,7 @@ const html = `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,800;1,800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=14">
+<link rel="stylesheet" href="assets/site.css?v=15">
 <script>document.documentElement.classList.remove('no-js')</script>
 <script type="application/ld+json">
 {
@@ -187,10 +187,6 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
       <div class="sec-num rv-up"><b>03</b>Quiénes somos</div>
       <h2 class="rv-up">Una fábrica joven<br>con equipo propio.</h2>
       <p class="lead rv-up">En ULTRAGRAF somos una empresa joven y dinámica, fundada en 2016, dedicada a ofrecer soluciones integrales en comunicación visual y diseño arquitectónico comercial.</p>
-      <div class="mv">
-        <div class="rv-up"><h3>Misión</h3><p>En ULTRAGRAF, transformamos ideas en identidad visual. Nos dedicamos a la fabricación de fachadas comerciales en ACM y ACM 3D, letras corpóreas e impresiones de alta calidad, ofreciendo soluciones creativas, duraderas y funcionales que realzan la imagen de cada marca. Nuestro compromiso es acompañar a nuestros clientes con innovación, precisión y diseño, para que cada proyecto refleje su esencia y genere impacto visual.</p></div>
-        <div class="rv-up"><h3>Visión</h3><p>Ser una empresa referente en comunicación visual y diseño de fachadas a nivel nacional, reconocida por nuestra calidad, creatividad y atención personalizada. En ULTRAGRAF, aspiramos a seguir creciendo como un equipo joven, dinámico y apasionado, que impulsa el desarrollo visual de las marcas mediante tecnología, diseño y excelencia en cada detalle.</p></div>
-      </div>
     </div>
     <div class="about-img">
       ${img('equipo-ultragraf', 'Equipo de UltraGraf en la planta de producción', '', 'rv-up', SZ.ab)}
@@ -198,15 +194,24 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
   </div>
 </section>
 
-<section class="sec" id="valores" style="padding-top:0">
+<section class="sec" id="mvv" lang="pt-BR" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-num rv-up"><b>04</b>Nuestros valores</div>
-    <h2 class="rv-up">Cómo trabajamos<br>cada proyecto.</h2>
-    <div class="vals">
-      <div class="val rv-up"><h3>Calidad</h3><p>Mantener altos estándares de calidad en cada proyecto realizado.</p></div>
-      <div class="val rv-up"><h3>Responsabilidad</h3><p>Cumplir con responsabilidad y eficiencia, asegurando entregas en tiempo y forma.</p></div>
-      <div class="val rv-up"><h3>Innovación</h3><p>Innovar constantemente en diseños, tendencias y procesos, para brindar propuestas creativas y diferenciales.</p></div>
-      <div class="val rv-up"><h3>Confianza</h3><p>Construir relaciones sólidas y duraderas con nuestros clientes, basadas en la confianza, la seguridad y el compromiso mutuo.</p></div>
+    <div class="mvv">
+      <div class="mvv-it rv-up">
+        <div class="mvv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div>
+        <h2>Missão</h2>
+        <p>Desenvolver projetos que encantem os clientes em cada detalhe, superando expectativas com criatividade e precisão. A qualidade de nosso trabalho e a satisfação do cliente são nossos maiores diferenciais, impulsionando indicações e consolidando nossa reputação no mercado.</p>
+      </div>
+      <div class="mvv-it rv-up">
+        <div class="mvv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg></div>
+        <h2>Visão</h2>
+        <p>Conquistar a plena confiança de nossos clientes, oferecendo a certeza de uma empresa comprometida com a excelência. Contamos com uma equipe altamente qualificada, dedicada a atender com precisão e eficiência as necessidades de cada projeto, reforçando nosso compromisso com resultados de alto padrão.</p>
+      </div>
+      <div class="mvv-it rv-up">
+        <div class="mvv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v3a2 2 0 1 0 0 4v3h-3a2 2 0 1 1-4 0H4V9h3a2 2 0 1 0 3-3z"/><path d="M14 13h3a2 2 0 1 1 0 4h-3z"/></svg></div>
+        <h2>Valores</h2>
+        <p>Nosso comprometimento com a qualidade, responsabilidade em cada etapa do processo, e modernidade nas soluções que oferecemos. Cultivamos a confiança mútua com nossos clientes e parceiros, baseando nossas ações no respeito, que guia todas as nossas relações e decisões.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -219,7 +224,7 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
 
 <section class="sec" id="faq" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-num rv-up"><b>05</b>Preguntas frecuentes</div>
+    <div class="sec-num rv-up"><b>04</b>Preguntas frecuentes</div>
     <h2 class="rv-up">Antes de escribirnos.</h2>
     <div class="faq">
       <details><summary>¿El presupuesto tiene costo?</summary><p>No. Los presupuestos son sin cargo, y hacemos visitas con atención personalizada.</p></details>
@@ -239,7 +244,7 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
 
 <section class="sec" id="contacto">
   <div class="wrap">
-    <div class="sec-num rv-up"><b>06</b>Contacto</div>
+    <div class="sec-num rv-up"><b>05</b>Contacto</div>
     <h2 class="rv-up">Escribinos<br>o pasá por la planta.</h2>
     <div class="ct-grid">
       <ul class="ct-list rv-up">
@@ -263,7 +268,7 @@ ${cols.map((c, i) => `      <div class="pf-col" data-parallax="${[6, -6, 4][i]}"
 <section class="sec" id="presupuesto">
   <div class="wrap cta-grid">
     <div>
-      <div class="sec-num rv-up"><b>07</b>Presupuesto</div>
+      <div class="sec-num rv-up"><b>06</b>Presupuesto</div>
       <h2 class="rv-up">Contanos tu idea.</h2>
       <p class="lead rv-up">Completá los datos y la conversación se abre en WhatsApp con todo escrito. Si preferís, mandanos directo fotos y medidas.</p>
       <a class="btn btn-acc" style="margin-top:1.6rem" href="${wa('Hola UltraGraf, quiero pedir un presupuesto sin cargo.')}" target="_blank" rel="noopener" data-loc="cta-final">${IWA}Hablar con UltraGraf</a>
