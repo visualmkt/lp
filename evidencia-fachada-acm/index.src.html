@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESC}}">
+  <meta name="theme-color" content="#EA0A0A">
+  <link rel="canonical" href="https://graficaevidencia.com/fachada-acm/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESC}}">
+  <meta property="og:url" content="https://graficaevidencia.com/fachada-acm/">
+  <meta property="og:image" content="{{LOGO}}">
+
+  <script type="application/ld+json">{{SCHEMA}}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body { font-family: 'Barlow', sans-serif; background: #111111; }
+    .wha-pulse { animation: wha-pulse 2.5s infinite; }
+    @keyframes wha-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,.45); }
+      60%       { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    }
+    .dashline { height: 1px; background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 0 10px); opacity: .2; }
+    .hero-glow { background: radial-gradient(ellipse at 70% 30%, rgba(234,10,10,.28) 0%, transparent 65%); }
+  </style>
+</head>
+
+<body class="bg-white text-dark font-body antialiased">
+
+<div id="app" class="min-h-screen">{{STATIC}}</div>
+
+<noscript>
+  <p style="text-align:center;padding:20px;font-family:sans-serif;">{{NOSCRIPT}}</p>
+</noscript>
+
+<script>
+const ICONS = {{ICONS}};
+const BAKED = {{CONFIG}};
+</script>
+<script>
+{{RENDER}}
+</script>
+<script>
+// ── CONFIG (Opção B: config.json no GitHub via jsDelivr; fallback statically; 2 tentativas, timeout 4s) ──
+const CONFIG_SOURCES = [
+  'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-fachada-acm/config.json',
+  'https://cdn.statically.io/gh/visualmkt/lp/main/evidencia-fachada-acm/config.json',
+];
+async function loadConfig() {
+  for (const base of CONFIG_SOURCES) {
+    for (let i = 0; i < 2; i++) {
+      try {
+        const ctrl = new AbortController();
+        const to = setTimeout(() => ctrl.abort(), 4000);
+        const r = await fetch(base + '?t=' + Date.now(), { cache: 'no-store', signal: ctrl.signal });
+        clearTimeout(to);
+        if (r.ok) return await r.json();
+      } catch (e) {}
+    }
+  }
+  return null;
+}
+
+// ── TRACKING (vem do config embutido: carrega na hora, sem esperar CDN) ──
+function injectTracking(t) {
+  if (!t) return;
+  window.dataLayer = window.dataLayer || [];
+  if (t.gtm) {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',t.gtm);
+    const ns=document.createElement('noscript');
+    ns.innerHTML='<iframe src="https://www.googletagmanager.com/ns.html?id='+t.gtm+'" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+    document.body.insertBefore(ns, document.body.firstChild);
+  }
+  if (t.gtag) {
+    const ids = Array.isArray(t.gtag) ? t.gtag : [t.gtag];
+    const s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ids[0];
+    document.head.appendChild(s);
+    window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); ids.forEach(id => gtag('config', id));
+  }
+  if (t.metaPixel) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', t.metaPixel); fbq('track', 'PageView');
+  }
+}
+
+// ── EVENTOS (delegação: continua valendo se a página for re-renderizada) ──
+document.addEventListener('click', function (e) {
+  var el = e.target.closest ? e.target.closest('[data-action="whatsapp"]') : null;
+  if (el && window.dataLayer) dataLayer.push({ event: 'whatsapp_click', location: el.dataset.location || 'unknown' });
+});
+
+injectTracking(BAKED.tracking);
+
+// Conteúdo editável: se o config.json do GitHub for diferente do embutido, re-renderiza.
+(async function () {
+  const c = await loadConfig();
+  if (c && JSON.stringify(c) !== JSON.stringify(BAKED)) {
+    try { document.getElementById('app').innerHTML = renderAll(c, ICONS); } catch (e) {}
+  }
+})();
+</script>
+</body>
+</html>
