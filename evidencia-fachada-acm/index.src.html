@@ -6,12 +6,20 @@
   <title>{{TITLE}}</title>
   <meta name="description" content="{{DESC}}">
   <meta name="theme-color" content="#EA0A0A">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="geo.region" content="BR-PA">
+  <meta name="geo.placename" content="Ipixuna do Pará">
   <link rel="canonical" href="https://graficaevidencia.com/fachada-acm/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{TITLE}}">
   <meta property="og:description" content="{{DESC}}">
   <meta property="og:url" content="https://graficaevidencia.com/fachada-acm/">
-  <meta property="og:image" content="{{LOGO}}">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Gráfica Evidência">
+  <meta property="og:image" content="https://graficaevidencia.com/fachada-acm/hero-fachada.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">{{SCHEMA}}</script>
 
@@ -28,6 +36,11 @@
       60%       { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
     }
     .dashline { height: 1px; background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 0 10px); opacity: .2; }
+    .hero-text h1, .hero-text p { text-shadow: 0 2px 18px rgba(0,0,0,.7); }
+    details summary { list-style: none; cursor: pointer; user-select: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform .25s ease; }
     .hero-glow { background: radial-gradient(ellipse at 70% 30%, rgba(234,10,10,.28) 0%, transparent 65%); }
   </style>
 </head>

@@ -23,10 +23,13 @@ function renderAll(c, ICONS) {
     '      </div>\n    </div>\n  </header>';
 
   var hero = '\n  <section class="relative flex items-center text-white pt-20 overflow-hidden bg-dark" style="min-height:92vh">\n' +
-    '    <div class="absolute inset-0 bg-dark"></div>\n    <div class="hero-glow absolute inset-0"></div>\n' +
-    '    <div class="relative max-w-5xl mx-auto px-4 py-14 md:py-24 text-center">\n' +
+    (h.bgImage
+      ? '    <img src="' + h.bgImage + '" alt="" width="1200" height="900" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" decoding="async">\n    <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/70 to-dark/85"></div>\n'
+      : '    <div class="absolute inset-0 bg-dark"></div>\n') +
+    '    <div class="hero-glow absolute inset-0"></div>\n' +
+    '    <div class="relative max-w-5xl mx-auto px-4 py-14 md:py-24 text-center hero-text">\n' +
     '      <div class="inline-flex items-center gap-2 border border-brand/60 bg-brand/15 text-gold px-4 py-2 rounded-full text-sm font-body font-semibold mb-8">' + icon('ruler-combined', 'text-gold text-xs') + h.badge + '</div>\n' +
-    '      <h1 class="font-title font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-6">' + h.h1Pre + '<br><span class="text-brand">' + h.h1Highlight + '</span></h1>\n' +
+    '      <h1 class="font-title font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-6">' + h.h1Pre + '<br><span class="' + (h.bgImage ? 'text-gold' : 'text-brand') + '">' + h.h1Highlight + '</span></h1>\n' +
     '      <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-body leading-relaxed">' + h.subtitle + '</p>\n' +
     '      <div class="flex flex-wrap items-center justify-center gap-4 mb-10 text-white/80 text-sm font-body">\n' +
     '        <span class="inline-flex items-center gap-1.5">' + icon('whatsapp', 'text-gold text-xs') + 'Orçamento pelo WhatsApp</span>\n' +
@@ -40,6 +43,28 @@ function renderAll(c, ICONS) {
     c.trust.map(function (t) {
       return '\n        <div class="flex flex-col items-center text-center p-4">\n          <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center mb-3 bg-brand/10">' + icon(t.icon, 'text-xl md:text-2xl text-brand') + '</div>\n' +
         '          <p class="font-title font-semibold text-sm md:text-base tracking-tight leading-tight text-dark">' + t.title + '</p>\n          <p class="text-slate-500 text-xs mt-0.5 font-body">' + t.subtitle + '</p>\n        </div>';
+    }).join('') + '\n      </div>\n    </div>\n  </section>';
+
+  var an = c.answer;
+  var answer = '\n  <section id="resposta" class="py-12 md:py-16 bg-white border-b border-slate-100">\n    <div class="max-w-3xl mx-auto px-4 text-center">\n' +
+    '      <p class="text-dark font-body text-lg md:text-xl leading-relaxed">' + an.text + '</p>\n    </div>\n  </section>';
+
+  var ab = c.about;
+  var about = '\n  <section id="o-que-e" class="py-20 md:py-24 bg-slate-50">\n    <div class="max-w-3xl mx-auto px-4">\n' +
+    '      <span class="text-brand font-title font-semibold text-xs uppercase tracking-[.15em]">' + ab.kicker + '</span>\n' +
+    '      <h2 class="font-title font-semibold text-3xl md:text-4xl leading-snug tracking-tight text-dark mt-2 mb-6">' + ab.title + '</h2>\n' +
+    ab.paragraphs.map(function (p) { return '      <p class="text-slate-600 font-body text-lg leading-relaxed mb-4">' + p + '</p>\n'; }).join('') +
+    '    </div>\n  </section>';
+
+  var fq = c.faq;
+  var faq = '\n  <section id="perguntas" class="py-20 md:py-28 bg-slate-50">\n    <div class="max-w-3xl mx-auto px-4">\n' +
+    '      <div class="text-center mb-10">\n        <span class="text-brand font-title font-semibold text-xs uppercase tracking-[.15em]">' + fq.kicker + '</span>\n' +
+    '        <h2 class="font-title font-semibold text-3xl md:text-4xl leading-snug tracking-tight text-dark mt-2">' + fq.title + '</h2>\n      </div>\n' +
+    '      <div class="space-y-3">' +
+    fq.items.map(function (f, i) {
+      return '\n        <details class="border border-slate-200 rounded-2xl overflow-hidden group bg-white"' + (i === 0 ? ' open' : '') + '>\n' +
+        '          <summary class="flex items-center justify-between gap-4 p-5 md:p-6"><h3 class="font-body font-semibold text-base md:text-lg text-dark">' + f.q + '</h3>' + icon('chevron-down', 'text-brand shrink-0 faq-chevron') + '</summary>\n' +
+        '          <div class="px-5 md:px-6 pb-5 md:pb-6 text-slate-600 font-body text-sm md:text-base leading-relaxed border-t border-slate-100 pt-4">' + f.a + '</div>\n        </details>';
     }).join('') + '\n      </div>\n    </div>\n  </section>';
 
   var s = c.services;
@@ -85,7 +110,10 @@ function renderAll(c, ICONS) {
     '      <span class="text-brand font-title font-semibold text-xs uppercase tracking-[.15em]">' + r.kicker + '</span>\n' +
     '      <h2 class="font-title font-semibold text-3xl md:text-4xl leading-snug tracking-tight text-dark mt-2 mb-4">' + r.title + '</h2>\n' +
     '      <p class="text-slate-600 font-body max-w-2xl mx-auto mb-8">' + r.text + '</p>\n' +
-    '      <div class="flex flex-wrap justify-center gap-3">' + r.cities.map(function (x) { return '<span class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-5 py-2 text-sm font-semibold text-dark font-body">' + icon('location-dot', 'text-brand') + x + '</span>'; }).join('') + '</div>\n    </div>\n  </section>';
+    '      <div class="flex flex-wrap justify-center gap-3 mb-10">' + r.cities.map(function (x) { return '<span class="inline-flex items-center gap-2 bg-white border border-slate-200 rounded-full px-5 py-2 text-sm font-semibold text-dark font-body">' + icon('location-dot', 'text-brand') + x + '</span>'; }).join('') + '</div>\n' +
+    '      <address class="not-italic text-slate-600 font-body mb-1">' + c.footer.address + '</address>\n' +
+    '      <p class="text-slate-600 font-body mb-5">' + c.footer.hours + '</p>\n' +
+    '      <a href="' + c.address.mapsUrl + '" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-slate-300 bg-white hover:bg-slate-100 text-dark font-body font-semibold text-sm px-6 py-3 rounded-full transition">' + icon('map-location-dot', 'text-brand') + 'Ver no Google Maps</a>\n    </div>\n  </section>';
 
   var ct = c.ctaFinal;
   var cta = '\n  <section class="py-20 md:py-28 bg-brand text-white text-center">\n    <div class="max-w-3xl mx-auto px-4">\n' +
@@ -108,5 +136,5 @@ function renderAll(c, ICONS) {
 
   var floating = '\n  <a href="' + wa() + '" target="_blank" rel="noopener noreferrer" data-action="whatsapp" data-location="flutuante" aria-label="Pedir orçamento pelo WhatsApp" class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-body font-semibold py-3 px-4 sm:px-5 rounded-full shadow-2xl wha-pulse transition-all hover:scale-105">' + icon('whatsapp', 'text-2xl') + '<span class="hidden sm:inline text-sm">Orçamento pelo WhatsApp</span></a>';
 
-  return header + hero + trust + services + works + gallery + steps + region + cta + footer + floating;
+  return header + '\n  <main>' + hero + answer + trust + about + services + works + gallery + steps + faq + region + cta + '\n  </main>' + footer + floating;
 }

@@ -19,12 +19,28 @@ const TW = 'c:/dev/ebg-build/node_modules/tailwindcss/lib/cli.js';
     await sharp('c:/lp/evidencia-letreiro/empresa-producao.webp').resize({ width: 1200 }).webp({ quality: 78 }).toFile(`${D}/${c.gallery.image}`);
   }
 
+  const BASE = 'https://graficaevidencia.com';
+  const URL_ = `${BASE}/fachada-acm/`;
   const schema = {
-    '@context': 'https://schema.org', '@type': 'LocalBusiness', name: c.footer.name, url: 'https://graficaevidencia.com/fachada-acm/',
-    telephone: c.contact.phoneTel, image: c.brand.logo, description: c.meta.description,
-    address: { '@type': 'PostalAddress', streetAddress: c.address.street, addressLocality: c.address.city, addressRegion: c.address.state, addressCountry: 'BR' },
-    openingHours: c.address.schemaHours, areaServed: c.address.areaServed,
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'LocalBusiness', '@id': `${BASE}/#empresa`, name: c.footer.name, url: BASE + '/',
+        telephone: c.contact.phoneTel, image: c.brand.logo, logo: c.brand.logo,
+        description: 'Gráfica e empresa de comunicação visual de Ipixuna do Pará (PA), com fabricação sob medida de fachada em ACM, painel em ACM e placas para fachada de loja.',
+        address: { '@type': 'PostalAddress', streetAddress: c.address.street, addressLocality: c.address.city, addressRegion: c.address.state, addressCountry: 'BR' },
+        openingHours: c.address.schemaHours, areaServed: c.address.areaServed, hasMap: c.address.mapsUrl,
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog', name: 'Fachada em ACM',
+          itemListElement: c.services.items.map(it => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: it.title, description: it.desc, areaServed: c.address.areaServed, provider: { '@id': `${BASE}/#empresa` } } })),
+        },
+      },
+      { '@type': 'WebPage', '@id': `${URL_}#pagina`, url: URL_, name: c.meta.title, description: c.meta.description, inLanguage: 'pt-BR', about: { '@id': `${BASE}/#empresa` }, primaryImageOfPage: `${URL_}hero-fachada.webp` },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Gráfica Evidência', item: BASE + '/' }, { '@type': 'ListItem', position: 2, name: 'Fachada em ACM', item: URL_ }] },
+      { '@type': 'FAQPage', mainEntity: c.faq.items.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+    ],
   };
+  JSON.parse(JSON.stringify(schema));
   const noscript = `${c.footer.name} — ${c.footer.address} — ${c.footer.hours} — WhatsApp: ${c.contact.phoneDisplay}`;
   const rep = { TITLE: c.meta.title, DESC: c.meta.description, LOGO: c.brand.logo, SCHEMA: JSON.stringify(schema), STATIC: staticHtml, NOSCRIPT: noscript, ICONS: JSON.stringify(ICONS), CONFIG: JSON.stringify(c), RENDER: renderJs };
   let html = fs.readFileSync(`${D}/index.src.html`, 'utf8');
@@ -48,7 +64,7 @@ const TW = 'c:/dev/ebg-build/node_modules/tailwindcss/lib/cli.js';
   const have = new Set();
   for (const m of css.matchAll(/\.((?:\\[0-9a-fA-F]{1,6} ?|\\.|[A-Za-z0-9_-])+)/g)) have.add(m[1].replace(/\\([0-9a-fA-F]{1,6}) ?/g, (_, h) => String.fromCodePoint(parseInt(h, 16))).replace(/\\(.)/g, '$1'));
   const inline = (html.match(/<style[\s\S]*?<\/style>/) || [''])[0];
-  const missing = [...classes].filter(x => x !== 'inline-svg' && !have.has(x) && !new RegExp('\\.' + x.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&') + '(?![\\w-])').test(inline));
+  const missing = [...classes].filter(x => !['inline-svg', 'group'].includes(x) && !have.has(x) && !new RegExp('\\.' + x.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&') + '(?![\\w-])').test(inline));
 
   // copy proibida (texto visível + config + meta)
   const visible = (staticHtml + ' ' + JSON.stringify(c)).replace(/<[^>]*>/g, ' ');
