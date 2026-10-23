@@ -124,7 +124,7 @@
                     </a>
                     <p class="text-slate-300 text-xs mt-3 text-center md:text-left">O WhatsApp abre com a mensagem pronta. É só completar o nome da sua empresa.</p>
 
-                    <div id="lead-box" class="mt-8" hidden>
+                    <div id="lead-box" class="mt-8" >
                         <details class="bg-white/10 border border-white/20 rounded-2xl p-5 group text-left">
                             <summary class="cursor-pointer font-semibold text-white flex justify-between items-center list-none">
                                 Prefere deixar seus dados? (opcional)
@@ -334,7 +334,7 @@
 
     <script>
         (function () {
-            var ENDPOINT = '';
+            var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwrVOL7iWsU9UW1LeXn3kTG5GDkul0CifUa0uo8nfOWTuj6s_dAFB3koID7_hmyLGVGsA/exec';
             var box = document.getElementById('lead-box');
             var form = document.getElementById('lead-form');
             if (!ENDPOINT) { if (box) box.hidden = true; return; }
