@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Demo — página de conversão para personal trainer</title>
+  <meta name="description" content="Demonstração fictícia de uma página de conversão para personal trainers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#12233d; --paper:#f5f8fc; --blue:#2456d6; --blue-deep:#17388c; --orange:#ff7543; --line:#d8e1ee; --mint:#d9f4e7; --radius:18px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"DM Sans",sans-serif; line-height:1.5; }
+    a { color:inherit; }
+    .notice { background:var(--ink); color:#fff; padding:9px 18px; text-align:center; font:600 12px/1.2 "IBM Plex Mono",monospace; letter-spacing:.04em; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:22px 0; }
+    .brand { display:flex; gap:10px; align-items:center; font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:20px; letter-spacing:-.04em; }
+    .brand-mark { width:28px; height:28px; border-radius:9px 9px 2px 9px; background:var(--orange); transform:rotate(-14deg); }
+    .eyebrow { color:var(--blue); font:600 12px/1.2 "IBM Plex Mono",monospace; letter-spacing:.09em; text-transform:uppercase; }
+    .top-link { font-size:14px; font-weight:700; text-decoration:none; border-bottom:2px solid var(--orange); }
+    .hero { display:grid; grid-template-columns:1.05fr .95fr; gap:54px; align-items:center; padding:66px 0 76px; }
+    h1,h2,h3,p { margin-top:0; }
+    h1,h2,h3 { font-family:"Bricolage Grotesque",sans-serif; letter-spacing:-.055em; line-height:.98; }
+    h1 { font-size:clamp(46px,7.2vw,86px); max-width:760px; margin:16px 0 25px; }
+    .accent { color:var(--blue); }
+    .hero-copy { font-size:19px; max-width:590px; color:#40516c; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:29px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:51px; padding:0 22px; border:0; border-radius:13px; text-decoration:none; font-weight:800; cursor:pointer; }
+    .button-primary { background:var(--blue); color:#fff; box-shadow:5px 5px 0 var(--blue-deep); }
+    .button-primary:hover { transform:translate(2px,2px); box-shadow:3px 3px 0 var(--blue-deep); }
+    .button-secondary { background:#fff; border:1px solid var(--line); }
+    .agenda { background:#fff; border:1px solid var(--line); padding:22px; border-radius:var(--radius); box-shadow:10px 12px 0 #dce6f7; }
+    .agenda-header { display:flex; justify-content:space-between; align-items:start; gap:12px; border-bottom:1px solid var(--line); padding-bottom:18px; }
+    .agenda-title { font:700 19px/1.1 "Bricolage Grotesque",sans-serif; }
+    .pill { background:var(--mint); color:#146342; border-radius:999px; padding:5px 9px; font:600 11px/1 "IBM Plex Mono",monospace; white-space:nowrap; }
+    .days { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin:20px 0 14px; }
+    .day { padding:11px 8px; border:1px solid var(--line); border-radius:12px; text-align:center; font-size:12px; }
+    .day strong { display:block; font:700 21px/1 "Bricolage Grotesque",sans-serif; margin-top:5px; }
+    .slot { display:flex; gap:10px; align-items:center; padding:11px 0; border-top:1px solid var(--line); font-size:14px; }
+    .dot { width:9px; height:9px; border-radius:50%; background:var(--orange); flex:0 0 auto; }
+    .dot.blue { background:var(--blue); }
+    .answer { border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#eaf0fb; }
+    .answer p { max-width:900px; padding:24px 0; margin:0; font-size:16px; }
+    section { padding:88px 0; }
+    .section-head { max-width:670px; margin-bottom:38px; }
+    h2 { font-size:clamp(34px,4.4vw,57px); margin:12px 0 18px; }
+    .section-head p { color:#53637c; font-size:18px; }
+    .routes { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .route { padding:24px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); }
+    .route b { display:block; font:700 24px/1.05 "Bricolage Grotesque",sans-serif; margin:12px 0 9px; }
+    .route span { color:#607088; font-size:15px; }
+    .route-icon { width:34px; height:34px; border-radius:10px; background:var(--mint); display:grid; place-items:center; color:#146342; font-weight:900; }
+    .process { background:var(--ink); color:#fff; }
+    .process .eyebrow { color:#aebff7; }
+    .process .section-head p { color:#c9d3e5; }
+    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#3a4b66; }
+    .step { background:var(--ink); padding:29px; min-height:210px; }
+    .step-number { color:var(--orange); font:600 12px/1 "IBM Plex Mono",monospace; }
+    .step h3 { font-size:29px; margin:18px 0 10px; }
+    .step p { color:#c9d3e5; margin-bottom:0; }
+    .scope { display:grid; grid-template-columns:.8fr 1.2fr; gap:38px; align-items:start; }
+    .scope-card { background:var(--blue); color:#fff; padding:30px; border-radius:var(--radius); position:sticky; top:16px; }
+    .scope-card h3 { font-size:38px; margin:12px 0; }
+    .scope-card p { color:#dce6ff; }
+    .check-list { list-style:none; padding:0; margin:0; display:grid; gap:14px; }
+    .check-list li { padding:16px 0 16px 38px; position:relative; border-bottom:1px solid var(--line); font-size:17px; }
+    .check-list li:before { content:""; position:absolute; left:0; top:21px; width:20px; height:10px; border-left:3px solid var(--orange); border-bottom:3px solid var(--orange); transform:rotate(-45deg); }
+    .faq { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+    details { background:#fff; border:1px solid var(--line); border-radius:14px; padding:19px 20px; }
+    summary { cursor:pointer; font-weight:800; padding-right:18px; }
+    details p { color:#5d6b80; margin:15px 0 0; }
+    .final { padding:62px 0; }
+    .final-panel { background:var(--orange); padding:42px; border-radius:var(--radius); display:flex; justify-content:space-between; gap:28px; align-items:end; }
+    .final-panel h2 { font-size:clamp(39px,5vw,63px); margin:11px 0 0; max-width:720px; }
+    .final-panel .button { background:var(--ink); color:#fff; white-space:nowrap; }
+    footer { padding:28px 0 42px; color:#65748b; font-size:13px; display:flex; justify-content:space-between; gap:16px; border-top:1px solid var(--line); }
+    .demo-form { display:none; margin-top:20px; padding:18px; background:#fff; border:1px solid var(--line); border-radius:12px; }
+    .demo-form.show { display:block; }
+    .demo-form p { margin:0; color:#53637c; }
+    @media (max-width:780px) {
+      .wrap { width:min(100% - 30px,1120px); }
+      header { padding:18px 0; }
+      .top-link { display:none; }
+      .hero,.scope { grid-template-columns:1fr; gap:32px; padding:42px 0 54px; }
+      .routes,.steps,.faq { grid-template-columns:1fr; }
+      section { padding:58px 0; }
+      .scope-card { position:static; }
+      .final-panel { display:block; padding:30px 24px; }
+      .final-panel .button { margin-top:24px; width:100%; }
+      footer { display:block; }
+      footer p + p { margin-top:8px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button-primary:hover { transform:none; } }
+  </style>
+</head>
+<body>
+  <div class="notice">DEMONSTRAÇÃO FICTÍCIA · NÃO REPRESENTA UM PROFISSIONAL REAL</div>
+  <main>
+    <div class="wrap">
+      <header>
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Movimento Direto</div>
+        <a class="top-link" href="#como-funciona">Ver como funciona</a>
+      </header>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Página de conversão para personal trainers</p>
+          <h1 id="hero-title">Seu método merece uma <span class="accent">porta de entrada</span> tão clara quanto o treino.</h1>
+          <p class="hero-copy">Um exemplo de página que organiza serviços, agenda e próximo passo — sem prometer resultado, inventar prova social ou depender de um feed.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#como-funciona" data-action="demo_cta" data-location="hero">Ver a estrutura da página</a>
+            <a class="button button-secondary" href="#escopo" data-action="demo_cta" data-location="hero">O que entra no projeto</a>
+          </div>
+        </div>
+        <aside class="agenda" aria-label="Exemplo visual de agenda">
+          <div class="agenda-header">
+            <div><span class="eyebrow">Organização</span><div class="agenda-title">Escolha o próximo passo</div></div>
+            <span class="pill">EXEMPLO</span>
+          </div>
+          <div class="days"><div class="day">CONHECER<strong>01</strong></div><div class="day">AVALIAR<strong>02</strong></div><div class="day">AGENDAR<strong>03</strong></div></div>
+          <div class="slot"><span class="dot"></span>Serviços explicados sem rolar o Instagram</div>
+          <div class="slot"><span class="dot blue"></span>Link de agenda ou conversa no WhatsApp</div>
+          <div class="slot"><span class="dot"></span>Fatos e depoimentos somente quando autorizados</div>
+        </aside>
+      </section>
+    </div>
+    <section class="answer">
+      <div class="wrap"><p><strong>O que esta demonstração resolve?</strong> Ela transforma uma busca, indicação ou visita ao Instagram em uma decisão simples: entender para quem o personal atende, como funciona o acompanhamento e qual é o próximo passo para iniciar uma conversa.</p></div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Uma página para decisões reais</p><h2>O visitante chega com uma dúvida. A página precisa responder antes de pedir contato.</h2><p>Em vez de uma vitrine genérica, a estrutura guia três situações que já acontecem no dia a dia de quem busca acompanhamento.</p></div>
+        <div class="routes">
+          <article class="route"><div class="route-icon">01</div><b>“É para o meu objetivo?”</b><span>Posicionamento, perfil de aluno e formato de atendimento ficam claros logo no início.</span></article>
+          <article class="route"><div class="route-icon">02</div><b>“Como funciona?”</b><span>O método, a frequência e o primeiro passo aparecem em linguagem direta.</span></article>
+          <article class="route"><div class="route-icon">03</div><b>“Posso falar agora?”</b><span>Um CTA único leva para agenda ou WhatsApp somente depois da pessoa entender a proposta.</span></article>
+        </div>
+      </div>
+    </section>
+    <section class="process" id="como-funciona">
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Implantação enxuta</p><h2>Não é “site em dez minutos”. É uma página aprovada, testada e pronta para receber conversas.</h2><p>O prazo comercial só será definido com dados e conteúdo reais do profissional.</p></div>
+        <div class="steps">
+          <article class="step"><span class="step-number">ETAPA 01</span><h3>Mapear</h3><p>Definir público, oferta, agenda e a conversa que a página precisa iniciar.</p></article>
+          <article class="step"><span class="step-number">ETAPA 02</span><h3>Montar</h3><p>Escrever a página com fatos fornecidos pelo profissional e revisar no celular.</p></article>
+          <article class="step"><span class="step-number">ETAPA 03</span><h3>Medir</h3><p>Publicar no domínio do cliente e acompanhar visualizações e cliques no canal escolhido.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="escopo">
+      <div class="wrap scope">
+        <aside class="scope-card"><p class="eyebrow">Formato do teste</p><h3>Página de conversão.</h3><p>Uma entrega enxuta para validar se existe demanda antes de adicionar manutenção, sistemas ou tráfego para o cliente.</p></aside>
+        <div>
+          <p class="eyebrow">O que a proposta inclui</p>
+          <ul class="check-list">
+            <li>Estrutura mobile focada em explicar e agendar.</li>
+            <li>Copy construída a partir de serviços, diferenciais e regras reais do profissional.</li>
+            <li>Links de WhatsApp ou agenda fornecidos e aprovados pelo cliente.</li>
+            <li>Prova social apenas com autorização verificável.</li>
+            <li>Medição de visualização e clique antes de qualquer campanha.</li>
+            <li>Domínio e ativos sob titularidade do cliente.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="section-head"><p class="eyebrow">Perguntas que evitam promessa vazia</p><h2>O que precisa estar decidido antes de publicar?</h2></div>
+        <div class="faq">
+          <details open><summary>Esta página garante alunos novos?</summary><p>Não. Ela melhora clareza e caminho de contato; resultado comercial depende de oferta, público, tráfego e atendimento.</p></details>
+          <details><summary>Posso usar avaliações do Google ou antes/depois?</summary><p>Somente conteúdo autorizado e comprovável pelo profissional. O demo não usa avaliações, fotos ou resultados de terceiros.</p></details>
+          <details><summary>Preciso trocar meu Instagram?</summary><p>Não. A página organiza a informação que o Instagram e o Google já encaminham para a conversa certa.</p></details>
+          <details><summary>O domínio fica com quem?</summary><p>Com o profissional. Registro, acessos e ativos devem ficar sob titularidade dele antes da publicação.</p></details>
+        </div>
+      </div>
+    </section>
+    <section class="final">
+      <div class="wrap">
+        <div class="final-panel">
+          <div><p class="eyebrow">Próximo passo do teste</p><h2>Ver uma versão da sua oferta, com fatos reais e sem promessas fabricadas.</h2></div>
+          <button class="button" type="button" id="demo-button" data-action="demo_cta" data-location="final">Solicitar um rascunho</button>
+        </div>
+        <div class="demo-form" id="demo-form" role="status"><p>Este é um demo local. O canal de contato e a cidade serão definidos antes da ativação do teste; nenhum dado é coletado nesta página.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><p>Movimento Direto é uma marca fictícia criada para demonstração.</p><p>Projeto 1M · preview local não publicado</p></footer>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    document.querySelectorAll("[data-action]").forEach(function(el) {
+      el.addEventListener("click", function() {
+        window.dataLayer.push({ event:"demo_cta", location:el.dataset.location || "unknown" });
+      });
+    });
+    document.getElementById("demo-button").addEventListener("click", function() {
+      document.getElementById("demo-form").classList.add("show");
+    });
+  </script>
+</body>
+</html>

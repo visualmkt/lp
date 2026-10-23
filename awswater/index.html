@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Water — Soluções em Tratamento de Água e Efluentes</title>
+<meta name="description" content="AWS Amazon Water Solution — Osmose reversa, ultrafiltração, monitoramento IoT e tratamento de efluentes industriais.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #04101e;
+  --surface: rgba(8,24,40,.92);
+  --glass:   rgba(4,16,30,.78);
+  --border:  rgba(0,180,216,.14);
+  --accent:  #00b4d8;
+  --accent2: #0077b6;
+  --text:    #e2f2fb;
+  --muted:   #a8cfe0;
+  --white:   #edf6fb;
+  --radius:  12px;
+  --gap:     clamp(72px, 9vw, 120px);
+}
+
+html { scroll-behavior: auto; }
+
+body {
+  background: #000;   /* preto puro — nenhuma cor vaza sob o vídeo */
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── TIPOGRAFIA — só Inter, sem distorção ── */
+.display {
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--white);
+}
+
+.h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+
+.label {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.divider {
+  width: 2.5rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 2px;
+  margin: 1rem 0 1.5rem;
+}
+
+/* ── LAYOUT ── */
+.container { width: 90%; max-width: 1180px; margin: 0 auto; }
+section { padding: var(--gap) 0; }
+
+/* ── VÍDEO FIXO — fundo de página inteira ──
+   Wrapper: fixed+overflow:hidden clipa o vídeo (sem bordas no parallax)
+   Inner:   ligeiramente maior (inset:-6%) para ter margem de movimento */
+.video-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-bg {
+  position: absolute;
+  inset: -6%;
+  will-change: transform;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay uniforme — só para leitura, sem gradiente que vire "cor" */
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: rgba(4,16,30,.58);
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 200;
+  padding: 1.4rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background .4s, backdrop-filter .4s;
+}
+
+nav.scrolled {
+  background: rgba(4,16,30,.9);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-logo em { font-style: normal; color: var(--accent); }
+
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: .86rem;
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.nav-links a:hover { color: var(--white); }
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  padding: .55rem 1.35rem;
+  border-radius: 50px;
+  font-weight: 600 !important;
+  transition: opacity .2s !important;
+}
+
+.nav-cta:hover { opacity: .82; }
+
+@media (max-width: 768px) { .nav-links { display: none; } }
+
+/* ── BOTÕES ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .85rem 1.9rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: .88rem;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: transform .2s, opacity .2s, border-color .2s, color .2s;
+  letter-spacing: -0.01em;
+}
+
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--accent); color: var(--bg); }
+.btn-outline {
+  background: rgba(255,255,255,.07);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(6px);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); background: rgba(0,180,216,.06); }
+
+/* ── SEÇÃO HERO (conteúdo sobre o vídeo) ── */
+.hero {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+/* Bolhas de água — primeiro plano do hero */
+.bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -40px;
+  border-radius: 50%;
+  background: rgba(0,180,216,.1);
+  border: 1px solid rgba(0,180,216,.2);
+  animation: riseUp linear infinite;
+}
+
+@keyframes riseUp {
+  0%   { transform: translateY(0)     scale(1);   opacity: .6; }
+  100% { transform: translateY(-105vh) scale(.35); opacity: 0; }
+}
+
+/* Ondas na base do hero */
+.hero-waves {
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  z-index: 3;
+  height: 100px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-waves svg { position: absolute; bottom: 0; display: block; }
+.wave1 { animation: wm1 10s linear infinite; }
+.wave2 { animation: wm2  7s linear infinite; opacity: .45; }
+
+@keyframes wm1 { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
+@keyframes wm2 { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  padding: 0 5%;
+  max-width: 800px;
+}
+
+.hero-label   { opacity: 0; margin-bottom: 1.1rem; }
+.hero-title   { opacity: 0; margin-bottom: 1.4rem; }
+.hero-title em { font-style: normal; color: var(--accent); }
+.hero-sub     {
+  opacity: 0;
+  margin-bottom: 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 500px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.hero-actions { opacity: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2.2rem; left: 5%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  opacity: 0;
+}
+
+.scroll-hint span {
+  font-size: .65rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.scroll-line {
+  height: 1px;
+  background: var(--accent);
+  animation: sline 1.6s ease-in-out infinite alternate;
+}
+
+@keyframes sline {
+  from { width: 16px; opacity: .3; }
+  to   { width: 52px; opacity: 1; }
+}
+
+/* ── SEÇÕES — transparentes, o vídeo aparece por baixo em toda a página ── */
+.section-solid,
+.section-surface {
+  position: relative;
+  z-index: 10;
+  background: transparent;
+}
+
+/* ── SOBRE ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.about-visual {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.about-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(140deg, #051a2e 0%, #004d7a 60%, #0096c7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-placeholder::after {
+  content: 'FOTO DO CLIENTE';
+  font-size: .65rem;
+  letter-spacing: .14em;
+  color: rgba(255,255,255,.2);
+  text-transform: uppercase;
+}
+
+.about-badge {
+  position: absolute;
+  bottom: 1.25rem; right: 1.25rem;
+  background: rgba(4,16,30,.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.badge-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.badge-lbl { font-size: .7rem; color: var(--muted); margin-top: .2rem; }
+
+.about-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 1.15rem;
+}
+
+/* ── SERVIÇOS ── */
+.section-header { text-align: center; margin-bottom: 3.5rem; }
+.section-header .h2 { margin-top: .65rem; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.15rem;
+}
+
+.svc-card {
+  background: rgba(8,24,40,.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.1rem 1.85rem;
+  transition: transform .3s, border-color .3s;
+  backdrop-filter: blur(8px);
+}
+
+.svc-card:hover { transform: translateY(-5px); border-color: rgba(0,180,216,.4); }
+
+.svc-icon {
+  width: 48px; height: 48px;
+  background: rgba(0,180,216,.1);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent);
+  margin-bottom: 1.35rem;
+}
+
+.svc-card .h3 { margin-bottom: .55rem; }
+.svc-card p { font-size: .87rem; color: var(--muted); line-height: 1.65; }
+
+/* ── NÚMEROS ── */
+.numbers-inner {
+  background: linear-gradient(135deg, #061625, #003756);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 3.5rem 2.5rem;
+}
+
+.numbers-header { text-align: center; margin-bottom: 2.5rem; }
+.numbers-header .h2 { margin-top: .65rem; }
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.75rem;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin-bottom: .35rem;
+}
+
+.stat-lbl { font-size: .8rem; color: var(--muted); }
+
+/* ── TECNOLOGIA ── */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+@media (max-width: 768px) { .tech-grid { grid-template-columns: 1fr; } }
+
+.tech-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  padding: 2.4rem 1.85rem;
+  background: rgba(8,24,40,.88);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  transition: border-color .3s;
+}
+
+.tech-card:hover { border-color: rgba(0,180,216,.4); }
+
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+}
+
+.tech-num {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: rgba(0,180,216,.07);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: .4rem;
+  user-select: none;
+}
+
+.tech-card .h3 { margin-bottom: .65rem; }
+.tech-card p { font-size: .86rem; color: var(--muted); line-height: 1.65; }
+
+.tech-tag {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: .04em;
+}
+
+/* ── RESULTADOS ── */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+}
+
+@media (max-width: 768px) { .results-grid { grid-template-columns: 1fr; } }
+
+.res-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: rgba(4,16,30,.6);
+  backdrop-filter: blur(8px);
+  transition: transform .3s;
+}
+
+.res-card:hover { transform: translateY(-4px); }
+
+.res-top {
+  padding: 1.85rem;
+  background: linear-gradient(135deg, rgba(6,22,42,.9), rgba(8,32,58,.9));
+  border-bottom: 1px solid var(--border);
+}
+
+.res-pct {
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.res-top .h3 { margin-top: .45rem; font-size: 1rem; }
+.res-body { padding: 1.4rem 1.85rem; }
+.res-body p { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+
+/* ── CONTATO ── */
+.contact-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+@media (max-width: 768px) { .contact-inner { grid-template-columns: 1fr; gap: 44px; } }
+
+.contact-info p { color: var(--muted); margin-top: .9rem; font-size: .93rem; }
+
+.contact-items { display: flex; flex-direction: column; gap: .85rem; margin-top: 1.85rem; }
+
+.contact-item {
+  display: flex; align-items: center; gap: .8rem;
+  font-size: .88rem; color: var(--text);
+}
+
+.contact-item svg { color: var(--accent); flex-shrink: 0; }
+
+form { display: flex; flex-direction: column; gap: .85rem; }
+
+input, textarea, select {
+  width: 100%;
+  background: rgba(8,24,40,.85);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .88rem 1rem;
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: .88rem;
+  outline: none;
+  transition: border-color .2s;
+  appearance: none;
+  backdrop-filter: blur(8px);
+}
+
+input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+input::placeholder, textarea::placeholder { color: var(--muted); }
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%235f8299' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right .9rem center;
+  padding-right: 2.4rem;
+}
+select option { background: #081828; }
+textarea { resize: vertical; min-height: 110px; }
+
+.form-success {
+  display: none;
+  background: rgba(0,180,216,.1);
+  border: 1px solid rgba(0,180,216,.3);
+  border-radius: 8px;
+  padding: 1.1rem;
+  text-align: center;
+  color: var(--accent);
+  font-size: .88rem;
+}
+
+/* ── FOOTER ── */
+footer {
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid var(--border);
+  padding: 2.25rem 5%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.footer-logo em { font-style: normal; color: var(--accent); }
+footer p { font-size: .76rem; color: var(--muted); }
+
+/* ── ESTADOS INICIAIS GSAP ── */
+.js-fade  { opacity: 0; transform: translateY(40px); }
+.js-left  { opacity: 0; transform: translateX(-55px); }
+.js-right { opacity: 0; transform: translateX(55px); }
+</style>
+</head>
+<body>
+
+<!-- ── VÍDEO FIXO — FUNDO DE TODA A PÁGINA ── -->
+<div class="video-wrapper">
+  <div class="video-bg" id="videoBg">
+    <!-- hero_scrub.mp4 = re-encodado com keyframe/frame + moov faststart -->
+    <video id="bgVideo" muted playsinline preload="auto">
+      <source src="assets/hero_scrub.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<!-- Overlay fixo de legibilidade -->
+<div class="video-overlay"></div>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="#" class="nav-logo">AWS<em>Water</em></a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#tecnologias">Tecnologia</a></li>
+    <li><a href="#resultados">Resultados</a></li>
+    <li><a href="#contato" class="nav-cta">Fale Conosco</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO — texto flutua sobre o vídeo ── -->
+<section class="hero" id="topo">
+  <div class="bubbles" id="bubbles"></div>
+
+  <div class="hero-waves">
+    <svg class="wave1" viewBox="0 0 2880 100" xmlns="http://www.w3.org/2000/svg" style="width:200%;height:100px">
+      <path d="M0,55 C480,105 960,15 1440,60 C1920,105 2400,15 2880,55 L2880,100 L0,100 Z" fill="#04101e" fill-opacity=".7"/>
+    </svg>
+    <svg class="wave2" viewBox="0 0 2880 100" xmlns="http://www.w3.org/2000/svg" style="width:200%;height:100px;position:absolute;bottom:0">
+      <path d="M0,38 C600,88 1200,8 1440,48 C1680,88 2280,8 2880,48 L2880,100 L0,100 Z" fill="#04101e"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="label hero-label">AWS Amazon Water Solution</div>
+    <h1 class="display hero-title">Água limpa<br>é uma <em>missão.</em></h1>
+    <p class="hero-sub">Soluções completas em tratamento de água e efluentes industriais — tecnologia avançada, suporte 24/7 e compromisso com a sustentabilidade.</p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn btn-primary">Solicitar diagnóstico gratuito</a>
+      <a href="#servicos" class="btn btn-outline">Ver serviços →</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint" id="scrollHint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── SOBRE ── -->
+<section class="section-surface" id="sobre">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual js-left">
+        <div class="about-placeholder"></div>
+        <div class="about-badge">
+          <div class="badge-num">10+</div>
+          <div class="badge-lbl">anos de experiência</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="label js-fade">Quem somos</div>
+        <div class="divider js-fade"></div>
+        <h2 class="h2 js-fade">Especialistas em tratamento de água e efluentes</h2>
+        <div class="js-fade">
+          <p>A AWS Water nasceu da convicção de que acesso à água tratada com segurança é fundamental para a indústria e para a sociedade.</p>
+          <p>Atuamos com tecnologias de ponta — osmose reversa, ultrafiltração e monitoramento IoT — para entregar soluções que reduzem custos operacionais e impacto ambiental.</p>
+          <p>Do diagnóstico inicial ao suporte contínuo, somos parceiros do seu projeto do início ao fim.</p>
+        </div>
+        <div class="js-fade" style="margin-top:1.75rem">
+          <a href="#contato" class="btn btn-primary">Falar com especialista</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVIÇOS ── -->
+<section class="section-solid" id="servicos">
+  <div class="container">
+    <div class="section-header">
+      <div class="label js-fade">O que fazemos</div>
+      <h2 class="h2 js-fade">Soluções para cada desafio hídrico</h2>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card js-fade">
+        <div class="svc-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path d="M12 2C8 2 4 6.5 4 10.5c0 5.8 8 11.5 8 11.5s8-5.7 8-11.5C20 6.5 16 2 12 2z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3 class="h3">Tratamento Industrial</h3>
+        <p>Projetos customizados para indústrias com padrões rigorosos de qualidade e volume de água de processo.</p>
+      </div>
+      <div class="svc-card js-fade">
+        <div class="svc-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="4" rx="2"/>
+            <rect x="2" y="10" width="20" height="4" rx="2"/>
+            <rect x="2" y="17" width="20" height="4" rx="2"/>
+          </svg>
+        </div>
+        <h3 class="h3">Sistemas de Filtração</h3>
+        <p>Filtragem multistágio com remoção de sólidos, turbidez e contaminantes específicos para cada aplicação.</p>
+      </div>
+      <div class="svc-card js-fade">
+        <div class="svc-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v8M8 12h8"/>
+          </svg>
+        </div>
+        <h3 class="h3">Tratamento de Efluentes</h3>
+        <p>Adequação às normas ambientais vigentes, com foco em reúso e economia circular da água.</p>
+      </div>
+      <div class="svc-card js-fade">
+        <div class="svc-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3 class="h3">Consultoria e Análise</h3>
+        <p>Diagnóstico completo com laudos laboratoriais, relatórios técnicos e plano de ação detalhado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NÚMEROS ── -->
+<section class="section-surface" id="numeros">
+  <div class="container">
+    <div class="numbers-inner js-fade">
+      <div class="numbers-header">
+        <div class="label">Resultados que provam</div>
+        <h2 class="h2">Números que fazem a diferença</h2>
+      </div>
+      <div class="numbers-grid">
+        <div>
+          <div class="stat-num" data-target="50" data-suffix="+">0</div>
+          <div class="stat-lbl">Projetos realizados</div>
+        </div>
+        <div>
+          <div class="stat-num" data-target="98" data-suffix="%">0</div>
+          <div class="stat-lbl">Eficiência energética</div>
+        </div>
+        <div>
+          <div class="stat-num" data-target="2" data-suffix="M L/mês">0</div>
+          <div class="stat-lbl">Água reaproveitada</div>
+        </div>
+        <div>
+          <div class="stat-num" data-target="24" data-suffix="/7">0</div>
+          <div class="stat-lbl">Suporte técnico</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TECNOLOGIAS ── -->
+<section class="section-solid" id="tecnologias">
+  <div class="container">
+    <div class="section-header">
+      <div class="label js-fade">Nossas tecnologias</div>
+      <h2 class="h2 js-fade">Ciência a serviço da água limpa</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card js-fade">
+        <div class="tech-num">01</div>
+        <h3 class="h3">Osmose Reversa</h3>
+        <p>Remove até 99% de sólidos dissolvidos, metais pesados e contaminantes, produzindo água com alto nível de pureza para aplicações críticas.</p>
+        <span class="tech-tag">↑ 99% de remoção de sólidos</span>
+      </div>
+      <div class="tech-card js-fade">
+        <div class="tech-num">02</div>
+        <h3 class="h3">Ultrafiltração e UV</h3>
+        <p>Desinfecção de alto desempenho sem produtos químicos. Radiação UV age instantaneamente contra bactérias e vírus sem alterar a composição química.</p>
+        <span class="tech-tag">→ Zero alteração química</span>
+      </div>
+      <div class="tech-card js-fade">
+        <div class="tech-num">03</div>
+        <h3 class="h3">Monitoramento IoT</h3>
+        <p>Sensores inteligentes monitoram qualidade, vazão e consumo em tempo real. Alertas automáticos e dashboards online com controle total da operação.</p>
+        <span class="tech-tag">⊙ Dados em tempo real</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESULTADOS ── -->
+<section class="section-surface" id="resultados">
+  <div class="container">
+    <div class="section-header">
+      <div class="label js-fade">Impacto real</div>
+      <h2 class="h2 js-fade">O que nossos projetos entregam</h2>
+    </div>
+    <div class="results-grid">
+      <div class="res-card js-fade">
+        <div class="res-top">
+          <div class="res-pct">-40%</div>
+          <h3 class="h3">Consumo de água</h3>
+        </div>
+        <div class="res-body">
+          <p>Indústrias que implementam nossas soluções reduzem até 40% no consumo de água no processo produtivo.</p>
+        </div>
+      </div>
+      <div class="res-card js-fade">
+        <div class="res-top">
+          <div class="res-pct">+35%</div>
+          <h3 class="h3">Qualidade do efluente</h3>
+        </div>
+        <div class="res-body">
+          <p>Melhoria média de 35% nos índices de qualidade, garantindo conformidade com normas ambientais vigentes.</p>
+        </div>
+      </div>
+      <div class="res-card js-fade">
+        <div class="res-top">
+          <div class="res-pct">2M</div>
+          <h3 class="h3">Litros reaproveitados/mês</h3>
+        </div>
+        <div class="res-body">
+          <p>Nossos sistemas permitem que a água tratada retorne ao processo, gerando economia real e impacto positivo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTATO ── -->
+<section class="section-solid" id="contato">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info js-left">
+        <div class="label">Contato</div>
+        <div class="divider"></div>
+        <h2 class="h2">Pronto para transformar sua gestão hídrica?</h2>
+        <p>Fale com nossos especialistas e receba um diagnóstico gratuito da sua operação.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.5 12 19.79 19.79 0 0 1 1.43 3.36 2 2 0 0 1 3.44 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+55 (XX) XXXXX-XXXX</span>
+          </div>
+          <div class="contact-item">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>contato@awswater.com.br</span>
+          </div>
+        </div>
+      </div>
+
+      <form class="js-right" id="contactForm" onsubmit="submitForm(event)">
+        <input type="text"  name="nome"     placeholder="Seu nome"           required>
+        <input type="email" name="email"    placeholder="E-mail corporativo" required>
+        <input type="tel"   name="telefone" placeholder="Telefone / WhatsApp">
+        <select name="servico">
+          <option value="" disabled selected>Interesse em...</option>
+          <option>Tratamento Industrial</option>
+          <option>Sistemas de Filtração</option>
+          <option>Tratamento de Efluentes</option>
+          <option>Consultoria e Análise</option>
+          <option>Monitoramento IoT</option>
+        </select>
+        <textarea name="mensagem" placeholder="Descreva brevemente sua necessidade"></textarea>
+        <button type="submit" class="btn btn-primary" id="submitBtn" style="justify-content:center">
+          Solicitar diagnóstico gratuito →
+        </button>
+        <div class="form-success" id="formSuccess">
+          Mensagem enviada! Entraremos em contato em breve.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">AWS<em>Water</em></div>
+  <p>© 2025 AWS Amazon Water Solution LTDA · CNPJ 59.711.575/0001-65</p>
+  <p style="color:var(--accent);font-size:.75rem">Água limpa é uma missão.</p>
+</footer>
+
+<!-- ── SCRIPTS ── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// ── VÍDEO SCRUB ──
+// Abordagem oficial GSAP: anima currentTime como propriedade com scrub:true
+// scrub:true = 1:1 com scroll, sem smoothing, sem lag
+const bgVideo = document.getElementById('bgVideo');
+bgVideo.load();
+
+function initVideoScrub() {
+  if (!bgVideo.duration || isNaN(bgVideo.duration)) return;
+  bgVideo.pause();
+
+  gsap.to(bgVideo, {
+    currentTime: bgVideo.duration,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: document.body,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: true,        // 1:1 com scroll, linear, sem delay
+    },
+  });
+}
+
+// Tenta quando metadata carregar
+bgVideo.addEventListener('loadedmetadata', initVideoScrub);
+
+// Fallback: se metadata já carregou antes do listener ser registrado
+if (bgVideo.readyState >= 1) initVideoScrub();
+
+// ── PARALLAX DE MOUSE ──
+(function() {
+  const bg = document.getElementById('videoBg');
+  let mx = 0, my = 0, cx = 0, cy = 0;
+  document.addEventListener('mousemove', e => {
+    mx = (e.clientX / window.innerWidth  - 0.5) * 2;
+    my = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+  gsap.ticker.add(() => {
+    cx += (mx - cx) * 0.05;
+    cy += (my - cy) * 0.05;
+    gsap.set(bg, { x: cx * -22, y: cy * -16, force3D: true });
+  });
+})();
+
+// ── BOLHAS ──
+(function() {
+  const c = document.getElementById('bubbles');
+  for (let i = 0; i < 16; i++) {
+    const b = document.createElement('div');
+    b.className = 'bubble';
+    const s = 7 + Math.random() * 26;
+    b.style.cssText = `width:${s}px;height:${s}px;left:${Math.random()*100}%;animation-duration:${9+Math.random()*13}s;animation-delay:${Math.random()*10}s`;
+    c.appendChild(b);
+  }
+})();
+
+// ── LENIS ──
+const lenis = new Lenis({
+  duration: 1.35,
+  easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smoothWheel: true,
+});
+gsap.ticker.add(t => lenis.raf(t * 1000));
+gsap.ticker.lagSmoothing(0);
+lenis.on('scroll', ScrollTrigger.update);
+
+// ── NAV ──
+const nav = document.getElementById('nav');
+lenis.on('scroll', ({ scroll }) => nav.classList.toggle('scrolled', scroll > 50));
+
+// ── HERO ENTRADA ──
+gsap.timeline({ delay: 0.2 })
+  .to('.hero-label',   { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' })
+  .to('.hero-title',   { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out' }, '-=0.3')
+  .to('.hero-sub',     { opacity: 1, y: 0, duration: 0.7,  ease: 'power2.out' }, '-=0.4')
+  .to('.hero-actions', { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, '-=0.3')
+  .to('#scrollHint',   { opacity: 1,        duration: 0.5 }, '-=0.1');
+
+// ── SCROLL REVEALS ──
+gsap.utils.toArray('.js-fade').forEach(el => {
+  gsap.fromTo(el,
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 86%', toggleActions: 'play none none none' } }
+  );
+});
+
+gsap.utils.toArray('.js-left').forEach(el => {
+  gsap.fromTo(el,
+    { opacity: 0, x: -60 },
+    { opacity: 1, x: 0, duration: 1.05, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 82%' } }
+  );
+});
+
+gsap.utils.toArray('.js-right').forEach(el => {
+  gsap.fromTo(el,
+    { opacity: 0, x: 60 },
+    { opacity: 1, x: 0, duration: 1.05, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 82%' } }
+  );
+});
+
+// Cards com stagger
+['svc-card','tech-card','res-card'].forEach(cls => {
+  gsap.utils.toArray('.' + cls).forEach((card, i) => {
+    gsap.fromTo(card,
+      { opacity: 0, y: 55 },
+      { opacity: 1, y: 0, duration: 0.7, delay: i * 0.1, ease: 'power3.out',
+        scrollTrigger: { trigger: card, start: 'top 89%' } }
+    );
+  });
+});
+
+// ── CONTADORES ──
+document.querySelectorAll('.stat-num').forEach(el => {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  ScrollTrigger.create({
+    trigger: el, start: 'top 82%', once: true,
+    onEnter() {
+      const obj = { val: 0 };
+      gsap.to(obj, { val: target, duration: 2.2, ease: 'power2.out',
+        onUpdate() { el.textContent = Math.round(obj.val) + suffix; } });
+    },
+  });
+});
+
+// ── FORMULÁRIO ──
+function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+  setTimeout(() => {
+    e.target.reset();
+    btn.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }, 700);
+}
+
+// Links âncora via Lenis
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); lenis.scrollTo(t, { offset: -80, duration: 1.8 }); }
+  });
+});
+</script>
+</body>
+</html>

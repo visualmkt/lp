@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CRM WhatsApp: Rollout de Clientes</title>
+<meta name="description" content="Plano de execução para conectar os clientes atuais da agência ao CRM WhatsApp, em duas fases controladas — mais a visão de longo prazo para 50.000 clientes.">
+<meta name="robots" content="noindex,nofollow">
+<style>
+:root{
+  --bg:#f6f5f2;
+  --bg-raised:#ffffff;
+  --ink:#1c2024;
+  --ink-soft:#4d545c;
+  --ink-faint:#7b828a;
+  --line:#dcdcd7;
+  --line-soft:#eae9e4;
+  --accent:#0f7a6b;
+  --accent-soft:#e3f0ec;
+  --accent-ink:#0a5a4e;
+  --warn:#8a4a12;
+  --warn-soft:#faf1e4;
+  --warn-line:#e8cfa8;
+  --crit:#9c2b2b;
+  --crit-soft:#fbebe9;
+  --crit-line:#eab8b3;
+  --measured:#0f7a6b;
+  --measured-soft:#e3f0ec;
+  --estimate:#8a6d0f;
+  --estimate-soft:#f7f0dc;
+  --decision:#3a3f8f;
+  --decision-soft:#e9e9f7;
+  --code-bg:#eeede8;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171a;
+    --bg-raised:#1c1f23;
+    --ink:#eceeef;
+    --ink-soft:#b7bcc2;
+    --ink-faint:#83898f;
+    --line:#33373c;
+    --line-soft:#282b2f;
+    --accent:#3fcdb4;
+    --accent-soft:#183330;
+    --accent-ink:#7ee3cf;
+    --warn:#e2a866;
+    --warn-soft:#2f2416;
+    --warn-line:#5c451f;
+    --crit:#f0938c;
+    --crit-soft:#331a1a;
+    --crit-line:#5c2c2a;
+    --measured:#3fcdb4;
+    --measured-soft:#183330;
+    --estimate:#e0c264;
+    --estimate-soft:#332c14;
+    --decision:#9a9ff2;
+    --decision-soft:#232449;
+    --code-bg:#202327;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171a;
+  --bg-raised:#1c1f23;
+  --ink:#eceeef;
+  --ink-soft:#b7bcc2;
+  --ink-faint:#83898f;
+  --line:#33373c;
+  --line-soft:#282b2f;
+  --accent:#3fcdb4;
+  --accent-soft:#183330;
+  --accent-ink:#7ee3cf;
+  --warn:#e2a866;
+  --warn-soft:#2f2416;
+  --warn-line:#5c451f;
+  --crit:#f0938c;
+  --crit-soft:#331a1a;
+  --crit-line:#5c2c2a;
+  --measured:#3fcdb4;
+  --measured-soft:#183330;
+  --estimate:#e0c264;
+  --estimate-soft:#332c14;
+  --decision:#9a9ff2;
+  --decision-soft:#232449;
+  --code-bg:#202327;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Source Sans 3",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  font-size:16.5px;
+  line-height:1.62;
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+}
+
+.page{
+  max-width:760px;
+  margin:0 auto;
+  padding:64px 28px 120px;
+}
+
+header.masthead{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding-bottom:36px;
+  margin-bottom:44px;
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  font-size:12.5px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--accent-ink);
+  font-weight:600;
+}
+h1{
+  font-family:"Fraunces",Georgia,"Times New Roman",serif;
+  font-size:clamp(30px,5vw,42px);
+  font-weight:600;
+  line-height:1.12;
+  margin:0;
+  text-wrap:balance;
+  letter-spacing:-.01em;
+}
+.masthead-sub{
+  color:var(--ink-soft);
+  font-size:16px;
+  max-width:56ch;
+  margin:0;
+}
+.masthead-meta{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:var(--ink-faint);
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+}
+.masthead-meta b{color:var(--ink-soft);font-weight:600}
+
+.legend{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:48px;
+}
+.legend-item{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-size:12.5px;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  padding:5px 10px 5px 8px;
+  border-radius:5px;
+  border:1px solid var(--line);
+  background:var(--bg-raised);
+  color:var(--ink-soft);
+}
+.legend-dot{width:8px;height:8px;border-radius:50%;flex:none}
+.legend-item.measured .legend-dot{background:var(--measured)}
+.legend-item.estimate .legend-dot{background:var(--estimate)}
+.legend-item.decision .legend-dot{background:var(--decision)}
+
+.callout{
+  border-radius:10px;
+  padding:20px 22px;
+  margin:28px 0;
+  border:1px solid;
+}
+.callout-crit{background:var(--crit-soft);border-color:var(--crit-line)}
+.callout-crit .callout-label{color:var(--crit)}
+.callout-warn{background:var(--warn-soft);border-color:var(--warn-line)}
+.callout-warn .callout-label{color:var(--warn)}
+.callout-label{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:11.5px;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  font-weight:700;
+  display:block;
+  margin-bottom:8px;
+}
+.callout p{margin:0 0 10px;color:var(--ink)}
+.callout p:last-child{margin-bottom:0}
+
+section{margin-bottom:56px}
+.sec-head{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+  margin-bottom:6px;
+}
+.sec-num{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:14px;
+  color:var(--accent-ink);
+  font-weight:600;
+  flex:none;
+}
+h2{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:25px;
+  font-weight:600;
+  margin:0;
+  letter-spacing:-.005em;
+  text-wrap:balance;
+}
+.sec-dek{
+  color:var(--ink-faint);
+  font-size:14.5px;
+  margin:0 0 22px;
+  padding-left:30px;
+  max-width:58ch;
+}
+h3{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:18.5px;
+  font-weight:600;
+  margin:26px 0 10px;
+}
+p{margin:0 0 14px;max-width:66ch}
+ul,ol{margin:0 0 16px;padding-left:22px}
+li{margin-bottom:7px;max-width:62ch}
+strong{font-weight:650;color:var(--ink)}
+code{
+  font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  font-size:.88em;
+  background:var(--code-bg);
+  padding:.15em .4em;
+  border-radius:4px;
+}
+a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:2px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:11px;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  font-weight:700;
+  padding:2px 8px;
+  border-radius:4px;
+  vertical-align:1px;
+}
+.tag-measured{background:var(--measured-soft);color:var(--accent-ink)}
+.tag-estimate{background:var(--estimate-soft);color:var(--estimate)}
+.tag-decision{background:var(--decision-soft);color:var(--decision)}
+
+.table-wrap{overflow-x:auto;margin:18px 0 24px;border:1px solid var(--line);border-radius:9px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:480px}
+th,td{
+  text-align:left;
+  padding:10px 14px;
+  border-bottom:1px solid var(--line-soft);
+  white-space:nowrap;
+}
+th{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:11.5px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  font-weight:600;
+  background:var(--bg-raised);
+}
+td{font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+td.num{font-family:"JetBrains Mono",ui-monospace,monospace}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--line-soft)}
+
+.stage-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  margin:18px 0 24px;
+}
+.stage{
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:14px;
+  padding:16px 18px;
+  background:var(--bg-raised);
+  border-bottom:1px solid var(--line-soft);
+}
+.stage:last-child{border-bottom:none}
+.stage-n{
+  font-family:"Fraunces",Georgia,serif;
+  font-size:19px;
+  font-weight:600;
+  color:var(--ink-faint);
+}
+.stage-body h4{margin:0 0 4px;font-size:15.5px;font-weight:650}
+.stage-body p{margin:0;font-size:14px;color:var(--ink-soft)}
+
+.risk-grid{display:flex;flex-direction:column;gap:14px;margin:18px 0 24px}
+.risk{
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px 18px;
+  background:var(--bg-raised);
+}
+.risk-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.risk-name{font-weight:650;font-size:15px}
+.sev{
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+  font-size:10.5px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-weight:700;
+  padding:3px 8px;
+  border-radius:4px;
+  flex:none;
+}
+.sev-crit{background:var(--crit-soft);color:var(--crit)}
+.sev-high{background:var(--warn-soft);color:var(--warn)}
+.sev-med{background:var(--line-soft);color:var(--ink-faint)}
+.risk p{margin:0;font-size:14px;color:var(--ink-soft)}
+.risk .mitig{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.risk .mitig b{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-faint);display:block;margin-bottom:3px}
+
+.divider{border:none;border-top:1px solid var(--line);margin:56px 0}
+
+.qbox{
+  background:var(--decision-soft);
+  border:1px solid var(--line);
+  border-left:3px solid var(--decision);
+  border-radius:0 10px 10px 0;
+  padding:18px 20px;
+  margin:20px 0;
+}
+.qbox b{display:block;font-size:11.5px;font-family:"JetBrains Mono",ui-monospace,monospace;text-transform:uppercase;letter-spacing:.05em;color:var(--decision);margin-bottom:6px}
+.qbox p{margin:0;font-size:14.5px}
+
+footer{
+  margin-top:64px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  color:var(--ink-faint);
+  font-family:"JetBrains Mono",ui-monospace,monospace;
+}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;650&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <span class="eyebrow">Plano de execução — validação externa</span>
+  <h1>CRM WhatsApp: rollout para os clientes atuais da agência</h1>
+  <p class="masthead-sub">O plano corrente é conectar os ~20-30 clientes existentes da Visual MKT, em duas fases controladas (Seção 01, abaixo). O cenário de 50.000 clientes fica registrado depois, marcado "LP", como visão de longo prazo — não é o que está em execução agora.</p>
+  <div class="masthead-meta">
+    <span><b>Baseline hoje</b> 1 cliente ativo, 1 VPS Hetzner 2GB</span>
+    <span><b>Plano corrente</b> 20-30 clientes existentes, em 2 fases</span>
+    <span><b>Status</b> planejamento — nada executado</span>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head"><span class="sec-num">01</span><h2>Rollout imediato — monitoramento leve, clientes reais</h2></div>
+  <p class="sec-dek">Plano de execução para os próximos 20-30 clientes existentes da agência, começando pequeno e validado. Escopo: só leitura/monitoramento — o CRM não envia nenhuma mensagem, só classifica onde cada lead está.</p>
+
+  <div class="callout callout-warn">
+    <span class="callout-label">Por que em duas fases</span>
+    <p>Um cálculo de dimensionamento feito nesta sessão mostrou que <strong>20-30 sessões reais não cabem no VPS atual</strong> (1,9GB) mesmo no cenário mais otimista — a única medição real disponível (~130MB por instância <em>sem</em> tráfego) com margem de segurança para sessão ativa (260–400MB) já estoura o servidor de hoje bem antes de chegar a 20 clientes. Por isso: validar com poucos clientes primeiro, medir o número real, decidir o próximo servidor com dado — não com estimativa.</p>
+  </div>
+
+  <h3>Fase 0 — Piloto controlado (1 a 3 clientes, servidor atual)</h3>
+  <p><strong>Testes técnicos obrigatórios antes de qualquer cliente real</strong>, com um número de teste próprio (não de cliente), cada um gate do próximo:</p>
+  <ol>
+    <li>Conectar via QR e confirmar que o WhatsApp Business do celular de teste segue funcionando normalmente por 24–48h com a sessão paralela ativa (linked device).</li>
+    <li>Enviar mensagens de teste de terceiros, confirmar que chegam no celular <em>e</em> no webhook do CRM, aparecendo certo no kanban.</li>
+    <li>Testar resiliência: derrubar a internet do celular por alguns minutos, ver se a sessão se recupera sozinha ou exige novo QR.</li>
+    <li>Testar desconexão manual pelo próprio WhatsApp ("Aparelhos conectados") e confirmar que o app do celular não é afetado.</li>
+    <li><strong>Medir RAM real da sessão conectada e recebendo tráfego de verdade</strong> — este número decide o dimensionamento da Fase 1.</li>
+  </ol>
+
+  <p><strong>Runbook de onboarding por cliente</strong> (repetível desde já):</p>
+  <div class="stage-list">
+    <div class="stage"><span class="stage-n">1</span><div class="stage-body"><h4>Agendar</h4><p>Combinar horário de baixo movimento com o cliente para escanear o QR.</p></div></div>
+    <div class="stage"><span class="stage-n">2</span><div class="stage-body"><h4>Criar instância</h4><p>Nome padronizado, webhook já configurado na criação.</p></div></div>
+    <div class="stage"><span class="stage-n">3</span><div class="stage-body"><h4>QR por canal seguro</h4><p>Vídeo ou print compartilhado — nunca pedir que o cliente mande o QR por WhatsApp (é dado sensível, equivale a sessão autenticada).</p></div></div>
+    <div class="stage"><span class="stage-n">4</span><div class="stage-body"><h4>Confirmar conexão</h4><p>Checar estado "open" antes de qualquer passo seguinte.</p></div></div>
+    <div class="stage"><span class="stage-n">5</span><div class="stage-body"><h4>Cadastrar no CRM</h4><p>Só depois de confirmado — nunca antes, para nunca precisar desfazer um cadastro já recebendo tráfego.</p></div></div>
+    <div class="stage"><span class="stage-n">6</span><div class="stage-body"><h4>Liberar autenticação</h4><p>Adicionar a instância na allowlist do serviço e reiniciar — passo que mais falha silenciosamente se esquecido.</p></div></div>
+    <div class="stage"><span class="stage-n">7</span><div class="stage-body"><h4>Teste de fumaça</h4><p>Mensagem de teste, confirmar que aparece no painel em segundos.</p></div></div>
+    <div class="stage"><span class="stage-n">8</span><div class="stage-body"><h4>Confirmar isolamento</h4><p>Logar como o cliente, confirmar que só os leads dele aparecem.</p></div></div>
+    <div class="stage"><span class="stage-n">9</span><div class="stage-body"><h4>Acompanhar 48–72h</h4><p>Monitoramento manual nesta fase, sem alerta automático ainda.</p></div></div>
+    <div class="stage"><span class="stage-n">10</span><div class="stage-body"><h4>Registrar</h4><p>Data, instância, quem confirmou — rastreio simples de quem já foi migrado.</p></div></div>
+  </div>
+
+  <h3>Rollback por cenário</h3>
+  <ul>
+    <li><strong>QR não conecta:</strong> recriar a instância, tentar de novo — sem risco porque nada foi cadastrado ainda.</li>
+    <li><strong>Sessão instável:</strong> pausar, desconectar, marcar inativo, investigar antes de repetir.</li>
+    <li><strong>Cliente pede para desfazer:</strong> remover o linked device na hora — pela API ou pelo próprio celular do cliente (dar essa instrução a ele, para ter controle próprio).</li>
+    <li><strong>Sessão cai depois de semanas em produção:</strong> novo QR para a mesma instância, dados históricos intactos.</li>
+  </ul>
+
+  <h3>Fase 1 — Restante dos clientes, condicionado ao próximo servidor</h3>
+  <p><strong>Gate obrigatório:</strong> ter o número real de RAM por sessão ativa (medido na Fase 0) e decidir o upgrade de VPS com esse dado. Só então:</p>
+  <ul>
+    <li>Repetir o runbook, ritmo de ~2–3 clientes por semana, acelerando com a confiança.</li>
+    <li>Construir o monitoramento de saúde de sessão que não existe hoje: checagem periódica (10–15 min) do estado de cada instância, alerta só quando uma sessão que estava conectada cai por 2+ checagens seguidas (evita alarme falso por blip de rede).</li>
+    <li>Monitorar RAM do host com limiar de 70–80% como gatilho de próximo upgrade — antes de esgotar de fato.</li>
+  </ul>
+
+  <div class="qbox">
+    <b>Incerteza real, não decisão de engenharia</b>
+    <p>Comportamento exato do WhatsApp Business com múltiplos linked devices simultâneos, e o prazo de inatividade antes de revogar automaticamente uma sessão não-oficial — não documentado oficialmente pela Meta, só observado pela comunidade. É por isso que os testes da Fase 0 são obrigatórios antes de qualquer cliente real, não uma formalidade.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section style="margin-top:8px;margin-bottom:28px">
+  <div class="sec-head"><span class="sec-num" style="color:var(--decision)">LP</span><h2 style="font-size:20px">A partir daqui: visão de longo prazo (50.000 clientes)</h2></div>
+  <p class="sec-dek">Não é o plano ativo. Mantido como referência para quando o rollout de clientes reais (Seção 01, acima) validar o modelo e a escala começar a fazer sentido discutir de novo.</p>
+</section>
+
+<div class="legend">
+  <span class="legend-item measured"><span class="legend-dot"></span>medido nesta sessão</span>
+  <span class="legend-item estimate"><span class="legend-dot"></span>estimativa de mercado</span>
+  <span class="legend-item decision"><span class="legend-dot"></span>decisão em aberto</span>
+</div>
+
+<div class="callout callout-crit">
+  <span class="callout-label">Leia isto antes do resto desta seção</span>
+  <p><strong>A pergunta que decide o cenário de 50.000 clientes não é de infraestrutura — é se o WhatsApp aceita tantas sessões automatizadas sem derrubar a operação.</strong> Evolution API (o que está em uso hoje) fala com o WhatsApp fingindo ser o app oficial de celular. Isso funciona bem para dezenas ou centenas de contas. Em dezenas de milhares, o padrão relatado por quem já tentou é detecção e banimento em massa — permanente, sem recurso — porque o comportamento agregado (muitas contas, mesmo provedor, mesmo padrão de uso) é exatamente o que os sistemas antifraude da Meta são desenhados para achar.</p>
+  <p>Isolar cada cliente em servidores diferentes (a ideia correta para RAM/CPU/falha) <strong>não resolve isso</strong> — a detecção acontece por conta e por padrão de comportamento, não por servidor. Ver Seção LP.3 para os dois caminhos reais.</p>
+</div>
+
+<section>
+  <div class="sec-head"><span class="sec-num">LP.1</span><h2>O que é fato medido hoje</h2></div>
+  <p class="sec-dek">Tudo abaixo veio de medição real no servidor de produção nesta sessão — não é projeção.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Medição</th><th>Valor</th><th>Contexto</th></tr></thead>
+      <tbody>
+        <tr><td>RAM — Evolution API com 1 sessão conectada</td><td class="num">80,8 MB</td><td>baseline antes do teste</td></tr>
+        <tr><td>RAM — + 1 instância criada (sem QR escaneado)</td><td class="num">+49,8 MB</td><td>piso, não uma sessão ativa real</td></tr>
+        <tr><td>RAM total do VPS</td><td class="num">1,9 GB</td><td>Hetzner CX22, compartilhado com CRM+n8n+Postgres+Redis+Traefik</td></tr>
+        <tr><td>RAM disponível hoje</td><td class="num">~450–650 MB</td><td>flutua com carga dos outros serviços</td></tr>
+        <tr><td>Disco usado antes da limpeza</td><td class="num">93%</td><td>2,8 GB livres — crítico</td></tr>
+        <tr><td>Disco usado depois da limpeza</td><td class="num">75%</td><td>9,0 GB livres — folga recuperada</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-warn">
+    <span class="callout-label">Limite honesto desta medição</span>
+    <p>49,8MB é o custo de <em>registrar</em> uma instância vazia — não o de uma sessão WhatsApp real, conectada, trocando mensagens e mantendo cache de contatos/grupos. Medir isso exigiria conectar um número de teste de verdade, fora do escopo de "zero risco" desta sessão. Trate o número real por sessão ativa como <strong>maior que 50MB</strong>, não como 50MB.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">LP.2</span><h2>Custo por cliente — hoje vs. em escala</h2></div>
+  <p class="sec-dek">Só infra + IA, como pedido. Sem impostos, suporte, ou tempo de desenvolvimento.</p>
+
+  <h3>Servidor <span class="tag tag-estimate">estimado</span></h3>
+  <p>Extrapolando o piso medido com uma margem para sessão ativa em regime (150–250MB, faixa comumente reportada em operações Evolution/Baileys — <strong>não medida nesta sessão</strong>):</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Plano Hetzner</th><th>RAM</th><th>Preço/mês</th><th>Clientes/servidor</th><th>Custo/cliente</th></tr></thead>
+      <tbody>
+        <tr><td>CX22 (atual)</td><td class="num">2 GB</td><td class="num">R$23</td><td class="num">5–8</td><td class="num">R$3–5</td></tr>
+        <tr><td>CX32</td><td class="num">4 GB</td><td class="num">R$46</td><td class="num">15–18</td><td class="num">R$2,5–3</td></tr>
+        <tr><td>CX42</td><td class="num">8 GB</td><td class="num">R$95</td><td class="num">35–38</td><td class="num">R$2,5–2,8</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>IA de classificação (Groq) <span class="tag tag-measured">testado</span></h3>
+  <p>A classificação de qualidade do lead (verde/amarelo/vermelho) já roda em produção via Groq. Free tier cobre o volume atual sem custo; em escala, o modelo pago (<code>openai/gpt-oss-120b</code>) fica na faixa de US$0,15–0,75 por milhão de tokens — cada classificação usa ~300–500 tokens, o que dá frações de centavo por mensagem. <strong>Custo de IA por cliente/mês: abaixo de R$1</strong>, mesmo em uso intenso.</p>
+
+  <h3>Total consolidado — Caminho A (Evolution/Baileys)</h3>
+  <p><strong>Custo estimado por cliente/mês: R$3–5</strong> (infra domina, IA é marginal). Com a regra pedida de 300% de lucro sobre esse custo (preço = 4× custo):</p>
+
+  <div class="callout callout-warn" style="border-left:3px solid var(--accent);background:var(--accent-soft);border-color:var(--line)">
+    <span class="callout-label" style="color:var(--accent-ink)">Preço de venda resultante — Caminho A</span>
+    <p><strong>R$12–20/mês por cliente</strong> cobriria a regra de margem sobre infra+IA. É bem abaixo de qualquer CRM de WhatsApp do mercado — mas este número carrega o risco de banimento descrito na Seção LP.3, e não é válido em escala de dezenas de milhares.</p>
+  </div>
+
+  <h3>Total consolidado — Caminho B (Cloud API oficial, 360dialog) <span class="tag tag-decision">revisado</span></h3>
+  <p>Refeito após avaliar a rota sem risco de ban. Estrutura: <strong>~R$30/mês por número</strong> (360dialog, flat, sem markup — a opção mais barata encontrada) + mensagens. Como o CRM é majoritariamente respondedor (lead inicia contato, atendimento responde dentro da janela de 24h — grátis até 30/set/2026 — ou via anúncio Click-to-WhatsApp, janela de 72h grátis para sempre), a maior parte do tráfego real cai isenta de tarifa por mensagem.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Item</th><th>Custo/mês</th></tr></thead>
+      <tbody>
+        <tr><td>Número (360dialog, flat)</td><td class="num">~R$30</td></tr>
+        <tr><td>Mensagens dentro da janela de atendimento (até set/2026)</td><td class="num">R$0</td></tr>
+        <tr><td>Mensagens de leads via Anúncios (janela 72h, sempre grátis)</td><td class="num">R$0</td></tr>
+        <tr><td>IA de classificação (Groq)</td><td class="num">&lt;R$1</td></tr>
+        <tr><td><strong>Total até set/2026</strong></td><td class="num"><strong>~R$31</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-warn" style="border-left:3px solid var(--accent);background:var(--accent-soft);border-color:var(--line)">
+    <span class="callout-label" style="color:var(--accent-ink)">Preço de venda resultante — Caminho B</span>
+    <p><strong>~R$120–125/mês por cliente</strong> (4× o custo de ~R$31) — mais caro que o Caminho A, mas sem o risco existencial de banimento em massa. Ainda competitivo frente aos R$50–300+ do mercado.</p>
+  </div>
+
+  <h3>Reduzir custo dentro do Caminho B</h3>
+  <ul>
+    <li>Concentrar aquisição via anúncios Click-to-WhatsApp — a janela de 72h grátis não muda com a mudança de regra de outubro/2026, então direcionar tráfego pago para esse formato maximiza a fatia de conversa isenta de tarifa.</li>
+    <li>Negociar preço de número por volume diretamente com o BSP a partir de dezenas de contas — não há tabela pública de desconto por escala, é negociação direta.</li>
+    <li>Modelo híbrido por segmento: clientes pequenos/piloto no Caminho A (mais barato, risco aceitável na escala inicial), clientes de maior volume/importância no Caminho B — decisão de produto, não técnica.</li>
+    <li>Confirmar o valor exato da tarifa "utility" pós-outubro/2026 para o Brasil antes de fechar qualquer conta final — não encontrado nesta pesquisa, e vai virar o componente mais recorrente de custo depois da mudança.</li>
+  </ul>
+
+  <p>Esta conta <strong>não inclui</strong>: seu tempo de suporte, desenvolvimento contínuo, ou o custo operacional de sessões caindo e precisando reconectar — que é trabalho humano.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">LP.3</span><h2>O ponto de decisão que domina tudo</h2></div>
+  <p class="sec-dek">Dois caminhos reais para conectar 50.000 números de WhatsApp. Escolher errado aqui não é um bug a corrigir depois — é reconstruir a base do produto.</p>
+
+  <h3>Caminho A — Evolution/Baileys (o que está em uso hoje)</h3>
+  <p>Protocolo não oficial: a biblioteca finge ser o WhatsApp Web rodando num navegador. Funciona bem hoje com 1 conta. Relatos de operações que tentaram escalar isso para milhares de contas descrevem detecção pelos sistemas antifraude da Meta em 2 a 8 semanas, com banimento permanente e sem recurso — o risco cresce com volume alto, mensagens para desconhecidos e padrões de envio robóticos. Contas hospedadas no mesmo provedor/IP tendem a ser correlacionadas: uma flagrada aumenta a chance de revisão das vizinhas.</p>
+  <p><strong>Veredito para 50.000 clientes: inviável como base única.</strong> Não é uma questão de "quantos servidores" — é uma questão de "quantas contas o sistema antifraude da Meta consegue agrupar como comportamento suspeito", e isso não se resolve com isolamento de infraestrutura.</p>
+
+  <h3>Caminho B — WhatsApp Business Platform (Cloud API oficial da Meta)</h3>
+  <p>API oficial, sem risco de banimento por detecção de automação — é o canal que a Meta constrói para isso. Desde julho de 2025 o modelo de cobrança é por mensagem entregue (não mais por conversa), variando por país e categoria: no Brasil, mensagem de marketing gira em torno de <strong>US$0,0625</strong>. Mensagens dentro da janela de 24h de atendimento (respostas normais) são gratuitas. Um provedor (BSP) intermediário costuma somar US$0,003–0,010 por mensagem.</p>
+  <p>Isso muda o modelo de custo: deixa de ser "servidor fixo por cliente" e passa a ter um componente <strong>variável por mensagem enviada fora da janela de atendimento</strong> — o CRM (respostas normais, dentro de conversa já aberta pelo cliente) tende a cair majoritariamente na janela grátis, mas qualquer disparo proativo (lembrete, reengajamento) entra na tarifa.</p>
+
+  <div class="qbox">
+    <b>Decisão a validar externamente</b>
+    <p>Migrar a base de conexão para a Cloud API oficial antes de escalar além de algumas centenas de clientes. Isso provavelmente exige um provedor (BSP) para simplificar o onboarding por QR code automatizado — vale pesquisar opções (Twilio, 360dialog, Zenvia, Gupshup) e comparar custo de setup por número contra o risco de banimento em massa do Caminho A.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">LP.4</span><h2>Arquitetura de infra — sua ideia de N servidores</h2></div>
+  <p class="sec-dek">A premissa de "vários servidores idênticos, cada um com sua própria instância" está correta como desenho de infra — resolve RAM/CPU e isolamento de falha. Detalhando o que falta.</p>
+
+  <div class="stage-list">
+    <div class="stage">
+      <span class="stage-n">1</span>
+      <div class="stage-body">
+        <h4>Unidade replicável ("shard")</h4>
+        <p>Cada servidor roda: 1 instância Evolution (ou, no Caminho B, um worker que fala com a Cloud API), sem Postgres/CRM próprios — esses ficam centralizados. Servidor cai, leva só as sessões dele, não o sistema inteiro.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <span class="stage-n">2</span>
+      <div class="stage-body">
+        <h4>Camada central compartilhada</h4>
+        <p>1 Postgres (com réplica), 1 painel CRM (o server.mjs atual, mas precisa aprender a rotear cada tenant para o shard certo), fila de eventos entre shards e o banco central — hoje é webhook direto, em escala precisa de fila (Redis Streams ou similar, já existe Redis no stack) para não perder mensagem se um shard cair no meio de um pico.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <span class="stage-n">3</span>
+      <div class="stage-body">
+        <h4>Orquestrador de provisionamento</h4>
+        <p>Serviço que decide "esse cliente novo vai para qual shard" (baseado em capacidade livre), sobe a instância, gera o QR automaticamente e associa ao tenant — é a peça que hoje não existe (hoje eu criei/apaguei instância manualmente via script).</p>
+      </div>
+    </div>
+    <div class="stage">
+      <span class="stage-n">4</span>
+      <div class="stage-body">
+        <h4>Monitoramento por shard</h4>
+        <p>Alerta automático quando um shard se aproxima do limite de RAM/sessões, e quando uma sessão cai (desconexão do WhatsApp) — hoje não existe nenhum alerta desse tipo no CRM.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Dimensionamento aproximado por shard (usando a faixa estimada de custo/cliente da Seção LP.2, plano CX32 4GB): <strong>~15–18 clientes por servidor</strong> → 50.000 clientes exigiriam algo entre <strong>2.800 e 3.300 shards</strong>. Esse número por si só é um argumento forte a favor do Caminho B (Cloud API), onde o custo deixa de escalar em "quantos servidores" e passa a escalar em "quantas mensagens" — operacionalmente muito mais simples de gerir que milhares de VPS.</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">LP.5</span><h2>Automação de ponta a ponta</h2></div>
+  <p class="sec-dek">Da criação da conta até o QR code conectado, sem intervenção manual.</p>
+
+  <div class="stage-list">
+    <div class="stage">
+      <span class="stage-n">1</span>
+      <div class="stage-body">
+        <h4>Cadastro self-service</h4>
+        <p>Cliente cria conta, escolhe plano, paga (gateway de pagamento — Stripe/Pagar.me/Asaas, a decidir) sem qualquer ação humana da sua parte.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <span class="stage-n">2</span>
+      <div class="stage-body">
+        <h4>Provisionamento automático</h4>
+        <p>O orquestrador (Seção LP.4, item 3) escolhe o shard, cria a instância/número, gera o QR e mostra na tela — sem ninguém no seu time tocando em nada.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <span class="stage-n">3</span>
+      <div class="stage-body">
+        <h4>Conexão e validação</h4>
+        <p>Cliente escaneia o QR com o celular dele. Sistema confirma conexão, ativa o tenant no CRM automaticamente — mesmo fluxo de <code>POST /api/clients</code> que já existe hoje, mas disparado pelo próprio cliente, não por mim via script.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <span class="stage-n">4</span>
+      <div class="stage-body">
+        <h4>Suporte — só via ticket</h4>
+        <p>Sistema próprio (decisão já tomada, sem SaaS terceiro): fila de tickets dentro do próprio painel, cliente abre quando algo falha (reconexão de QR, dúvida de uso), sem canal humano direto — WhatsApp, telefone ou chat ao vivo não fazem parte do modelo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">LP.6</span><h2>Riscos por ordem de severidade</h2></div>
+
+  <div class="risk-grid">
+    <div class="risk">
+      <div class="risk-head"><span class="risk-name">Banimento em massa (Caminho A)</span><span class="sev sev-crit">Crítico</span></div>
+      <p>Sem recurso, sem aviso — a base inteira do produto pode cair de uma vez se detectada como rede de automação.</p>
+      <div class="mitig"><b>Mitigação</b>Migrar para Cloud API oficial (Caminho B) antes de escalar além de algumas centenas de clientes.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-head"><span class="risk-name">Perda de mensagem em pico</span><span class="sev sev-high">Alto</span></div>
+      <p>Hoje o webhook é síncrono, sem fila — se o CRM ou um shard estiver sobrecarregado no momento exato, a mensagem se perde.</p>
+      <div class="mitig"><b>Mitigação</b>Fila de eventos (Redis Streams) entre Evolution/Cloud API e o CRM, com reprocessamento automático.</div>
+    </div>
+    <div class="risk">
+      <div class="risk-head"><span class="risk-name">RLS e isolamento de tenant em escala</span><span class="sev sev-high">Alto</span></div>
+      <p>O schema atual usa <code>SET LOCAL app.tenant_id</code> por request — testado e correto para dezenas de tenants; não validado sob milhares de conexões simultâneas ao Postgres.</p>
+      <div class="mitig"><b>Mitigação</b>Teste de carga real no Postgres antes de escalar; considerar connection pooling dedicado (PgBouncer).</div>
+    </div>
+    <div class="risk">
+      <div class="risk-head"><span class="risk-name">Suporte 100% self-service sem contato humano</span><span class="sev sev-med">Médio</span></div>
+      <p>Em 50.000 clientes, mesmo com baixa taxa de problema por conta, o volume absoluto de tickets é grande — sem triagem automática, vira gargalo.</p>
+      <div class="mitig"><b>Mitigação</b>IA de triagem de ticket (mesma infra Groq já validada) para resolver os casos comuns (reconectar QR, dúvida de uso) antes de qualquer escalonamento humano.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section style="margin-bottom:0">
+  <div class="sec-head"><span class="sec-num">—</span><h2>O que levar para validação externa</h2></div>
+  <ul>
+    <li><strong>Prioridade — sobre o plano corrente (Seção 01):</strong> comportamento do WhatsApp com múltiplos linked devices simultâneos e prazo de revogação por inatividade — não documentado oficialmente pela Meta, só observado pela comunidade Baileys. É a maior incerteza real antes de conectar qualquer cliente.</li>
+    <li>A extrapolação de RAM por sessão ativa (Seção 01 e LP.2) é a peça mais fraca deste documento — só o piso foi medido de fato; a Fase 0 do rollout existe justamente para medir o número real antes de decidir o próximo servidor.</li>
+    <li>Sobre a visão de longo prazo: a leitura de risco do Caminho A (Seção LP.3) vem de relatos de mercado, não de um caso jurídico ou dado oficial da Meta. Vale confrontar com quem já operou WhatsApp automatizado em volume real.</li>
+    <li>O custo por mensagem da Cloud API (Seção LP.3) muda com frequência — confirmar valor atual antes de fechar qualquer conta de unit economics, especialmente a tarifa "utility" pós-outubro/2026, ainda não encontrada nesta pesquisa.</li>
+    <li>Dimensionamento de shards (Seção LP.4) assume distribuição uniforme de clientes; picos de uso concentrados (horário comercial) podem exigir mais margem por shard.</li>
+  </ul>
+</section>
+
+<footer>
+  Documento de planejamento — nenhuma ação foi executada. Baseado em medições do VPS de produção e pesquisa de mercado sobre WhatsApp Business API e risco de banimento de automação não oficial. Atualizado 30/08/2026 com revisão de custos (Cloud API oficial) e plano de rollout em fases.
+</footer>
+
+</div>
+</body>
+</html>
