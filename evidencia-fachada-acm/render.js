@@ -56,6 +56,16 @@ function renderAll(c, ICONS) {
     }).join('') + '\n      </div>\n' +
     '      <p class="text-center text-slate-600 font-body mt-10">' + s.letraNote + ' <a href="' + s.letraHref + '" class="text-brand font-semibold underline underline-offset-4 hover:text-red-700">' + s.letraLink + '</a></p>\n    </div>\n  </section>';
 
+  var w = c.works;
+  var works = '\n  <section id="trabalhos" class="py-20 md:py-28 bg-white">\n    <div class="max-w-6xl mx-auto px-4">\n' +
+    '      <div class="text-center mb-10">\n        <span class="text-brand font-title font-semibold text-xs uppercase tracking-[.15em]">' + w.kicker + '</span>\n' +
+    '        <h2 class="font-title font-semibold text-3xl md:text-4xl leading-snug tracking-tight text-dark mt-2 mb-3">' + w.title + '</h2>\n' +
+    '        <p class="text-slate-600 font-body max-w-xl mx-auto">' + w.text + '</p>\n      </div>\n' +
+    '      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">' +
+    w.items.map(function (it, i) {
+      return '\n        <button type="button" data-lightbox="' + it.img + '" aria-label="Ampliar foto: ' + it.alt + '" class="block overflow-hidden rounded-2xl bg-slate-100 cursor-zoom-in"><img src="' + it.img + '" alt="' + it.alt + '" width="' + it.w + '" height="' + it.h + '" class="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-300" loading="lazy" decoding="async"></button>';
+    }).join('') + '\n      </div>\n    </div>\n  </section>';
+
   var g = c.gallery;
   var gallery = '\n  <section class="py-20 md:py-28 bg-dark text-white">\n    <div class="max-w-6xl mx-auto px-4">\n      <div class="grid md:grid-cols-2 gap-12 items-center">\n' +
     '        <div>\n          <span class="text-gold font-title font-semibold text-xs uppercase tracking-[.15em]">' + g.kicker + '</span>\n' +
@@ -98,5 +108,5 @@ function renderAll(c, ICONS) {
 
   var floating = '\n  <a href="' + wa() + '" target="_blank" rel="noopener noreferrer" data-action="whatsapp" data-location="flutuante" aria-label="Pedir orçamento pelo WhatsApp" class="fixed bottom-5 right-5 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-body font-semibold py-3 px-4 sm:px-5 rounded-full shadow-2xl wha-pulse transition-all hover:scale-105">' + icon('whatsapp', 'text-2xl') + '<span class="hidden sm:inline text-sm">Orçamento pelo WhatsApp</span></a>';
 
-  return header + hero + trust + services + gallery + steps + region + cta + footer + floating;
+  return header + hero + trust + services + works + gallery + steps + region + cta + footer + floating;
 }

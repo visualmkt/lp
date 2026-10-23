@@ -36,6 +36,11 @@
 
 <div id="app" class="min-h-screen">{{STATIC}}</div>
 
+<div id="lightbox" class="hidden fixed inset-0 z-[999] bg-black/90 flex items-center justify-center p-4" role="dialog" aria-label="Foto ampliada">
+  <img id="lb-img" src="" alt="" class="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl">
+  <button type="button" id="lb-close" aria-label="Fechar" class="absolute top-4 right-4 text-white/80 hover:text-white text-5xl leading-none">&times;</button>
+</div>
+
 <noscript>
   <p style="text-align:center;padding:20px;font-family:sans-serif;">{{NOSCRIPT}}</p>
 </noscript>
@@ -104,6 +109,15 @@ document.addEventListener('click', function (e) {
   var el = e.target.closest ? e.target.closest('[data-action="whatsapp"]') : null;
   if (el && window.dataLayer) dataLayer.push({ event: 'whatsapp_click', location: el.dataset.location || 'unknown' });
 });
+
+// Lightbox das fotos (delegação)
+document.addEventListener('click', function (ev) {
+  var lb = document.getElementById('lightbox');
+  var t = ev.target.closest ? ev.target.closest('[data-lightbox]') : null;
+  if (t) { var im = t.querySelector('img'); document.getElementById('lb-img').src = t.getAttribute('data-lightbox'); document.getElementById('lb-img').alt = im ? im.alt : ''; lb.classList.remove('hidden'); return; }
+  if (ev.target === lb || ev.target.id === 'lb-close') lb.classList.add('hidden');
+});
+document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') document.getElementById('lightbox').classList.add('hidden'); });
 
 injectTracking(BAKED.tracking);
 
