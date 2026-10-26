@@ -95,7 +95,9 @@ const CONFIG_SOURCES = [
   'https://cdn.statically.io/gh/visualmkt/lp/main/evidencia-letreiro/config.json',
 ];
 
+const CONFIG_VERSION = 2; // sobe junto com mudanças de layout; CDN com config velho é ignorado (tenta a próxima fonte)
 async function loadConfig() {
+  let stale = null;
   for (const base of CONFIG_SOURCES) {
     for (let i = 0; i < 2; i++) {
       try {
@@ -103,10 +105,11 @@ async function loadConfig() {
         const to = setTimeout(() => ctrl.abort(), 4000);
         const r = await fetch(base + '?t=' + Date.now(), { cache: 'no-store', signal: ctrl.signal });
         clearTimeout(to);
-        if (r.ok) return await r.json();
+        if (r.ok) { const j = await r.json(); if (j.v === CONFIG_VERSION) return j; stale = stale || j; break; }
       } catch {}
     }
   }
+  if (stale) return stale;
   throw new Error('config.json indisponível em todos os CDNs');
 }
 
@@ -159,7 +162,7 @@ const waBtn = (num, msg, label, loc, cls) =>
 function renderHeader(c) {
   const { whatsapp: num, whatsappMsgDefault: msg, phoneDisplay, phoneTel } = c.contact;
   const logoHtml = c.brand.logo
-    ? `<img src="${c.brand.logo}" alt="" width="400" height="400" style="height:3rem;width:3rem" class="rounded-full"><span class="font-title font-semibold text-white text-base leading-tight">Gráfica<br>Evidência</span>`
+    ? `<img src="${c.brand.logo}" alt="" width="400" height="400" style="height:3rem;width:3rem;object-fit:contain" class="rounded-full"><span class="font-title font-semibold text-white text-base leading-tight">Gráfica<br>Evidência</span>`
     : `<span class="font-title font-semibold text-white text-2xl">Gráfica Evidência</span>`;
 
   return `
@@ -388,7 +391,7 @@ function renderFooter(c) {
   return `
   <footer class="bg-dark text-white py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      ${c.brand.logoFull ? `<img src="${c.brand.logoFull}" alt="${c.brand.logoAlt}" width="400" height="400" style="height:7rem;width:7rem" class="mx-auto mb-4 rounded-full" loading="lazy" decoding="async">` : ''}
+      ${c.brand.logoFull ? `<img src="${c.brand.logoFull}" alt="${c.brand.logoAlt}" width="400" height="400" style="height:7rem;width:7rem;object-fit:contain" class="mx-auto mb-4 rounded-full" loading="lazy" decoding="async">` : ''}
       <p class="font-title font-semibold text-2xl tracking-tight mb-1">${f.name}</p>
       <p class="text-slate-400 text-sm font-body mb-1">${f.address}</p>
       <p class="text-slate-400 text-sm font-body mb-6">${f.tagline}</p>
