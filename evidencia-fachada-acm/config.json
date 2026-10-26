@@ -1,11 +1,14 @@
 {
+  "v": 3,
   "meta": {
     "title": "Fachada em ACM em Ipixuna do Pará | Gráfica Evidência",
     "description": "Fachada em ACM, painel em ACM e placas para fachada de loja, fabricados sob medida em Ipixuna do Pará. Atendemos a região. Orçamento pelo WhatsApp."
   },
   "brand": {
-    "logo": "https://graficaevidencia.com/wp-content/uploads/2025/11/cropped-cropped-Grafica-evidencia-222-1-600x209.png",
-    "logoAlt": "Gráfica Evidência — Impressos Gráficos e Comunicação Visual"
+    "logo": "https://graficaevidencia.com/fachada-acm/logo-evidencia.webp",
+    "logoFull": "logo-evidencia.webp",
+    "logoMark": "logo-marca.webp",
+    "logoAlt": "Gráfica Evidência — Gráfica e Comunicação Visual"
   },
   "contact": {
     "whatsapp": "5591984551220",
@@ -114,6 +117,24 @@
     "text": "Veja fachadas, painéis e letreiros de lojas e empresas da região. Toque na foto para ampliar.",
     "items": [
       {
+        "img": "trabalhos/fachada-loja-painel-preto-laranja-dia.webp",
+        "alt": "Fachada de loja com painel preto e detalhes laranja, durante o dia",
+        "w": 1000,
+        "h": 750
+      },
+      {
+        "img": "trabalhos/fachada-loja-painel-verde-noite.webp",
+        "alt": "Fachada de loja com painéis verdes e letreiro iluminado à noite",
+        "w": 1000,
+        "h": 750
+      },
+      {
+        "img": "trabalhos/fachada-painel-preto-faixas-laranja-noite.webp",
+        "alt": "Fachada com painel preto e faixas laranja iluminada à noite",
+        "w": 1000,
+        "h": 750
+      },
+      {
         "img": "trabalhos/fachada-loja-fitness-noite.webp",
         "alt": "Fachada de loja fitness com painel metálico e letreiro iluminado à noite",
         "w": 1000,
@@ -146,6 +167,24 @@
       {
         "img": "trabalhos/painel-verde-logotipo-relevo.webp",
         "alt": "Painel verde com logotipo em relevo e letras iluminadas",
+        "w": 1000,
+        "h": 750
+      },
+      {
+        "img": "trabalhos/fachada-loja-painel-branco-noite.webp",
+        "alt": "Fachada de loja com painel branco e letreiro à noite",
+        "w": 1000,
+        "h": 750
+      },
+      {
+        "img": "trabalhos/painel-laranja-logotipo-relevo.webp",
+        "alt": "Painel laranja com logotipo em relevo e letras iluminadas",
+        "w": 1000,
+        "h": 750
+      },
+      {
+        "img": "trabalhos/fachada-salao-letreiro-iluminado-noite.webp",
+        "alt": "Fachada de salão de beleza com painel escuro e letreiro iluminado à noite",
         "w": 1000,
         "h": 750
       }
