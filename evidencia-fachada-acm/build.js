@@ -35,7 +35,7 @@ const TW = 'c:/dev/ebg-build/node_modules/tailwindcss/lib/cli.js';
           itemListElement: c.services.items.map(it => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: it.title, description: it.desc, areaServed: c.address.areaServed, provider: { '@id': `${BASE}/#empresa` } } })),
         },
       },
-      { '@type': 'WebPage', '@id': `${URL_}#pagina`, url: URL_, name: c.meta.title, description: c.meta.description, inLanguage: 'pt-BR', about: { '@id': `${BASE}/#empresa` }, primaryImageOfPage: `${URL_}hero-fachada.webp` },
+      { '@type': 'WebPage', '@id': `${URL_}#pagina`, url: URL_, name: c.meta.title, description: c.meta.description, inLanguage: 'pt-BR', about: { '@id': `${BASE}/#empresa` }, primaryImageOfPage: `${URL_}hero-fachada-2.webp` },
       { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Gráfica Evidência', item: BASE + '/' }, { '@type': 'ListItem', position: 2, name: 'Fachada em ACM', item: URL_ }] },
       { '@type': 'FAQPage', mainEntity: c.faq.items.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     ],

@@ -16,27 +16,27 @@ function renderAll(c, ICONS) {
   var h = c.hero;
   var header = '\n  <header class="fixed top-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b-2 border-brand shadow-sm">\n' +
     '    <div class="max-w-6xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between gap-4">\n' +
-    '      <a href="#" class="flex items-center gap-3 min-w-0" aria-label="' + c.brand.logoAlt + '"><img src="' + c.brand.logoMark + '" alt="" width="220" height="160" class="h-10 md:h-12 w-auto"><span class="font-title font-semibold text-white text-base md:text-lg leading-tight">Gráfica<br>Evidência</span></a>\n' +
+    '      <a href="#" class="flex items-center gap-3 min-w-0" aria-label="' + c.brand.logoAlt + '"><img src="' + c.brand.logoLockup + '" alt="" width="566" height="128" class="h-10 md:h-12 w-auto"></a>\n' +
     '      <div class="flex items-center gap-2 md:gap-4 shrink-0">\n' +
     '        <a href="tel:' + c.contact.phoneTel + '" class="hidden md:flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-semibold font-body">' + icon('phone', 'text-brand text-xs') + c.contact.phoneDisplay + '</a>\n' +
     '        ' + waBtn('Orçamento', 'header', 'flex items-center bg-brand hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full transition-all shadow-lg') + '\n' +
     '      </div>\n    </div>\n  </header>';
 
-  var hero = '\n  <section class="relative flex items-center text-white pt-20 overflow-hidden bg-dark" style="min-height:92vh">\n' +
-    (h.bgImage
-      ? '    <img src="' + h.bgImage + '" alt="" width="1600" height="1200" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" decoding="async">\n    <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/70 to-dark/85"></div>\n'
-      : '    <div class="absolute inset-0 bg-dark"></div>\n') +
+  var hero = '\n  <section class="relative text-white pt-24 md:pt-28 pb-14 md:pb-20 overflow-hidden bg-dark">\n' +
     '    <div class="hero-glow absolute inset-0"></div>\n' +
-    '    <div class="relative max-w-5xl mx-auto px-4 py-14 md:py-24 text-center hero-text">\n' +
-    '      <div class="inline-flex items-center gap-2 border border-brand/60 bg-brand/15 text-gold px-4 py-2 rounded-full text-sm font-body font-semibold mb-8">' + icon('ruler-combined', 'text-gold text-xs') + h.badge + '</div>\n' +
-    '      <h1 class="font-title font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mb-6">' + h.h1Pre + '<br><span class="' + (h.bgImage ? 'text-gold' : 'text-brand') + '">' + h.h1Highlight + '</span></h1>\n' +
-    '      <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-8 font-body leading-relaxed">' + h.subtitle + '</p>\n' +
-    '      <div class="flex flex-wrap items-center justify-center gap-4 mb-10 text-white/80 text-sm font-body">\n' +
-    '        <span class="inline-flex items-center gap-1.5">' + icon('whatsapp', 'text-gold text-xs') + 'Orçamento pelo WhatsApp</span>\n' +
-    '        <span class="inline-flex items-center gap-1.5">' + icon('layer-group', 'text-gold text-xs') + 'Fachada, painel e placa em ACM</span>\n' +
-    '        <span class="inline-flex items-center gap-1.5">' + icon('location-dot', 'text-gold text-xs') + 'Ipixuna do Pará e região</span>\n' +
+    '    <div class="relative max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 md:gap-12 items-center">\n' +
+    '      <div class="text-center md:text-left">\n' +
+    '        <div class="inline-flex items-center gap-2 border border-brand/60 bg-brand/15 text-gold px-4 py-2 rounded-full text-sm font-body font-semibold mb-6">' + icon('ruler-combined', 'text-gold text-xs') + h.badge + '</div>\n' +
+    '        <h1 class="font-title font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight mb-5">' + h.h1Pre + '<br><span class="text-gold">' + h.h1Highlight + '</span></h1>\n' +
+    '        <p class="text-slate-200 text-lg md:text-xl max-w-xl mx-auto md:mx-0 mb-7 font-body leading-relaxed">' + h.subtitle + '</p>\n' +
+    '        <div class="flex flex-wrap items-center justify-center md:justify-start gap-x-5 gap-y-2 mb-8 text-slate-300 text-sm font-body">\n' +
+    '          <span class="inline-flex items-center gap-1.5">' + icon('whatsapp', 'text-gold text-xs') + 'Orçamento pelo WhatsApp</span>\n' +
+    '          <span class="inline-flex items-center gap-1.5">' + icon('layer-group', 'text-gold text-xs') + 'Fachada, painel e placa em ACM</span>\n' +
+    '          <span class="inline-flex items-center gap-1.5">' + icon('location-dot', 'text-gold text-xs') + 'Ipixuna do Pará e região</span>\n' +
+    '        </div>\n' +
+    '        <div class="flex justify-center md:justify-start">' + waBtn(h.ctaPrimary, 'hero', 'flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-body font-semibold text-lg px-8 md:px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105 wha-pulse') + '</div>\n' +
     '      </div>\n' +
-    '      <div class="flex justify-center">' + waBtn(h.ctaPrimary, 'hero', 'flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-body font-semibold text-lg px-8 md:px-10 py-4 md:py-5 rounded-2xl shadow-2xl transition-all hover:scale-105 wha-pulse') + '</div>\n' +
+    '      <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10"><img src="' + h.bgImage + '" alt="' + h.imageAlt + '" width="1600" height="1200" class="w-full h-auto object-cover" fetchpriority="high" decoding="async"></div>\n' +
     '    </div>\n  </section>';
 
   var trust = '\n  <section class="py-10 bg-white border-b border-slate-100">\n    <div class="max-w-5xl mx-auto px-4">\n      <div class="grid grid-cols-2 md:grid-cols-4 gap-2">' +
