@@ -16,13 +16,14 @@ function renderAll(c, ICONS) {
   var h = c.hero;
   var header = '\n  <header class="fixed top-0 w-full z-50 bg-dark/95 backdrop-blur-sm border-b-2 border-brand shadow-sm">\n' +
     '    <div class="max-w-6xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between gap-4">\n' +
-    '      <a href="#" class="flex items-center gap-3 min-w-0" aria-label="' + c.brand.logoAlt + '"><img src="' + c.brand.logoLockup + '" alt="" width="566" height="128" style="height:3rem;width:auto" class="block"></a>\n' +
+    '      <a href="#" class="flex items-center gap-3 min-w-0" aria-label="' + c.brand.logoAlt + '"><img src="' + c.brand.logoFull + '" alt="" width="400" height="400" style="height:3rem;width:3rem" class="block rounded-full"><span class="font-title font-semibold text-white text-base md:text-lg leading-tight">Gráfica<br>Evidência</span></a>\n' +
     '      <div class="flex items-center gap-2 md:gap-4 shrink-0">\n' +
     '        <a href="tel:' + c.contact.phoneTel + '" class="hidden md:flex items-center gap-2 text-slate-300 hover:text-white transition-colors text-sm font-semibold font-body">' + icon('phone', 'text-brand text-xs') + c.contact.phoneDisplay + '</a>\n' +
     '        ' + waBtn('Orçamento', 'header', 'flex items-center bg-brand hover:bg-red-700 text-white font-body font-semibold text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full transition-all shadow-lg') + '\n' +
     '      </div>\n    </div>\n  </header>';
 
   var hero = '\n  <section class="relative text-white pt-24 md:pt-28 pb-14 md:pb-20 overflow-hidden bg-dark">\n' +
+    '    <img src="' + h.bgFull + '" alt="" aria-hidden="true" width="1600" height="1200" class="absolute inset-0 w-full h-full object-cover" style="opacity:.2" decoding="async">\n' +
     '    <div class="hero-glow absolute inset-0"></div>\n' +
     '    <div class="relative max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 md:gap-12 items-center">\n' +
     '      <div class="text-center md:text-left">\n' +
@@ -123,7 +124,7 @@ function renderAll(c, ICONS) {
 
   var f = c.footer;
   var footer = '\n  <footer class="bg-dark text-white py-16">\n    <div class="max-w-4xl mx-auto px-4 text-center">\n' +
-    '      <img src="' + c.brand.logoFull + '" alt="' + c.brand.logoAlt + '" width="560" height="543" style="height:5.5rem;width:auto" class="mx-auto mb-4" loading="lazy" decoding="async">\n' +
+    '      <img src="' + c.brand.logoFull + '" alt="' + c.brand.logoAlt + '" width="400" height="400" style="height:7rem;width:7rem" class="mx-auto mb-4 rounded-full" loading="lazy" decoding="async">\n' +
     '      <p class="font-title font-semibold text-2xl tracking-tight mb-1">' + f.name + '</p>\n' +
     '      <p class="text-slate-400 text-sm font-body mb-1">' + f.address + '</p>\n' +
     '      <p class="text-slate-400 text-sm font-body mb-1">' + f.hours + '</p>\n' +

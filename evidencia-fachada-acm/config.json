@@ -1,15 +1,13 @@
 {
-  "v": 4,
+  "v": 5,
   "meta": {
     "title": "Fachada em ACM em Ipixuna do Pará | Gráfica Evidência",
     "description": "Fachada em ACM, painel em ACM e placas para fachada de loja, fabricados sob medida em Ipixuna do Pará. Atendemos a região. Orçamento pelo WhatsApp."
   },
   "brand": {
-    "logo": "https://graficaevidencia.com/fachada-acm/logo-evidencia.webp",
-    "logoFull": "logo-evidencia.webp",
-    "logoMark": "logo-marca.webp",
-    "logoAlt": "Gráfica Evidência — Gráfica e Comunicação Visual",
-    "logoLockup": "logo-horizontal.webp"
+    "logo": "https://graficaevidencia.com/fachada-acm/logo-redonda.webp",
+    "logoFull": "logo-redonda.webp",
+    "logoAlt": "Gráfica Evidência — Gráfica e Comunicação Visual"
   },
   "contact": {
     "whatsapp": "5591984551220",
@@ -39,7 +37,8 @@
     "subtitle": "Fachada de ACM, painel em ACM e placas de fachada de loja, fabricados sob medida para a sua empresa. Peça o orçamento pelo WhatsApp.",
     "ctaPrimary": "Pedir orçamento pelo WhatsApp",
     "bgImage": "hero-fachada-2.webp",
-    "imageAlt": "Fachada de loja com painel preto e detalhes laranja"
+    "imageAlt": "Fachada de loja com painel preto e detalhes laranja",
+    "bgFull": "hero-bg-fachada.webp"
   },
   "answer": {
     "text": "A Gráfica Evidência é uma gráfica e empresa de comunicação visual de Ipixuna do Pará (PA), com fabricação sob medida de fachada em ACM, painel em ACM e placas para fachada de loja. Atende lojas e empresas de Ipixuna do Pará, Paragominas, Tomé-Açu e do nordeste do Pará, com orçamento pelo WhatsApp."

@@ -159,7 +159,7 @@ const waBtn = (num, msg, label, loc, cls) =>
 function renderHeader(c) {
   const { whatsapp: num, whatsappMsgDefault: msg, phoneDisplay, phoneTel } = c.contact;
   const logoHtml = c.brand.logo
-    ? `<img src="${c.brand.logo}" alt="" width="566" height="128" class="h-10 md:h-12 w-auto">`
+    ? `<img src="${c.brand.logo}" alt="" width="400" height="400" style="height:3rem;width:3rem" class="rounded-full"><span class="font-title font-semibold text-white text-base leading-tight">Gráfica<br>Evidência</span>`
     : `<span class="font-title font-semibold text-white text-2xl">Gráfica Evidência</span>`;
 
   return `
@@ -181,8 +181,7 @@ function renderHero(c) {
   const { whatsapp: num, whatsappMsgDefault: msg } = c.contact;
   const h = c.hero;
   const bg = h.bgImage
-    ? `<img src="${h.bgImage}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
-       <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/70 to-dark/90"></div>`
+    ? `<img src="${h.bgImage}" alt="" aria-hidden="true" width="1600" height="1200" class="absolute inset-0 w-full h-full object-cover" style="opacity:.2" fetchpriority="high">`
     : `<div class="absolute inset-0 bg-dark"></div>
        <div class="hero-glow absolute inset-0"></div>
        <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, #fff 40px, #fff 41px);"></div>`;
@@ -389,7 +388,7 @@ function renderFooter(c) {
   return `
   <footer class="bg-dark text-white py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      ${c.brand.logoFull ? `<img src="${c.brand.logoFull}" alt="${c.brand.logoAlt}" width="560" height="543" style="height:7rem;width:auto" class="mx-auto mb-4" loading="lazy" decoding="async">` : ''}
+      ${c.brand.logoFull ? `<img src="${c.brand.logoFull}" alt="${c.brand.logoAlt}" width="400" height="400" style="height:7rem;width:7rem" class="mx-auto mb-4 rounded-full" loading="lazy" decoding="async">` : ''}
       <p class="font-title font-semibold text-2xl tracking-tight mb-1">${f.name}</p>
       <p class="text-slate-400 text-sm font-body mb-1">${f.address}</p>
       <p class="text-slate-400 text-sm font-body mb-6">${f.tagline}</p>

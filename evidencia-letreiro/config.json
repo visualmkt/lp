@@ -8,9 +8,9 @@
     "primary": "#EA0A0A",
     "dark": "#111111",
     "gold": "#FFA800",
-    "logo": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/logo-horizontal.webp",
+    "logo": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/logo-redonda.webp",
     "logoAlt": "Gráfica Evidência — Gráfica e Comunicação Visual",
-    "logoFull": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/logo-evidencia.webp"
+    "logoFull": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/logo-redonda.webp"
   },
   "contact": {
     "whatsapp": "5591984551220",
@@ -38,7 +38,7 @@
     "subtitle": "Letras caixa em ACM, PVC e com iluminação LED. Sua fachada valorizada com letreiro profissional feito sob medida. Orçamento rápido pelo WhatsApp.",
     "ctaPrimary": "Orçamento Rápido pelo Whats",
     "ctaSecondary": "Ver Modelos",
-    "bgImage": "",
+    "bgImage": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/hero-bg-letreiro.webp",
     "hiddenSeo": "letra caixa letreiro letreiro iluminado letra caixa 3d letra caixa led letras fachada loja letreiro para fachada de loja letreiro de loja fabricante de letras caixa letra caixa em acm letra caixa pvc letreiro luminoso fachada comercial ipixuna do para paragominas tome-acu nordeste do para comunicação visual"
   },
   "trust": [
