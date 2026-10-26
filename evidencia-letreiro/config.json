@@ -8,8 +8,9 @@
     "primary": "#EA0A0A",
     "dark": "#111111",
     "gold": "#FFA800",
-    "logo": "https://graficaevidencia.com/wp-content/uploads/2025/11/cropped-cropped-Grafica-evidencia-222-1-600x209.png",
-    "logoAlt": "Gráfica Evidência — Impressos Gráficos e Comunicação Visual"
+    "logo": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/logo-marca.webp",
+    "logoAlt": "Gráfica Evidência — Gráfica e Comunicação Visual",
+    "logoFull": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/logo-evidencia.webp"
   },
   "contact": {
     "whatsapp": "5591984551220",
@@ -23,7 +24,12 @@
     "city": "Ipixuna do Pará",
     "state": "PA",
     "schemaHours": "Mo-Fr 08:00-18:00",
-    "areaServed": ["Ipixuna do Pará", "Paragominas", "Tomé-Açu", "Nordeste do Pará"]
+    "areaServed": [
+      "Ipixuna do Pará",
+      "Paragominas",
+      "Tomé-Açu",
+      "Nordeste do Pará"
+    ]
   },
   "hero": {
     "badge": "Fabricação sob medida — Ipixuna do Pará e região",
@@ -36,12 +42,36 @@
     "hiddenSeo": "letra caixa letreiro letreiro iluminado letra caixa 3d letra caixa led letras fachada loja letreiro para fachada de loja letreiro de loja fabricante de letras caixa letra caixa em acm letra caixa pvc letreiro luminoso fachada comercial ipixuna do para paragominas tome-acu nordeste do para comunicação visual"
   },
   "trust": [
-    { "icon": "fa-ruler-combined", "title": "Sob Medida", "subtitle": "Projeto para a sua fachada" },
-    { "icon": "fa-bolt", "title": "Orçamento Rápido", "subtitle": "Resposta ágil pelo WhatsApp" },
-    { "icon": "fa-layer-group", "title": "Vários Materiais", "subtitle": "ACM, PVC, com ou sem LED" },
-    { "icon": "fa-truck-fast", "title": "Ipixuna e Região", "subtitle": "Atendemos o nordeste do PA" },
-    { "icon": "fa-store", "title": "Gráfica + CV", "subtitle": "Impressos e comunicação visual" },
-    { "icon": "fa-thumbs-up", "title": "Acabamento Profissional", "subtitle": "Corte preciso e instalação" }
+    {
+      "icon": "fa-ruler-combined",
+      "title": "Sob Medida",
+      "subtitle": "Projeto para a sua fachada"
+    },
+    {
+      "icon": "fa-bolt",
+      "title": "Orçamento Rápido",
+      "subtitle": "Resposta ágil pelo WhatsApp"
+    },
+    {
+      "icon": "fa-layer-group",
+      "title": "Vários Materiais",
+      "subtitle": "ACM, PVC, com ou sem LED"
+    },
+    {
+      "icon": "fa-truck-fast",
+      "title": "Ipixuna e Região",
+      "subtitle": "Atendemos o nordeste do PA"
+    },
+    {
+      "icon": "fa-store",
+      "title": "Gráfica + CV",
+      "subtitle": "Impressos e comunicação visual"
+    },
+    {
+      "icon": "fa-thumbs-up",
+      "title": "Acabamento Profissional",
+      "subtitle": "Corte preciso e instalação"
+    }
   ],
   "products": [
     {

@@ -159,15 +159,15 @@ const waBtn = (num, msg, label, loc, cls) =>
 function renderHeader(c) {
   const { whatsapp: num, whatsappMsgDefault: msg, phoneDisplay, phoneTel } = c.contact;
   const logoHtml = c.brand.logo
-    ? `<img src="${c.brand.logo}" alt="${c.brand.logoAlt}" class="h-10 md:h-12 w-auto">`
-    : `<span class="font-title font-semibold text-dark text-2xl">Gráfica Evidência</span>`;
+    ? `<img src="${c.brand.logo}" alt="" width="220" height="160" class="h-10 md:h-12 w-auto"><span class="font-title font-semibold text-white text-base leading-tight">Gráfica<br>Evidência</span>`
+    : `<span class="font-title font-semibold text-white text-2xl">Gráfica Evidência</span>`;
 
   return `
-  <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b-2 border-brand shadow-sm">
+  <header class="fixed top-0 w-full z-50 bg-dark border-b-2 border-brand shadow-sm">
     <div class="max-w-6xl mx-auto px-4 h-16 md:h-20 flex items-center justify-between gap-4">
-      <a href="#" class="flex items-center gap-3 min-w-0">${logoHtml}</a>
+      <a href="#" class="flex items-center gap-3 min-w-0" aria-label="${c.brand.logoAlt}">${logoHtml}</a>
       <div class="flex items-center gap-2 md:gap-4 shrink-0">
-        <a href="tel:${phoneTel}" class="hidden md:flex items-center gap-2 text-slate-500 hover:text-brand transition-colors text-sm font-semibold font-body">
+        <a href="tel:${phoneTel}" class="hidden md:flex items-center gap-2 text-slate-300 transition-colors text-sm font-semibold font-body">
           ${icon('phone', 'text-brand text-xs')}${phoneDisplay}
         </a>
         ${waBtn(num, msg, 'Orçamento', 'header',
@@ -389,6 +389,7 @@ function renderFooter(c) {
   return `
   <footer class="bg-dark text-white py-16">
     <div class="max-w-4xl mx-auto px-4 text-center">
+      ${c.brand.logoFull ? `<img src="${c.brand.logoFull}" alt="${c.brand.logoAlt}" width="560" height="543" style="height:7rem;width:auto" class="mx-auto mb-4" loading="lazy" decoding="async">` : ''}
       <p class="font-title font-semibold text-2xl tracking-tight mb-1">${f.name}</p>
       <p class="text-slate-400 text-sm font-body mb-1">${f.address}</p>
       <p class="text-slate-400 text-sm font-body mb-6">${f.tagline}</p>
