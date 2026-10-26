@@ -70,6 +70,9 @@ const TW = 'c:/dev/ebg-build/node_modules/tailwindcss/lib/cli.js';
   const visible = (staticHtml + ' ' + JSON.stringify(c)).replace(/<[^>]*>/g, ' ');
   const bad = [...visible.matchAll(/pre[cç]o|valor|a partir de|garantia|prazo|\b24 ?h|resposta em|projet|arte inclu|instala|gratuit|entrega r[aá]pida|anos de experi|r[aá]pid[oa]|sem compromisso|mensal|R\$/gi)].map(m => m[0]);
 
+  // cache-bust do CSS: o navegador guardava o style.css antigo e quebrava o layout novo
+  const hash = require('crypto').createHash('sha1').update(css).digest('hex').slice(0, 8);
+  html = html.replace('href="style.css"', `href="style.css?v=${hash}"`);
   fs.writeFileSync(`${D}/index.html`, html);
   const h1 = (staticHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/) || [])[1].replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   console.log(`index.html=${html.length}B style.css=${css.length}B classes=${classes.size} faltando=${missing.length}${missing.length ? ' → ' + missing.join(' ') : ''}`);
