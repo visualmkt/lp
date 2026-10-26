@@ -93,6 +93,7 @@
 const CONFIG_SOURCES = [
   'https://cdn.jsdelivr.net/gh/visualmkt/lp@main/evidencia-letreiro/config.json',
   'https://cdn.statically.io/gh/visualmkt/lp/main/evidencia-letreiro/config.json',
+  'https://raw.githubusercontent.com/visualmkt/lp/main/evidencia-letreiro/config.json', // sem cache longo: garante a versão nova quando os CDNs estão velhos
 ];
 
 const CONFIG_VERSION = 2; // sobe junto com mudanças de layout; CDN com config velho é ignorado (tenta a próxima fonte)
