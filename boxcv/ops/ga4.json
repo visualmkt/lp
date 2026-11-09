@@ -1,0 +1,9 @@
+{
+  "op": "create_property",
+  "account_id": "199253767",
+  "property_name": "Box CV",
+  "website_url": "https://boxcv.com.br",
+  "timezone": "America/Sao_Paulo",
+  "currency": "BRL",
+  "stream": { "display_name": "Box CV - Site", "default_uri": "https://boxcv.com.br" }
+}
