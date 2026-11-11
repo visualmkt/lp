@@ -1,16 +1,29 @@
 {
   "meta": {
     "title": "Troféus e Placas de Homenagem em Rio Claro | Junior Comunicação Visual",
-    "description": "Troféus personalizados e placas de homenagem para empresas, eventos e instituições. Produção própria em Rio Claro, mais de 29 anos em comunicação visual.",
-    "keywords": "troféu personalizado, troféu rio claro, placa de homenagem, placa de homenagem rio claro, troféu para empresa, troféu para evento, placa de agradecimento, placa dedicatória, premiação personalizada"
+    "description": "Troféus personalizados e placas de homenagem para empresas, eventos e instituições. Produção própria em Rio Claro, mais de 29 anos em comunicação visual."
+  },
+  "identity": {
+    "tone": [
+      "direto",
+      "industrial",
+      "próximo"
+    ],
+    "fonts": "Montserrat (fonte do site do cliente) + Source Sans 3",
+    "tokens": {
+      "radius": "4px",
+      "sombra": "flat",
+      "assinatura": "sublinhado grosso na keyword do H1"
+    }
   },
   "brand": {
     "primary": "#E8520E",
     "secondary": "#EE7D00",
-    "dark": "#1A1A1A",
+    "dark": "#141414",
     "logo": "https://juniorcomvisual.com.br/wp-content/uploads/2025/11/Logo-Junior.svg",
     "logoAlt": "Junior Comunicação Visual"
   },
+  "imgBase": "https://cdn.jsdelivr.net/gh/visualmkt/lp@main/junior-trofeus-homenagem/imagens/",
   "contact": {
     "whatsapp": "551935222566",
     "whatsappDisplay": "(19) 3522-2566",
@@ -23,29 +36,103 @@
     "city": "Rio Claro",
     "state": "SP",
     "zip": "13503-135",
-    "schemaHours": "Mo-Fr 08:00-18:00",
     "areaServed": [
       "Rio Claro",
       "Região de Rio Claro"
     ]
   },
   "hero": {
-    "h1Pre": "Troféus e Placas de Homenagem",
-    "h1Highlight": "em Rio Claro",
-    "subtitle": "Fazemos troféus e placas de homenagem sob encomenda para empresas, escolas, eventos e campeonatos. A produção é nossa, aqui em Rio Claro.",
-    "ctaPrimary": "Pedir orçamento",
-    "entries": [
+    "h1Pre": "Troféus e Placas de",
+    "h1Highlight": "Homenagem",
+    "h1Pos": "em Rio Claro",
+    "subtitle": "A Junior produz troféus e placas de homenagem com a marca e o texto da sua empresa, do seu evento ou da sua instituição. Fabricação própria em Rio Claro.",
+    "ctaPrimary": "Pedir orçamento no WhatsApp",
+    "ctaSecondary": "Ver modelos e valores",
+    "image": "trofeu-top-melhores-clientes.webp?v=1",
+    "imageAlt": "Troféu em pedra e madeira com gravação, produzido pela Junior Comunicação Visual",
+    "strip": [
+      "Troféus",
+      "Placas de homenagem",
+      "Premiação",
+      "Reconhecimento"
+    ],
+    "hiddenSeo": "troféu personalizado troféu rio claro troféu para empresa troféu para evento troféu de acrílico placa de homenagem placa de homenagem rio claro placa de agradecimento placa dedicatória premiação personalizada comunicação visual rio claro"
+  },
+  "paths": {
+    "label": "O que você procura?",
+    "items": [
       {
-        "label": "Ver troféus",
-        "href": "#trofeus"
+        "id": "trofeus",
+        "label": "Troféus",
+        "href": "#trofeus",
+        "img": "trofeu-acrilico-amarelo.webp?v=1",
+        "alt": "Troféu em acrílico amarelo e transparente sobre base preta"
       },
       {
-        "label": "Ver placas de homenagem",
-        "href": "#homenagem"
+        "id": "homenagem",
+        "label": "Placas de homenagem",
+        "href": "#homenagem",
+        "img": "placa-estojo-veludo.webp?v=1",
+        "alt": "Placa de homenagem em metal escovado dentro de estojo de veludo preto"
       }
-    ],
-    "bgImage": "",
-    "hiddenSeo": "troféu personalizado troféu rio claro troféu para empresa troféu para evento placa de homenagem placa de homenagem rio claro placa de agradecimento placa dedicatória premiação personalizada comunicação visual rio claro"
+    ]
+  },
+  "facts": [
+    {
+      "count": 29,
+      "prefix": "+",
+      "label": "anos de mercado"
+    },
+    {
+      "big": "100%",
+      "label": "produção própria"
+    },
+    {
+      "big": "Rio Claro",
+      "label": "fábrica no Jardim Mirassol"
+    }
+  ],
+  "answer": "A Junior Comunicação Visual fabrica troféus e placas de homenagem em Rio Claro (SP). As peças são feitas na fábrica da empresa, em materiais como acrílico, metal e madeira, com a logo e o texto de quem encomenda. O orçamento é feito pelo WhatsApp (19) 3522-2566.",
+  "tiers": {
+    "title": "Modelos e valores",
+    "intro": "Três faixas de modelos. Escolha a que cabe no seu evento e peça o orçamento da sua peça.",
+    "noPrice": "Valor sob consulta",
+    "items": [
+      {
+        "id": "basico",
+        "short": "Básico",
+        "name": "Modelos básicos",
+        "desc": "",
+        "price": "",
+        "img": "",
+        "imgAlt": "",
+        "cta": "Quero um modelo básico",
+        "msg": "Olá! Tenho interesse nos modelos BÁSICOS de troféu / placa de homenagem. Pode me passar os modelos e valores?"
+      },
+      {
+        "id": "intermediario",
+        "short": "Intermediário",
+        "name": "Modelos intermediários",
+        "desc": "",
+        "price": "",
+        "img": "",
+        "imgAlt": "",
+        "highlight": true,
+        "cta": "Quero um intermediário",
+        "msg": "Olá! Tenho interesse nos modelos INTERMEDIÁRIOS de troféu / placa de homenagem. Pode me passar os modelos e valores?"
+      },
+      {
+        "id": "premium",
+        "short": "Premium",
+        "name": "Modelos premium",
+        "desc": "",
+        "price": "",
+        "img": "",
+        "imgAlt": "",
+        "cta": "Quero um modelo premium",
+        "msg": "Olá! Tenho interesse nos modelos PREMIUM de troféu / placa de homenagem. Pode me passar os modelos e valores?"
+      }
+    ]
   },
   "sections": [
     {
@@ -55,24 +142,24 @@
       "items": [
         {
           "title": "Troféu para empresa",
-          "desc": "Premiação de vendedor, destaque do mês, campanha interna, tempo de casa.",
-          "img": "",
-          "imgAlt": "Troféu personalizado para empresa produzido pela Junior Comunicação Visual",
+          "desc": "Premiação de vendedor, destaque do mês, campanha interna, pódio de 1º, 2º e 3º lugar.",
+          "img": "trofeu-podio-acrilico.webp?v=1",
+          "imgAlt": "Trio de troféus de 1º, 2º e 3º lugar em acrílico",
           "msg": "Olá! Quero orçamento de troféu para empresa."
         },
         {
           "title": "Troféu para evento e campeonato",
-          "desc": "Torneios, festivais, formaturas e eventos, com o nome e a marca de quem organiza.",
-          "img": "",
-          "imgAlt": "Troféu personalizado para evento ou campeonato produzido pela Junior Comunicação Visual",
+          "desc": "Torneios, desafios, festivais e eventos, com o nome e a marca de quem organiza.",
+          "img": "trofeu-challenge-vermelho.webp?v=1",
+          "imgAlt": "Troféu redondo vermelho em acrílico com base preta",
           "msg": "Olá! Quero orçamento de troféu para evento ou campeonato."
         },
         {
-          "title": "Troféu sob medida",
-          "desc": "Tem um formato em mente ou quer a sua logo em destaque? Mande a ideia e a gente diz como dá para fazer.",
-          "img": "",
-          "imgAlt": "Troféu sob medida produzido pela Junior Comunicação Visual",
-          "msg": "Olá! Quero orçamento de um troféu sob medida."
+          "title": "Troféu de aniversário e tempo de casa",
+          "desc": "Números e letras recortados para marcar os anos da empresa ou de um funcionário.",
+          "img": "trofeu-15-anos-dourado.webp?v=1",
+          "imgAlt": "Troféu de 15 anos em acrílico dourado espelhado",
+          "msg": "Olá! Quero orçamento de troféu de aniversário / tempo de casa."
         }
       ],
       "cta": "Pedir orçamento de troféu",
@@ -84,25 +171,25 @@
       "intro": "Para agradecer, homenagear ou marcar uma data, com o texto que você escrever.",
       "items": [
         {
-          "title": "Placa de homenagem",
-          "desc": "Para pessoas, parceiros e funcionários, com nome, data e mensagem.",
-          "img": "",
-          "imgAlt": "Placa de homenagem personalizada produzida pela Junior Comunicação Visual",
-          "msg": "Olá! Quero orçamento de placa de homenagem."
+          "title": "Placa de homenagem com estojo",
+          "desc": "Placa em metal com o seu texto, entregue em estojo de veludo. Para homenagens e agradecimentos.",
+          "img": "placa-homenagem-estojo.webp?v=1",
+          "imgAlt": "Placa de homenagem em metal com impressão azul em estojo de veludo preto",
+          "msg": "Olá! Quero orçamento de placa de homenagem com estojo."
         },
         {
-          "title": "Placa de agradecimento",
-          "desc": "Para clientes, apoiadores e patrocinadores.",
-          "img": "",
-          "imgAlt": "Placa de agradecimento personalizada produzida pela Junior Comunicação Visual",
-          "msg": "Olá! Quero orçamento de placa de agradecimento."
+          "title": "Placa de reconhecimento com base",
+          "desc": "Metal escovado sobre base, para selos, certificações e conquistas da empresa.",
+          "img": "placa-metal-escovado-base.webp?v=1",
+          "imgAlt": "Placa em metal escovado com impressão verde sobre base preta",
+          "msg": "Olá! Quero orçamento de placa de reconhecimento com base."
         },
         {
-          "title": "Placa dedicatória",
-          "desc": "Para registrar uma dedicatória em um espaço, projeto ou evento.",
-          "img": "",
-          "imgAlt": "Placa dedicatória personalizada produzida pela Junior Comunicação Visual",
-          "msg": "Olá! Quero orçamento de placa dedicatória."
+          "title": "Placa em acrílico",
+          "desc": "Bloco de acrílico com impressão, sobre base preta.",
+          "img": "placa-acrilico-bloco.webp?v=1",
+          "imgAlt": "Placa em bloco de acrílico com impressão sobre base preta",
+          "msg": "Olá! Quero orçamento de placa em acrílico."
         }
       ],
       "cta": "Pedir orçamento de placa",
@@ -110,8 +197,58 @@
     }
   ],
   "gallery": {
-    "title": "Trabalhos que já fizemos",
-    "images": []
+    "title": "Peças que saíram da nossa fábrica",
+    "intro": "Toque na foto para ampliar.",
+    "images": [
+      {
+        "src": "trofeus-pedra-madeira.webp?v=1",
+        "alt": "Troféus em pedra com base de madeira"
+      },
+      {
+        "src": "trofeu-dourado-preto.webp?v=1",
+        "alt": "Troféu dourado e preto com disco em metal"
+      },
+      {
+        "src": "trofeus-acrilico-azul.webp?v=1",
+        "alt": "Troféus em acrílico azul"
+      },
+      {
+        "src": "trofeu-acrilico-impresso.webp?v=1",
+        "alt": "Troféu em acrílico com impressão colorida"
+      },
+      {
+        "src": "trofeu-bloco-acrilico-verde.webp?v=1",
+        "alt": "Troféu em bloco de acrílico verde"
+      },
+      {
+        "src": "premios-acrilico-rosa.webp?v=1",
+        "alt": "Prêmios em acrílico rosa"
+      },
+      {
+        "src": "trofeu-acrilico-base-preta.webp?v=1",
+        "alt": "Troféu em acrílico azul com base preta"
+      },
+      {
+        "src": "trofeu-estrela-dourada.webp?v=1",
+        "alt": "Troféu em formato de estrela dourada"
+      },
+      {
+        "src": "trofeus-35-anos.webp?v=1",
+        "alt": "Troféus comemorativos de 35 anos"
+      },
+      {
+        "src": "medalhoes-base-acrilico.webp?v=1",
+        "alt": "Medalhões dourados em base de acrílico"
+      },
+      {
+        "src": "trofeu-cupula-acrilico.webp?v=1",
+        "alt": "Peça comemorativa em cúpula de acrílico"
+      },
+      {
+        "src": "trofeu-preto-vermelho.webp?v=1",
+        "alt": "Troféu preto e vermelho em acrílico"
+      }
+    ]
   },
   "steps": {
     "title": "Como pedir",
@@ -131,20 +268,28 @@
     ]
   },
   "authority": {
-    "title": "Sobre a Junior",
+    "years": 29,
+    "yearsLabel": "anos de comunicação visual em Rio Claro",
+    "title": "Feito na nossa fábrica",
     "items": [
-      "Empresa de comunicação visual de Rio Claro, com mais de 29 anos de mercado.",
-      "A produção é feita na nossa fábrica, sem terceirizar.",
-      "Atendemos empresas, escolas, clubes e organizadores de eventos."
-    ]
+      "Corte, gravação, impressão e montagem feitos na Junior.",
+      "Atendemos empresas, escolas, clubes e organizadores de eventos.",
+      "Fábrica na Rua 26, 996, Jardim Mirassol."
+    ],
+    "image": "producao-trofeus-bancada.webp?v=1",
+    "imageAlt": "Troféus em acrílico alinhados na bancada de produção da Junior"
   },
   "faq": [
     {
-      "q": "Quais materiais e modelos de troféu e placa vocês fazem?",
-      "a": "Depende da peça e do uso. Conte a ocasião e a quantidade pelo WhatsApp e a gente indica o modelo e o material para o seu caso."
+      "q": "Quais materiais vocês usam?",
+      "a": "Acrílico, metal e madeira, entre outros. As fotos desta página são de peças que saíram da nossa fábrica. Conte a ocasião pelo WhatsApp e a gente indica o material para a sua peça."
     },
     {
-      "q": "Dá para personalizar com a logo e o texto da minha empresa?",
+      "q": "Quanto custa um troféu ou uma placa de homenagem?",
+      "a": "Depende do modelo, do tamanho e da quantidade. Veja as faixas de modelos nesta página e peça o valor da sua peça pelo WhatsApp."
+    },
+    {
+      "q": "Dá para colocar a logo e o texto da minha empresa?",
       "a": "Sim. A peça leva a sua logo e o texto que você definir."
     },
     {
@@ -152,7 +297,7 @@
       "a": "Informe a quantidade no pedido de orçamento. Cada pedido é avaliado caso a caso."
     },
     {
-      "q": "Atendem outras cidades além de Rio Claro?",
+      "q": "Atendem fora de Rio Claro?",
       "a": "Atendemos Rio Claro e região e também enviamos para outras cidades. Informe a sua cidade no WhatsApp."
     },
     {
@@ -162,23 +307,23 @@
   ],
   "ctaFinal": {
     "title": "Peça o orçamento do seu troféu ou placa",
-    "subtitle": "Atendimento pelo WhatsApp, de Rio Claro para a região.",
-    "cta": "Chamar no WhatsApp"
+    "subtitle": "Conte a ocasião e a quantidade. A gente responde pelo WhatsApp.",
+    "cta": "Chamar a Junior no Whats"
+  },
+  "exitPopup": {
+    "title": "Quer ver modelos e valores?",
+    "subtitle": "Mande uma mensagem e a gente envia as opções de troféu e placa de homenagem.",
+    "cta": "Receber modelos no WhatsApp",
+    "msg": "Olá! Quero receber os modelos e valores de troféu / placa de homenagem."
   },
   "footer": {
     "name": "Junior Comunicação Visual",
     "address": "Rua 26, 996 — Jardim Mirassol, Rio Claro — SP · CEP 13503-135",
-    "tagline": "",
-    "copyright": "© 2026 Junior Comunicação Visual. Todos os direitos reservados."
+    "copyright": "© 2026 Junior Comunicação Visual."
   },
   "tracking": {
     "gtm": "GTM-KBZ7XH3G",
     "gtag": "",
     "metaPixel": ""
-  },
-  "facts": [
-    "Mais de 29 anos em Rio Claro",
-    "Produção própria",
-    "Rua 26, 996, Jardim Mirassol"
-  ]
+  }
 }
