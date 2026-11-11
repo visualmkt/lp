@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "Troféus e Placas de Homenagem em Rio Claro | Junior Comunicação Visual",
+    "description": "Troféus personalizados e placas de homenagem para empresas, eventos e instituições. Produção própria em Rio Claro, mais de 29 anos em comunicação visual.",
+    "keywords": "troféu personalizado, troféu rio claro, placa de homenagem, placa de homenagem rio claro, troféu para empresa, troféu para evento, placa de agradecimento, placa dedicatória, premiação personalizada"
+  },
+  "brand": {
+    "primary": "#E8520E",
+    "secondary": "#EE7D00",
+    "dark": "#1A1A1A",
+    "logo": "https://juniorcomvisual.com.br/wp-content/uploads/2025/11/Logo-Junior.svg",
+    "logoAlt": "Junior Comunicação Visual"
+  },
+  "contact": {
+    "whatsapp": "551935222566",
+    "whatsappDisplay": "(19) 3522-2566",
+    "phoneTel": "+551935222566",
+    "phoneDisplay": "(19) 3522-2566",
+    "whatsappMsgDefault": "Olá! Vim pelo site e quero orçamento de troféu / placa de homenagem."
+  },
+  "address": {
+    "street": "Rua 26, 996 — Jardim Mirassol",
+    "city": "Rio Claro",
+    "state": "SP",
+    "zip": "13503-135",
+    "schemaHours": "Mo-Fr 08:00-18:00",
+    "areaServed": ["Rio Claro", "Região de Rio Claro"]
+  },
+  "hero": {
+    "badge": "Premiação e reconhecimento com a sua marca",
+    "h1Pre": "Troféus e Placas de Homenagem",
+    "h1Highlight": "em Rio Claro",
+    "subtitle": "Troféus personalizados e placas de homenagem para empresas, eventos e instituições. Produção própria e mais de 29 anos em comunicação visual.",
+    "ctaPrimary": "Orçamento no WhatsApp",
+    "entries": [
+      { "label": "Troféus", "href": "#trofeus" },
+      { "label": "Placas de Homenagem", "href": "#homenagem" }
+    ],
+    "bgImage": "",
+    "hiddenSeo": "troféu personalizado troféu rio claro troféu para empresa troféu para evento placa de homenagem placa de homenagem rio claro placa de agradecimento placa dedicatória premiação personalizada comunicação visual rio claro"
+  },
+  "trust": [
+    { "icon": "fa-trophy", "title": "+29 Anos", "subtitle": "De experiência em comunicação visual" },
+    { "icon": "fa-warehouse", "title": "Produção Própria", "subtitle": "Em Rio Claro" },
+    { "icon": "fa-check", "title": "Personalizado", "subtitle": "Com a sua marca e o seu texto" },
+    { "icon": "fa-building", "title": "Empresas e Eventos", "subtitle": "Para quem premia e homenageia" },
+    { "icon": "fa-map-location-dot", "title": "Rio Claro e Região", "subtitle": "Atendimento local" },
+    { "icon": "fa-whatsapp", "title": "Pelo WhatsApp", "subtitle": "Peça seu orçamento" }
+  ],
+  "sections": [
+    {
+      "id": "trofeus",
+      "kicker": "Premiação",
+      "title": "Troféus Personalizados",
+      "intro": "Troféus feitos sob medida para reconhecer vendedores, equipes, parceiros, atletas e eventos. Você conta a ocasião e a gente indica o modelo e o material.",
+      "items": [
+        {
+          "title": "Troféu para Empresa",
+          "desc": "Premiação de vendedor, destaque do mês, campanhas internas e reconhecimento de equipe.",
+          "img": "",
+          "imgAlt": "Troféu personalizado para empresa produzido pela Junior Comunicação Visual",
+          "msg": "Olá! Quero orçamento de troféu para empresa."
+        },
+        {
+          "title": "Troféu para Eventos e Esportes",
+          "desc": "Campeonatos, torneios, formaturas e eventos com a identidade da sua organização.",
+          "img": "",
+          "imgAlt": "Troféu personalizado para evento ou campeonato produzido pela Junior Comunicação Visual",
+          "msg": "Olá! Quero orçamento de troféu para evento ou campeonato."
+        },
+        {
+          "title": "Troféu Sob Medida",
+          "desc": "Tem uma ideia, um formato ou uma marca para destacar? Conte o que precisa e orientamos o melhor caminho.",
+          "img": "",
+          "imgAlt": "Troféu sob medida produzido pela Junior Comunicação Visual",
+          "msg": "Olá! Quero orçamento de um troféu sob medida."
+        }
+      ],
+      "cta": "Orçamento de Troféu",
+      "msg": "Olá! Quero orçamento de troféu personalizado."
+    },
+    {
+      "id": "homenagem",
+      "kicker": "Reconhecimento",
+      "title": "Placas de Homenagem",
+      "intro": "Placas para agradecer, homenagear e registrar momentos importantes da sua empresa, escola ou instituição, com o texto e a identidade que você escolher.",
+      "items": [
+        {
+          "title": "Placa de Homenagem",
+          "desc": "Para homenagear pessoas, parceiros e tempo de casa, com o texto que você definir.",
+          "img": "",
+          "imgAlt": "Placa de homenagem personalizada produzida pela Junior Comunicação Visual",
+          "msg": "Olá! Quero orçamento de placa de homenagem."
+        },
+        {
+          "title": "Placa de Agradecimento",
+          "desc": "Agradeça clientes, apoiadores e colaboradores com uma peça à altura da mensagem.",
+          "img": "",
+          "imgAlt": "Placa de agradecimento personalizada produzida pela Junior Comunicação Visual",
+          "msg": "Olá! Quero orçamento de placa de agradecimento."
+        },
+        {
+          "title": "Placa Dedicatória",
+          "desc": "Registro de dedicatória e reconhecimento para espaços, projetos e eventos.",
+          "img": "",
+          "imgAlt": "Placa dedicatória personalizada produzida pela Junior Comunicação Visual",
+          "msg": "Olá! Quero orçamento de placa dedicatória."
+        }
+      ],
+      "cta": "Orçamento de Placa de Homenagem",
+      "msg": "Olá! Quero orçamento de placa de homenagem."
+    }
+  ],
+  "gallery": {
+    "kicker": "Trabalhos",
+    "title": "Alguns dos nossos trabalhos",
+    "images": []
+  },
+  "steps": {
+    "kicker": "Como pedir",
+    "title": "Simples, direto no WhatsApp",
+    "items": [
+      { "title": "Conte o que precisa", "desc": "Diga se é troféu ou placa, a ocasião e a quantidade." },
+      { "title": "Receba a orientação", "desc": "Indicamos modelo e material e enviamos o orçamento." },
+      { "title": "Aprove e produzimos", "desc": "Aprovou, produzimos na nossa fábrica em Rio Claro." }
+    ]
+  },
+  "authority": {
+    "kicker": "Por que escolher a Junior Comunicação Visual",
+    "title": "Quem produz comunicação visual há mais de 29 anos",
+    "items": [
+      "+29 anos produzindo comunicação visual",
+      "Produção própria em Rio Claro",
+      "Personalização com a sua marca, o seu texto e a sua ocasião",
+      "Atendimento consultivo: ajudamos a escolher o modelo e o material",
+      "Atendemos empresas, escolas, eventos e instituições"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "faq": [
+    {
+      "q": "Quais materiais e modelos de troféu e placa vocês fazem?",
+      "a": "Depende do uso e do que você precisa. Conte a ocasião e a quantidade pelo WhatsApp e indicamos o melhor modelo e material para o seu caso."
+    },
+    {
+      "q": "Dá para personalizar com a logo e o texto da minha empresa?",
+      "a": "Sim. Troféus e placas podem levar a sua marca e o texto que você definir. Conte o que precisa e orientamos sobre o melhor formato."
+    },
+    {
+      "q": "Fazem uma unidade só ou apenas quantidade grande?",
+      "a": "Informe a quantidade no orçamento. Cada pedido é avaliado de acordo com o que você precisa."
+    },
+    {
+      "q": "Atendem outras cidades além de Rio Claro?",
+      "a": "Atendemos Rio Claro e região e também enviamos para outras cidades. Chame no WhatsApp informando a sua cidade."
+    },
+    {
+      "q": "Como funciona o orçamento?",
+      "a": "Chame no WhatsApp, diga se é troféu ou placa de homenagem, a quantidade e a ocasião. Retornamos com a orientação e o orçamento."
+    }
+  ],
+  "ctaFinal": {
+    "title": "Reconheça quem merece, com a sua marca.",
+    "subtitle": "Peça o orçamento do seu troféu ou da sua placa de homenagem. Atendimento pelo WhatsApp em Rio Claro e região.",
+    "cta": "Orçamento no WhatsApp"
+  },
+  "footer": {
+    "name": "Junior Comunicação Visual",
+    "address": "Rua 26, 996 — Jardim Mirassol, Rio Claro — SP · CEP 13503-135",
+    "tagline": "Comunicação visual há mais de 29 anos. Troféus e placas de homenagem em Rio Claro e região.",
+    "copyright": "© 2026 Junior Comunicação Visual. Todos os direitos reservados."
+  },
+  "tracking": {
+    "gtm": "GTM-KBZ7XH3G",
+    "gtag": "",
+    "metaPixel": ""
+  }
+}
