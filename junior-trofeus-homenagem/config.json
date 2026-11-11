@@ -88,8 +88,8 @@
       "label": "produção própria"
     },
     {
-      "big": "Rio Claro",
-      "label": "fábrica no Jardim Mirassol"
+      "big": "Envio",
+      "label": "para qualquer lugar"
     }
   ],
   "answer": "A Junior Comunicação Visual fabrica troféus e placas de homenagem em Rio Claro (SP). As peças são feitas na fábrica da empresa, em materiais como acrílico, metal e madeira, com a logo e o texto de quem encomenda. O orçamento é feito pelo WhatsApp (19) 3522-2566.",
@@ -104,8 +104,8 @@
         "name": "Modelos básicos",
         "desc": "",
         "price": "",
-        "img": "",
-        "imgAlt": "",
+        "img": "faixa-basico-acrilico-impresso.webp?v=1",
+        "imgAlt": "Peças pequenas em acrílico com impressão, produzidas em quantidade",
         "cta": "Quero um modelo básico",
         "msg": "Olá! Tenho interesse nos modelos BÁSICOS de troféu / placa de homenagem. Pode me passar os modelos e valores?"
       },
@@ -115,8 +115,8 @@
         "name": "Modelos intermediários",
         "desc": "",
         "price": "",
-        "img": "",
-        "imgAlt": "",
+        "img": "faixa-intermediario-metal-base.webp?v=1",
+        "imgAlt": "Placa em metal escovado com impressão sobre base preta",
         "highlight": true,
         "cta": "Quero um intermediário",
         "msg": "Olá! Tenho interesse nos modelos INTERMEDIÁRIOS de troféu / placa de homenagem. Pode me passar os modelos e valores?"
@@ -127,12 +127,13 @@
         "name": "Modelos premium",
         "desc": "",
         "price": "",
-        "img": "",
-        "imgAlt": "",
+        "img": "faixa-premium-dourado-preto.webp?v=1",
+        "imgAlt": "Troféu dourado e preto com disco em metal",
         "cta": "Quero um modelo premium",
         "msg": "Olá! Tenho interesse nos modelos PREMIUM de troféu / placa de homenagem. Pode me passar os modelos e valores?"
       }
-    ]
+    ],
+    "_validar": "Fotos das 3 faixas escolhidas pela agência — VALIDAR com o cliente. Preços e descrições pendentes."
   },
   "sections": [
     {
@@ -205,8 +206,8 @@
         "alt": "Troféus em pedra com base de madeira"
       },
       {
-        "src": "trofeu-dourado-preto.webp?v=1",
-        "alt": "Troféu dourado e preto com disco em metal"
+        "src": "trofeu-mascote-verde.webp?v=1",
+        "alt": "Troféu com mascote verde em acrílico"
       },
       {
         "src": "trofeus-acrilico-azul.webp?v=1",
@@ -274,7 +275,7 @@
     "items": [
       "Corte, gravação, impressão e montagem feitos na Junior.",
       "Atendemos empresas, escolas, clubes e organizadores de eventos.",
-      "Fábrica na Rua 26, 996, Jardim Mirassol."
+      "Enviamos para qualquer lugar."
     ],
     "image": "producao-trofeus-bancada.webp?v=1",
     "imageAlt": "Troféus em acrílico alinhados na bancada de produção da Junior"
@@ -298,7 +299,7 @@
     },
     {
       "q": "Atendem fora de Rio Claro?",
-      "a": "Atendemos Rio Claro e região e também enviamos para outras cidades. Informe a sua cidade no WhatsApp."
+      "a": "Sim. Enviamos para qualquer lugar. Informe a sua cidade no WhatsApp."
     },
     {
       "q": "Como peço o orçamento?",
