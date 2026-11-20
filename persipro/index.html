@@ -324,7 +324,7 @@
       <div class="hero-vis" id="hero-vis">
         <div class="phone">
           <video id="hero-video" muted loop playsinline preload="metadata" poster="imagens/poster-wave-before-after.webp" aria-label="Antes e depois da instalação de cortina wave">
-            <source data-src="videos/wave-before-after.mp4" type="video/mp4">
+            <source data-src="" data-file="wave-before-after.mp4" type="video/mp4">
           </video>
           <span class="phone-tag">Antes e depois · Cortina Wave</span>
         </div>
@@ -495,6 +495,7 @@
 
 <script>
 var WA = '5551994995610';
+var VID = 'https://pub-6a1578b9ac894fe3b855d229bfc26dc8.r2.dev/lp/persipro/videos/'; /* R2: responde 206 (Range), exigido pelo Safari/iPhone */
 var GTM_ID = ''; /* página de validação: tags desligadas. Na publicação no domínio do cliente, usar 'GTM-T8P5HWF6' */
 var MODELS = [{"id":"blackout","nome":"Persiana Blackout","desc":"Bloqueia a luz por completo. Indicada para quartos e home theater."},{"id":"blackout-rolo","nome":"Blackout Rolo","desc":"Rolo com tecido blackout: escurece o ambiente com visual limpo."},{"id":"rolo","nome":"Persiana Rolo","desc":"Tecido que enrola no topo. Prática e discreta, para qualquer cômodo."},{"id":"vertical","nome":"Persiana Vertical","desc":"Lâminas verticais que giram para regular a entrada de luz. Boa para vãos largos."},{"id":"romana","nome":"Persiana Romana","desc":"Recolhe em gomos de tecido. Visual aconchegante para salas e quartos."},{"id":"double-vision","nome":"Double Vision","desc":"Faixas alternadas de tela e tecido: dosa a luz e a privacidade."},{"id":"wave","nome":"Cortina Wave","desc":"Ondas uniformes do teto ao chão. Acabamento elegante para a sala."},{"id":"wave-before-after","nome":"Wave (antes e depois)","desc":"Veja a diferença que a cortina wave faz no mesmo ambiente."},{"id":"persiana-eletrica","nome":"Persiana Automatizada","desc":"Motorizada, com controle remoto, celular, Alexa ou Google Home."}];
 var REVIEWS = [{"nome":"Bruno M. B.","texto":"Para colocar alguém dentro da sua casa precisa ser de Confiança. Me indicaram, contratei e indico muito! 100% confiável e seguro!"},{"nome":"Veridiana Demarco","texto":"Serviço de manutenção de persianas bem executado. Profissional pontual, atencioso e transparente no orçamento. A persiana ficou funcionando corretamente após o reparo, além do custo benefício. Recomendo."},{"nome":"Caroline Nicola Sangalli","texto":"Agendei as 11h com a empresa, 11:10 Kauan e Paulo já estavam na portaria. Serviço rápido, limpo, atencioso. Me explicaram tudo que fizeram na persiana. Super indico!"},{"nome":"Ismael Subilhaga","texto":"Excelente atendimento do início ao fim! Recomendo a todos que procuram serviços de persianas."},{"nome":"Gustavo Viegas","texto":"Ótimo atendimento e serviço excelente. O técnico arrumou a persiana e deixou tudo limpo após o serviço. Recomendadíssimos!"},{"nome":"Luciana Wallauer","texto":"Excelente atendimento,profissionais educados e atenciosos. Recomendo"},{"nome":"Ana Guarize","texto":"Muita satisfeita. Profissionais educados, atenciosos e competentes.  Recomendo."},{"nome":"Ricardo Canhada","texto":"Atendimento muito atencioso e qualificado . Parabéns pelo trabalho !"},{"nome":"Bruno Dos santos","texto":"Excelente serviço! Rápidos, atenciosos e minhas persianas ficaram como novas. Recomendo!"},{"nome":"Natacha Santos","texto":"Profissionais responsáveis, foram além das minhas expectativas super recomendo!"},{"nome":"Beth Pereira","texto":"Excelente atendimento e espetacular serviço prestado"},{"nome":"matheeus Bitencourt","texto":"Profissionais capacitados e de alta competência, atendimento rápido, ágil e humanizado, TOP demais."},{"nome":"Gabriel Rodrigues","texto":"Muito bom o serviço"},{"nome":"Leonardo Garcia","texto":"Excelente atendimento, é um ótimo serviço prestado pelos rapaze!!"},{"nome":"Yuri França","texto":"Trabalham com bastante cuidado e bem rápido, recomendo muito, já fiz mais de um trabalho com eles!"},{"nome":"Matheus Santos","texto":"Atendimento excelente! O serviço de persianas ficou muito bem feito, com ótimo acabamento e atenção aos detalhes. Equipe  prestativa e demonstrou profissionalismo durante todo o atendimento. Fiquei satisfeito com o resultado e recomendo."},{"nome":"Carla Bianchi","texto":"Fiquei impressionada com a rapidez. Entrei em contato hoje e no fim da tarde as persianas já estavam consertadas. Atendimento cordial pelo WhatsApp e serviço técnico muito bom. Valeu muito a pena pelo preço justo"},{"nome":"Salete Nicola","texto":"Nota 10! Extremamente atenciosos, de extrema confiança, prestaram o serviço conforme o combinado. Super indico!!!"},{"nome":"Lilian Rubio","texto":"Serviço de conserto da persiana externa muito bem executado. Profissionais pontuais e caprichosos. Indico o serviço."},{"nome":"Alexandre Boaz","texto":"Muito bom atendimento, pro ativo, boa vontade, caprichoso,  dando sugestões para melhorar rendimento do produto. Parabéns!"},{"nome":"Leticia Ribeiro De Morais","texto":"Serviço de qualidade, com preço justo!! Recomendo a quem precisar"}];
@@ -512,7 +513,7 @@ var FAQ = [{"q":"Vocês fazem a medição no local?","a":"Sim. A PersiPro mede n
   document.getElementById('cat').innerHTML = MODELS.map(function (m, i) {
     return '<article class="mdl">' +
       '<div class="mdl-v"><img src="imagens/poster-' + m.id + '.webp" alt="' + esc(m.nome) + ' instalada" loading="lazy" width="540" height="960">' +
-      '<video muted loop playsinline preload="none" data-src="videos/' + m.id + '.mp4" aria-label="Vídeo: ' + esc(m.nome) + '"></video>' +
+      '<video muted loop playsinline preload="none" data-src="' + VID + m.id + '.mp4" aria-label="Vídeo: ' + esc(m.nome) + '"></video>' +
       '<span class="mdl-n">' + String(i + 1).padStart(2, '0') + '</span></div>' +
       '<div class="mdl-b"><h3>' + esc(m.nome) + '</h3><p>' + esc(m.desc) + '</p>' +
       '<a class="btn btn-wa btn-sm btn-bl" data-wa="' + esc('Olá! Tenho interesse no modelo ' + m.nome + '. Pode me passar um orçamento?') + '" data-location="modelo-' + m.id + '">' + '<i data-ic="whatsapp"></i>Quero esse modelo</a></div></article>';
@@ -562,7 +563,7 @@ var FAQ = [{"q":"Vocês fazem a medição no local?","a":"Sim. A PersiPro mede n
       if (e.isIntersecting) {
         if (!v.dataset.ok) {
           var s = v.querySelector('source[data-src]');
-          if (s) { s.src = s.getAttribute('data-src'); } else { v.src = v.getAttribute('data-src'); }
+          if (s) { s.src = s.getAttribute('data-file') ? VID + s.getAttribute('data-file') : s.getAttribute('data-src'); } else { v.src = v.getAttribute('data-src'); }
           v.load(); v.dataset.ok = 1;
           v.addEventListener('playing', function () { var p = v.parentElement; if (p.classList.contains('mdl-v')) p.classList.add('on'); }, { once: true });
         }

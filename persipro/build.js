@@ -40,6 +40,9 @@ const FAQ = [
   }
   const av = JSON.parse(fs.readFileSync(D + '/_ref/avaliacoes.json', 'utf8'))
     .map(a => ({ nome: a.nome, texto: a.comentario.replace(/[”"]+\s*$/, '').trim() }));
+  const VID = s0 => s0.match(/var VID = '([^']+)'/)[1];
+  const vbase = VID(fs.readFileSync(D + '/src.html', 'utf8'));
+  for (const m of MODELS) { const r = await fetch(vbase + m.id + '.mp4', { headers: { Range: 'bytes=0-99' } }); if (r.status !== 206) throw new Error('vídeo ' + m.id + ' no R2: HTTP ' + r.status); }
   for (const m of MODELS) if (!fs.existsSync(`${D}/videos/${m.id}.mp4`) || !fs.existsSync(`${D}/imagens/poster-${m.id}.webp`)) throw new Error('falta mídia ' + m.id);
   const faqSchema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
   let s = fs.readFileSync(D + '/src.html', 'utf8');

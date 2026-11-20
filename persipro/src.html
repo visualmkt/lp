@@ -324,7 +324,7 @@
       <div class="hero-vis" id="hero-vis">
         <div class="phone">
           <video id="hero-video" muted loop playsinline preload="metadata" poster="imagens/poster-wave-before-after.webp" aria-label="Antes e depois da instalação de cortina wave">
-            <source data-src="videos/wave-before-after.mp4" type="video/mp4">
+            <source data-src="" data-file="wave-before-after.mp4" type="video/mp4">
           </video>
           <span class="phone-tag">Antes e depois · Cortina Wave</span>
         </div>
@@ -495,6 +495,7 @@
 
 <script>
 var WA = '5551994995610';
+var VID = 'https://pub-6a1578b9ac894fe3b855d229bfc26dc8.r2.dev/lp/persipro/videos/'; /* R2: responde 206 (Range), exigido pelo Safari/iPhone */
 var GTM_ID = ''; /* página de validação: tags desligadas. Na publicação no domínio do cliente, usar 'GTM-T8P5HWF6' */
 var MODELS = /*MODELS*/;
 var REVIEWS = /*REVIEWS*/;
@@ -512,7 +513,7 @@ var FAQ = /*FAQ*/;
   document.getElementById('cat').innerHTML = MODELS.map(function (m, i) {
     return '<article class="mdl">' +
       '<div class="mdl-v"><img src="imagens/poster-' + m.id + '.webp" alt="' + esc(m.nome) + ' instalada" loading="lazy" width="540" height="960">' +
-      '<video muted loop playsinline preload="none" data-src="videos/' + m.id + '.mp4" aria-label="Vídeo: ' + esc(m.nome) + '"></video>' +
+      '<video muted loop playsinline preload="none" data-src="' + VID + m.id + '.mp4" aria-label="Vídeo: ' + esc(m.nome) + '"></video>' +
       '<span class="mdl-n">' + String(i + 1).padStart(2, '0') + '</span></div>' +
       '<div class="mdl-b"><h3>' + esc(m.nome) + '</h3><p>' + esc(m.desc) + '</p>' +
       '<a class="btn btn-wa btn-sm btn-bl" data-wa="' + esc('Olá! Tenho interesse no modelo ' + m.nome + '. Pode me passar um orçamento?') + '" data-location="modelo-' + m.id + '">' + '<i data-ic="whatsapp"></i>Quero esse modelo</a></div></article>';
@@ -562,7 +563,7 @@ var FAQ = /*FAQ*/;
       if (e.isIntersecting) {
         if (!v.dataset.ok) {
           var s = v.querySelector('source[data-src]');
-          if (s) { s.src = s.getAttribute('data-src'); } else { v.src = v.getAttribute('data-src'); }
+          if (s) { s.src = s.getAttribute('data-file') ? VID + s.getAttribute('data-file') : s.getAttribute('data-src'); } else { v.src = v.getAttribute('data-src'); }
           v.load(); v.dataset.ok = 1;
           v.addEventListener('playing', function () { var p = v.parentElement; if (p.classList.contains('mdl-v')) p.classList.add('on'); }, { once: true });
         }
