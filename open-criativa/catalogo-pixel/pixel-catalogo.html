@@ -1,0 +1,34 @@
+<!--
+  Pixel Meta + eventos de conversão — catálogo Open Criativa (opencriativa.com.br/catalogo/)
+  ONDE COLAR: dentro do <head> de TODAS as páginas de /catalogo/ (ou no topo de assets/base.js, sem as tags <script>).
+  Pixel: 879074768047178 (conta Meta act_821101770840993).
+  Eventos:
+    PageView      toda página
+    ViewContent   página de produto (/catalogo/<produto>/), com nome do produto
+    AddToCart     item adicionado ao carrinho (evento interno "lista" do base.js)
+    Contact       qualquer clique que abre WhatsApp (wa.me, api.whatsapp, botões de vendedor)
+    Lead          envio da lista de orçamento (#enviar-lista)
+    TesteChama    clique em "Testar o Chama grátis"
+-->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','879074768047178');
+fbq('track','PageView');
+(function(){
+  var partes=location.pathname.split('/').filter(Boolean);
+  var produto=partes[0]==='catalogo'&&partes[1]?partes[1]:null;
+  if(produto){fbq('track','ViewContent',{content_name:(document.querySelector('h1')||{}).textContent||produto,content_ids:[produto],content_type:'product'});}
+  document.addEventListener('lista',function(e){if(e.detail&&e.detail.na){fbq('track','AddToCart',{content_ids:[e.detail.c],content_type:'product'});}});
+  var ultimo=0;
+  function contato(origem){var agora=Date.now();if(agora-ultimo<1500)return;ultimo=agora;fbq('track','Contact',{content_name:origem,produto:produto||'catalogo'});}
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('a,button');if(!el)return;
+    var href=(el.getAttribute('href')||'').toLowerCase();
+    var txt=(el.textContent||'').trim().toLowerCase();
+    if(el.id==='enviar-lista'){fbq('track','Lead',{content_name:'lista de orcamento',produto:produto||'catalogo'});contato('enviar-lista');return;}
+    if(txt.indexOf('chama')>-1&&txt.indexOf('testar')>-1){fbq('trackCustom','TesteChama',{produto:produto||'catalogo'});return;}
+    if(el.hasAttribute('data-vend')||href.indexOf('wa.me')>-1||href.indexOf('whatsapp')>-1){contato(el.hasAttribute('data-vend')?'vendedor':'link whatsapp');}
+  },true);
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=879074768047178&ev=PageView&noscript=1" alt=""></noscript>
