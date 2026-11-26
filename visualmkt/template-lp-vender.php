@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Template Name: LP Vender
  * Template Post Type: page
